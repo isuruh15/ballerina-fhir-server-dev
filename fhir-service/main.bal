@@ -10,27 +10,10 @@ public function main() returns error? {
     final jdbc:Client jdbcClient = check dbHandler.initializeJdbcClient();
     final db_store:Client persistClient = check dbHandler.initializePersistClient();
 
-    error? isDbCreated = dbHandler.initDatabase(jdbcClient);
+    error? isDbCreated = dbHandler.initDatabase(jdbcClient, persistClient);
     if (isDbCreated is error){
         io:println("Error while creating the DB");
     } else {
-        error? isPopulated = dbHandler.populateSearchParamExpressionTable(persistClient);
-        io:println(isPopulated);
+        io:println("DB Initiation Successful");
     }
-    // error? result2 = dbHandlerObj.afterSuite();
-
-
-    // db_handler:DBHandler dbHandlerObj = new db_handler:DBHandler();
-    // jdbc:Client|sql:Error dbClient = dbHandlerObj.getDbClient();
-
-    // if (dbClient is jdbc:Client){
-    //     error? isDbSkeletonCreateError = dbHandlerObj.createDbSkeleton(dbClient);
-
-    //     if (isDbSkeletonCreateError is error){
-    //         io:println("Error occured when createing the DB skeleton");
-    //         io:println(isDbSkeletonCreateError);
-    //     } else {
-    //         io:println("DB Skeleton creation successful");
-    //     }
-    // }    
 }

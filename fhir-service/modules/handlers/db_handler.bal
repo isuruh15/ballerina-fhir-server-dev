@@ -5,13 +5,13 @@ import ballerina/sql;
 import ballerinax/java.jdbc;
 
 public class DBHandler {
-    private final string filePath = "./script.sql";
+    private final string filePath = "./modules/db_store/script.sql";
     private final jdbc:Client|sql:Error jdbcClient = new ("jdbc:h2:~./fhir-data-db", "sa", "");
-    
+
     private sql:ParameterizedQuery[] dropQueries;
     private sql:ParameterizedQuery[] createQueries;
-    
-    public function init(){
+
+    public function init() {
         self.dropQueries = [];
         self.createQueries = [];
     }
@@ -24,7 +24,7 @@ public class DBHandler {
         return new ();
     }
 
-    private function convertToParameterizedQuery (readonly & string[] strQuery) returns sql:ParameterizedQuery {
+    private function convertToParameterizedQuery(readonly & string[] strQuery) returns sql:ParameterizedQuery {
         sql:ParameterizedQuery parameterizedQuery = ``;
         parameterizedQuery.strings = strQuery;
         return parameterizedQuery;
@@ -54,7 +54,7 @@ public class DBHandler {
             if trimmed.startsWith("CREATE") {
                 inCreateQuery = true;
                 currentCreateQuery = trimmed;
-                
+
                 // If CREATE ends immediately with `;`
                 if trimmed.endsWith(";") {
                     readonly & string[] tempArr = [currentCreateQuery];
@@ -78,26 +78,24 @@ public class DBHandler {
         }
     }
 
-    public function populateSearchParamExpressionTable (db_store:Client persistClient) returns error?{
+    private function populateSearchParamExpressionTable(db_store:Client persistClient) returns error? {
         final string dataFilePath = "./assets/searchParam-Expression.csv";
         final string[] readLines = check io:fileReadLines(dataFilePath);
-
         final string:RegExp regex = re `,`;
-
-        // final sql:ParameterizedQuery insertQuery = `INSERT INTO SEARCH_PARAM_RES_EXPRESSION_TABLE VALUES (?,?,?,?)`;
-
         int i = 0;
+        int totRecords = 0;
+
         foreach string line in readLines {
             i += 1;
 
             // Exclude Header
-            if (i == 1){
+            if (i == 1) {
                 continue;
             }
 
             string[] data = regex.split(line);
 
-            if (data.length() == 4){
+            if (data.length() == 4) {
                 string searchParamName = data[0];
                 string 'resource = data[1];
                 string searchParamType = data[2];
@@ -109,31 +107,43 @@ public class DBHandler {
                     RESOURCE_NAME: 'resource,
                     EXPRESSION: expression
                 };
-                
-                int[] recordIds = check persistClient->/search_param_res_expression_tables.post([searchParamResourceExpression]);
-                io:println(recordIds);
-            } 
+
+                int[] recordId = check persistClient->/search_param_res_expression_tables.post([searchParamResourceExpression]);
+                totRecords = recordId[0]; // tot_records = last_rec_id
+            }
         }
+        io:println("Total Records Inserted: " + totRecords.toString());
     }
 
-    public function initDatabase(jdbc:Client dbClient) returns error?{
-        error? isError = self.retreiveQueriesFromSchema();
+    public function initDatabase(jdbc:Client jdbcClient, db_store:Client persistClient) returns error? {
+        sql:ExecutionResult dropQueryResult = {affectedRowCount: 0, lastInsertId: 0};
+        sql:ExecutionResult createQueryResult = {affectedRowCount: 0, lastInsertId: 0};
 
-        if (isError is error){
+        error? isError = self.retreiveQueriesFromSchema();
+        
+        if (isError is error) {
             io:println("An error occured when reading the db schema");
             io:println(isError);
         } else {
             foreach sql:ParameterizedQuery dropQuery in self.dropQueries {
                 sql:ParameterizedQuery query1 = dropQuery;
-                sql:ExecutionResult result1 = check dbClient->execute(query1);
-                io:println(result1);
+                dropQueryResult = check jdbcClient->execute(query1);
             }
 
             foreach sql:ParameterizedQuery createQuery in self.createQueries {
                 sql:ParameterizedQuery query2 = createQuery;
-                sql:ExecutionResult result2 = check dbClient->execute(query2);
-                io:println(result2);
+                createQueryResult = check jdbcClient->execute(query2);
             }
+        }
+
+        io:println("Drop Query Result: " + dropQueryResult.toString());
+        io:println("Create Query Result: " + createQueryResult.toString());
+
+        error? isSearchParamsPopulated = self.populateSearchParamExpressionTable(persistClient);
+        if (isSearchParamsPopulated is error) {
+            io:print("An error occured while populating the SEARCH_PARAM_EXPRESSION_TABLE: " + isSearchParamsPopulated.toString());
+        } else {
+            io:println("SEARCH_PARAM_EXPRESSION_TABLE populated successfully!");
         }
     }
 }
