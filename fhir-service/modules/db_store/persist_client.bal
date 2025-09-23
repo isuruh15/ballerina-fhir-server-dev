@@ -10,8 +10,8 @@ import ballerinax/h2.driver as _;
 import ballerinax/java.jdbc;
 import ballerinax/persist.sql as psql;
 
-const S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N__T_A_B_L_E = "search_param_res_expression_tables";
-const R_E_F_E_R_E_N_C_E__T_A_B_L_E = "reference_tables";
+const S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S = "search_param_res_expressions";
+const R_E_F_E_R_E_N_C_E_S = "references";
 const TEST_SCRIPT_TABLE = "testscripttables";
 const TEST_REPORT_TABLE = "testreporttables";
 const RELATED_PERSON_TABLE = "relatedpersontables";
@@ -154,9 +154,9 @@ public isolated client class Client {
     private final map<psql:SQLClient> persistClients;
 
     private final record {|psql:SQLMetadata...;|} & readonly metadata = {
-        [S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N__T_A_B_L_E]: {
-            entityName: "SEARCH_PARAM_RES_EXPRESSION_TABLE",
-            tableName: "SEARCH_PARAM_RES_EXPRESSION_TABLE",
+        [S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S]: {
+            entityName: "SEARCH_PARAM_RES_EXPRESSIONS",
+            tableName: "SEARCH_PARAM_RES_EXPRESSIONS",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
                 SEARCH_PARAM_NAME: {columnName: "SEARCH_PARAM_NAME"},
@@ -166,9 +166,9 @@ public isolated client class Client {
             },
             keyFields: ["ID"]
         },
-        [R_E_F_E_R_E_N_C_E__T_A_B_L_E]: {
-            entityName: "REFERENCE_TABLE",
-            tableName: "REFERENCE_TABLE",
+        [R_E_F_E_R_E_N_C_E_S]: {
+            entityName: "REFERENCES",
+            tableName: "REFERENCES",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
                 SOURCE_RESOURCE_TYPE: {columnName: "SOURCE_RESOURCE_TYPE"},
@@ -188,6 +188,7 @@ public isolated client class Client {
             tableName: "TestScriptTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                TESTSCRIPTTABLE_ID: {columnName: "TESTSCRIPTTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 CONTEXT: {columnName: "CONTEXT"},
@@ -215,6 +216,7 @@ public isolated client class Client {
             tableName: "TestReportTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                TESTREPORTTABLE_ID: {columnName: "TESTREPORTTABLE_ID"},
                 ISSUED: {columnName: "ISSUED"},
                 PARTICIPANT: {columnName: "PARTICIPANT"},
                 TESTER: {columnName: "TESTER"},
@@ -233,6 +235,7 @@ public isolated client class Client {
             tableName: "RelatedPersonTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                RELATEDPERSONTABLE_ID: {columnName: "RELATEDPERSONTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
                 ACTIVE: {columnName: "ACTIVE"},
@@ -262,6 +265,7 @@ public isolated client class Client {
             tableName: "EvidenceVariableTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                EVIDENCEVARIABLETABLE_ID: {columnName: "EVIDENCEVARIABLETABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -290,6 +294,7 @@ public isolated client class Client {
             tableName: "ValueSetTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                VALUESETTABLE_ID: {columnName: "VALUESETTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 CONTEXT: {columnName: "CONTEXT"},
@@ -319,6 +324,7 @@ public isolated client class Client {
             tableName: "DocumentManifestTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                DOCUMENTMANIFESTTABLE_ID: {columnName: "DOCUMENTMANIFESTTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
                 RELATED_ID: {columnName: "RELATED_ID"},
@@ -339,6 +345,7 @@ public isolated client class Client {
             tableName: "ImmunizationRecommendationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                IMMUNIZATIONRECOMMENDATIONTABLE_ID: {columnName: "IMMUNIZATIONRECOMMENDATIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 TARGET_DISEASE: {columnName: "TARGET_DISEASE"},
@@ -357,6 +364,7 @@ public isolated client class Client {
             tableName: "DeviceMetricTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                DEVICEMETRICTABLE_ID: {columnName: "DEVICEMETRICTABLE_ID"},
                 CATEGORY: {columnName: "CATEGORY"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 TYPE: {columnName: "TYPE"},
@@ -373,6 +381,7 @@ public isolated client class Client {
             tableName: "LocationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                LOCATIONTABLE_ID: {columnName: "LOCATIONTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
                 STATUS: {columnName: "STATUS"},
@@ -397,6 +406,7 @@ public isolated client class Client {
             tableName: "ExplanationOfBenefitTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                EXPLANATIONOFBENEFITTABLE_ID: {columnName: "EXPLANATIONOFBENEFITTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -414,6 +424,7 @@ public isolated client class Client {
             tableName: "FlagTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                FLAGTABLE_ID: {columnName: "FLAGTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -429,6 +440,7 @@ public isolated client class Client {
             tableName: "MedicationStatementTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICATIONSTATEMENTTABLE_ID: {columnName: "MEDICATIONSTATEMENTTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
                 CATEGORY: {columnName: "CATEGORY"},
@@ -447,6 +459,7 @@ public isolated client class Client {
             tableName: "InsurancePlanTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                INSURANCEPLANTABLE_ID: {columnName: "INSURANCEPLANTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
                 STATUS: {columnName: "STATUS"},
@@ -471,6 +484,7 @@ public isolated client class Client {
             tableName: "MedicinalProductContraindicationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID: {columnName: "MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
                 UPDATED_AT: {columnName: "UPDATED_AT"},
@@ -484,6 +498,7 @@ public isolated client class Client {
             tableName: "ClaimResponseTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CLAIMRESPONSETABLE_ID: {columnName: "CLAIMRESPONSETABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
                 OUTCOME: {columnName: "OUTCOME"},
@@ -504,6 +519,7 @@ public isolated client class Client {
             tableName: "MedicinalProductAuthorizationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICINALPRODUCTAUTHORIZATIONTABLE_ID: {columnName: "MEDICINALPRODUCTAUTHORIZATIONTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 COUNTRY: {columnName: "COUNTRY"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -520,6 +536,7 @@ public isolated client class Client {
             tableName: "ImagingStudyTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                IMAGINGSTUDYTABLE_ID: {columnName: "IMAGINGSTUDYTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 DICOM_CLASS: {columnName: "DICOM_CLASS"},
                 SERIES: {columnName: "SERIES"},
@@ -542,6 +559,7 @@ public isolated client class Client {
             tableName: "PractitionerRoleTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                PRACTITIONERROLETABLE_ID: {columnName: "PRACTITIONERROLETABLE_ID"},
                 ROLE: {columnName: "ROLE"},
                 DATE: {columnName: "DATE"},
                 ACTIVE: {columnName: "ACTIVE"},
@@ -563,6 +581,7 @@ public isolated client class Client {
             tableName: "GroupTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                GROUPTABLE_ID: {columnName: "GROUPTABLE_ID"},
                 CHARACTERISTIC: {columnName: "CHARACTERISTIC"},
                 CODE: {columnName: "CODE"},
                 EXCLUDE: {columnName: "EXCLUDE"},
@@ -583,6 +602,7 @@ public isolated client class Client {
             tableName: "PersonTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                PERSONTABLE_ID: {columnName: "PERSONTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
                 PHONE: {columnName: "PHONE"},
@@ -610,6 +630,7 @@ public isolated client class Client {
             tableName: "PractitionerTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                PRACTITIONERTABLE_ID: {columnName: "PRACTITIONERTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
                 ACTIVE: {columnName: "ACTIVE"},
@@ -640,6 +661,7 @@ public isolated client class Client {
             tableName: "ActivityDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ACTIVITYDEFINITIONTABLE_ID: {columnName: "ACTIVITYDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -668,6 +690,7 @@ public isolated client class Client {
             tableName: "EvidenceTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                EVIDENCETABLE_ID: {columnName: "EVIDENCETABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -696,6 +719,7 @@ public isolated client class Client {
             tableName: "DeviceTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                DEVICETABLE_ID: {columnName: "DEVICETABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 UDI_DI: {columnName: "UDI_DI"},
                 UDI_CARRIER: {columnName: "UDI_CARRIER"},
@@ -718,6 +742,7 @@ public isolated client class Client {
             tableName: "FamilyMemberHistoryTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                FAMILYMEMBERHISTORYTABLE_ID: {columnName: "FAMILYMEMBERHISTORYTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -738,6 +763,7 @@ public isolated client class Client {
             tableName: "AdverseEventTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ADVERSEEVENTTABLE_ID: {columnName: "ADVERSEEVENTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 CATEGORY: {columnName: "CATEGORY"},
                 SERIOUSNESS: {columnName: "SERIOUSNESS"},
@@ -757,6 +783,7 @@ public isolated client class Client {
             tableName: "SupplyRequestTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SUPPLYREQUESTTABLE_ID: {columnName: "SUPPLYREQUESTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 CATEGORY: {columnName: "CATEGORY"},
@@ -774,6 +801,7 @@ public isolated client class Client {
             tableName: "ExampleScenarioTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                EXAMPLESCENARIOTABLE_ID: {columnName: "EXAMPLESCENARIOTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 STATUS: {columnName: "STATUS"},
@@ -798,6 +826,7 @@ public isolated client class Client {
             tableName: "InvoiceTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                INVOICETABLE_ID: {columnName: "INVOICETABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 TOTALNET: {columnName: "TOTALNET"},
@@ -818,6 +847,7 @@ public isolated client class Client {
             tableName: "QuestionnaireResponseTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                QUESTIONNAIRERESPONSETABLE_ID: {columnName: "QUESTIONNAIRERESPONSETABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 AUTHORED: {columnName: "AUTHORED"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -834,6 +864,7 @@ public isolated client class Client {
             tableName: "ObservationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                OBSERVATIONTABLE_ID: {columnName: "OBSERVATIONTABLE_ID"},
                 COMPONENT_CODE: {columnName: "COMPONENT_CODE"},
                 VALUE_QUANTITY: {columnName: "VALUE_QUANTITY"},
                 COMBO_CODE: {columnName: "COMBO_CODE"},
@@ -866,6 +897,7 @@ public isolated client class Client {
             tableName: "EffectEvidenceSynthesisTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                EFFECTEVIDENCESYNTHESISTABLE_ID: {columnName: "EFFECTEVIDENCESYNTHESISTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -893,6 +925,7 @@ public isolated client class Client {
             tableName: "OperationDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                OPERATIONDEFINITIONTABLE_ID: {columnName: "OPERATIONDEFINITIONTABLE_ID"},
                 SYSTEM: {columnName: "SYSTEM"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -923,6 +956,7 @@ public isolated client class Client {
             tableName: "MeasureReportTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEASUREREPORTTABLE_ID: {columnName: "MEASUREREPORTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 PERIOD: {columnName: "PERIOD"},
@@ -940,6 +974,7 @@ public isolated client class Client {
             tableName: "SupplyDeliveryTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SUPPLYDELIVERYTABLE_ID: {columnName: "SUPPLYDELIVERYTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -955,6 +990,7 @@ public isolated client class Client {
             tableName: "ServiceRequestTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SERVICEREQUESTTABLE_ID: {columnName: "SERVICEREQUESTTABLE_ID"},
                 REQUISITION: {columnName: "REQUISITION"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -980,6 +1016,7 @@ public isolated client class Client {
             tableName: "BasicTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                BASICTABLE_ID: {columnName: "BASICTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 CREATED: {columnName: "CREATED"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -996,6 +1033,7 @@ public isolated client class Client {
             tableName: "SubscriptionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SUBSCRIPTIONTABLE_ID: {columnName: "SUBSCRIPTIONTABLE_ID"},
                 CRITERIA: {columnName: "CRITERIA"},
                 CONTACT: {columnName: "CONTACT"},
                 STATUS: {columnName: "STATUS"},
@@ -1015,6 +1053,7 @@ public isolated client class Client {
             tableName: "EnrollmentResponseTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ENROLLMENTRESPONSETABLE_ID: {columnName: "ENROLLMENTRESPONSETABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -1030,6 +1069,7 @@ public isolated client class Client {
             tableName: "DeviceRequestTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                DEVICEREQUESTTABLE_ID: {columnName: "DEVICEREQUESTTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 EVENT_DATE: {columnName: "EVENT_DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -1051,6 +1091,7 @@ public isolated client class Client {
             tableName: "AppointmentTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                APPOINTMENTTABLE_ID: {columnName: "APPOINTMENTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 SERVICE_CATEGORY: {columnName: "SERVICE_CATEGORY"},
                 PART_STATUS: {columnName: "PART_STATUS"},
@@ -1073,6 +1114,7 @@ public isolated client class Client {
             tableName: "NamingSystemTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                NAMINGSYSTEMTABLE_ID: {columnName: "NAMINGSYSTEMTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 RESPONSIBLE: {columnName: "RESPONSIBLE"},
                 CONTACT: {columnName: "CONTACT"},
@@ -1103,6 +1145,7 @@ public isolated client class Client {
             tableName: "StructureDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                STRUCTUREDEFINITIONTABLE_ID: {columnName: "STRUCTUREDEFINITIONTABLE_ID"},
                 PATH: {columnName: "PATH"},
                 DERIVATION: {columnName: "DERIVATION"},
                 PUBLISHER: {columnName: "PUBLISHER"},
@@ -1138,6 +1181,7 @@ public isolated client class Client {
             tableName: "ClinicalImpressionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CLINICALIMPRESSIONTABLE_ID: {columnName: "CLINICALIMPRESSIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 FINDING_CODE: {columnName: "FINDING_CODE"},
@@ -1155,6 +1199,7 @@ public isolated client class Client {
             tableName: "CommunicationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                COMMUNICATIONTABLE_ID: {columnName: "COMMUNICATIONTABLE_ID"},
                 RECEIVED: {columnName: "RECEIVED"},
                 STATUS: {columnName: "STATUS"},
                 MEDIUM: {columnName: "MEDIUM"},
@@ -1175,6 +1220,7 @@ public isolated client class Client {
             tableName: "OrganizationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ORGANIZATIONTABLE_ID: {columnName: "ORGANIZATIONTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
                 ADDRESS_USE: {columnName: "ADDRESS_USE"},
@@ -1199,6 +1245,7 @@ public isolated client class Client {
             tableName: "CoverageEligibilityResponseTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                COVERAGEELIGIBILITYRESPONSETABLE_ID: {columnName: "COVERAGEELIGIBILITYRESPONSETABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
                 OUTCOME: {columnName: "OUTCOME"},
@@ -1217,6 +1264,7 @@ public isolated client class Client {
             tableName: "ResearchStudyTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                RESEARCHSTUDYTABLE_ID: {columnName: "RESEARCHSTUDYTABLE_ID"},
                 LOCATION: {columnName: "LOCATION"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -1238,6 +1286,7 @@ public isolated client class Client {
             tableName: "BundleTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                BUNDLETABLE_ID: {columnName: "BUNDLETABLE_ID"},
                 TIMESTAMP: {columnName: "TIMESTAMP"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 TYPE: {columnName: "TYPE"},
@@ -1254,6 +1303,7 @@ public isolated client class Client {
             tableName: "EncounterTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ENCOUNTERTABLE_ID: {columnName: "ENCOUNTERTABLE_ID"},
                 PARTICIPANT_TYPE: {columnName: "PARTICIPANT_TYPE"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -1277,6 +1327,7 @@ public isolated client class Client {
             tableName: "RiskAssessmentTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                RISKASSESSMENTTABLE_ID: {columnName: "RISKASSESSMENTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PROBABILITY: {columnName: "PROBABILITY"},
                 METHOD: {columnName: "METHOD"},
@@ -1295,6 +1346,7 @@ public isolated client class Client {
             tableName: "ListTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                LISTTABLE_ID: {columnName: "LISTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 NOTES: {columnName: "NOTES"},
                 EMPTY_REASON: {columnName: "EMPTY_REASON"},
@@ -1315,6 +1367,7 @@ public isolated client class Client {
             tableName: "OrganizationAffiliationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ORGANIZATIONAFFILIATIONTABLE_ID: {columnName: "ORGANIZATIONAFFILIATIONTABLE_ID"},
                 ROLE: {columnName: "ROLE"},
                 DATE: {columnName: "DATE"},
                 ACTIVE: {columnName: "ACTIVE"},
@@ -1336,6 +1389,7 @@ public isolated client class Client {
             tableName: "ChargeItemTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CHARGEITEMTABLE_ID: {columnName: "CHARGEITEMTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 FACTOR_OVERRIDE: {columnName: "FACTOR_OVERRIDE"},
                 QUANTITY: {columnName: "QUANTITY"},
@@ -1357,6 +1411,7 @@ public isolated client class Client {
             tableName: "MedicationKnowledgeTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICATIONKNOWLEDGETABLE_ID: {columnName: "MEDICATIONKNOWLEDGETABLE_ID"},
                 CODE: {columnName: "CODE"},
                 SOURCE_COST: {columnName: "SOURCE_COST"},
                 STATUS: {columnName: "STATUS"},
@@ -1380,6 +1435,7 @@ public isolated client class Client {
             tableName: "PlanDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                PLANDEFINITIONTABLE_ID: {columnName: "PLANDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -1409,6 +1465,7 @@ public isolated client class Client {
             tableName: "CarePlanTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CAREPLANTABLE_ID: {columnName: "CAREPLANTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 INSTANTIATES_URI: {columnName: "INSTANTIATES_URI"},
@@ -1430,6 +1487,7 @@ public isolated client class Client {
             tableName: "VisionPrescriptionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                VISIONPRESCRIPTIONTABLE_ID: {columnName: "VISIONPRESCRIPTIONTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 DATEWRITTEN: {columnName: "DATEWRITTEN"},
@@ -1446,6 +1504,7 @@ public isolated client class Client {
             tableName: "EpisodeOfCareTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                EPISODEOFCARETABLE_ID: {columnName: "EPISODEOFCARETABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -1463,6 +1522,7 @@ public isolated client class Client {
             tableName: "CareTeamTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CARETEAMTABLE_ID: {columnName: "CARETEAMTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 CATEGORY: {columnName: "CATEGORY"},
@@ -1480,6 +1540,7 @@ public isolated client class Client {
             tableName: "MedicationAdministrationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICATIONADMINISTRATIONTABLE_ID: {columnName: "MEDICATIONADMINISTRATIONTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
                 REASON_NOT_GIVEN: {columnName: "REASON_NOT_GIVEN"},
@@ -1499,6 +1560,7 @@ public isolated client class Client {
             tableName: "ConsentTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CONSENTTABLE_ID: {columnName: "CONSENTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 SECURITY_LABEL: {columnName: "SECURITY_LABEL"},
                 STATUS: {columnName: "STATUS"},
@@ -1521,6 +1583,7 @@ public isolated client class Client {
             tableName: "DetectedIssueTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                DETECTEDISSUETABLE_ID: {columnName: "DETECTEDISSUETABLE_ID"},
                 CODE: {columnName: "CODE"},
                 IDENTIFIED: {columnName: "IDENTIFIED"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -1537,6 +1600,7 @@ public isolated client class Client {
             tableName: "SubstanceSpecificationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SUBSTANCESPECIFICATIONTABLE_ID: {columnName: "SUBSTANCESPECIFICATIONTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
@@ -1551,6 +1615,7 @@ public isolated client class Client {
             tableName: "AllergyIntoleranceTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ALLERGYINTOLERANCETABLE_ID: {columnName: "ALLERGYINTOLERANCETABLE_ID"},
                 ROUTE: {columnName: "ROUTE"},
                 LAST_DATE: {columnName: "LAST_DATE"},
                 MANIFESTATION: {columnName: "MANIFESTATION"},
@@ -1577,6 +1642,7 @@ public isolated client class Client {
             tableName: "MedicinalProductIndicationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICINALPRODUCTINDICATIONTABLE_ID: {columnName: "MEDICINALPRODUCTINDICATIONTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
                 UPDATED_AT: {columnName: "UPDATED_AT"},
@@ -1590,6 +1656,7 @@ public isolated client class Client {
             tableName: "MedicinalProductPharmaceuticalTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICINALPRODUCTPHARMACEUTICALTABLE_ID: {columnName: "MEDICINALPRODUCTPHARMACEUTICALTABLE_ID"},
                 ROUTE: {columnName: "ROUTE"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 TARGET_SPECIES: {columnName: "TARGET_SPECIES"},
@@ -1606,6 +1673,7 @@ public isolated client class Client {
             tableName: "SlotTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SLOTTABLE_ID: {columnName: "SLOTTABLE_ID"},
                 SERVICE_CATEGORY: {columnName: "SERVICE_CATEGORY"},
                 STATUS: {columnName: "STATUS"},
                 APPOINTMENT_TYPE: {columnName: "APPOINTMENT_TYPE"},
@@ -1626,6 +1694,7 @@ public isolated client class Client {
             tableName: "VerificationResultTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                VERIFICATIONRESULTTABLE_ID: {columnName: "VERIFICATIONRESULTTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
                 UPDATED_AT: {columnName: "UPDATED_AT"},
@@ -1639,6 +1708,7 @@ public isolated client class Client {
             tableName: "SpecimenTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SPECIMENTABLE_ID: {columnName: "SPECIMENTABLE_ID"},
                 COLLECTED: {columnName: "COLLECTED"},
                 STATUS: {columnName: "STATUS"},
                 ACCESSION: {columnName: "ACCESSION"},
@@ -1660,6 +1730,7 @@ public isolated client class Client {
             tableName: "ResearchSubjectTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                RESEARCHSUBJECTTABLE_ID: {columnName: "RESEARCHSUBJECTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -1676,6 +1747,7 @@ public isolated client class Client {
             tableName: "MedicationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICATIONTABLE_ID: {columnName: "MEDICATIONTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
                 EXPIRATION_DATE: {columnName: "EXPIRATION_DATE"},
@@ -1696,6 +1768,7 @@ public isolated client class Client {
             tableName: "ResearchDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                RESEARCHDEFINITIONTABLE_ID: {columnName: "RESEARCHDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -1724,6 +1797,7 @@ public isolated client class Client {
             tableName: "HealthcareServiceTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                HEALTHCARESERVICETABLE_ID: {columnName: "HEALTHCARESERVICETABLE_ID"},
                 SERVICE_CATEGORY: {columnName: "SERVICE_CATEGORY"},
                 CHARACTERISTIC: {columnName: "CHARACTERISTIC"},
                 ACTIVE: {columnName: "ACTIVE"},
@@ -1745,6 +1819,7 @@ public isolated client class Client {
             tableName: "PaymentNoticeTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                PAYMENTNOTICETABLE_ID: {columnName: "PAYMENTNOTICETABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
                 PAYMENT_STATUS: {columnName: "PAYMENT_STATUS"},
@@ -1762,6 +1837,7 @@ public isolated client class Client {
             tableName: "ProvenanceTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                PROVENANCETABLE_ID: {columnName: "PROVENANCETABLE_ID"},
                 RECORDED: {columnName: "RECORDED"},
                 WHEN: {columnName: "WHEN"},
                 AGENT_TYPE: {columnName: "AGENT_TYPE"},
@@ -1780,6 +1856,7 @@ public isolated client class Client {
             tableName: "GraphDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                GRAPHDEFINITIONTABLE_ID: {columnName: "GRAPHDEFINITIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 STATUS: {columnName: "STATUS"},
@@ -1805,6 +1882,7 @@ public isolated client class Client {
             tableName: "MediaTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDIATABLE_ID: {columnName: "MEDIATABLE_ID"},
                 SITE: {columnName: "SITE"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
@@ -1825,6 +1903,7 @@ public isolated client class Client {
             tableName: "BodyStructureTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                BODYSTRUCTURETABLE_ID: {columnName: "BODYSTRUCTURETABLE_ID"},
                 LOCATION: {columnName: "LOCATION"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 MORPHOLOGY: {columnName: "MORPHOLOGY"},
@@ -1841,6 +1920,7 @@ public isolated client class Client {
             tableName: "DiagnosticReportTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                DIAGNOSTICREPORTTABLE_ID: {columnName: "DIAGNOSTICREPORTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 ISSUED: {columnName: "ISSUED"},
                 CODE: {columnName: "CODE"},
@@ -1861,6 +1941,7 @@ public isolated client class Client {
             tableName: "GoalTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                GOALTABLE_ID: {columnName: "GOALTABLE_ID"},
                 TARGET_DATE: {columnName: "TARGET_DATE"},
                 ACHIEVEMENT_STATUS: {columnName: "ACHIEVEMENT_STATUS"},
                 CATEGORY: {columnName: "CATEGORY"},
@@ -1880,6 +1961,7 @@ public isolated client class Client {
             tableName: "CapabilityStatementTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CAPABILITYSTATEMENTTABLE_ID: {columnName: "CAPABILITYSTATEMENTTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 FORMAT: {columnName: "FORMAT"},
@@ -1911,6 +1993,7 @@ public isolated client class Client {
             tableName: "DeviceUseStatementTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                DEVICEUSESTATEMENTTABLE_ID: {columnName: "DEVICEUSESTATEMENTTABLE_ID"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
@@ -1925,6 +2008,7 @@ public isolated client class Client {
             tableName: "ScheduleTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SCHEDULETABLE_ID: {columnName: "SCHEDULETABLE_ID"},
                 DATE: {columnName: "DATE"},
                 SERVICE_CATEGORY: {columnName: "SERVICE_CATEGORY"},
                 ACTIVE: {columnName: "ACTIVE"},
@@ -1944,6 +2028,7 @@ public isolated client class Client {
             tableName: "MedicinalProductPackagedTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICINALPRODUCTPACKAGEDTABLE_ID: {columnName: "MEDICINALPRODUCTPACKAGEDTABLE_ID"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
@@ -1958,6 +2043,7 @@ public isolated client class Client {
             tableName: "ProcedureTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                PROCEDURETABLE_ID: {columnName: "PROCEDURETABLE_ID"},
                 DATE: {columnName: "DATE"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -1978,6 +2064,7 @@ public isolated client class Client {
             tableName: "LibraryTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                LIBRARYTABLE_ID: {columnName: "LIBRARYTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -2008,6 +2095,7 @@ public isolated client class Client {
             tableName: "CodeSystemTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CODESYSTEMTABLE_ID: {columnName: "CODESYSTEMTABLE_ID"},
                 LANGUAGE: {columnName: "LANGUAGE"},
                 SYSTEM: {columnName: "SYSTEM"},
                 PUBLISHER: {columnName: "PUBLISHER"},
@@ -2038,6 +2126,7 @@ public isolated client class Client {
             tableName: "CommunicationRequestTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                COMMUNICATIONREQUESTTABLE_ID: {columnName: "COMMUNICATIONREQUESTTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 MEDIUM: {columnName: "MEDIUM"},
                 OCCURRENCE: {columnName: "OCCURRENCE"},
@@ -2059,6 +2148,7 @@ public isolated client class Client {
             tableName: "DocumentReferenceTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                DOCUMENTREFERENCETABLE_ID: {columnName: "DOCUMENTREFERENCETABLE_ID"},
                 LANGUAGE: {columnName: "LANGUAGE"},
                 LOCATION: {columnName: "LOCATION"},
                 CONTENTTYPE: {columnName: "CONTENTTYPE"},
@@ -2088,6 +2178,7 @@ public isolated client class Client {
             tableName: "RequestGroupTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                REQUESTGROUPTABLE_ID: {columnName: "REQUESTGROUPTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
                 INSTANTIATES_URI: {columnName: "INSTANTIATES_URI"},
@@ -2109,6 +2200,7 @@ public isolated client class Client {
             tableName: "ClaimTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CLAIMTABLE_ID: {columnName: "CLAIMTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
                 USE: {columnName: "USE"},
@@ -2127,6 +2219,7 @@ public isolated client class Client {
             tableName: "MessageDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MESSAGEDEFINITIONTABLE_ID: {columnName: "MESSAGEDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 FOCUS: {columnName: "FOCUS"},
@@ -2156,6 +2249,7 @@ public isolated client class Client {
             tableName: "RiskEvidenceSynthesisTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                RISKEVIDENCESYNTHESISTABLE_ID: {columnName: "RISKEVIDENCESYNTHESISTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -2183,6 +2277,7 @@ public isolated client class Client {
             tableName: "TaskTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                TASKTABLE_ID: {columnName: "TASKTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
                 BUSINESS_STATUS: {columnName: "BUSINESS_STATUS"},
@@ -2207,6 +2302,7 @@ public isolated client class Client {
             tableName: "ImplementationGuideTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                IMPLEMENTATIONGUIDETABLE_ID: {columnName: "IMPLEMENTATIONGUIDETABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EXPERIMENTAL: {columnName: "EXPERIMENTAL"},
@@ -2233,6 +2329,7 @@ public isolated client class Client {
             tableName: "StructureMapTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                STRUCTUREMAPTABLE_ID: {columnName: "STRUCTUREMAPTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 CONTEXT: {columnName: "CONTEXT"},
@@ -2259,6 +2356,7 @@ public isolated client class Client {
             tableName: "MedicinalProductUndesirableEffectTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID: {columnName: "MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
                 UPDATED_AT: {columnName: "UPDATED_AT"},
@@ -2272,6 +2370,7 @@ public isolated client class Client {
             tableName: "CompartmentDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                COMPARTMENTDEFINITIONTABLE_ID: {columnName: "COMPARTMENTDEFINITIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 CODE: {columnName: "CODE"},
@@ -2297,6 +2396,7 @@ public isolated client class Client {
             tableName: "EndpointTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ENDPOINTTABLE_ID: {columnName: "ENDPOINTTABLE_ID"},
                 CONNECTION_TYPE: {columnName: "CONNECTION_TYPE"},
                 STATUS: {columnName: "STATUS"},
                 PAYLOAD_TYPE: {columnName: "PAYLOAD_TYPE"},
@@ -2315,6 +2415,7 @@ public isolated client class Client {
             tableName: "TerminologyCapabilitiesTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                TERMINOLOGYCAPABILITIESTABLE_ID: {columnName: "TERMINOLOGYCAPABILITIESTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 STATUS: {columnName: "STATUS"},
@@ -2340,6 +2441,7 @@ public isolated client class Client {
             tableName: "ConditionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CONDITIONTABLE_ID: {columnName: "CONDITIONTABLE_ID"},
                 CLINICAL_STATUS: {columnName: "CLINICAL_STATUS"},
                 STAGE: {columnName: "STAGE"},
                 ONSET_AGE: {columnName: "ONSET_AGE"},
@@ -2369,6 +2471,7 @@ public isolated client class Client {
             tableName: "CompositionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                COMPOSITIONTABLE_ID: {columnName: "COMPOSITIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 RELATED_ID: {columnName: "RELATED_ID"},
@@ -2393,6 +2496,7 @@ public isolated client class Client {
             tableName: "ContractTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CONTRACTTABLE_ID: {columnName: "CONTRACTTABLE_ID"},
                 ISSUED: {columnName: "ISSUED"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -2411,6 +2515,7 @@ public isolated client class Client {
             tableName: "ImmunizationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                IMMUNIZATIONTABLE_ID: {columnName: "IMMUNIZATIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 VACCINE_CODE: {columnName: "VACCINE_CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -2434,6 +2539,7 @@ public isolated client class Client {
             tableName: "MedicationDispenseTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICATIONDISPENSETABLE_ID: {columnName: "MEDICATIONDISPENSETABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
                 WHENHANDEDOVER: {columnName: "WHENHANDEDOVER"},
@@ -2453,6 +2559,7 @@ public isolated client class Client {
             tableName: "MolecularSequenceTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MOLECULARSEQUENCETABLE_ID: {columnName: "MOLECULARSEQUENCETABLE_ID"},
                 CHROMOSOME: {columnName: "CHROMOSOME"},
                 VARIANT_START: {columnName: "VARIANT_START"},
                 WINDOW_START: {columnName: "WINDOW_START"},
@@ -2474,6 +2581,7 @@ public isolated client class Client {
             tableName: "SearchParameterTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SEARCHPARAMETERTABLE_ID: {columnName: "SEARCHPARAMETERTABLE_ID"},
                 TARGET: {columnName: "TARGET"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2502,6 +2610,7 @@ public isolated client class Client {
             tableName: "MedicationRequestTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICATIONREQUESTTABLE_ID: {columnName: "MEDICATIONREQUESTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -2524,6 +2633,7 @@ public isolated client class Client {
             tableName: "EnrollmentRequestTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ENROLLMENTREQUESTTABLE_ID: {columnName: "ENROLLMENTREQUESTTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -2539,6 +2649,7 @@ public isolated client class Client {
             tableName: "SpecimenDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SPECIMENDEFINITIONTABLE_ID: {columnName: "SPECIMENDEFINITIONTABLE_ID"},
                 CONTAINER: {columnName: "CONTAINER"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 TYPE: {columnName: "TYPE"},
@@ -2555,6 +2666,7 @@ public isolated client class Client {
             tableName: "EventDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                EVENTDEFINITIONTABLE_ID: {columnName: "EVENTDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -2583,6 +2695,7 @@ public isolated client class Client {
             tableName: "ImmunizationEvaluationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                IMMUNIZATIONEVALUATIONTABLE_ID: {columnName: "IMMUNIZATIONEVALUATIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
                 TARGET_DISEASE: {columnName: "TARGET_DISEASE"},
@@ -2601,6 +2714,7 @@ public isolated client class Client {
             tableName: "PaymentReconciliationTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                PAYMENTRECONCILIATIONTABLE_ID: {columnName: "PAYMENTRECONCILIATIONTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
                 OUTCOME: {columnName: "OUTCOME"},
@@ -2619,6 +2733,7 @@ public isolated client class Client {
             tableName: "MeasureTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEASURETABLE_ID: {columnName: "MEASURETABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -2647,6 +2762,7 @@ public isolated client class Client {
             tableName: "ConceptMapTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CONCEPTMAPTABLE_ID: {columnName: "CONCEPTMAPTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 CONTEXT: {columnName: "CONTEXT"},
@@ -2679,6 +2795,7 @@ public isolated client class Client {
             tableName: "ResearchElementDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                RESEARCHELEMENTDEFINITIONTABLE_ID: {columnName: "RESEARCHELEMENTDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -2707,6 +2824,7 @@ public isolated client class Client {
             tableName: "GuidanceResponseTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                GUIDANCERESPONSETABLE_ID: {columnName: "GUIDANCERESPONSETABLE_ID"},
                 REQUEST: {columnName: "REQUEST"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -2722,6 +2840,7 @@ public isolated client class Client {
             tableName: "LinkageTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                LINKAGETABLE_ID: {columnName: "LINKAGETABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
                 UPDATED_AT: {columnName: "UPDATED_AT"},
@@ -2735,6 +2854,7 @@ public isolated client class Client {
             tableName: "MedicinalProductTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICINALPRODUCTTABLE_ID: {columnName: "MEDICINALPRODUCTTABLE_ID"},
                 NAME_LANGUAGE: {columnName: "NAME_LANGUAGE"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 NAME: {columnName: "NAME"},
@@ -2751,6 +2871,7 @@ public isolated client class Client {
             tableName: "DeviceDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                DEVICEDEFINITIONTABLE_ID: {columnName: "DEVICEDEFINITIONTABLE_ID"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 TYPE: {columnName: "TYPE"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -2766,6 +2887,7 @@ public isolated client class Client {
             tableName: "CoverageEligibilityRequestTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                COVERAGEELIGIBILITYREQUESTTABLE_ID: {columnName: "COVERAGEELIGIBILITYREQUESTTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -2782,6 +2904,7 @@ public isolated client class Client {
             tableName: "PatientTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                PATIENTTABLE_ID: {columnName: "PATIENTTABLE_ID"},
                 LANGUAGE: {columnName: "LANGUAGE"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
@@ -2815,6 +2938,7 @@ public isolated client class Client {
             tableName: "CoverageTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                COVERAGETABLE_ID: {columnName: "COVERAGETABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 DEPENDENT: {columnName: "DEPENDENT"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -2834,6 +2958,7 @@ public isolated client class Client {
             tableName: "SubstanceTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                SUBSTANCETABLE_ID: {columnName: "SUBSTANCETABLE_ID"},
                 CONTAINER_IDENTIFIER: {columnName: "CONTAINER_IDENTIFIER"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -2854,6 +2979,7 @@ public isolated client class Client {
             tableName: "ChargeItemDefinitionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                CHARGEITEMDEFINITIONTABLE_ID: {columnName: "CHARGEITEMDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
                 EFFECTIVE: {columnName: "EFFECTIVE"},
@@ -2880,6 +3006,7 @@ public isolated client class Client {
             tableName: "MedicinalProductInteractionTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MEDICINALPRODUCTINTERACTIONTABLE_ID: {columnName: "MEDICINALPRODUCTINTERACTIONTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
                 UPDATED_AT: {columnName: "UPDATED_AT"},
@@ -2893,6 +3020,7 @@ public isolated client class Client {
             tableName: "AccountTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                ACCOUNTTABLE_ID: {columnName: "ACCOUNTTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 PERIOD: {columnName: "PERIOD"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -2911,6 +3039,7 @@ public isolated client class Client {
             tableName: "MessageHeaderTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                MESSAGEHEADERTABLE_ID: {columnName: "MESSAGEHEADERTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 SOURCE_URI: {columnName: "SOURCE_URI"},
                 DESTINATION: {columnName: "DESTINATION"},
@@ -2931,6 +3060,7 @@ public isolated client class Client {
             tableName: "AuditEventTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                AUDITEVENTTABLE_ID: {columnName: "AUDITEVENTTABLE_ID"},
                 SUBTYPE: {columnName: "SUBTYPE"},
                 SITE: {columnName: "SITE"},
                 OUTCOME: {columnName: "OUTCOME"},
@@ -2958,6 +3088,7 @@ public isolated client class Client {
             tableName: "NutritionOrderTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                NUTRITIONORDERTABLE_ID: {columnName: "NUTRITIONORDERTABLE_ID"},
                 SUPPLEMENT: {columnName: "SUPPLEMENT"},
                 STATUS: {columnName: "STATUS"},
                 DATETIME: {columnName: "DATETIME"},
@@ -2979,6 +3110,7 @@ public isolated client class Client {
             tableName: "QuestionnaireTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                QUESTIONNAIRETABLE_ID: {columnName: "QUESTIONNAIRETABLE_ID"},
                 DEFINITION: {columnName: "DEFINITION"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -3009,6 +3141,7 @@ public isolated client class Client {
             tableName: "AppointmentResponseTable",
             fieldMetadata: {
                 ID: {columnName: "ID", dbGenerated: true},
+                APPOINTMENTRESPONSETABLE_ID: {columnName: "APPOINTMENTRESPONSETABLE_ID"},
                 PART_STATUS: {columnName: "PART_STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -3028,8 +3161,8 @@ public isolated client class Client {
         }
         self.dbClient = dbClient;
         self.persistClients = {
-            [S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N__T_A_B_L_E]: check new (dbClient, self.metadata.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N__T_A_B_L_E), psql:H2_SPECIFICS),
-            [R_E_F_E_R_E_N_C_E__T_A_B_L_E]: check new (dbClient, self.metadata.get(R_E_F_E_R_E_N_C_E__T_A_B_L_E), psql:H2_SPECIFICS),
+            [S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S]: check new (dbClient, self.metadata.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S), psql:H2_SPECIFICS),
+            [R_E_F_E_R_E_N_C_E_S]: check new (dbClient, self.metadata.get(R_E_F_E_R_E_N_C_E_S), psql:H2_SPECIFICS),
             [TEST_SCRIPT_TABLE]: check new (dbClient, self.metadata.get(TEST_SCRIPT_TABLE), psql:H2_SPECIFICS),
             [TEST_REPORT_TABLE]: check new (dbClient, self.metadata.get(TEST_REPORT_TABLE), psql:H2_SPECIFICS),
             [RELATED_PERSON_TABLE]: check new (dbClient, self.metadata.get(RELATED_PERSON_TABLE), psql:H2_SPECIFICS),
@@ -3166,20 +3299,20 @@ public isolated client class Client {
         };
     }
 
-    isolated resource function get search_param_res_expression_tables(SEARCH_PARAM_RES_EXPRESSION_TABLETargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
+    isolated resource function get search_param_res_expressions(SEARCH_PARAM_RES_EXPRESSIONSTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
         'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
         name: "query"
     } external;
 
-    isolated resource function get search_param_res_expression_tables/[int ID](SEARCH_PARAM_RES_EXPRESSION_TABLETargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+    isolated resource function get search_param_res_expressions/[int ID](SEARCH_PARAM_RES_EXPRESSIONSTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
         'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
         name: "queryOne"
     } external;
 
-    isolated resource function post search_param_res_expression_tables(SEARCH_PARAM_RES_EXPRESSION_TABLEInsert[] data) returns int[]|persist:Error {
+    isolated resource function post search_param_res_expressions(SEARCH_PARAM_RES_EXPRESSIONSInsert[] data) returns int[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
-            sqlClient = self.persistClients.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N__T_A_B_L_E);
+            sqlClient = self.persistClients.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S);
         }
         sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
         return from sql:ExecutionResult inserted in result
@@ -3187,39 +3320,39 @@ public isolated client class Client {
             select <int>inserted.lastInsertId;
     }
 
-    isolated resource function put search_param_res_expression_tables/[int ID](SEARCH_PARAM_RES_EXPRESSION_TABLEUpdate value) returns SEARCH_PARAM_RES_EXPRESSION_TABLE|persist:Error {
+    isolated resource function put search_param_res_expressions/[int ID](SEARCH_PARAM_RES_EXPRESSIONSUpdate value) returns SEARCH_PARAM_RES_EXPRESSIONS|persist:Error {
         psql:SQLClient sqlClient;
         lock {
-            sqlClient = self.persistClients.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N__T_A_B_L_E);
+            sqlClient = self.persistClients.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S);
         }
         _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/search_param_res_expression_tables/[ID].get();
+        return self->/search_param_res_expressions/[ID].get();
     }
 
-    isolated resource function delete search_param_res_expression_tables/[int ID]() returns SEARCH_PARAM_RES_EXPRESSION_TABLE|persist:Error {
-        SEARCH_PARAM_RES_EXPRESSION_TABLE result = check self->/search_param_res_expression_tables/[ID].get();
+    isolated resource function delete search_param_res_expressions/[int ID]() returns SEARCH_PARAM_RES_EXPRESSIONS|persist:Error {
+        SEARCH_PARAM_RES_EXPRESSIONS result = check self->/search_param_res_expressions/[ID].get();
         psql:SQLClient sqlClient;
         lock {
-            sqlClient = self.persistClients.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N__T_A_B_L_E);
+            sqlClient = self.persistClients.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S);
         }
         _ = check sqlClient.runDeleteQuery(ID);
         return result;
     }
 
-    isolated resource function get reference_tables(REFERENCE_TABLETargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
+    isolated resource function get references(REFERENCESTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
         'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
         name: "query"
     } external;
 
-    isolated resource function get reference_tables/[int ID](REFERENCE_TABLETargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+    isolated resource function get references/[int ID](REFERENCESTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
         'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
         name: "queryOne"
     } external;
 
-    isolated resource function post reference_tables(REFERENCE_TABLEInsert[] data) returns int[]|persist:Error {
+    isolated resource function post references(REFERENCESInsert[] data) returns int[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
-            sqlClient = self.persistClients.get(R_E_F_E_R_E_N_C_E__T_A_B_L_E);
+            sqlClient = self.persistClients.get(R_E_F_E_R_E_N_C_E_S);
         }
         sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
         return from sql:ExecutionResult inserted in result
@@ -3227,20 +3360,20 @@ public isolated client class Client {
             select <int>inserted.lastInsertId;
     }
 
-    isolated resource function put reference_tables/[int ID](REFERENCE_TABLEUpdate value) returns REFERENCE_TABLE|persist:Error {
+    isolated resource function put references/[int ID](REFERENCESUpdate value) returns REFERENCES|persist:Error {
         psql:SQLClient sqlClient;
         lock {
-            sqlClient = self.persistClients.get(R_E_F_E_R_E_N_C_E__T_A_B_L_E);
+            sqlClient = self.persistClients.get(R_E_F_E_R_E_N_C_E_S);
         }
         _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/reference_tables/[ID].get();
+        return self->/references/[ID].get();
     }
 
-    isolated resource function delete reference_tables/[int ID]() returns REFERENCE_TABLE|persist:Error {
-        REFERENCE_TABLE result = check self->/reference_tables/[ID].get();
+    isolated resource function delete references/[int ID]() returns REFERENCES|persist:Error {
+        REFERENCES result = check self->/references/[ID].get();
         psql:SQLClient sqlClient;
         lock {
-            sqlClient = self.persistClients.get(R_E_F_E_R_E_N_C_E__T_A_B_L_E);
+            sqlClient = self.persistClients.get(R_E_F_E_R_E_N_C_E_S);
         }
         _ = check sqlClient.runDeleteQuery(ID);
         return result;

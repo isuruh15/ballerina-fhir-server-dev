@@ -5,7 +5,7 @@
 
 import ballerina/time;
 
-public type SEARCH_PARAM_RES_EXPRESSION_TABLE record {|
+public type SEARCH_PARAM_RES_EXPRESSIONS record {|
     readonly int ID;
     string SEARCH_PARAM_NAME;
     string SEARCH_PARAM_TYPE;
@@ -13,7 +13,7 @@ public type SEARCH_PARAM_RES_EXPRESSION_TABLE record {|
     string EXPRESSION;
 |};
 
-public type SEARCH_PARAM_RES_EXPRESSION_TABLEOptionalized record {|
+public type SEARCH_PARAM_RES_EXPRESSIONSOptionalized record {|
     int ID?;
     string SEARCH_PARAM_NAME?;
     string SEARCH_PARAM_TYPE?;
@@ -21,23 +21,23 @@ public type SEARCH_PARAM_RES_EXPRESSION_TABLEOptionalized record {|
     string EXPRESSION?;
 |};
 
-public type SEARCH_PARAM_RES_EXPRESSION_TABLETargetType typedesc<SEARCH_PARAM_RES_EXPRESSION_TABLEOptionalized>;
+public type SEARCH_PARAM_RES_EXPRESSIONSTargetType typedesc<SEARCH_PARAM_RES_EXPRESSIONSOptionalized>;
 
-public type SEARCH_PARAM_RES_EXPRESSION_TABLEInsert record {|
+public type SEARCH_PARAM_RES_EXPRESSIONSInsert record {|
     string SEARCH_PARAM_NAME;
     string SEARCH_PARAM_TYPE;
     string RESOURCE_NAME;
     string EXPRESSION;
 |};
 
-public type SEARCH_PARAM_RES_EXPRESSION_TABLEUpdate record {|
+public type SEARCH_PARAM_RES_EXPRESSIONSUpdate record {|
     string SEARCH_PARAM_NAME?;
     string SEARCH_PARAM_TYPE?;
     string RESOURCE_NAME?;
     string EXPRESSION?;
 |};
 
-public type REFERENCE_TABLE record {|
+public type REFERENCES record {|
     readonly int ID;
     string SOURCE_RESOURCE_TYPE;
     string SOURCE_RESOURCE_ID;
@@ -50,7 +50,7 @@ public type REFERENCE_TABLE record {|
     time:Civil LAST_UPDATED;
 |};
 
-public type REFERENCE_TABLEOptionalized record {|
+public type REFERENCESOptionalized record {|
     int ID?;
     string SOURCE_RESOURCE_TYPE?;
     string SOURCE_RESOURCE_ID?;
@@ -63,9 +63,9 @@ public type REFERENCE_TABLEOptionalized record {|
     time:Civil LAST_UPDATED?;
 |};
 
-public type REFERENCE_TABLETargetType typedesc<REFERENCE_TABLEOptionalized>;
+public type REFERENCESTargetType typedesc<REFERENCESOptionalized>;
 
-public type REFERENCE_TABLEInsert record {|
+public type REFERENCESInsert record {|
     string SOURCE_RESOURCE_TYPE;
     string SOURCE_RESOURCE_ID;
     string SOURCE_EXPRESSION;
@@ -77,7 +77,7 @@ public type REFERENCE_TABLEInsert record {|
     time:Civil LAST_UPDATED;
 |};
 
-public type REFERENCE_TABLEUpdate record {|
+public type REFERENCESUpdate record {|
     string SOURCE_RESOURCE_TYPE?;
     string SOURCE_RESOURCE_ID?;
     string SOURCE_EXPRESSION?;
@@ -91,6 +91,7 @@ public type REFERENCE_TABLEUpdate record {|
 
 public type TestScriptTable record {|
     readonly int ID;
+    string TESTSCRIPTTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? CONTEXT;
@@ -114,6 +115,7 @@ public type TestScriptTable record {|
 
 public type TestScriptTableOptionalized record {|
     int ID?;
+    string TESTSCRIPTTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? CONTEXT?;
@@ -138,6 +140,7 @@ public type TestScriptTableOptionalized record {|
 public type TestScriptTableTargetType typedesc<TestScriptTableOptionalized>;
 
 public type TestScriptTableInsert record {|
+    string TESTSCRIPTTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? CONTEXT;
@@ -160,6 +163,7 @@ public type TestScriptTableInsert record {|
 |};
 
 public type TestScriptTableUpdate record {|
+    string TESTSCRIPTTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? CONTEXT?;
@@ -183,6 +187,7 @@ public type TestScriptTableUpdate record {|
 
 public type TestReportTable record {|
     readonly int ID;
+    string TESTREPORTTABLE_ID;
     time:Date? ISSUED;
     string? PARTICIPANT;
     string? TESTER;
@@ -197,6 +202,7 @@ public type TestReportTable record {|
 
 public type TestReportTableOptionalized record {|
     int ID?;
+    string TESTREPORTTABLE_ID?;
     time:Date? ISSUED?;
     string? PARTICIPANT?;
     string? TESTER?;
@@ -212,6 +218,7 @@ public type TestReportTableOptionalized record {|
 public type TestReportTableTargetType typedesc<TestReportTableOptionalized>;
 
 public type TestReportTableInsert record {|
+    string TESTREPORTTABLE_ID;
     time:Date? ISSUED;
     string? PARTICIPANT;
     string? TESTER;
@@ -225,6 +232,7 @@ public type TestReportTableInsert record {|
 |};
 
 public type TestReportTableUpdate record {|
+    string TESTREPORTTABLE_ID?;
     time:Date? ISSUED?;
     string? PARTICIPANT?;
     string? TESTER?;
@@ -239,6 +247,7 @@ public type TestReportTableUpdate record {|
 
 public type RelatedPersonTable record {|
     readonly int ID;
+    string RELATEDPERSONTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? ACTIVE;
@@ -264,6 +273,7 @@ public type RelatedPersonTable record {|
 
 public type RelatedPersonTableOptionalized record {|
     int ID?;
+    string RELATEDPERSONTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? ACTIVE?;
@@ -290,6 +300,7 @@ public type RelatedPersonTableOptionalized record {|
 public type RelatedPersonTableTargetType typedesc<RelatedPersonTableOptionalized>;
 
 public type RelatedPersonTableInsert record {|
+    string RELATEDPERSONTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? ACTIVE;
@@ -314,6 +325,7 @@ public type RelatedPersonTableInsert record {|
 |};
 
 public type RelatedPersonTableUpdate record {|
+    string RELATEDPERSONTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? ACTIVE?;
@@ -339,6 +351,7 @@ public type RelatedPersonTableUpdate record {|
 
 public type EvidenceVariableTable record {|
     readonly int ID;
+    string EVIDENCEVARIABLETABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -363,6 +376,7 @@ public type EvidenceVariableTable record {|
 
 public type EvidenceVariableTableOptionalized record {|
     int ID?;
+    string EVIDENCEVARIABLETABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -388,6 +402,7 @@ public type EvidenceVariableTableOptionalized record {|
 public type EvidenceVariableTableTargetType typedesc<EvidenceVariableTableOptionalized>;
 
 public type EvidenceVariableTableInsert record {|
+    string EVIDENCEVARIABLETABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -411,6 +426,7 @@ public type EvidenceVariableTableInsert record {|
 |};
 
 public type EvidenceVariableTableUpdate record {|
+    string EVIDENCEVARIABLETABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -435,6 +451,7 @@ public type EvidenceVariableTableUpdate record {|
 
 public type ValueSetTable record {|
     readonly int ID;
+    string VALUESETTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? CONTEXT;
@@ -460,6 +477,7 @@ public type ValueSetTable record {|
 
 public type ValueSetTableOptionalized record {|
     int ID?;
+    string VALUESETTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? CONTEXT?;
@@ -486,6 +504,7 @@ public type ValueSetTableOptionalized record {|
 public type ValueSetTableTargetType typedesc<ValueSetTableOptionalized>;
 
 public type ValueSetTableInsert record {|
+    string VALUESETTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? CONTEXT;
@@ -510,6 +529,7 @@ public type ValueSetTableInsert record {|
 |};
 
 public type ValueSetTableUpdate record {|
+    string VALUESETTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? CONTEXT?;
@@ -535,6 +555,7 @@ public type ValueSetTableUpdate record {|
 
 public type DocumentManifestTable record {|
     readonly int ID;
+    string DOCUMENTMANIFESTTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? RELATED_ID;
@@ -551,6 +572,7 @@ public type DocumentManifestTable record {|
 
 public type DocumentManifestTableOptionalized record {|
     int ID?;
+    string DOCUMENTMANIFESTTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? RELATED_ID?;
@@ -568,6 +590,7 @@ public type DocumentManifestTableOptionalized record {|
 public type DocumentManifestTableTargetType typedesc<DocumentManifestTableOptionalized>;
 
 public type DocumentManifestTableInsert record {|
+    string DOCUMENTMANIFESTTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? RELATED_ID;
@@ -583,6 +606,7 @@ public type DocumentManifestTableInsert record {|
 |};
 
 public type DocumentManifestTableUpdate record {|
+    string DOCUMENTMANIFESTTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? RELATED_ID?;
@@ -599,6 +623,7 @@ public type DocumentManifestTableUpdate record {|
 
 public type ImmunizationRecommendationTable record {|
     readonly int ID;
+    string IMMUNIZATIONRECOMMENDATIONTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? TARGET_DISEASE;
@@ -613,6 +638,7 @@ public type ImmunizationRecommendationTable record {|
 
 public type ImmunizationRecommendationTableOptionalized record {|
     int ID?;
+    string IMMUNIZATIONRECOMMENDATIONTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? TARGET_DISEASE?;
@@ -628,6 +654,7 @@ public type ImmunizationRecommendationTableOptionalized record {|
 public type ImmunizationRecommendationTableTargetType typedesc<ImmunizationRecommendationTableOptionalized>;
 
 public type ImmunizationRecommendationTableInsert record {|
+    string IMMUNIZATIONRECOMMENDATIONTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? TARGET_DISEASE;
@@ -641,6 +668,7 @@ public type ImmunizationRecommendationTableInsert record {|
 |};
 
 public type ImmunizationRecommendationTableUpdate record {|
+    string IMMUNIZATIONRECOMMENDATIONTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? TARGET_DISEASE?;
@@ -655,6 +683,7 @@ public type ImmunizationRecommendationTableUpdate record {|
 
 public type DeviceMetricTable record {|
     readonly int ID;
+    string DEVICEMETRICTABLE_ID;
     string? CATEGORY;
     string? IDENTIFIER;
     string? TYPE;
@@ -667,6 +696,7 @@ public type DeviceMetricTable record {|
 
 public type DeviceMetricTableOptionalized record {|
     int ID?;
+    string DEVICEMETRICTABLE_ID?;
     string? CATEGORY?;
     string? IDENTIFIER?;
     string? TYPE?;
@@ -680,6 +710,7 @@ public type DeviceMetricTableOptionalized record {|
 public type DeviceMetricTableTargetType typedesc<DeviceMetricTableOptionalized>;
 
 public type DeviceMetricTableInsert record {|
+    string DEVICEMETRICTABLE_ID;
     string? CATEGORY;
     string? IDENTIFIER;
     string? TYPE;
@@ -691,6 +722,7 @@ public type DeviceMetricTableInsert record {|
 |};
 
 public type DeviceMetricTableUpdate record {|
+    string DEVICEMETRICTABLE_ID?;
     string? CATEGORY?;
     string? IDENTIFIER?;
     string? TYPE?;
@@ -703,6 +735,7 @@ public type DeviceMetricTableUpdate record {|
 
 public type LocationTable record {|
     readonly int ID;
+    string LOCATIONTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? STATUS;
@@ -723,6 +756,7 @@ public type LocationTable record {|
 
 public type LocationTableOptionalized record {|
     int ID?;
+    string LOCATIONTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? STATUS?;
@@ -744,6 +778,7 @@ public type LocationTableOptionalized record {|
 public type LocationTableTargetType typedesc<LocationTableOptionalized>;
 
 public type LocationTableInsert record {|
+    string LOCATIONTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? STATUS;
@@ -763,6 +798,7 @@ public type LocationTableInsert record {|
 |};
 
 public type LocationTableUpdate record {|
+    string LOCATIONTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? STATUS?;
@@ -783,6 +819,7 @@ public type LocationTableUpdate record {|
 
 public type ExplanationOfBenefitTable record {|
     readonly int ID;
+    string EXPLANATIONOFBENEFITTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? IDENTIFIER;
@@ -796,6 +833,7 @@ public type ExplanationOfBenefitTable record {|
 
 public type ExplanationOfBenefitTableOptionalized record {|
     int ID?;
+    string EXPLANATIONOFBENEFITTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -810,6 +848,7 @@ public type ExplanationOfBenefitTableOptionalized record {|
 public type ExplanationOfBenefitTableTargetType typedesc<ExplanationOfBenefitTableOptionalized>;
 
 public type ExplanationOfBenefitTableInsert record {|
+    string EXPLANATIONOFBENEFITTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? IDENTIFIER;
@@ -822,6 +861,7 @@ public type ExplanationOfBenefitTableInsert record {|
 |};
 
 public type ExplanationOfBenefitTableUpdate record {|
+    string EXPLANATIONOFBENEFITTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -835,6 +875,7 @@ public type ExplanationOfBenefitTableUpdate record {|
 
 public type FlagTable record {|
     readonly int ID;
+    string FLAGTABLE_ID;
     time:Date? DATE;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -846,6 +887,7 @@ public type FlagTable record {|
 
 public type FlagTableOptionalized record {|
     int ID?;
+    string FLAGTABLE_ID?;
     time:Date? DATE?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -858,6 +900,7 @@ public type FlagTableOptionalized record {|
 public type FlagTableTargetType typedesc<FlagTableOptionalized>;
 
 public type FlagTableInsert record {|
+    string FLAGTABLE_ID;
     time:Date? DATE;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -868,6 +911,7 @@ public type FlagTableInsert record {|
 |};
 
 public type FlagTableUpdate record {|
+    string FLAGTABLE_ID?;
     time:Date? DATE?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -879,6 +923,7 @@ public type FlagTableUpdate record {|
 
 public type MedicationStatementTable record {|
     readonly int ID;
+    string MEDICATIONSTATEMENTTABLE_ID;
     string? CODE;
     string? STATUS;
     string? CATEGORY;
@@ -893,6 +938,7 @@ public type MedicationStatementTable record {|
 
 public type MedicationStatementTableOptionalized record {|
     int ID?;
+    string MEDICATIONSTATEMENTTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     string? CATEGORY?;
@@ -908,6 +954,7 @@ public type MedicationStatementTableOptionalized record {|
 public type MedicationStatementTableTargetType typedesc<MedicationStatementTableOptionalized>;
 
 public type MedicationStatementTableInsert record {|
+    string MEDICATIONSTATEMENTTABLE_ID;
     string? CODE;
     string? STATUS;
     string? CATEGORY;
@@ -921,6 +968,7 @@ public type MedicationStatementTableInsert record {|
 |};
 
 public type MedicationStatementTableUpdate record {|
+    string MEDICATIONSTATEMENTTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     string? CATEGORY?;
@@ -935,6 +983,7 @@ public type MedicationStatementTableUpdate record {|
 
 public type InsurancePlanTable record {|
     readonly int ID;
+    string INSURANCEPLANTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? STATUS;
@@ -955,6 +1004,7 @@ public type InsurancePlanTable record {|
 
 public type InsurancePlanTableOptionalized record {|
     int ID?;
+    string INSURANCEPLANTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? STATUS?;
@@ -976,6 +1026,7 @@ public type InsurancePlanTableOptionalized record {|
 public type InsurancePlanTableTargetType typedesc<InsurancePlanTableOptionalized>;
 
 public type InsurancePlanTableInsert record {|
+    string INSURANCEPLANTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? STATUS;
@@ -995,6 +1046,7 @@ public type InsurancePlanTableInsert record {|
 |};
 
 public type InsurancePlanTableUpdate record {|
+    string INSURANCEPLANTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? STATUS?;
@@ -1015,6 +1067,7 @@ public type InsurancePlanTableUpdate record {|
 
 public type MedicinalProductContraindicationTable record {|
     readonly int ID;
+    string MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -1024,6 +1077,7 @@ public type MedicinalProductContraindicationTable record {|
 
 public type MedicinalProductContraindicationTableOptionalized record {|
     int ID?;
+    string MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -1034,6 +1088,7 @@ public type MedicinalProductContraindicationTableOptionalized record {|
 public type MedicinalProductContraindicationTableTargetType typedesc<MedicinalProductContraindicationTableOptionalized>;
 
 public type MedicinalProductContraindicationTableInsert record {|
+    string MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -1042,6 +1097,7 @@ public type MedicinalProductContraindicationTableInsert record {|
 |};
 
 public type MedicinalProductContraindicationTableUpdate record {|
+    string MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -1051,6 +1107,7 @@ public type MedicinalProductContraindicationTableUpdate record {|
 
 public type ClaimResponseTable record {|
     readonly int ID;
+    string CLAIMRESPONSETABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? OUTCOME;
@@ -1067,6 +1124,7 @@ public type ClaimResponseTable record {|
 
 public type ClaimResponseTableOptionalized record {|
     int ID?;
+    string CLAIMRESPONSETABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? OUTCOME?;
@@ -1084,6 +1142,7 @@ public type ClaimResponseTableOptionalized record {|
 public type ClaimResponseTableTargetType typedesc<ClaimResponseTableOptionalized>;
 
 public type ClaimResponseTableInsert record {|
+    string CLAIMRESPONSETABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? OUTCOME;
@@ -1099,6 +1158,7 @@ public type ClaimResponseTableInsert record {|
 |};
 
 public type ClaimResponseTableUpdate record {|
+    string CLAIMRESPONSETABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? OUTCOME?;
@@ -1115,6 +1175,7 @@ public type ClaimResponseTableUpdate record {|
 
 public type MedicinalProductAuthorizationTable record {|
     readonly int ID;
+    string MEDICINALPRODUCTAUTHORIZATIONTABLE_ID;
     string? STATUS;
     string? COUNTRY;
     string? IDENTIFIER;
@@ -1127,6 +1188,7 @@ public type MedicinalProductAuthorizationTable record {|
 
 public type MedicinalProductAuthorizationTableOptionalized record {|
     int ID?;
+    string MEDICINALPRODUCTAUTHORIZATIONTABLE_ID?;
     string? STATUS?;
     string? COUNTRY?;
     string? IDENTIFIER?;
@@ -1140,6 +1202,7 @@ public type MedicinalProductAuthorizationTableOptionalized record {|
 public type MedicinalProductAuthorizationTableTargetType typedesc<MedicinalProductAuthorizationTableOptionalized>;
 
 public type MedicinalProductAuthorizationTableInsert record {|
+    string MEDICINALPRODUCTAUTHORIZATIONTABLE_ID;
     string? STATUS;
     string? COUNTRY;
     string? IDENTIFIER;
@@ -1151,6 +1214,7 @@ public type MedicinalProductAuthorizationTableInsert record {|
 |};
 
 public type MedicinalProductAuthorizationTableUpdate record {|
+    string MEDICINALPRODUCTAUTHORIZATIONTABLE_ID?;
     string? STATUS?;
     string? COUNTRY?;
     string? IDENTIFIER?;
@@ -1163,6 +1227,7 @@ public type MedicinalProductAuthorizationTableUpdate record {|
 
 public type ImagingStudyTable record {|
     readonly int ID;
+    string IMAGINGSTUDYTABLE_ID;
     string? STATUS;
     string? DICOM_CLASS;
     string? SERIES;
@@ -1181,6 +1246,7 @@ public type ImagingStudyTable record {|
 
 public type ImagingStudyTableOptionalized record {|
     int ID?;
+    string IMAGINGSTUDYTABLE_ID?;
     string? STATUS?;
     string? DICOM_CLASS?;
     string? SERIES?;
@@ -1200,6 +1266,7 @@ public type ImagingStudyTableOptionalized record {|
 public type ImagingStudyTableTargetType typedesc<ImagingStudyTableOptionalized>;
 
 public type ImagingStudyTableInsert record {|
+    string IMAGINGSTUDYTABLE_ID;
     string? STATUS;
     string? DICOM_CLASS;
     string? SERIES;
@@ -1217,6 +1284,7 @@ public type ImagingStudyTableInsert record {|
 |};
 
 public type ImagingStudyTableUpdate record {|
+    string IMAGINGSTUDYTABLE_ID?;
     string? STATUS?;
     string? DICOM_CLASS?;
     string? SERIES?;
@@ -1235,6 +1303,7 @@ public type ImagingStudyTableUpdate record {|
 
 public type PractitionerRoleTable record {|
     readonly int ID;
+    string PRACTITIONERROLETABLE_ID;
     string? ROLE;
     time:Date? DATE;
     string? ACTIVE;
@@ -1252,6 +1321,7 @@ public type PractitionerRoleTable record {|
 
 public type PractitionerRoleTableOptionalized record {|
     int ID?;
+    string PRACTITIONERROLETABLE_ID?;
     string? ROLE?;
     time:Date? DATE?;
     string? ACTIVE?;
@@ -1270,6 +1340,7 @@ public type PractitionerRoleTableOptionalized record {|
 public type PractitionerRoleTableTargetType typedesc<PractitionerRoleTableOptionalized>;
 
 public type PractitionerRoleTableInsert record {|
+    string PRACTITIONERROLETABLE_ID;
     string? ROLE;
     time:Date? DATE;
     string? ACTIVE;
@@ -1286,6 +1357,7 @@ public type PractitionerRoleTableInsert record {|
 |};
 
 public type PractitionerRoleTableUpdate record {|
+    string PRACTITIONERROLETABLE_ID?;
     string? ROLE?;
     time:Date? DATE?;
     string? ACTIVE?;
@@ -1303,6 +1375,7 @@ public type PractitionerRoleTableUpdate record {|
 
 public type GroupTable record {|
     readonly int ID;
+    string GROUPTABLE_ID;
     string? CHARACTERISTIC;
     string? CODE;
     string? EXCLUDE;
@@ -1319,6 +1392,7 @@ public type GroupTable record {|
 
 public type GroupTableOptionalized record {|
     int ID?;
+    string GROUPTABLE_ID?;
     string? CHARACTERISTIC?;
     string? CODE?;
     string? EXCLUDE?;
@@ -1336,6 +1410,7 @@ public type GroupTableOptionalized record {|
 public type GroupTableTargetType typedesc<GroupTableOptionalized>;
 
 public type GroupTableInsert record {|
+    string GROUPTABLE_ID;
     string? CHARACTERISTIC;
     string? CODE;
     string? EXCLUDE;
@@ -1351,6 +1426,7 @@ public type GroupTableInsert record {|
 |};
 
 public type GroupTableUpdate record {|
+    string GROUPTABLE_ID?;
     string? CHARACTERISTIC?;
     string? CODE?;
     string? EXCLUDE?;
@@ -1367,6 +1443,7 @@ public type GroupTableUpdate record {|
 
 public type PersonTable record {|
     readonly int ID;
+    string PERSONTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? PHONE;
@@ -1390,6 +1467,7 @@ public type PersonTable record {|
 
 public type PersonTableOptionalized record {|
     int ID?;
+    string PERSONTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? PHONE?;
@@ -1414,6 +1492,7 @@ public type PersonTableOptionalized record {|
 public type PersonTableTargetType typedesc<PersonTableOptionalized>;
 
 public type PersonTableInsert record {|
+    string PERSONTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? PHONE;
@@ -1436,6 +1515,7 @@ public type PersonTableInsert record {|
 |};
 
 public type PersonTableUpdate record {|
+    string PERSONTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? PHONE?;
@@ -1459,6 +1539,7 @@ public type PersonTableUpdate record {|
 
 public type PractitionerTable record {|
     readonly int ID;
+    string PRACTITIONERTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? ACTIVE;
@@ -1485,6 +1566,7 @@ public type PractitionerTable record {|
 
 public type PractitionerTableOptionalized record {|
     int ID?;
+    string PRACTITIONERTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? ACTIVE?;
@@ -1512,6 +1594,7 @@ public type PractitionerTableOptionalized record {|
 public type PractitionerTableTargetType typedesc<PractitionerTableOptionalized>;
 
 public type PractitionerTableInsert record {|
+    string PRACTITIONERTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? ACTIVE;
@@ -1537,6 +1620,7 @@ public type PractitionerTableInsert record {|
 |};
 
 public type PractitionerTableUpdate record {|
+    string PRACTITIONERTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? ACTIVE?;
@@ -1563,6 +1647,7 @@ public type PractitionerTableUpdate record {|
 
 public type ActivityDefinitionTable record {|
     readonly int ID;
+    string ACTIVITYDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -1587,6 +1672,7 @@ public type ActivityDefinitionTable record {|
 
 public type ActivityDefinitionTableOptionalized record {|
     int ID?;
+    string ACTIVITYDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -1612,6 +1698,7 @@ public type ActivityDefinitionTableOptionalized record {|
 public type ActivityDefinitionTableTargetType typedesc<ActivityDefinitionTableOptionalized>;
 
 public type ActivityDefinitionTableInsert record {|
+    string ACTIVITYDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -1635,6 +1722,7 @@ public type ActivityDefinitionTableInsert record {|
 |};
 
 public type ActivityDefinitionTableUpdate record {|
+    string ACTIVITYDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -1659,6 +1747,7 @@ public type ActivityDefinitionTableUpdate record {|
 
 public type EvidenceTable record {|
     readonly int ID;
+    string EVIDENCETABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -1683,6 +1772,7 @@ public type EvidenceTable record {|
 
 public type EvidenceTableOptionalized record {|
     int ID?;
+    string EVIDENCETABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -1708,6 +1798,7 @@ public type EvidenceTableOptionalized record {|
 public type EvidenceTableTargetType typedesc<EvidenceTableOptionalized>;
 
 public type EvidenceTableInsert record {|
+    string EVIDENCETABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -1731,6 +1822,7 @@ public type EvidenceTableInsert record {|
 |};
 
 public type EvidenceTableUpdate record {|
+    string EVIDENCETABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -1755,6 +1847,7 @@ public type EvidenceTableUpdate record {|
 
 public type DeviceTable record {|
     readonly int ID;
+    string DEVICETABLE_ID;
     string? STATUS;
     string? UDI_DI;
     string? UDI_CARRIER;
@@ -1773,6 +1866,7 @@ public type DeviceTable record {|
 
 public type DeviceTableOptionalized record {|
     int ID?;
+    string DEVICETABLE_ID?;
     string? STATUS?;
     string? UDI_DI?;
     string? UDI_CARRIER?;
@@ -1792,6 +1886,7 @@ public type DeviceTableOptionalized record {|
 public type DeviceTableTargetType typedesc<DeviceTableOptionalized>;
 
 public type DeviceTableInsert record {|
+    string DEVICETABLE_ID;
     string? STATUS;
     string? UDI_DI;
     string? UDI_CARRIER;
@@ -1809,6 +1904,7 @@ public type DeviceTableInsert record {|
 |};
 
 public type DeviceTableUpdate record {|
+    string DEVICETABLE_ID?;
     string? STATUS?;
     string? UDI_DI?;
     string? UDI_CARRIER?;
@@ -1827,6 +1923,7 @@ public type DeviceTableUpdate record {|
 
 public type FamilyMemberHistoryTable record {|
     readonly int ID;
+    string FAMILYMEMBERHISTORYTABLE_ID;
     time:Date? DATE;
     string? CODE;
     string? STATUS;
@@ -1843,6 +1940,7 @@ public type FamilyMemberHistoryTable record {|
 
 public type FamilyMemberHistoryTableOptionalized record {|
     int ID?;
+    string FAMILYMEMBERHISTORYTABLE_ID?;
     time:Date? DATE?;
     string? CODE?;
     string? STATUS?;
@@ -1860,6 +1958,7 @@ public type FamilyMemberHistoryTableOptionalized record {|
 public type FamilyMemberHistoryTableTargetType typedesc<FamilyMemberHistoryTableOptionalized>;
 
 public type FamilyMemberHistoryTableInsert record {|
+    string FAMILYMEMBERHISTORYTABLE_ID;
     time:Date? DATE;
     string? CODE;
     string? STATUS;
@@ -1875,6 +1974,7 @@ public type FamilyMemberHistoryTableInsert record {|
 |};
 
 public type FamilyMemberHistoryTableUpdate record {|
+    string FAMILYMEMBERHISTORYTABLE_ID?;
     time:Date? DATE?;
     string? CODE?;
     string? STATUS?;
@@ -1891,6 +1991,7 @@ public type FamilyMemberHistoryTableUpdate record {|
 
 public type AdverseEventTable record {|
     readonly int ID;
+    string ADVERSEEVENTTABLE_ID;
     time:Date? DATE;
     string? CATEGORY;
     string? SERIOUSNESS;
@@ -1906,6 +2007,7 @@ public type AdverseEventTable record {|
 
 public type AdverseEventTableOptionalized record {|
     int ID?;
+    string ADVERSEEVENTTABLE_ID?;
     time:Date? DATE?;
     string? CATEGORY?;
     string? SERIOUSNESS?;
@@ -1922,6 +2024,7 @@ public type AdverseEventTableOptionalized record {|
 public type AdverseEventTableTargetType typedesc<AdverseEventTableOptionalized>;
 
 public type AdverseEventTableInsert record {|
+    string ADVERSEEVENTTABLE_ID;
     time:Date? DATE;
     string? CATEGORY;
     string? SERIOUSNESS;
@@ -1936,6 +2039,7 @@ public type AdverseEventTableInsert record {|
 |};
 
 public type AdverseEventTableUpdate record {|
+    string ADVERSEEVENTTABLE_ID?;
     time:Date? DATE?;
     string? CATEGORY?;
     string? SERIOUSNESS?;
@@ -1951,6 +2055,7 @@ public type AdverseEventTableUpdate record {|
 
 public type SupplyRequestTable record {|
     readonly int ID;
+    string SUPPLYREQUESTTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? CATEGORY;
@@ -1964,6 +2069,7 @@ public type SupplyRequestTable record {|
 
 public type SupplyRequestTableOptionalized record {|
     int ID?;
+    string SUPPLYREQUESTTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? CATEGORY?;
@@ -1978,6 +2084,7 @@ public type SupplyRequestTableOptionalized record {|
 public type SupplyRequestTableTargetType typedesc<SupplyRequestTableOptionalized>;
 
 public type SupplyRequestTableInsert record {|
+    string SUPPLYREQUESTTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? CATEGORY;
@@ -1990,6 +2097,7 @@ public type SupplyRequestTableInsert record {|
 |};
 
 public type SupplyRequestTableUpdate record {|
+    string SUPPLYREQUESTTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? CATEGORY?;
@@ -2003,6 +2111,7 @@ public type SupplyRequestTableUpdate record {|
 
 public type ExampleScenarioTable record {|
     readonly int ID;
+    string EXAMPLESCENARIOTABLE_ID;
     time:Date? DATE;
     string? PUBLISHER;
     string? STATUS;
@@ -2023,6 +2132,7 @@ public type ExampleScenarioTable record {|
 
 public type ExampleScenarioTableOptionalized record {|
     int ID?;
+    string EXAMPLESCENARIOTABLE_ID?;
     time:Date? DATE?;
     string? PUBLISHER?;
     string? STATUS?;
@@ -2044,6 +2154,7 @@ public type ExampleScenarioTableOptionalized record {|
 public type ExampleScenarioTableTargetType typedesc<ExampleScenarioTableOptionalized>;
 
 public type ExampleScenarioTableInsert record {|
+    string EXAMPLESCENARIOTABLE_ID;
     time:Date? DATE;
     string? PUBLISHER;
     string? STATUS;
@@ -2063,6 +2174,7 @@ public type ExampleScenarioTableInsert record {|
 |};
 
 public type ExampleScenarioTableUpdate record {|
+    string EXAMPLESCENARIOTABLE_ID?;
     time:Date? DATE?;
     string? PUBLISHER?;
     string? STATUS?;
@@ -2083,6 +2195,7 @@ public type ExampleScenarioTableUpdate record {|
 
 public type InvoiceTable record {|
     readonly int ID;
+    string INVOICETABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? TOTALNET;
@@ -2099,6 +2212,7 @@ public type InvoiceTable record {|
 
 public type InvoiceTableOptionalized record {|
     int ID?;
+    string INVOICETABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? TOTALNET?;
@@ -2116,6 +2230,7 @@ public type InvoiceTableOptionalized record {|
 public type InvoiceTableTargetType typedesc<InvoiceTableOptionalized>;
 
 public type InvoiceTableInsert record {|
+    string INVOICETABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? TOTALNET;
@@ -2131,6 +2246,7 @@ public type InvoiceTableInsert record {|
 |};
 
 public type InvoiceTableUpdate record {|
+    string INVOICETABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? TOTALNET?;
@@ -2147,6 +2263,7 @@ public type InvoiceTableUpdate record {|
 
 public type QuestionnaireResponseTable record {|
     readonly int ID;
+    string QUESTIONNAIRERESPONSETABLE_ID;
     string? STATUS;
     time:Date? AUTHORED;
     string? IDENTIFIER;
@@ -2159,6 +2276,7 @@ public type QuestionnaireResponseTable record {|
 
 public type QuestionnaireResponseTableOptionalized record {|
     int ID?;
+    string QUESTIONNAIRERESPONSETABLE_ID?;
     string? STATUS?;
     time:Date? AUTHORED?;
     string? IDENTIFIER?;
@@ -2172,6 +2290,7 @@ public type QuestionnaireResponseTableOptionalized record {|
 public type QuestionnaireResponseTableTargetType typedesc<QuestionnaireResponseTableOptionalized>;
 
 public type QuestionnaireResponseTableInsert record {|
+    string QUESTIONNAIRERESPONSETABLE_ID;
     string? STATUS;
     time:Date? AUTHORED;
     string? IDENTIFIER;
@@ -2183,6 +2302,7 @@ public type QuestionnaireResponseTableInsert record {|
 |};
 
 public type QuestionnaireResponseTableUpdate record {|
+    string QUESTIONNAIRERESPONSETABLE_ID?;
     string? STATUS?;
     time:Date? AUTHORED?;
     string? IDENTIFIER?;
@@ -2195,6 +2315,7 @@ public type QuestionnaireResponseTableUpdate record {|
 
 public type ObservationTable record {|
     readonly int ID;
+    string OBSERVATIONTABLE_ID;
     string? COMPONENT_CODE;
     string? VALUE_QUANTITY;
     string? COMBO_CODE;
@@ -2223,6 +2344,7 @@ public type ObservationTable record {|
 
 public type ObservationTableOptionalized record {|
     int ID?;
+    string OBSERVATIONTABLE_ID?;
     string? COMPONENT_CODE?;
     string? VALUE_QUANTITY?;
     string? COMBO_CODE?;
@@ -2252,6 +2374,7 @@ public type ObservationTableOptionalized record {|
 public type ObservationTableTargetType typedesc<ObservationTableOptionalized>;
 
 public type ObservationTableInsert record {|
+    string OBSERVATIONTABLE_ID;
     string? COMPONENT_CODE;
     string? VALUE_QUANTITY;
     string? COMBO_CODE;
@@ -2279,6 +2402,7 @@ public type ObservationTableInsert record {|
 |};
 
 public type ObservationTableUpdate record {|
+    string OBSERVATIONTABLE_ID?;
     string? COMPONENT_CODE?;
     string? VALUE_QUANTITY?;
     string? COMBO_CODE?;
@@ -2307,6 +2431,7 @@ public type ObservationTableUpdate record {|
 
 public type EffectEvidenceSynthesisTable record {|
     readonly int ID;
+    string EFFECTEVIDENCESYNTHESISTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -2330,6 +2455,7 @@ public type EffectEvidenceSynthesisTable record {|
 
 public type EffectEvidenceSynthesisTableOptionalized record {|
     int ID?;
+    string EFFECTEVIDENCESYNTHESISTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -2354,6 +2480,7 @@ public type EffectEvidenceSynthesisTableOptionalized record {|
 public type EffectEvidenceSynthesisTableTargetType typedesc<EffectEvidenceSynthesisTableOptionalized>;
 
 public type EffectEvidenceSynthesisTableInsert record {|
+    string EFFECTEVIDENCESYNTHESISTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -2376,6 +2503,7 @@ public type EffectEvidenceSynthesisTableInsert record {|
 |};
 
 public type EffectEvidenceSynthesisTableUpdate record {|
+    string EFFECTEVIDENCESYNTHESISTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -2399,6 +2527,7 @@ public type EffectEvidenceSynthesisTableUpdate record {|
 
 public type OperationDefinitionTable record {|
     readonly int ID;
+    string OPERATIONDEFINITIONTABLE_ID;
     string? SYSTEM;
     string? PUBLISHER;
     string? JURISDICTION;
@@ -2425,6 +2554,7 @@ public type OperationDefinitionTable record {|
 
 public type OperationDefinitionTableOptionalized record {|
     int ID?;
+    string OPERATIONDEFINITIONTABLE_ID?;
     string? SYSTEM?;
     string? PUBLISHER?;
     string? JURISDICTION?;
@@ -2452,6 +2582,7 @@ public type OperationDefinitionTableOptionalized record {|
 public type OperationDefinitionTableTargetType typedesc<OperationDefinitionTableOptionalized>;
 
 public type OperationDefinitionTableInsert record {|
+    string OPERATIONDEFINITIONTABLE_ID;
     string? SYSTEM;
     string? PUBLISHER;
     string? JURISDICTION;
@@ -2477,6 +2608,7 @@ public type OperationDefinitionTableInsert record {|
 |};
 
 public type OperationDefinitionTableUpdate record {|
+    string OPERATIONDEFINITIONTABLE_ID?;
     string? SYSTEM?;
     string? PUBLISHER?;
     string? JURISDICTION?;
@@ -2503,6 +2635,7 @@ public type OperationDefinitionTableUpdate record {|
 
 public type MeasureReportTable record {|
     readonly int ID;
+    string MEASUREREPORTTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     time:Date? PERIOD;
@@ -2516,6 +2649,7 @@ public type MeasureReportTable record {|
 
 public type MeasureReportTableOptionalized record {|
     int ID?;
+    string MEASUREREPORTTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     time:Date? PERIOD?;
@@ -2530,6 +2664,7 @@ public type MeasureReportTableOptionalized record {|
 public type MeasureReportTableTargetType typedesc<MeasureReportTableOptionalized>;
 
 public type MeasureReportTableInsert record {|
+    string MEASUREREPORTTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     time:Date? PERIOD;
@@ -2542,6 +2677,7 @@ public type MeasureReportTableInsert record {|
 |};
 
 public type MeasureReportTableUpdate record {|
+    string MEASUREREPORTTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     time:Date? PERIOD?;
@@ -2555,6 +2691,7 @@ public type MeasureReportTableUpdate record {|
 
 public type SupplyDeliveryTable record {|
     readonly int ID;
+    string SUPPLYDELIVERYTABLE_ID;
     string? STATUS;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -2566,6 +2703,7 @@ public type SupplyDeliveryTable record {|
 
 public type SupplyDeliveryTableOptionalized record {|
     int ID?;
+    string SUPPLYDELIVERYTABLE_ID?;
     string? STATUS?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -2578,6 +2716,7 @@ public type SupplyDeliveryTableOptionalized record {|
 public type SupplyDeliveryTableTargetType typedesc<SupplyDeliveryTableOptionalized>;
 
 public type SupplyDeliveryTableInsert record {|
+    string SUPPLYDELIVERYTABLE_ID;
     string? STATUS;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -2588,6 +2727,7 @@ public type SupplyDeliveryTableInsert record {|
 |};
 
 public type SupplyDeliveryTableUpdate record {|
+    string SUPPLYDELIVERYTABLE_ID?;
     string? STATUS?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -2599,6 +2739,7 @@ public type SupplyDeliveryTableUpdate record {|
 
 public type ServiceRequestTable record {|
     readonly int ID;
+    string SERVICEREQUESTTABLE_ID;
     string? REQUISITION;
     string? CODE;
     string? STATUS;
@@ -2620,6 +2761,7 @@ public type ServiceRequestTable record {|
 
 public type ServiceRequestTableOptionalized record {|
     int ID?;
+    string SERVICEREQUESTTABLE_ID?;
     string? REQUISITION?;
     string? CODE?;
     string? STATUS?;
@@ -2642,6 +2784,7 @@ public type ServiceRequestTableOptionalized record {|
 public type ServiceRequestTableTargetType typedesc<ServiceRequestTableOptionalized>;
 
 public type ServiceRequestTableInsert record {|
+    string SERVICEREQUESTTABLE_ID;
     string? REQUISITION;
     string? CODE;
     string? STATUS;
@@ -2662,6 +2805,7 @@ public type ServiceRequestTableInsert record {|
 |};
 
 public type ServiceRequestTableUpdate record {|
+    string SERVICEREQUESTTABLE_ID?;
     string? REQUISITION?;
     string? CODE?;
     string? STATUS?;
@@ -2683,6 +2827,7 @@ public type ServiceRequestTableUpdate record {|
 
 public type BasicTable record {|
     readonly int ID;
+    string BASICTABLE_ID;
     string? CODE;
     time:Date? CREATED;
     string? IDENTIFIER;
@@ -2695,6 +2840,7 @@ public type BasicTable record {|
 
 public type BasicTableOptionalized record {|
     int ID?;
+    string BASICTABLE_ID?;
     string? CODE?;
     time:Date? CREATED?;
     string? IDENTIFIER?;
@@ -2708,6 +2854,7 @@ public type BasicTableOptionalized record {|
 public type BasicTableTargetType typedesc<BasicTableOptionalized>;
 
 public type BasicTableInsert record {|
+    string BASICTABLE_ID;
     string? CODE;
     time:Date? CREATED;
     string? IDENTIFIER;
@@ -2719,6 +2866,7 @@ public type BasicTableInsert record {|
 |};
 
 public type BasicTableUpdate record {|
+    string BASICTABLE_ID?;
     string? CODE?;
     time:Date? CREATED?;
     string? IDENTIFIER?;
@@ -2731,6 +2879,7 @@ public type BasicTableUpdate record {|
 
 public type SubscriptionTable record {|
     readonly int ID;
+    string SUBSCRIPTIONTABLE_ID;
     string? CRITERIA;
     string? CONTACT;
     string? STATUS;
@@ -2746,6 +2895,7 @@ public type SubscriptionTable record {|
 
 public type SubscriptionTableOptionalized record {|
     int ID?;
+    string SUBSCRIPTIONTABLE_ID?;
     string? CRITERIA?;
     string? CONTACT?;
     string? STATUS?;
@@ -2762,6 +2912,7 @@ public type SubscriptionTableOptionalized record {|
 public type SubscriptionTableTargetType typedesc<SubscriptionTableOptionalized>;
 
 public type SubscriptionTableInsert record {|
+    string SUBSCRIPTIONTABLE_ID;
     string? CRITERIA;
     string? CONTACT;
     string? STATUS;
@@ -2776,6 +2927,7 @@ public type SubscriptionTableInsert record {|
 |};
 
 public type SubscriptionTableUpdate record {|
+    string SUBSCRIPTIONTABLE_ID?;
     string? CRITERIA?;
     string? CONTACT?;
     string? STATUS?;
@@ -2791,6 +2943,7 @@ public type SubscriptionTableUpdate record {|
 
 public type EnrollmentResponseTable record {|
     readonly int ID;
+    string ENROLLMENTRESPONSETABLE_ID;
     string? STATUS;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -2802,6 +2955,7 @@ public type EnrollmentResponseTable record {|
 
 public type EnrollmentResponseTableOptionalized record {|
     int ID?;
+    string ENROLLMENTRESPONSETABLE_ID?;
     string? STATUS?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -2814,6 +2968,7 @@ public type EnrollmentResponseTableOptionalized record {|
 public type EnrollmentResponseTableTargetType typedesc<EnrollmentResponseTableOptionalized>;
 
 public type EnrollmentResponseTableInsert record {|
+    string ENROLLMENTRESPONSETABLE_ID;
     string? STATUS;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -2824,6 +2979,7 @@ public type EnrollmentResponseTableInsert record {|
 |};
 
 public type EnrollmentResponseTableUpdate record {|
+    string ENROLLMENTRESPONSETABLE_ID?;
     string? STATUS?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -2835,6 +2991,7 @@ public type EnrollmentResponseTableUpdate record {|
 
 public type DeviceRequestTable record {|
     readonly int ID;
+    string DEVICEREQUESTTABLE_ID;
     string? CODE;
     time:Date? EVENT_DATE;
     string? STATUS;
@@ -2852,6 +3009,7 @@ public type DeviceRequestTable record {|
 
 public type DeviceRequestTableOptionalized record {|
     int ID?;
+    string DEVICEREQUESTTABLE_ID?;
     string? CODE?;
     time:Date? EVENT_DATE?;
     string? STATUS?;
@@ -2870,6 +3028,7 @@ public type DeviceRequestTableOptionalized record {|
 public type DeviceRequestTableTargetType typedesc<DeviceRequestTableOptionalized>;
 
 public type DeviceRequestTableInsert record {|
+    string DEVICEREQUESTTABLE_ID;
     string? CODE;
     time:Date? EVENT_DATE;
     string? STATUS;
@@ -2886,6 +3045,7 @@ public type DeviceRequestTableInsert record {|
 |};
 
 public type DeviceRequestTableUpdate record {|
+    string DEVICEREQUESTTABLE_ID?;
     string? CODE?;
     time:Date? EVENT_DATE?;
     string? STATUS?;
@@ -2903,6 +3063,7 @@ public type DeviceRequestTableUpdate record {|
 
 public type AppointmentTable record {|
     readonly int ID;
+    string APPOINTMENTTABLE_ID;
     time:Date? DATE;
     string? SERVICE_CATEGORY;
     string? PART_STATUS;
@@ -2921,6 +3082,7 @@ public type AppointmentTable record {|
 
 public type AppointmentTableOptionalized record {|
     int ID?;
+    string APPOINTMENTTABLE_ID?;
     time:Date? DATE?;
     string? SERVICE_CATEGORY?;
     string? PART_STATUS?;
@@ -2940,7 +3102,8 @@ public type AppointmentTableOptionalized record {|
 public type AppointmentTableTargetType typedesc<AppointmentTableOptionalized>;
 
 public type AppointmentTableInsert record {|
-    time:Date? DATE;
+    string APPOINTMENTTABLE_ID;
+    string? DATE;
     string? SERVICE_CATEGORY;
     string? PART_STATUS;
     string? STATUS;
@@ -2957,6 +3120,7 @@ public type AppointmentTableInsert record {|
 |};
 
 public type AppointmentTableUpdate record {|
+    string APPOINTMENTTABLE_ID?;
     time:Date? DATE?;
     string? SERVICE_CATEGORY?;
     string? PART_STATUS?;
@@ -2975,6 +3139,7 @@ public type AppointmentTableUpdate record {|
 
 public type NamingSystemTable record {|
     readonly int ID;
+    string NAMINGSYSTEMTABLE_ID;
     string? PUBLISHER;
     string? RESPONSIBLE;
     string? CONTACT;
@@ -3001,6 +3166,7 @@ public type NamingSystemTable record {|
 
 public type NamingSystemTableOptionalized record {|
     int ID?;
+    string NAMINGSYSTEMTABLE_ID?;
     string? PUBLISHER?;
     string? RESPONSIBLE?;
     string? CONTACT?;
@@ -3028,6 +3194,7 @@ public type NamingSystemTableOptionalized record {|
 public type NamingSystemTableTargetType typedesc<NamingSystemTableOptionalized>;
 
 public type NamingSystemTableInsert record {|
+    string NAMINGSYSTEMTABLE_ID;
     string? PUBLISHER;
     string? RESPONSIBLE;
     string? CONTACT;
@@ -3053,6 +3220,7 @@ public type NamingSystemTableInsert record {|
 |};
 
 public type NamingSystemTableUpdate record {|
+    string NAMINGSYSTEMTABLE_ID?;
     string? PUBLISHER?;
     string? RESPONSIBLE?;
     string? CONTACT?;
@@ -3079,6 +3247,7 @@ public type NamingSystemTableUpdate record {|
 
 public type StructureDefinitionTable record {|
     readonly int ID;
+    string STRUCTUREDEFINITIONTABLE_ID;
     string? PATH;
     string? DERIVATION;
     string? PUBLISHER;
@@ -3110,6 +3279,7 @@ public type StructureDefinitionTable record {|
 
 public type StructureDefinitionTableOptionalized record {|
     int ID?;
+    string STRUCTUREDEFINITIONTABLE_ID?;
     string? PATH?;
     string? DERIVATION?;
     string? PUBLISHER?;
@@ -3142,6 +3312,7 @@ public type StructureDefinitionTableOptionalized record {|
 public type StructureDefinitionTableTargetType typedesc<StructureDefinitionTableOptionalized>;
 
 public type StructureDefinitionTableInsert record {|
+    string STRUCTUREDEFINITIONTABLE_ID;
     string? PATH;
     string? DERIVATION;
     string? PUBLISHER;
@@ -3172,6 +3343,7 @@ public type StructureDefinitionTableInsert record {|
 |};
 
 public type StructureDefinitionTableUpdate record {|
+    string STRUCTUREDEFINITIONTABLE_ID?;
     string? PATH?;
     string? DERIVATION?;
     string? PUBLISHER?;
@@ -3203,6 +3375,7 @@ public type StructureDefinitionTableUpdate record {|
 
 public type ClinicalImpressionTable record {|
     readonly int ID;
+    string CLINICALIMPRESSIONTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? FINDING_CODE;
@@ -3216,6 +3389,7 @@ public type ClinicalImpressionTable record {|
 
 public type ClinicalImpressionTableOptionalized record {|
     int ID?;
+    string CLINICALIMPRESSIONTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? FINDING_CODE?;
@@ -3230,6 +3404,7 @@ public type ClinicalImpressionTableOptionalized record {|
 public type ClinicalImpressionTableTargetType typedesc<ClinicalImpressionTableOptionalized>;
 
 public type ClinicalImpressionTableInsert record {|
+    string CLINICALIMPRESSIONTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? FINDING_CODE;
@@ -3242,6 +3417,7 @@ public type ClinicalImpressionTableInsert record {|
 |};
 
 public type ClinicalImpressionTableUpdate record {|
+    string CLINICALIMPRESSIONTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? FINDING_CODE?;
@@ -3255,6 +3431,7 @@ public type ClinicalImpressionTableUpdate record {|
 
 public type CommunicationTable record {|
     readonly int ID;
+    string COMMUNICATIONTABLE_ID;
     time:Date? RECEIVED;
     string? STATUS;
     string? MEDIUM;
@@ -3271,6 +3448,7 @@ public type CommunicationTable record {|
 
 public type CommunicationTableOptionalized record {|
     int ID?;
+    string COMMUNICATIONTABLE_ID?;
     time:Date? RECEIVED?;
     string? STATUS?;
     string? MEDIUM?;
@@ -3288,6 +3466,7 @@ public type CommunicationTableOptionalized record {|
 public type CommunicationTableTargetType typedesc<CommunicationTableOptionalized>;
 
 public type CommunicationTableInsert record {|
+    string COMMUNICATIONTABLE_ID;
     time:Date? RECEIVED;
     string? STATUS;
     string? MEDIUM;
@@ -3303,6 +3482,7 @@ public type CommunicationTableInsert record {|
 |};
 
 public type CommunicationTableUpdate record {|
+    string COMMUNICATIONTABLE_ID?;
     time:Date? RECEIVED?;
     string? STATUS?;
     string? MEDIUM?;
@@ -3319,6 +3499,7 @@ public type CommunicationTableUpdate record {|
 
 public type OrganizationTable record {|
     readonly int ID;
+    string ORGANIZATIONTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? ADDRESS_USE;
@@ -3339,6 +3520,7 @@ public type OrganizationTable record {|
 
 public type OrganizationTableOptionalized record {|
     int ID?;
+    string ORGANIZATIONTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? ADDRESS_USE?;
@@ -3360,6 +3542,7 @@ public type OrganizationTableOptionalized record {|
 public type OrganizationTableTargetType typedesc<OrganizationTableOptionalized>;
 
 public type OrganizationTableInsert record {|
+    string ORGANIZATIONTABLE_ID;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
     string? ADDRESS_USE;
@@ -3379,6 +3562,7 @@ public type OrganizationTableInsert record {|
 |};
 
 public type OrganizationTableUpdate record {|
+    string ORGANIZATIONTABLE_ID?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
     string? ADDRESS_USE?;
@@ -3399,6 +3583,7 @@ public type OrganizationTableUpdate record {|
 
 public type CoverageEligibilityResponseTable record {|
     readonly int ID;
+    string COVERAGEELIGIBILITYRESPONSETABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? OUTCOME;
@@ -3413,6 +3598,7 @@ public type CoverageEligibilityResponseTable record {|
 
 public type CoverageEligibilityResponseTableOptionalized record {|
     int ID?;
+    string COVERAGEELIGIBILITYRESPONSETABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? OUTCOME?;
@@ -3428,6 +3614,7 @@ public type CoverageEligibilityResponseTableOptionalized record {|
 public type CoverageEligibilityResponseTableTargetType typedesc<CoverageEligibilityResponseTableOptionalized>;
 
 public type CoverageEligibilityResponseTableInsert record {|
+    string COVERAGEELIGIBILITYRESPONSETABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? OUTCOME;
@@ -3441,6 +3628,7 @@ public type CoverageEligibilityResponseTableInsert record {|
 |};
 
 public type CoverageEligibilityResponseTableUpdate record {|
+    string COVERAGEELIGIBILITYRESPONSETABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? OUTCOME?;
@@ -3455,6 +3643,7 @@ public type CoverageEligibilityResponseTableUpdate record {|
 
 public type ResearchStudyTable record {|
     readonly int ID;
+    string RESEARCHSTUDYTABLE_ID;
     string? LOCATION;
     time:Date? DATE;
     string? STATUS;
@@ -3472,6 +3661,7 @@ public type ResearchStudyTable record {|
 
 public type ResearchStudyTableOptionalized record {|
     int ID?;
+    string RESEARCHSTUDYTABLE_ID?;
     string? LOCATION?;
     time:Date? DATE?;
     string? STATUS?;
@@ -3490,6 +3680,7 @@ public type ResearchStudyTableOptionalized record {|
 public type ResearchStudyTableTargetType typedesc<ResearchStudyTableOptionalized>;
 
 public type ResearchStudyTableInsert record {|
+    string RESEARCHSTUDYTABLE_ID;
     string? LOCATION;
     time:Date? DATE;
     string? STATUS;
@@ -3506,6 +3697,7 @@ public type ResearchStudyTableInsert record {|
 |};
 
 public type ResearchStudyTableUpdate record {|
+    string RESEARCHSTUDYTABLE_ID?;
     string? LOCATION?;
     time:Date? DATE?;
     string? STATUS?;
@@ -3523,6 +3715,7 @@ public type ResearchStudyTableUpdate record {|
 
 public type BundleTable record {|
     readonly int ID;
+    string BUNDLETABLE_ID;
     time:Date? TIMESTAMP;
     string? IDENTIFIER;
     string? TYPE;
@@ -3535,6 +3728,7 @@ public type BundleTable record {|
 
 public type BundleTableOptionalized record {|
     int ID?;
+    string BUNDLETABLE_ID?;
     time:Date? TIMESTAMP?;
     string? IDENTIFIER?;
     string? TYPE?;
@@ -3548,6 +3742,7 @@ public type BundleTableOptionalized record {|
 public type BundleTableTargetType typedesc<BundleTableOptionalized>;
 
 public type BundleTableInsert record {|
+    string BUNDLETABLE_ID;
     time:Date? TIMESTAMP;
     string? IDENTIFIER;
     string? TYPE;
@@ -3559,6 +3754,7 @@ public type BundleTableInsert record {|
 |};
 
 public type BundleTableUpdate record {|
+    string BUNDLETABLE_ID?;
     time:Date? TIMESTAMP?;
     string? IDENTIFIER?;
     string? TYPE?;
@@ -3571,6 +3767,7 @@ public type BundleTableUpdate record {|
 
 public type EncounterTable record {|
     readonly int ID;
+    string ENCOUNTERTABLE_ID;
     string? PARTICIPANT_TYPE;
     time:Date? DATE;
     string? STATUS;
@@ -3590,6 +3787,7 @@ public type EncounterTable record {|
 
 public type EncounterTableOptionalized record {|
     int ID?;
+    string ENCOUNTERTABLE_ID?;
     string? PARTICIPANT_TYPE?;
     time:Date? DATE?;
     string? STATUS?;
@@ -3610,6 +3808,7 @@ public type EncounterTableOptionalized record {|
 public type EncounterTableTargetType typedesc<EncounterTableOptionalized>;
 
 public type EncounterTableInsert record {|
+    string ENCOUNTERTABLE_ID;
     string? PARTICIPANT_TYPE;
     time:Date? DATE;
     string? STATUS;
@@ -3628,6 +3827,7 @@ public type EncounterTableInsert record {|
 |};
 
 public type EncounterTableUpdate record {|
+    string ENCOUNTERTABLE_ID?;
     string? PARTICIPANT_TYPE?;
     time:Date? DATE?;
     string? STATUS?;
@@ -3647,6 +3847,7 @@ public type EncounterTableUpdate record {|
 
 public type RiskAssessmentTable record {|
     readonly int ID;
+    string RISKASSESSMENTTABLE_ID;
     time:Date? DATE;
     int? PROBABILITY;
     string? METHOD;
@@ -3661,6 +3862,7 @@ public type RiskAssessmentTable record {|
 
 public type RiskAssessmentTableOptionalized record {|
     int ID?;
+    string RISKASSESSMENTTABLE_ID?;
     time:Date? DATE?;
     int? PROBABILITY?;
     string? METHOD?;
@@ -3676,6 +3878,7 @@ public type RiskAssessmentTableOptionalized record {|
 public type RiskAssessmentTableTargetType typedesc<RiskAssessmentTableOptionalized>;
 
 public type RiskAssessmentTableInsert record {|
+    string RISKASSESSMENTTABLE_ID;
     time:Date? DATE;
     int? PROBABILITY;
     string? METHOD;
@@ -3689,6 +3892,7 @@ public type RiskAssessmentTableInsert record {|
 |};
 
 public type RiskAssessmentTableUpdate record {|
+    string RISKASSESSMENTTABLE_ID?;
     time:Date? DATE?;
     int? PROBABILITY?;
     string? METHOD?;
@@ -3703,6 +3907,7 @@ public type RiskAssessmentTableUpdate record {|
 
 public type ListTable record {|
     readonly int ID;
+    string LISTTABLE_ID;
     time:Date? DATE;
     string? NOTES;
     string? EMPTY_REASON;
@@ -3719,6 +3924,7 @@ public type ListTable record {|
 
 public type ListTableOptionalized record {|
     int ID?;
+    string LISTTABLE_ID?;
     time:Date? DATE?;
     string? NOTES?;
     string? EMPTY_REASON?;
@@ -3736,6 +3942,7 @@ public type ListTableOptionalized record {|
 public type ListTableTargetType typedesc<ListTableOptionalized>;
 
 public type ListTableInsert record {|
+    string LISTTABLE_ID;
     time:Date? DATE;
     string? NOTES;
     string? EMPTY_REASON;
@@ -3751,6 +3958,7 @@ public type ListTableInsert record {|
 |};
 
 public type ListTableUpdate record {|
+    string LISTTABLE_ID?;
     time:Date? DATE?;
     string? NOTES?;
     string? EMPTY_REASON?;
@@ -3767,6 +3975,7 @@ public type ListTableUpdate record {|
 
 public type OrganizationAffiliationTable record {|
     readonly int ID;
+    string ORGANIZATIONAFFILIATIONTABLE_ID;
     string? ROLE;
     time:Date? DATE;
     string? ACTIVE;
@@ -3784,6 +3993,7 @@ public type OrganizationAffiliationTable record {|
 
 public type OrganizationAffiliationTableOptionalized record {|
     int ID?;
+    string ORGANIZATIONAFFILIATIONTABLE_ID?;
     string? ROLE?;
     time:Date? DATE?;
     string? ACTIVE?;
@@ -3802,6 +4012,7 @@ public type OrganizationAffiliationTableOptionalized record {|
 public type OrganizationAffiliationTableTargetType typedesc<OrganizationAffiliationTableOptionalized>;
 
 public type OrganizationAffiliationTableInsert record {|
+    string ORGANIZATIONAFFILIATIONTABLE_ID;
     string? ROLE;
     time:Date? DATE;
     string? ACTIVE;
@@ -3818,6 +4029,7 @@ public type OrganizationAffiliationTableInsert record {|
 |};
 
 public type OrganizationAffiliationTableUpdate record {|
+    string ORGANIZATIONAFFILIATIONTABLE_ID?;
     string? ROLE?;
     time:Date? DATE?;
     string? ACTIVE?;
@@ -3835,6 +4047,7 @@ public type OrganizationAffiliationTableUpdate record {|
 
 public type ChargeItemTable record {|
     readonly int ID;
+    string CHARGEITEMTABLE_ID;
     string? CODE;
     int? FACTOR_OVERRIDE;
     string? QUANTITY;
@@ -3852,6 +4065,7 @@ public type ChargeItemTable record {|
 
 public type ChargeItemTableOptionalized record {|
     int ID?;
+    string CHARGEITEMTABLE_ID?;
     string? CODE?;
     int? FACTOR_OVERRIDE?;
     string? QUANTITY?;
@@ -3870,6 +4084,7 @@ public type ChargeItemTableOptionalized record {|
 public type ChargeItemTableTargetType typedesc<ChargeItemTableOptionalized>;
 
 public type ChargeItemTableInsert record {|
+    string CHARGEITEMTABLE_ID;
     string? CODE;
     int? FACTOR_OVERRIDE;
     string? QUANTITY;
@@ -3886,6 +4101,7 @@ public type ChargeItemTableInsert record {|
 |};
 
 public type ChargeItemTableUpdate record {|
+    string CHARGEITEMTABLE_ID?;
     string? CODE?;
     int? FACTOR_OVERRIDE?;
     string? QUANTITY?;
@@ -3903,6 +4119,7 @@ public type ChargeItemTableUpdate record {|
 
 public type MedicationKnowledgeTable record {|
     readonly int ID;
+    string MEDICATIONKNOWLEDGETABLE_ID;
     string? CODE;
     string? SOURCE_COST;
     string? STATUS;
@@ -3922,6 +4139,7 @@ public type MedicationKnowledgeTable record {|
 
 public type MedicationKnowledgeTableOptionalized record {|
     int ID?;
+    string MEDICATIONKNOWLEDGETABLE_ID?;
     string? CODE?;
     string? SOURCE_COST?;
     string? STATUS?;
@@ -3942,6 +4160,7 @@ public type MedicationKnowledgeTableOptionalized record {|
 public type MedicationKnowledgeTableTargetType typedesc<MedicationKnowledgeTableOptionalized>;
 
 public type MedicationKnowledgeTableInsert record {|
+    string MEDICATIONKNOWLEDGETABLE_ID;
     string? CODE;
     string? SOURCE_COST;
     string? STATUS;
@@ -3960,6 +4179,7 @@ public type MedicationKnowledgeTableInsert record {|
 |};
 
 public type MedicationKnowledgeTableUpdate record {|
+    string MEDICATIONKNOWLEDGETABLE_ID?;
     string? CODE?;
     string? SOURCE_COST?;
     string? STATUS?;
@@ -3979,6 +4199,7 @@ public type MedicationKnowledgeTableUpdate record {|
 
 public type PlanDefinitionTable record {|
     readonly int ID;
+    string PLANDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -4004,6 +4225,7 @@ public type PlanDefinitionTable record {|
 
 public type PlanDefinitionTableOptionalized record {|
     int ID?;
+    string PLANDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -4030,6 +4252,7 @@ public type PlanDefinitionTableOptionalized record {|
 public type PlanDefinitionTableTargetType typedesc<PlanDefinitionTableOptionalized>;
 
 public type PlanDefinitionTableInsert record {|
+    string PLANDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -4054,6 +4277,7 @@ public type PlanDefinitionTableInsert record {|
 |};
 
 public type PlanDefinitionTableUpdate record {|
+    string PLANDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -4079,6 +4303,7 @@ public type PlanDefinitionTableUpdate record {|
 
 public type CarePlanTable record {|
     readonly int ID;
+    string CAREPLANTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? INSTANTIATES_URI;
@@ -4096,6 +4321,7 @@ public type CarePlanTable record {|
 
 public type CarePlanTableOptionalized record {|
     int ID?;
+    string CAREPLANTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? INSTANTIATES_URI?;
@@ -4114,6 +4340,7 @@ public type CarePlanTableOptionalized record {|
 public type CarePlanTableTargetType typedesc<CarePlanTableOptionalized>;
 
 public type CarePlanTableInsert record {|
+    string CAREPLANTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? INSTANTIATES_URI;
@@ -4130,6 +4357,7 @@ public type CarePlanTableInsert record {|
 |};
 
 public type CarePlanTableUpdate record {|
+    string CAREPLANTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? INSTANTIATES_URI?;
@@ -4147,6 +4375,7 @@ public type CarePlanTableUpdate record {|
 
 public type VisionPrescriptionTable record {|
     readonly int ID;
+    string VISIONPRESCRIPTIONTABLE_ID;
     string? STATUS;
     string? IDENTIFIER;
     time:Date? DATEWRITTEN;
@@ -4159,6 +4388,7 @@ public type VisionPrescriptionTable record {|
 
 public type VisionPrescriptionTableOptionalized record {|
     int ID?;
+    string VISIONPRESCRIPTIONTABLE_ID?;
     string? STATUS?;
     string? IDENTIFIER?;
     time:Date? DATEWRITTEN?;
@@ -4172,6 +4402,7 @@ public type VisionPrescriptionTableOptionalized record {|
 public type VisionPrescriptionTableTargetType typedesc<VisionPrescriptionTableOptionalized>;
 
 public type VisionPrescriptionTableInsert record {|
+    string VISIONPRESCRIPTIONTABLE_ID;
     string? STATUS;
     string? IDENTIFIER;
     time:Date? DATEWRITTEN;
@@ -4183,6 +4414,7 @@ public type VisionPrescriptionTableInsert record {|
 |};
 
 public type VisionPrescriptionTableUpdate record {|
+    string VISIONPRESCRIPTIONTABLE_ID?;
     string? STATUS?;
     string? IDENTIFIER?;
     time:Date? DATEWRITTEN?;
@@ -4195,6 +4427,7 @@ public type VisionPrescriptionTableUpdate record {|
 
 public type EpisodeOfCareTable record {|
     readonly int ID;
+    string EPISODEOFCARETABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? IDENTIFIER;
@@ -4208,6 +4441,7 @@ public type EpisodeOfCareTable record {|
 
 public type EpisodeOfCareTableOptionalized record {|
     int ID?;
+    string EPISODEOFCARETABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -4222,6 +4456,7 @@ public type EpisodeOfCareTableOptionalized record {|
 public type EpisodeOfCareTableTargetType typedesc<EpisodeOfCareTableOptionalized>;
 
 public type EpisodeOfCareTableInsert record {|
+    string EPISODEOFCARETABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? IDENTIFIER;
@@ -4234,6 +4469,7 @@ public type EpisodeOfCareTableInsert record {|
 |};
 
 public type EpisodeOfCareTableUpdate record {|
+    string EPISODEOFCARETABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -4247,6 +4483,7 @@ public type EpisodeOfCareTableUpdate record {|
 
 public type CareTeamTable record {|
     readonly int ID;
+    string CARETEAMTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? CATEGORY;
@@ -4260,6 +4497,7 @@ public type CareTeamTable record {|
 
 public type CareTeamTableOptionalized record {|
     int ID?;
+    string CARETEAMTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? CATEGORY?;
@@ -4274,6 +4512,7 @@ public type CareTeamTableOptionalized record {|
 public type CareTeamTableTargetType typedesc<CareTeamTableOptionalized>;
 
 public type CareTeamTableInsert record {|
+    string CARETEAMTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? CATEGORY;
@@ -4286,6 +4525,7 @@ public type CareTeamTableInsert record {|
 |};
 
 public type CareTeamTableUpdate record {|
+    string CARETEAMTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? CATEGORY?;
@@ -4299,6 +4539,7 @@ public type CareTeamTableUpdate record {|
 
 public type MedicationAdministrationTable record {|
     readonly int ID;
+    string MEDICATIONADMINISTRATIONTABLE_ID;
     string? CODE;
     string? STATUS;
     string? REASON_NOT_GIVEN;
@@ -4314,6 +4555,7 @@ public type MedicationAdministrationTable record {|
 
 public type MedicationAdministrationTableOptionalized record {|
     int ID?;
+    string MEDICATIONADMINISTRATIONTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     string? REASON_NOT_GIVEN?;
@@ -4330,6 +4572,7 @@ public type MedicationAdministrationTableOptionalized record {|
 public type MedicationAdministrationTableTargetType typedesc<MedicationAdministrationTableOptionalized>;
 
 public type MedicationAdministrationTableInsert record {|
+    string MEDICATIONADMINISTRATIONTABLE_ID;
     string? CODE;
     string? STATUS;
     string? REASON_NOT_GIVEN;
@@ -4344,6 +4587,7 @@ public type MedicationAdministrationTableInsert record {|
 |};
 
 public type MedicationAdministrationTableUpdate record {|
+    string MEDICATIONADMINISTRATIONTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     string? REASON_NOT_GIVEN?;
@@ -4359,6 +4603,7 @@ public type MedicationAdministrationTableUpdate record {|
 
 public type ConsentTable record {|
     readonly int ID;
+    string CONSENTTABLE_ID;
     time:Date? DATE;
     string? SECURITY_LABEL;
     string? STATUS;
@@ -4377,6 +4622,7 @@ public type ConsentTable record {|
 
 public type ConsentTableOptionalized record {|
     int ID?;
+    string CONSENTTABLE_ID?;
     time:Date? DATE?;
     string? SECURITY_LABEL?;
     string? STATUS?;
@@ -4396,6 +4642,7 @@ public type ConsentTableOptionalized record {|
 public type ConsentTableTargetType typedesc<ConsentTableOptionalized>;
 
 public type ConsentTableInsert record {|
+    string CONSENTTABLE_ID;
     time:Date? DATE;
     string? SECURITY_LABEL;
     string? STATUS;
@@ -4413,6 +4660,7 @@ public type ConsentTableInsert record {|
 |};
 
 public type ConsentTableUpdate record {|
+    string CONSENTTABLE_ID?;
     time:Date? DATE?;
     string? SECURITY_LABEL?;
     string? STATUS?;
@@ -4431,6 +4679,7 @@ public type ConsentTableUpdate record {|
 
 public type DetectedIssueTable record {|
     readonly int ID;
+    string DETECTEDISSUETABLE_ID;
     string? CODE;
     time:Date? IDENTIFIED;
     string? IDENTIFIER;
@@ -4443,6 +4692,7 @@ public type DetectedIssueTable record {|
 
 public type DetectedIssueTableOptionalized record {|
     int ID?;
+    string DETECTEDISSUETABLE_ID?;
     string? CODE?;
     time:Date? IDENTIFIED?;
     string? IDENTIFIER?;
@@ -4456,6 +4706,7 @@ public type DetectedIssueTableOptionalized record {|
 public type DetectedIssueTableTargetType typedesc<DetectedIssueTableOptionalized>;
 
 public type DetectedIssueTableInsert record {|
+    string DETECTEDISSUETABLE_ID;
     string? CODE;
     time:Date? IDENTIFIED;
     string? IDENTIFIER;
@@ -4467,6 +4718,7 @@ public type DetectedIssueTableInsert record {|
 |};
 
 public type DetectedIssueTableUpdate record {|
+    string DETECTEDISSUETABLE_ID?;
     string? CODE?;
     time:Date? IDENTIFIED?;
     string? IDENTIFIER?;
@@ -4479,6 +4731,7 @@ public type DetectedIssueTableUpdate record {|
 
 public type SubstanceSpecificationTable record {|
     readonly int ID;
+    string SUBSTANCESPECIFICATIONTABLE_ID;
     string? CODE;
     int VERSION_ID;
     time:Civil CREATED_AT;
@@ -4489,6 +4742,7 @@ public type SubstanceSpecificationTable record {|
 
 public type SubstanceSpecificationTableOptionalized record {|
     int ID?;
+    string SUBSTANCESPECIFICATIONTABLE_ID?;
     string? CODE?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
@@ -4500,6 +4754,7 @@ public type SubstanceSpecificationTableOptionalized record {|
 public type SubstanceSpecificationTableTargetType typedesc<SubstanceSpecificationTableOptionalized>;
 
 public type SubstanceSpecificationTableInsert record {|
+    string SUBSTANCESPECIFICATIONTABLE_ID;
     string? CODE;
     int VERSION_ID;
     time:Civil CREATED_AT;
@@ -4509,6 +4764,7 @@ public type SubstanceSpecificationTableInsert record {|
 |};
 
 public type SubstanceSpecificationTableUpdate record {|
+    string SUBSTANCESPECIFICATIONTABLE_ID?;
     string? CODE?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
@@ -4519,6 +4775,7 @@ public type SubstanceSpecificationTableUpdate record {|
 
 public type AllergyIntoleranceTable record {|
     readonly int ID;
+    string ALLERGYINTOLERANCETABLE_ID;
     string? ROUTE;
     time:Date? LAST_DATE;
     string? MANIFESTATION;
@@ -4541,6 +4798,7 @@ public type AllergyIntoleranceTable record {|
 
 public type AllergyIntoleranceTableOptionalized record {|
     int ID?;
+    string ALLERGYINTOLERANCETABLE_ID?;
     string? ROUTE?;
     time:Date? LAST_DATE?;
     string? MANIFESTATION?;
@@ -4564,6 +4822,7 @@ public type AllergyIntoleranceTableOptionalized record {|
 public type AllergyIntoleranceTableTargetType typedesc<AllergyIntoleranceTableOptionalized>;
 
 public type AllergyIntoleranceTableInsert record {|
+    string ALLERGYINTOLERANCETABLE_ID;
     string? ROUTE;
     time:Date? LAST_DATE;
     string? MANIFESTATION;
@@ -4585,6 +4844,7 @@ public type AllergyIntoleranceTableInsert record {|
 |};
 
 public type AllergyIntoleranceTableUpdate record {|
+    string ALLERGYINTOLERANCETABLE_ID?;
     string? ROUTE?;
     time:Date? LAST_DATE?;
     string? MANIFESTATION?;
@@ -4607,6 +4867,7 @@ public type AllergyIntoleranceTableUpdate record {|
 
 public type MedicinalProductIndicationTable record {|
     readonly int ID;
+    string MEDICINALPRODUCTINDICATIONTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -4616,6 +4877,7 @@ public type MedicinalProductIndicationTable record {|
 
 public type MedicinalProductIndicationTableOptionalized record {|
     int ID?;
+    string MEDICINALPRODUCTINDICATIONTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -4626,6 +4888,7 @@ public type MedicinalProductIndicationTableOptionalized record {|
 public type MedicinalProductIndicationTableTargetType typedesc<MedicinalProductIndicationTableOptionalized>;
 
 public type MedicinalProductIndicationTableInsert record {|
+    string MEDICINALPRODUCTINDICATIONTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -4634,6 +4897,7 @@ public type MedicinalProductIndicationTableInsert record {|
 |};
 
 public type MedicinalProductIndicationTableUpdate record {|
+    string MEDICINALPRODUCTINDICATIONTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -4643,6 +4907,7 @@ public type MedicinalProductIndicationTableUpdate record {|
 
 public type MedicinalProductPharmaceuticalTable record {|
     readonly int ID;
+    string MEDICINALPRODUCTPHARMACEUTICALTABLE_ID;
     string? ROUTE;
     string? IDENTIFIER;
     string? TARGET_SPECIES;
@@ -4655,6 +4920,7 @@ public type MedicinalProductPharmaceuticalTable record {|
 
 public type MedicinalProductPharmaceuticalTableOptionalized record {|
     int ID?;
+    string MEDICINALPRODUCTPHARMACEUTICALTABLE_ID?;
     string? ROUTE?;
     string? IDENTIFIER?;
     string? TARGET_SPECIES?;
@@ -4668,6 +4934,7 @@ public type MedicinalProductPharmaceuticalTableOptionalized record {|
 public type MedicinalProductPharmaceuticalTableTargetType typedesc<MedicinalProductPharmaceuticalTableOptionalized>;
 
 public type MedicinalProductPharmaceuticalTableInsert record {|
+    string MEDICINALPRODUCTPHARMACEUTICALTABLE_ID;
     string? ROUTE;
     string? IDENTIFIER;
     string? TARGET_SPECIES;
@@ -4679,6 +4946,7 @@ public type MedicinalProductPharmaceuticalTableInsert record {|
 |};
 
 public type MedicinalProductPharmaceuticalTableUpdate record {|
+    string MEDICINALPRODUCTPHARMACEUTICALTABLE_ID?;
     string? ROUTE?;
     string? IDENTIFIER?;
     string? TARGET_SPECIES?;
@@ -4691,6 +4959,7 @@ public type MedicinalProductPharmaceuticalTableUpdate record {|
 
 public type SlotTable record {|
     readonly int ID;
+    string SLOTTABLE_ID;
     string? SERVICE_CATEGORY;
     string? STATUS;
     string? APPOINTMENT_TYPE;
@@ -4707,6 +4976,7 @@ public type SlotTable record {|
 
 public type SlotTableOptionalized record {|
     int ID?;
+    string SLOTTABLE_ID?;
     string? SERVICE_CATEGORY?;
     string? STATUS?;
     string? APPOINTMENT_TYPE?;
@@ -4724,6 +4994,7 @@ public type SlotTableOptionalized record {|
 public type SlotTableTargetType typedesc<SlotTableOptionalized>;
 
 public type SlotTableInsert record {|
+    string SLOTTABLE_ID;
     string? SERVICE_CATEGORY;
     string? STATUS;
     string? APPOINTMENT_TYPE;
@@ -4739,6 +5010,7 @@ public type SlotTableInsert record {|
 |};
 
 public type SlotTableUpdate record {|
+    string SLOTTABLE_ID?;
     string? SERVICE_CATEGORY?;
     string? STATUS?;
     string? APPOINTMENT_TYPE?;
@@ -4755,6 +5027,7 @@ public type SlotTableUpdate record {|
 
 public type VerificationResultTable record {|
     readonly int ID;
+    string VERIFICATIONRESULTTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -4764,6 +5037,7 @@ public type VerificationResultTable record {|
 
 public type VerificationResultTableOptionalized record {|
     int ID?;
+    string VERIFICATIONRESULTTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -4774,6 +5048,7 @@ public type VerificationResultTableOptionalized record {|
 public type VerificationResultTableTargetType typedesc<VerificationResultTableOptionalized>;
 
 public type VerificationResultTableInsert record {|
+    string VERIFICATIONRESULTTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -4782,6 +5057,7 @@ public type VerificationResultTableInsert record {|
 |};
 
 public type VerificationResultTableUpdate record {|
+    string VERIFICATIONRESULTTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -4791,6 +5067,7 @@ public type VerificationResultTableUpdate record {|
 
 public type SpecimenTable record {|
     readonly int ID;
+    string SPECIMENTABLE_ID;
     time:Date? COLLECTED;
     string? STATUS;
     string? ACCESSION;
@@ -4808,6 +5085,7 @@ public type SpecimenTable record {|
 
 public type SpecimenTableOptionalized record {|
     int ID?;
+    string SPECIMENTABLE_ID?;
     time:Date? COLLECTED?;
     string? STATUS?;
     string? ACCESSION?;
@@ -4826,6 +5104,7 @@ public type SpecimenTableOptionalized record {|
 public type SpecimenTableTargetType typedesc<SpecimenTableOptionalized>;
 
 public type SpecimenTableInsert record {|
+    string SPECIMENTABLE_ID;
     time:Date? COLLECTED;
     string? STATUS;
     string? ACCESSION;
@@ -4842,6 +5121,7 @@ public type SpecimenTableInsert record {|
 |};
 
 public type SpecimenTableUpdate record {|
+    string SPECIMENTABLE_ID?;
     time:Date? COLLECTED?;
     string? STATUS?;
     string? ACCESSION?;
@@ -4859,6 +5139,7 @@ public type SpecimenTableUpdate record {|
 
 public type ResearchSubjectTable record {|
     readonly int ID;
+    string RESEARCHSUBJECTTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? IDENTIFIER;
@@ -4871,6 +5152,7 @@ public type ResearchSubjectTable record {|
 
 public type ResearchSubjectTableOptionalized record {|
     int ID?;
+    string RESEARCHSUBJECTTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -4884,6 +5166,7 @@ public type ResearchSubjectTableOptionalized record {|
 public type ResearchSubjectTableTargetType typedesc<ResearchSubjectTableOptionalized>;
 
 public type ResearchSubjectTableInsert record {|
+    string RESEARCHSUBJECTTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? IDENTIFIER;
@@ -4895,6 +5178,7 @@ public type ResearchSubjectTableInsert record {|
 |};
 
 public type ResearchSubjectTableUpdate record {|
+    string RESEARCHSUBJECTTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -4907,6 +5191,7 @@ public type ResearchSubjectTableUpdate record {|
 
 public type MedicationTable record {|
     readonly int ID;
+    string MEDICATIONTABLE_ID;
     string? CODE;
     string? STATUS;
     time:Date? EXPIRATION_DATE;
@@ -4923,6 +5208,7 @@ public type MedicationTable record {|
 
 public type MedicationTableOptionalized record {|
     int ID?;
+    string MEDICATIONTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     time:Date? EXPIRATION_DATE?;
@@ -4940,6 +5226,7 @@ public type MedicationTableOptionalized record {|
 public type MedicationTableTargetType typedesc<MedicationTableOptionalized>;
 
 public type MedicationTableInsert record {|
+    string MEDICATIONTABLE_ID;
     string? CODE;
     string? STATUS;
     time:Date? EXPIRATION_DATE;
@@ -4955,6 +5242,7 @@ public type MedicationTableInsert record {|
 |};
 
 public type MedicationTableUpdate record {|
+    string MEDICATIONTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     time:Date? EXPIRATION_DATE?;
@@ -4971,6 +5259,7 @@ public type MedicationTableUpdate record {|
 
 public type ResearchDefinitionTable record {|
     readonly int ID;
+    string RESEARCHDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -4995,6 +5284,7 @@ public type ResearchDefinitionTable record {|
 
 public type ResearchDefinitionTableOptionalized record {|
     int ID?;
+    string RESEARCHDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -5020,6 +5310,7 @@ public type ResearchDefinitionTableOptionalized record {|
 public type ResearchDefinitionTableTargetType typedesc<ResearchDefinitionTableOptionalized>;
 
 public type ResearchDefinitionTableInsert record {|
+    string RESEARCHDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -5043,6 +5334,7 @@ public type ResearchDefinitionTableInsert record {|
 |};
 
 public type ResearchDefinitionTableUpdate record {|
+    string RESEARCHDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -5067,6 +5359,7 @@ public type ResearchDefinitionTableUpdate record {|
 
 public type HealthcareServiceTable record {|
     readonly int ID;
+    string HEALTHCARESERVICETABLE_ID;
     string? SERVICE_CATEGORY;
     string? CHARACTERISTIC;
     string? ACTIVE;
@@ -5084,6 +5377,7 @@ public type HealthcareServiceTable record {|
 
 public type HealthcareServiceTableOptionalized record {|
     int ID?;
+    string HEALTHCARESERVICETABLE_ID?;
     string? SERVICE_CATEGORY?;
     string? CHARACTERISTIC?;
     string? ACTIVE?;
@@ -5102,6 +5396,7 @@ public type HealthcareServiceTableOptionalized record {|
 public type HealthcareServiceTableTargetType typedesc<HealthcareServiceTableOptionalized>;
 
 public type HealthcareServiceTableInsert record {|
+    string HEALTHCARESERVICETABLE_ID;
     string? SERVICE_CATEGORY;
     string? CHARACTERISTIC;
     string? ACTIVE;
@@ -5118,6 +5413,7 @@ public type HealthcareServiceTableInsert record {|
 |};
 
 public type HealthcareServiceTableUpdate record {|
+    string HEALTHCARESERVICETABLE_ID?;
     string? SERVICE_CATEGORY?;
     string? CHARACTERISTIC?;
     string? ACTIVE?;
@@ -5135,6 +5431,7 @@ public type HealthcareServiceTableUpdate record {|
 
 public type PaymentNoticeTable record {|
     readonly int ID;
+    string PAYMENTNOTICETABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? PAYMENT_STATUS;
@@ -5148,6 +5445,7 @@ public type PaymentNoticeTable record {|
 
 public type PaymentNoticeTableOptionalized record {|
     int ID?;
+    string PAYMENTNOTICETABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? PAYMENT_STATUS?;
@@ -5162,6 +5460,7 @@ public type PaymentNoticeTableOptionalized record {|
 public type PaymentNoticeTableTargetType typedesc<PaymentNoticeTableOptionalized>;
 
 public type PaymentNoticeTableInsert record {|
+    string PAYMENTNOTICETABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? PAYMENT_STATUS;
@@ -5174,6 +5473,7 @@ public type PaymentNoticeTableInsert record {|
 |};
 
 public type PaymentNoticeTableUpdate record {|
+    string PAYMENTNOTICETABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? PAYMENT_STATUS?;
@@ -5187,6 +5487,7 @@ public type PaymentNoticeTableUpdate record {|
 
 public type ProvenanceTable record {|
     readonly int ID;
+    string PROVENANCETABLE_ID;
     time:Date? RECORDED;
     time:Date? WHEN;
     string? AGENT_TYPE;
@@ -5201,6 +5502,7 @@ public type ProvenanceTable record {|
 
 public type ProvenanceTableOptionalized record {|
     int ID?;
+    string PROVENANCETABLE_ID?;
     time:Date? RECORDED?;
     time:Date? WHEN?;
     string? AGENT_TYPE?;
@@ -5216,6 +5518,7 @@ public type ProvenanceTableOptionalized record {|
 public type ProvenanceTableTargetType typedesc<ProvenanceTableOptionalized>;
 
 public type ProvenanceTableInsert record {|
+    string PROVENANCETABLE_ID;
     time:Date? RECORDED;
     time:Date? WHEN;
     string? AGENT_TYPE;
@@ -5229,6 +5532,7 @@ public type ProvenanceTableInsert record {|
 |};
 
 public type ProvenanceTableUpdate record {|
+    string PROVENANCETABLE_ID?;
     time:Date? RECORDED?;
     time:Date? WHEN?;
     string? AGENT_TYPE?;
@@ -5243,6 +5547,7 @@ public type ProvenanceTableUpdate record {|
 
 public type GraphDefinitionTable record {|
     readonly int ID;
+    string GRAPHDEFINITIONTABLE_ID;
     time:Date? DATE;
     string? PUBLISHER;
     string? STATUS;
@@ -5264,6 +5569,7 @@ public type GraphDefinitionTable record {|
 
 public type GraphDefinitionTableOptionalized record {|
     int ID?;
+    string GRAPHDEFINITIONTABLE_ID?;
     time:Date? DATE?;
     string? PUBLISHER?;
     string? STATUS?;
@@ -5286,6 +5592,7 @@ public type GraphDefinitionTableOptionalized record {|
 public type GraphDefinitionTableTargetType typedesc<GraphDefinitionTableOptionalized>;
 
 public type GraphDefinitionTableInsert record {|
+    string GRAPHDEFINITIONTABLE_ID;
     time:Date? DATE;
     string? PUBLISHER;
     string? STATUS;
@@ -5306,6 +5613,7 @@ public type GraphDefinitionTableInsert record {|
 |};
 
 public type GraphDefinitionTableUpdate record {|
+    string GRAPHDEFINITIONTABLE_ID?;
     time:Date? DATE?;
     string? PUBLISHER?;
     string? STATUS?;
@@ -5327,6 +5635,7 @@ public type GraphDefinitionTableUpdate record {|
 
 public type MediaTable record {|
     readonly int ID;
+    string MEDIATABLE_ID;
     string? SITE;
     time:Date? CREATED;
     string? STATUS;
@@ -5343,6 +5652,7 @@ public type MediaTable record {|
 
 public type MediaTableOptionalized record {|
     int ID?;
+    string MEDIATABLE_ID?;
     string? SITE?;
     time:Date? CREATED?;
     string? STATUS?;
@@ -5360,6 +5670,7 @@ public type MediaTableOptionalized record {|
 public type MediaTableTargetType typedesc<MediaTableOptionalized>;
 
 public type MediaTableInsert record {|
+    string MEDIATABLE_ID;
     string? SITE;
     time:Date? CREATED;
     string? STATUS;
@@ -5375,6 +5686,7 @@ public type MediaTableInsert record {|
 |};
 
 public type MediaTableUpdate record {|
+    string MEDIATABLE_ID?;
     string? SITE?;
     time:Date? CREATED?;
     string? STATUS?;
@@ -5391,6 +5703,7 @@ public type MediaTableUpdate record {|
 
 public type BodyStructureTable record {|
     readonly int ID;
+    string BODYSTRUCTURETABLE_ID;
     string? LOCATION;
     string? IDENTIFIER;
     string? MORPHOLOGY;
@@ -5403,6 +5716,7 @@ public type BodyStructureTable record {|
 
 public type BodyStructureTableOptionalized record {|
     int ID?;
+    string BODYSTRUCTURETABLE_ID?;
     string? LOCATION?;
     string? IDENTIFIER?;
     string? MORPHOLOGY?;
@@ -5416,6 +5730,7 @@ public type BodyStructureTableOptionalized record {|
 public type BodyStructureTableTargetType typedesc<BodyStructureTableOptionalized>;
 
 public type BodyStructureTableInsert record {|
+    string BODYSTRUCTURETABLE_ID;
     string? LOCATION;
     string? IDENTIFIER;
     string? MORPHOLOGY;
@@ -5427,6 +5742,7 @@ public type BodyStructureTableInsert record {|
 |};
 
 public type BodyStructureTableUpdate record {|
+    string BODYSTRUCTURETABLE_ID?;
     string? LOCATION?;
     string? IDENTIFIER?;
     string? MORPHOLOGY?;
@@ -5439,6 +5755,7 @@ public type BodyStructureTableUpdate record {|
 
 public type DiagnosticReportTable record {|
     readonly int ID;
+    string DIAGNOSTICREPORTTABLE_ID;
     time:Date? DATE;
     time:Date? ISSUED;
     string? CODE;
@@ -5455,6 +5772,7 @@ public type DiagnosticReportTable record {|
 
 public type DiagnosticReportTableOptionalized record {|
     int ID?;
+    string DIAGNOSTICREPORTTABLE_ID?;
     time:Date? DATE?;
     time:Date? ISSUED?;
     string? CODE?;
@@ -5472,6 +5790,7 @@ public type DiagnosticReportTableOptionalized record {|
 public type DiagnosticReportTableTargetType typedesc<DiagnosticReportTableOptionalized>;
 
 public type DiagnosticReportTableInsert record {|
+    string DIAGNOSTICREPORTTABLE_ID;
     time:Date? DATE;
     time:Date? ISSUED;
     string? CODE;
@@ -5487,6 +5806,7 @@ public type DiagnosticReportTableInsert record {|
 |};
 
 public type DiagnosticReportTableUpdate record {|
+    string DIAGNOSTICREPORTTABLE_ID?;
     time:Date? DATE?;
     time:Date? ISSUED?;
     string? CODE?;
@@ -5503,6 +5823,7 @@ public type DiagnosticReportTableUpdate record {|
 
 public type GoalTable record {|
     readonly int ID;
+    string GOALTABLE_ID;
     time:Date? TARGET_DATE;
     string? ACHIEVEMENT_STATUS;
     string? CATEGORY;
@@ -5518,6 +5839,7 @@ public type GoalTable record {|
 
 public type GoalTableOptionalized record {|
     int ID?;
+    string GOALTABLE_ID?;
     time:Date? TARGET_DATE?;
     string? ACHIEVEMENT_STATUS?;
     string? CATEGORY?;
@@ -5534,6 +5856,7 @@ public type GoalTableOptionalized record {|
 public type GoalTableTargetType typedesc<GoalTableOptionalized>;
 
 public type GoalTableInsert record {|
+    string GOALTABLE_ID;
     time:Date? TARGET_DATE;
     string? ACHIEVEMENT_STATUS;
     string? CATEGORY;
@@ -5548,6 +5871,7 @@ public type GoalTableInsert record {|
 |};
 
 public type GoalTableUpdate record {|
+    string GOALTABLE_ID?;
     time:Date? TARGET_DATE?;
     string? ACHIEVEMENT_STATUS?;
     string? CATEGORY?;
@@ -5563,6 +5887,7 @@ public type GoalTableUpdate record {|
 
 public type CapabilityStatementTable record {|
     readonly int ID;
+    string CAPABILITYSTATEMENTTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? FORMAT;
@@ -5590,6 +5915,7 @@ public type CapabilityStatementTable record {|
 
 public type CapabilityStatementTableOptionalized record {|
     int ID?;
+    string CAPABILITYSTATEMENTTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? FORMAT?;
@@ -5618,6 +5944,7 @@ public type CapabilityStatementTableOptionalized record {|
 public type CapabilityStatementTableTargetType typedesc<CapabilityStatementTableOptionalized>;
 
 public type CapabilityStatementTableInsert record {|
+    string CAPABILITYSTATEMENTTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? FORMAT;
@@ -5644,6 +5971,7 @@ public type CapabilityStatementTableInsert record {|
 |};
 
 public type CapabilityStatementTableUpdate record {|
+    string CAPABILITYSTATEMENTTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? FORMAT?;
@@ -5671,6 +5999,7 @@ public type CapabilityStatementTableUpdate record {|
 
 public type DeviceUseStatementTable record {|
     readonly int ID;
+    string DEVICEUSESTATEMENTTABLE_ID;
     string? IDENTIFIER;
     int VERSION_ID;
     time:Civil CREATED_AT;
@@ -5681,6 +6010,7 @@ public type DeviceUseStatementTable record {|
 
 public type DeviceUseStatementTableOptionalized record {|
     int ID?;
+    string DEVICEUSESTATEMENTTABLE_ID?;
     string? IDENTIFIER?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
@@ -5692,6 +6022,7 @@ public type DeviceUseStatementTableOptionalized record {|
 public type DeviceUseStatementTableTargetType typedesc<DeviceUseStatementTableOptionalized>;
 
 public type DeviceUseStatementTableInsert record {|
+    string DEVICEUSESTATEMENTTABLE_ID;
     string? IDENTIFIER;
     int VERSION_ID;
     time:Civil CREATED_AT;
@@ -5701,6 +6032,7 @@ public type DeviceUseStatementTableInsert record {|
 |};
 
 public type DeviceUseStatementTableUpdate record {|
+    string DEVICEUSESTATEMENTTABLE_ID?;
     string? IDENTIFIER?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
@@ -5711,6 +6043,7 @@ public type DeviceUseStatementTableUpdate record {|
 
 public type ScheduleTable record {|
     readonly int ID;
+    string SCHEDULETABLE_ID;
     time:Date? DATE;
     string? SERVICE_CATEGORY;
     string? ACTIVE;
@@ -5726,6 +6059,7 @@ public type ScheduleTable record {|
 
 public type ScheduleTableOptionalized record {|
     int ID?;
+    string SCHEDULETABLE_ID?;
     time:Date? DATE?;
     string? SERVICE_CATEGORY?;
     string? ACTIVE?;
@@ -5742,6 +6076,7 @@ public type ScheduleTableOptionalized record {|
 public type ScheduleTableTargetType typedesc<ScheduleTableOptionalized>;
 
 public type ScheduleTableInsert record {|
+    string SCHEDULETABLE_ID;
     time:Date? DATE;
     string? SERVICE_CATEGORY;
     string? ACTIVE;
@@ -5756,6 +6091,7 @@ public type ScheduleTableInsert record {|
 |};
 
 public type ScheduleTableUpdate record {|
+    string SCHEDULETABLE_ID?;
     time:Date? DATE?;
     string? SERVICE_CATEGORY?;
     string? ACTIVE?;
@@ -5771,6 +6107,7 @@ public type ScheduleTableUpdate record {|
 
 public type MedicinalProductPackagedTable record {|
     readonly int ID;
+    string MEDICINALPRODUCTPACKAGEDTABLE_ID;
     string? IDENTIFIER;
     int VERSION_ID;
     time:Civil CREATED_AT;
@@ -5781,6 +6118,7 @@ public type MedicinalProductPackagedTable record {|
 
 public type MedicinalProductPackagedTableOptionalized record {|
     int ID?;
+    string MEDICINALPRODUCTPACKAGEDTABLE_ID?;
     string? IDENTIFIER?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
@@ -5792,6 +6130,7 @@ public type MedicinalProductPackagedTableOptionalized record {|
 public type MedicinalProductPackagedTableTargetType typedesc<MedicinalProductPackagedTableOptionalized>;
 
 public type MedicinalProductPackagedTableInsert record {|
+    string MEDICINALPRODUCTPACKAGEDTABLE_ID;
     string? IDENTIFIER;
     int VERSION_ID;
     time:Civil CREATED_AT;
@@ -5801,6 +6140,7 @@ public type MedicinalProductPackagedTableInsert record {|
 |};
 
 public type MedicinalProductPackagedTableUpdate record {|
+    string MEDICINALPRODUCTPACKAGEDTABLE_ID?;
     string? IDENTIFIER?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
@@ -5811,6 +6151,7 @@ public type MedicinalProductPackagedTableUpdate record {|
 
 public type ProcedureTable record {|
     readonly int ID;
+    string PROCEDURETABLE_ID;
     time:Date? DATE;
     string? CODE;
     string? STATUS;
@@ -5827,6 +6168,7 @@ public type ProcedureTable record {|
 
 public type ProcedureTableOptionalized record {|
     int ID?;
+    string PROCEDURETABLE_ID?;
     time:Date? DATE?;
     string? CODE?;
     string? STATUS?;
@@ -5844,6 +6186,7 @@ public type ProcedureTableOptionalized record {|
 public type ProcedureTableTargetType typedesc<ProcedureTableOptionalized>;
 
 public type ProcedureTableInsert record {|
+    string PROCEDURETABLE_ID;
     time:Date? DATE;
     string? CODE;
     string? STATUS;
@@ -5859,6 +6202,7 @@ public type ProcedureTableInsert record {|
 |};
 
 public type ProcedureTableUpdate record {|
+    string PROCEDURETABLE_ID?;
     time:Date? DATE?;
     string? CODE?;
     string? STATUS?;
@@ -5875,6 +6219,7 @@ public type ProcedureTableUpdate record {|
 
 public type LibraryTable record {|
     readonly int ID;
+    string LIBRARYTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -5901,6 +6246,7 @@ public type LibraryTable record {|
 
 public type LibraryTableOptionalized record {|
     int ID?;
+    string LIBRARYTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -5928,6 +6274,7 @@ public type LibraryTableOptionalized record {|
 public type LibraryTableTargetType typedesc<LibraryTableOptionalized>;
 
 public type LibraryTableInsert record {|
+    string LIBRARYTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -5953,6 +6300,7 @@ public type LibraryTableInsert record {|
 |};
 
 public type LibraryTableUpdate record {|
+    string LIBRARYTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -5979,6 +6327,7 @@ public type LibraryTableUpdate record {|
 
 public type CodeSystemTable record {|
     readonly int ID;
+    string CODESYSTEMTABLE_ID;
     string? LANGUAGE;
     string? SYSTEM;
     string? PUBLISHER;
@@ -6005,6 +6354,7 @@ public type CodeSystemTable record {|
 
 public type CodeSystemTableOptionalized record {|
     int ID?;
+    string CODESYSTEMTABLE_ID?;
     string? LANGUAGE?;
     string? SYSTEM?;
     string? PUBLISHER?;
@@ -6032,6 +6382,7 @@ public type CodeSystemTableOptionalized record {|
 public type CodeSystemTableTargetType typedesc<CodeSystemTableOptionalized>;
 
 public type CodeSystemTableInsert record {|
+    string CODESYSTEMTABLE_ID;
     string? LANGUAGE;
     string? SYSTEM;
     string? PUBLISHER;
@@ -6057,6 +6408,7 @@ public type CodeSystemTableInsert record {|
 |};
 
 public type CodeSystemTableUpdate record {|
+    string CODESYSTEMTABLE_ID?;
     string? LANGUAGE?;
     string? SYSTEM?;
     string? PUBLISHER?;
@@ -6083,6 +6435,7 @@ public type CodeSystemTableUpdate record {|
 
 public type CommunicationRequestTable record {|
     readonly int ID;
+    string COMMUNICATIONREQUESTTABLE_ID;
     string? STATUS;
     string? MEDIUM;
     time:Date? OCCURRENCE;
@@ -6100,6 +6453,7 @@ public type CommunicationRequestTable record {|
 
 public type CommunicationRequestTableOptionalized record {|
     int ID?;
+    string COMMUNICATIONREQUESTTABLE_ID?;
     string? STATUS?;
     string? MEDIUM?;
     time:Date? OCCURRENCE?;
@@ -6118,6 +6472,7 @@ public type CommunicationRequestTableOptionalized record {|
 public type CommunicationRequestTableTargetType typedesc<CommunicationRequestTableOptionalized>;
 
 public type CommunicationRequestTableInsert record {|
+    string COMMUNICATIONREQUESTTABLE_ID;
     string? STATUS;
     string? MEDIUM;
     time:Date? OCCURRENCE;
@@ -6134,6 +6489,7 @@ public type CommunicationRequestTableInsert record {|
 |};
 
 public type CommunicationRequestTableUpdate record {|
+    string COMMUNICATIONREQUESTTABLE_ID?;
     string? STATUS?;
     string? MEDIUM?;
     time:Date? OCCURRENCE?;
@@ -6151,6 +6507,7 @@ public type CommunicationRequestTableUpdate record {|
 
 public type DocumentReferenceTable record {|
     readonly int ID;
+    string DOCUMENTREFERENCETABLE_ID;
     string? LANGUAGE;
     string? LOCATION;
     string? CONTENTTYPE;
@@ -6176,6 +6533,7 @@ public type DocumentReferenceTable record {|
 
 public type DocumentReferenceTableOptionalized record {|
     int ID?;
+    string DOCUMENTREFERENCETABLE_ID?;
     string? LANGUAGE?;
     string? LOCATION?;
     string? CONTENTTYPE?;
@@ -6202,6 +6560,7 @@ public type DocumentReferenceTableOptionalized record {|
 public type DocumentReferenceTableTargetType typedesc<DocumentReferenceTableOptionalized>;
 
 public type DocumentReferenceTableInsert record {|
+    string DOCUMENTREFERENCETABLE_ID;
     string? LANGUAGE;
     string? LOCATION;
     string? CONTENTTYPE;
@@ -6226,6 +6585,7 @@ public type DocumentReferenceTableInsert record {|
 |};
 
 public type DocumentReferenceTableUpdate record {|
+    string DOCUMENTREFERENCETABLE_ID?;
     string? LANGUAGE?;
     string? LOCATION?;
     string? CONTENTTYPE?;
@@ -6251,6 +6611,7 @@ public type DocumentReferenceTableUpdate record {|
 
 public type RequestGroupTable record {|
     readonly int ID;
+    string REQUESTGROUPTABLE_ID;
     string? CODE;
     string? STATUS;
     string? INSTANTIATES_URI;
@@ -6268,6 +6629,7 @@ public type RequestGroupTable record {|
 
 public type RequestGroupTableOptionalized record {|
     int ID?;
+    string REQUESTGROUPTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     string? INSTANTIATES_URI?;
@@ -6286,6 +6648,7 @@ public type RequestGroupTableOptionalized record {|
 public type RequestGroupTableTargetType typedesc<RequestGroupTableOptionalized>;
 
 public type RequestGroupTableInsert record {|
+    string REQUESTGROUPTABLE_ID;
     string? CODE;
     string? STATUS;
     string? INSTANTIATES_URI;
@@ -6302,6 +6665,7 @@ public type RequestGroupTableInsert record {|
 |};
 
 public type RequestGroupTableUpdate record {|
+    string REQUESTGROUPTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     string? INSTANTIATES_URI?;
@@ -6319,6 +6683,7 @@ public type RequestGroupTableUpdate record {|
 
 public type ClaimTable record {|
     readonly int ID;
+    string CLAIMTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? USE;
@@ -6333,6 +6698,7 @@ public type ClaimTable record {|
 
 public type ClaimTableOptionalized record {|
     int ID?;
+    string CLAIMTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? USE?;
@@ -6348,6 +6714,7 @@ public type ClaimTableOptionalized record {|
 public type ClaimTableTargetType typedesc<ClaimTableOptionalized>;
 
 public type ClaimTableInsert record {|
+    string CLAIMTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? USE;
@@ -6361,6 +6728,7 @@ public type ClaimTableInsert record {|
 |};
 
 public type ClaimTableUpdate record {|
+    string CLAIMTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? USE?;
@@ -6375,6 +6743,7 @@ public type ClaimTableUpdate record {|
 
 public type MessageDefinitionTable record {|
     readonly int ID;
+    string MESSAGEDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? FOCUS;
@@ -6400,6 +6769,7 @@ public type MessageDefinitionTable record {|
 
 public type MessageDefinitionTableOptionalized record {|
     int ID?;
+    string MESSAGEDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? FOCUS?;
@@ -6426,6 +6796,7 @@ public type MessageDefinitionTableOptionalized record {|
 public type MessageDefinitionTableTargetType typedesc<MessageDefinitionTableOptionalized>;
 
 public type MessageDefinitionTableInsert record {|
+    string MESSAGEDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? FOCUS;
@@ -6450,6 +6821,7 @@ public type MessageDefinitionTableInsert record {|
 |};
 
 public type MessageDefinitionTableUpdate record {|
+    string MESSAGEDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? FOCUS?;
@@ -6475,6 +6847,7 @@ public type MessageDefinitionTableUpdate record {|
 
 public type RiskEvidenceSynthesisTable record {|
     readonly int ID;
+    string RISKEVIDENCESYNTHESISTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -6498,6 +6871,7 @@ public type RiskEvidenceSynthesisTable record {|
 
 public type RiskEvidenceSynthesisTableOptionalized record {|
     int ID?;
+    string RISKEVIDENCESYNTHESISTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -6522,6 +6896,7 @@ public type RiskEvidenceSynthesisTableOptionalized record {|
 public type RiskEvidenceSynthesisTableTargetType typedesc<RiskEvidenceSynthesisTableOptionalized>;
 
 public type RiskEvidenceSynthesisTableInsert record {|
+    string RISKEVIDENCESYNTHESISTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -6544,6 +6919,7 @@ public type RiskEvidenceSynthesisTableInsert record {|
 |};
 
 public type RiskEvidenceSynthesisTableUpdate record {|
+    string RISKEVIDENCESYNTHESISTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -6567,6 +6943,7 @@ public type RiskEvidenceSynthesisTableUpdate record {|
 
 public type TaskTable record {|
     readonly int ID;
+    string TASKTABLE_ID;
     string? CODE;
     string? STATUS;
     string? BUSINESS_STATUS;
@@ -6587,6 +6964,7 @@ public type TaskTable record {|
 
 public type TaskTableOptionalized record {|
     int ID?;
+    string TASKTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     string? BUSINESS_STATUS?;
@@ -6608,6 +6986,7 @@ public type TaskTableOptionalized record {|
 public type TaskTableTargetType typedesc<TaskTableOptionalized>;
 
 public type TaskTableInsert record {|
+    string TASKTABLE_ID;
     string? CODE;
     string? STATUS;
     string? BUSINESS_STATUS;
@@ -6627,6 +7006,7 @@ public type TaskTableInsert record {|
 |};
 
 public type TaskTableUpdate record {|
+    string TASKTABLE_ID?;
     string? CODE?;
     string? STATUS?;
     string? BUSINESS_STATUS?;
@@ -6647,6 +7027,7 @@ public type TaskTableUpdate record {|
 
 public type ImplementationGuideTable record {|
     readonly int ID;
+    string IMPLEMENTATIONGUIDETABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? EXPERIMENTAL;
@@ -6669,6 +7050,7 @@ public type ImplementationGuideTable record {|
 
 public type ImplementationGuideTableOptionalized record {|
     int ID?;
+    string IMPLEMENTATIONGUIDETABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? EXPERIMENTAL?;
@@ -6692,6 +7074,7 @@ public type ImplementationGuideTableOptionalized record {|
 public type ImplementationGuideTableTargetType typedesc<ImplementationGuideTableOptionalized>;
 
 public type ImplementationGuideTableInsert record {|
+    string IMPLEMENTATIONGUIDETABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? EXPERIMENTAL;
@@ -6713,6 +7096,7 @@ public type ImplementationGuideTableInsert record {|
 |};
 
 public type ImplementationGuideTableUpdate record {|
+    string IMPLEMENTATIONGUIDETABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? EXPERIMENTAL?;
@@ -6735,6 +7119,7 @@ public type ImplementationGuideTableUpdate record {|
 
 public type StructureMapTable record {|
     readonly int ID;
+    string STRUCTUREMAPTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? CONTEXT;
@@ -6757,6 +7142,7 @@ public type StructureMapTable record {|
 
 public type StructureMapTableOptionalized record {|
     int ID?;
+    string STRUCTUREMAPTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? CONTEXT?;
@@ -6780,6 +7166,7 @@ public type StructureMapTableOptionalized record {|
 public type StructureMapTableTargetType typedesc<StructureMapTableOptionalized>;
 
 public type StructureMapTableInsert record {|
+    string STRUCTUREMAPTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? CONTEXT;
@@ -6801,6 +7188,7 @@ public type StructureMapTableInsert record {|
 |};
 
 public type StructureMapTableUpdate record {|
+    string STRUCTUREMAPTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? CONTEXT?;
@@ -6823,6 +7211,7 @@ public type StructureMapTableUpdate record {|
 
 public type MedicinalProductUndesirableEffectTable record {|
     readonly int ID;
+    string MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -6832,6 +7221,7 @@ public type MedicinalProductUndesirableEffectTable record {|
 
 public type MedicinalProductUndesirableEffectTableOptionalized record {|
     int ID?;
+    string MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -6842,6 +7232,7 @@ public type MedicinalProductUndesirableEffectTableOptionalized record {|
 public type MedicinalProductUndesirableEffectTableTargetType typedesc<MedicinalProductUndesirableEffectTableOptionalized>;
 
 public type MedicinalProductUndesirableEffectTableInsert record {|
+    string MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -6850,6 +7241,7 @@ public type MedicinalProductUndesirableEffectTableInsert record {|
 |};
 
 public type MedicinalProductUndesirableEffectTableUpdate record {|
+    string MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -6859,6 +7251,7 @@ public type MedicinalProductUndesirableEffectTableUpdate record {|
 
 public type CompartmentDefinitionTable record {|
     readonly int ID;
+    string COMPARTMENTDEFINITIONTABLE_ID;
     time:Date? DATE;
     string? PUBLISHER;
     string? CODE;
@@ -6880,6 +7273,7 @@ public type CompartmentDefinitionTable record {|
 
 public type CompartmentDefinitionTableOptionalized record {|
     int ID?;
+    string COMPARTMENTDEFINITIONTABLE_ID?;
     time:Date? DATE?;
     string? PUBLISHER?;
     string? CODE?;
@@ -6902,6 +7296,7 @@ public type CompartmentDefinitionTableOptionalized record {|
 public type CompartmentDefinitionTableTargetType typedesc<CompartmentDefinitionTableOptionalized>;
 
 public type CompartmentDefinitionTableInsert record {|
+    string COMPARTMENTDEFINITIONTABLE_ID;
     time:Date? DATE;
     string? PUBLISHER;
     string? CODE;
@@ -6922,6 +7317,7 @@ public type CompartmentDefinitionTableInsert record {|
 |};
 
 public type CompartmentDefinitionTableUpdate record {|
+    string COMPARTMENTDEFINITIONTABLE_ID?;
     time:Date? DATE?;
     string? PUBLISHER?;
     string? CODE?;
@@ -6943,6 +7339,7 @@ public type CompartmentDefinitionTableUpdate record {|
 
 public type EndpointTable record {|
     readonly int ID;
+    string ENDPOINTTABLE_ID;
     string? CONNECTION_TYPE;
     string? STATUS;
     string? PAYLOAD_TYPE;
@@ -6957,6 +7354,7 @@ public type EndpointTable record {|
 
 public type EndpointTableOptionalized record {|
     int ID?;
+    string ENDPOINTTABLE_ID?;
     string? CONNECTION_TYPE?;
     string? STATUS?;
     string? PAYLOAD_TYPE?;
@@ -6972,6 +7370,7 @@ public type EndpointTableOptionalized record {|
 public type EndpointTableTargetType typedesc<EndpointTableOptionalized>;
 
 public type EndpointTableInsert record {|
+    string ENDPOINTTABLE_ID;
     string? CONNECTION_TYPE;
     string? STATUS;
     string? PAYLOAD_TYPE;
@@ -6985,6 +7384,7 @@ public type EndpointTableInsert record {|
 |};
 
 public type EndpointTableUpdate record {|
+    string ENDPOINTTABLE_ID?;
     string? CONNECTION_TYPE?;
     string? STATUS?;
     string? PAYLOAD_TYPE?;
@@ -6999,6 +7399,7 @@ public type EndpointTableUpdate record {|
 
 public type TerminologyCapabilitiesTable record {|
     readonly int ID;
+    string TERMINOLOGYCAPABILITIESTABLE_ID;
     time:Date? DATE;
     string? PUBLISHER;
     string? STATUS;
@@ -7020,6 +7421,7 @@ public type TerminologyCapabilitiesTable record {|
 
 public type TerminologyCapabilitiesTableOptionalized record {|
     int ID?;
+    string TERMINOLOGYCAPABILITIESTABLE_ID?;
     time:Date? DATE?;
     string? PUBLISHER?;
     string? STATUS?;
@@ -7042,6 +7444,7 @@ public type TerminologyCapabilitiesTableOptionalized record {|
 public type TerminologyCapabilitiesTableTargetType typedesc<TerminologyCapabilitiesTableOptionalized>;
 
 public type TerminologyCapabilitiesTableInsert record {|
+    string TERMINOLOGYCAPABILITIESTABLE_ID;
     time:Date? DATE;
     string? PUBLISHER;
     string? STATUS;
@@ -7062,6 +7465,7 @@ public type TerminologyCapabilitiesTableInsert record {|
 |};
 
 public type TerminologyCapabilitiesTableUpdate record {|
+    string TERMINOLOGYCAPABILITIESTABLE_ID?;
     time:Date? DATE?;
     string? PUBLISHER?;
     string? STATUS?;
@@ -7083,6 +7487,7 @@ public type TerminologyCapabilitiesTableUpdate record {|
 
 public type ConditionTable record {|
     readonly int ID;
+    string CONDITIONTABLE_ID;
     string? CLINICAL_STATUS;
     string? STAGE;
     string? ONSET_AGE;
@@ -7108,6 +7513,7 @@ public type ConditionTable record {|
 
 public type ConditionTableOptionalized record {|
     int ID?;
+    string CONDITIONTABLE_ID?;
     string? CLINICAL_STATUS?;
     string? STAGE?;
     string? ONSET_AGE?;
@@ -7134,6 +7540,7 @@ public type ConditionTableOptionalized record {|
 public type ConditionTableTargetType typedesc<ConditionTableOptionalized>;
 
 public type ConditionTableInsert record {|
+    string CONDITIONTABLE_ID;
     string? CLINICAL_STATUS;
     string? STAGE;
     string? ONSET_AGE;
@@ -7158,6 +7565,7 @@ public type ConditionTableInsert record {|
 |};
 
 public type ConditionTableUpdate record {|
+    string CONDITIONTABLE_ID?;
     string? CLINICAL_STATUS?;
     string? STAGE?;
     string? ONSET_AGE?;
@@ -7183,6 +7591,7 @@ public type ConditionTableUpdate record {|
 
 public type CompositionTable record {|
     readonly int ID;
+    string COMPOSITIONTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? RELATED_ID;
@@ -7203,6 +7612,7 @@ public type CompositionTable record {|
 
 public type CompositionTableOptionalized record {|
     int ID?;
+    string COMPOSITIONTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? RELATED_ID?;
@@ -7224,6 +7634,7 @@ public type CompositionTableOptionalized record {|
 public type CompositionTableTargetType typedesc<CompositionTableOptionalized>;
 
 public type CompositionTableInsert record {|
+    string COMPOSITIONTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? RELATED_ID;
@@ -7243,6 +7654,7 @@ public type CompositionTableInsert record {|
 |};
 
 public type CompositionTableUpdate record {|
+    string COMPOSITIONTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? RELATED_ID?;
@@ -7263,6 +7675,7 @@ public type CompositionTableUpdate record {|
 
 public type ContractTable record {|
     readonly int ID;
+    string CONTRACTTABLE_ID;
     time:Date? ISSUED;
     string? STATUS;
     string? IDENTIFIER;
@@ -7277,6 +7690,7 @@ public type ContractTable record {|
 
 public type ContractTableOptionalized record {|
     int ID?;
+    string CONTRACTTABLE_ID?;
     time:Date? ISSUED?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -7292,6 +7706,7 @@ public type ContractTableOptionalized record {|
 public type ContractTableTargetType typedesc<ContractTableOptionalized>;
 
 public type ContractTableInsert record {|
+    string CONTRACTTABLE_ID;
     time:Date? ISSUED;
     string? STATUS;
     string? IDENTIFIER;
@@ -7305,6 +7720,7 @@ public type ContractTableInsert record {|
 |};
 
 public type ContractTableUpdate record {|
+    string CONTRACTTABLE_ID?;
     time:Date? ISSUED?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -7319,6 +7735,7 @@ public type ContractTableUpdate record {|
 
 public type ImmunizationTable record {|
     readonly int ID;
+    string IMMUNIZATIONTABLE_ID;
     time:Date? DATE;
     string? VACCINE_CODE;
     string? STATUS;
@@ -7338,6 +7755,7 @@ public type ImmunizationTable record {|
 
 public type ImmunizationTableOptionalized record {|
     int ID?;
+    string IMMUNIZATIONTABLE_ID?;
     time:Date? DATE?;
     string? VACCINE_CODE?;
     string? STATUS?;
@@ -7358,6 +7776,7 @@ public type ImmunizationTableOptionalized record {|
 public type ImmunizationTableTargetType typedesc<ImmunizationTableOptionalized>;
 
 public type ImmunizationTableInsert record {|
+    string IMMUNIZATIONTABLE_ID;
     time:Date? DATE;
     string? VACCINE_CODE;
     string? STATUS;
@@ -7376,6 +7795,7 @@ public type ImmunizationTableInsert record {|
 |};
 
 public type ImmunizationTableUpdate record {|
+    string IMMUNIZATIONTABLE_ID?;
     time:Date? DATE?;
     string? VACCINE_CODE?;
     string? STATUS?;
@@ -7395,6 +7815,7 @@ public type ImmunizationTableUpdate record {|
 
 public type MedicationDispenseTable record {|
     readonly int ID;
+    string MEDICATIONDISPENSETABLE_ID;
     string? CODE;
     string? STATUS;
     time:Date? WHENHANDEDOVER;
@@ -7410,6 +7831,7 @@ public type MedicationDispenseTable record {|
 
 public type MedicationDispenseTableOptionalized record {|
     int ID?;
+    string MEDICATIONDISPENSETABLE_ID?;
     string? CODE?;
     string? STATUS?;
     time:Date? WHENHANDEDOVER?;
@@ -7426,6 +7848,7 @@ public type MedicationDispenseTableOptionalized record {|
 public type MedicationDispenseTableTargetType typedesc<MedicationDispenseTableOptionalized>;
 
 public type MedicationDispenseTableInsert record {|
+    string MEDICATIONDISPENSETABLE_ID;
     string? CODE;
     string? STATUS;
     time:Date? WHENHANDEDOVER;
@@ -7440,6 +7863,7 @@ public type MedicationDispenseTableInsert record {|
 |};
 
 public type MedicationDispenseTableUpdate record {|
+    string MEDICATIONDISPENSETABLE_ID?;
     string? CODE?;
     string? STATUS?;
     time:Date? WHENHANDEDOVER?;
@@ -7455,6 +7879,7 @@ public type MedicationDispenseTableUpdate record {|
 
 public type MolecularSequenceTable record {|
     readonly int ID;
+    string MOLECULARSEQUENCETABLE_ID;
     string? CHROMOSOME;
     int? VARIANT_START;
     int? WINDOW_START;
@@ -7472,6 +7897,7 @@ public type MolecularSequenceTable record {|
 
 public type MolecularSequenceTableOptionalized record {|
     int ID?;
+    string MOLECULARSEQUENCETABLE_ID?;
     string? CHROMOSOME?;
     int? VARIANT_START?;
     int? WINDOW_START?;
@@ -7490,6 +7916,7 @@ public type MolecularSequenceTableOptionalized record {|
 public type MolecularSequenceTableTargetType typedesc<MolecularSequenceTableOptionalized>;
 
 public type MolecularSequenceTableInsert record {|
+    string MOLECULARSEQUENCETABLE_ID;
     string? CHROMOSOME;
     int? VARIANT_START;
     int? WINDOW_START;
@@ -7506,6 +7933,7 @@ public type MolecularSequenceTableInsert record {|
 |};
 
 public type MolecularSequenceTableUpdate record {|
+    string MOLECULARSEQUENCETABLE_ID?;
     string? CHROMOSOME?;
     int? VARIANT_START?;
     int? WINDOW_START?;
@@ -7523,6 +7951,7 @@ public type MolecularSequenceTableUpdate record {|
 
 public type SearchParameterTable record {|
     readonly int ID;
+    string SEARCHPARAMETERTABLE_ID;
     string? TARGET;
     string? PUBLISHER;
     string? JURISDICTION;
@@ -7547,6 +7976,7 @@ public type SearchParameterTable record {|
 
 public type SearchParameterTableOptionalized record {|
     int ID?;
+    string SEARCHPARAMETERTABLE_ID?;
     string? TARGET?;
     string? PUBLISHER?;
     string? JURISDICTION?;
@@ -7572,6 +8002,7 @@ public type SearchParameterTableOptionalized record {|
 public type SearchParameterTableTargetType typedesc<SearchParameterTableOptionalized>;
 
 public type SearchParameterTableInsert record {|
+    string SEARCHPARAMETERTABLE_ID;
     string? TARGET;
     string? PUBLISHER;
     string? JURISDICTION;
@@ -7595,6 +8026,7 @@ public type SearchParameterTableInsert record {|
 |};
 
 public type SearchParameterTableUpdate record {|
+    string SEARCHPARAMETERTABLE_ID?;
     string? TARGET?;
     string? PUBLISHER?;
     string? JURISDICTION?;
@@ -7619,6 +8051,7 @@ public type SearchParameterTableUpdate record {|
 
 public type MedicationRequestTable record {|
     readonly int ID;
+    string MEDICATIONREQUESTTABLE_ID;
     time:Date? DATE;
     string? CODE;
     string? STATUS;
@@ -7637,6 +8070,7 @@ public type MedicationRequestTable record {|
 
 public type MedicationRequestTableOptionalized record {|
     int ID?;
+    string MEDICATIONREQUESTTABLE_ID?;
     time:Date? DATE?;
     string? CODE?;
     string? STATUS?;
@@ -7656,6 +8090,7 @@ public type MedicationRequestTableOptionalized record {|
 public type MedicationRequestTableTargetType typedesc<MedicationRequestTableOptionalized>;
 
 public type MedicationRequestTableInsert record {|
+    string MEDICATIONREQUESTTABLE_ID;
     time:Date? DATE;
     string? CODE;
     string? STATUS;
@@ -7673,6 +8108,7 @@ public type MedicationRequestTableInsert record {|
 |};
 
 public type MedicationRequestTableUpdate record {|
+    string MEDICATIONREQUESTTABLE_ID?;
     time:Date? DATE?;
     string? CODE?;
     string? STATUS?;
@@ -7691,6 +8127,7 @@ public type MedicationRequestTableUpdate record {|
 
 public type EnrollmentRequestTable record {|
     readonly int ID;
+    string ENROLLMENTREQUESTTABLE_ID;
     string? STATUS;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -7702,6 +8139,7 @@ public type EnrollmentRequestTable record {|
 
 public type EnrollmentRequestTableOptionalized record {|
     int ID?;
+    string ENROLLMENTREQUESTTABLE_ID?;
     string? STATUS?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -7714,6 +8152,7 @@ public type EnrollmentRequestTableOptionalized record {|
 public type EnrollmentRequestTableTargetType typedesc<EnrollmentRequestTableOptionalized>;
 
 public type EnrollmentRequestTableInsert record {|
+    string ENROLLMENTREQUESTTABLE_ID;
     string? STATUS;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -7724,6 +8163,7 @@ public type EnrollmentRequestTableInsert record {|
 |};
 
 public type EnrollmentRequestTableUpdate record {|
+    string ENROLLMENTREQUESTTABLE_ID?;
     string? STATUS?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -7735,6 +8175,7 @@ public type EnrollmentRequestTableUpdate record {|
 
 public type SpecimenDefinitionTable record {|
     readonly int ID;
+    string SPECIMENDEFINITIONTABLE_ID;
     string? CONTAINER;
     string? IDENTIFIER;
     string? TYPE;
@@ -7747,6 +8188,7 @@ public type SpecimenDefinitionTable record {|
 
 public type SpecimenDefinitionTableOptionalized record {|
     int ID?;
+    string SPECIMENDEFINITIONTABLE_ID?;
     string? CONTAINER?;
     string? IDENTIFIER?;
     string? TYPE?;
@@ -7760,6 +8202,7 @@ public type SpecimenDefinitionTableOptionalized record {|
 public type SpecimenDefinitionTableTargetType typedesc<SpecimenDefinitionTableOptionalized>;
 
 public type SpecimenDefinitionTableInsert record {|
+    string SPECIMENDEFINITIONTABLE_ID;
     string? CONTAINER;
     string? IDENTIFIER;
     string? TYPE;
@@ -7771,6 +8214,7 @@ public type SpecimenDefinitionTableInsert record {|
 |};
 
 public type SpecimenDefinitionTableUpdate record {|
+    string SPECIMENDEFINITIONTABLE_ID?;
     string? CONTAINER?;
     string? IDENTIFIER?;
     string? TYPE?;
@@ -7783,6 +8227,7 @@ public type SpecimenDefinitionTableUpdate record {|
 
 public type EventDefinitionTable record {|
     readonly int ID;
+    string EVENTDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -7807,6 +8252,7 @@ public type EventDefinitionTable record {|
 
 public type EventDefinitionTableOptionalized record {|
     int ID?;
+    string EVENTDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -7832,6 +8278,7 @@ public type EventDefinitionTableOptionalized record {|
 public type EventDefinitionTableTargetType typedesc<EventDefinitionTableOptionalized>;
 
 public type EventDefinitionTableInsert record {|
+    string EVENTDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -7855,6 +8302,7 @@ public type EventDefinitionTableInsert record {|
 |};
 
 public type EventDefinitionTableUpdate record {|
+    string EVENTDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -7879,6 +8327,7 @@ public type EventDefinitionTableUpdate record {|
 
 public type ImmunizationEvaluationTable record {|
     readonly int ID;
+    string IMMUNIZATIONEVALUATIONTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? TARGET_DISEASE;
@@ -7893,6 +8342,7 @@ public type ImmunizationEvaluationTable record {|
 
 public type ImmunizationEvaluationTableOptionalized record {|
     int ID?;
+    string IMMUNIZATIONEVALUATIONTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? TARGET_DISEASE?;
@@ -7908,6 +8358,7 @@ public type ImmunizationEvaluationTableOptionalized record {|
 public type ImmunizationEvaluationTableTargetType typedesc<ImmunizationEvaluationTableOptionalized>;
 
 public type ImmunizationEvaluationTableInsert record {|
+    string IMMUNIZATIONEVALUATIONTABLE_ID;
     time:Date? DATE;
     string? STATUS;
     string? TARGET_DISEASE;
@@ -7921,6 +8372,7 @@ public type ImmunizationEvaluationTableInsert record {|
 |};
 
 public type ImmunizationEvaluationTableUpdate record {|
+    string IMMUNIZATIONEVALUATIONTABLE_ID?;
     time:Date? DATE?;
     string? STATUS?;
     string? TARGET_DISEASE?;
@@ -7935,6 +8387,7 @@ public type ImmunizationEvaluationTableUpdate record {|
 
 public type PaymentReconciliationTable record {|
     readonly int ID;
+    string PAYMENTRECONCILIATIONTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? OUTCOME;
@@ -7949,6 +8402,7 @@ public type PaymentReconciliationTable record {|
 
 public type PaymentReconciliationTableOptionalized record {|
     int ID?;
+    string PAYMENTRECONCILIATIONTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? OUTCOME?;
@@ -7964,6 +8418,7 @@ public type PaymentReconciliationTableOptionalized record {|
 public type PaymentReconciliationTableTargetType typedesc<PaymentReconciliationTableOptionalized>;
 
 public type PaymentReconciliationTableInsert record {|
+    string PAYMENTRECONCILIATIONTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? OUTCOME;
@@ -7977,6 +8432,7 @@ public type PaymentReconciliationTableInsert record {|
 |};
 
 public type PaymentReconciliationTableUpdate record {|
+    string PAYMENTRECONCILIATIONTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? OUTCOME?;
@@ -7991,6 +8447,7 @@ public type PaymentReconciliationTableUpdate record {|
 
 public type MeasureTable record {|
     readonly int ID;
+    string MEASURETABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -8015,6 +8472,7 @@ public type MeasureTable record {|
 
 public type MeasureTableOptionalized record {|
     int ID?;
+    string MEASURETABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -8040,6 +8498,7 @@ public type MeasureTableOptionalized record {|
 public type MeasureTableTargetType typedesc<MeasureTableOptionalized>;
 
 public type MeasureTableInsert record {|
+    string MEASURETABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -8063,6 +8522,7 @@ public type MeasureTableInsert record {|
 |};
 
 public type MeasureTableUpdate record {|
+    string MEASURETABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -8087,6 +8547,7 @@ public type MeasureTableUpdate record {|
 
 public type ConceptMapTable record {|
     readonly int ID;
+    string CONCEPTMAPTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? CONTEXT;
@@ -8115,6 +8576,7 @@ public type ConceptMapTable record {|
 
 public type ConceptMapTableOptionalized record {|
     int ID?;
+    string CONCEPTMAPTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? CONTEXT?;
@@ -8144,6 +8606,7 @@ public type ConceptMapTableOptionalized record {|
 public type ConceptMapTableTargetType typedesc<ConceptMapTableOptionalized>;
 
 public type ConceptMapTableInsert record {|
+    string CONCEPTMAPTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     string? CONTEXT;
@@ -8171,6 +8634,7 @@ public type ConceptMapTableInsert record {|
 |};
 
 public type ConceptMapTableUpdate record {|
+    string CONCEPTMAPTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     string? CONTEXT?;
@@ -8199,6 +8663,7 @@ public type ConceptMapTableUpdate record {|
 
 public type ResearchElementDefinitionTable record {|
     readonly int ID;
+    string RESEARCHELEMENTDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -8223,6 +8688,7 @@ public type ResearchElementDefinitionTable record {|
 
 public type ResearchElementDefinitionTableOptionalized record {|
     int ID?;
+    string RESEARCHELEMENTDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -8248,6 +8714,7 @@ public type ResearchElementDefinitionTableOptionalized record {|
 public type ResearchElementDefinitionTableTargetType typedesc<ResearchElementDefinitionTableOptionalized>;
 
 public type ResearchElementDefinitionTableInsert record {|
+    string RESEARCHELEMENTDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -8271,6 +8738,7 @@ public type ResearchElementDefinitionTableInsert record {|
 |};
 
 public type ResearchElementDefinitionTableUpdate record {|
+    string RESEARCHELEMENTDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -8295,6 +8763,7 @@ public type ResearchElementDefinitionTableUpdate record {|
 
 public type GuidanceResponseTable record {|
     readonly int ID;
+    string GUIDANCERESPONSETABLE_ID;
     string? REQUEST;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -8306,6 +8775,7 @@ public type GuidanceResponseTable record {|
 
 public type GuidanceResponseTableOptionalized record {|
     int ID?;
+    string GUIDANCERESPONSETABLE_ID?;
     string? REQUEST?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -8318,6 +8788,7 @@ public type GuidanceResponseTableOptionalized record {|
 public type GuidanceResponseTableTargetType typedesc<GuidanceResponseTableOptionalized>;
 
 public type GuidanceResponseTableInsert record {|
+    string GUIDANCERESPONSETABLE_ID;
     string? REQUEST;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -8328,6 +8799,7 @@ public type GuidanceResponseTableInsert record {|
 |};
 
 public type GuidanceResponseTableUpdate record {|
+    string GUIDANCERESPONSETABLE_ID?;
     string? REQUEST?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -8339,6 +8811,7 @@ public type GuidanceResponseTableUpdate record {|
 
 public type LinkageTable record {|
     readonly int ID;
+    string LINKAGETABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -8348,6 +8821,7 @@ public type LinkageTable record {|
 
 public type LinkageTableOptionalized record {|
     int ID?;
+    string LINKAGETABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -8358,6 +8832,7 @@ public type LinkageTableOptionalized record {|
 public type LinkageTableTargetType typedesc<LinkageTableOptionalized>;
 
 public type LinkageTableInsert record {|
+    string LINKAGETABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -8366,6 +8841,7 @@ public type LinkageTableInsert record {|
 |};
 
 public type LinkageTableUpdate record {|
+    string LINKAGETABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -8375,6 +8851,7 @@ public type LinkageTableUpdate record {|
 
 public type MedicinalProductTable record {|
     readonly int ID;
+    string MEDICINALPRODUCTTABLE_ID;
     string? NAME_LANGUAGE;
     string? IDENTIFIER;
     string? NAME;
@@ -8387,6 +8864,7 @@ public type MedicinalProductTable record {|
 
 public type MedicinalProductTableOptionalized record {|
     int ID?;
+    string MEDICINALPRODUCTTABLE_ID?;
     string? NAME_LANGUAGE?;
     string? IDENTIFIER?;
     string? NAME?;
@@ -8400,6 +8878,7 @@ public type MedicinalProductTableOptionalized record {|
 public type MedicinalProductTableTargetType typedesc<MedicinalProductTableOptionalized>;
 
 public type MedicinalProductTableInsert record {|
+    string MEDICINALPRODUCTTABLE_ID;
     string? NAME_LANGUAGE;
     string? IDENTIFIER;
     string? NAME;
@@ -8411,6 +8890,7 @@ public type MedicinalProductTableInsert record {|
 |};
 
 public type MedicinalProductTableUpdate record {|
+    string MEDICINALPRODUCTTABLE_ID?;
     string? NAME_LANGUAGE?;
     string? IDENTIFIER?;
     string? NAME?;
@@ -8423,6 +8903,7 @@ public type MedicinalProductTableUpdate record {|
 
 public type DeviceDefinitionTable record {|
     readonly int ID;
+    string DEVICEDEFINITIONTABLE_ID;
     string? IDENTIFIER;
     string? TYPE;
     int VERSION_ID;
@@ -8434,6 +8915,7 @@ public type DeviceDefinitionTable record {|
 
 public type DeviceDefinitionTableOptionalized record {|
     int ID?;
+    string DEVICEDEFINITIONTABLE_ID?;
     string? IDENTIFIER?;
     string? TYPE?;
     int VERSION_ID?;
@@ -8446,6 +8928,7 @@ public type DeviceDefinitionTableOptionalized record {|
 public type DeviceDefinitionTableTargetType typedesc<DeviceDefinitionTableOptionalized>;
 
 public type DeviceDefinitionTableInsert record {|
+    string DEVICEDEFINITIONTABLE_ID;
     string? IDENTIFIER;
     string? TYPE;
     int VERSION_ID;
@@ -8456,6 +8939,7 @@ public type DeviceDefinitionTableInsert record {|
 |};
 
 public type DeviceDefinitionTableUpdate record {|
+    string DEVICEDEFINITIONTABLE_ID?;
     string? IDENTIFIER?;
     string? TYPE?;
     int VERSION_ID?;
@@ -8467,6 +8951,7 @@ public type DeviceDefinitionTableUpdate record {|
 
 public type CoverageEligibilityRequestTable record {|
     readonly int ID;
+    string COVERAGEELIGIBILITYREQUESTTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? IDENTIFIER;
@@ -8479,6 +8964,7 @@ public type CoverageEligibilityRequestTable record {|
 
 public type CoverageEligibilityRequestTableOptionalized record {|
     int ID?;
+    string COVERAGEELIGIBILITYREQUESTTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -8492,6 +8978,7 @@ public type CoverageEligibilityRequestTableOptionalized record {|
 public type CoverageEligibilityRequestTableTargetType typedesc<CoverageEligibilityRequestTableOptionalized>;
 
 public type CoverageEligibilityRequestTableInsert record {|
+    string COVERAGEELIGIBILITYREQUESTTABLE_ID;
     time:Date? CREATED;
     string? STATUS;
     string? IDENTIFIER;
@@ -8503,6 +8990,7 @@ public type CoverageEligibilityRequestTableInsert record {|
 |};
 
 public type CoverageEligibilityRequestTableUpdate record {|
+    string COVERAGEELIGIBILITYREQUESTTABLE_ID?;
     time:Date? CREATED?;
     string? STATUS?;
     string? IDENTIFIER?;
@@ -8515,6 +9003,7 @@ public type CoverageEligibilityRequestTableUpdate record {|
 
 public type PatientTable record {|
     readonly int ID;
+    string PATIENTTABLE_ID;
     string? LANGUAGE;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
@@ -8544,6 +9033,7 @@ public type PatientTable record {|
 
 public type PatientTableOptionalized record {|
     int ID?;
+    string PATIENTTABLE_ID?;
     string? LANGUAGE?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
@@ -8574,6 +9064,7 @@ public type PatientTableOptionalized record {|
 public type PatientTableTargetType typedesc<PatientTableOptionalized>;
 
 public type PatientTableInsert record {|
+    string PATIENTTABLE_ID;
     string? LANGUAGE;
     string? ADDRESS_COUNTRY;
     string? ADDRESS_POSTALCODE;
@@ -8602,6 +9093,7 @@ public type PatientTableInsert record {|
 |};
 
 public type PatientTableUpdate record {|
+    string PATIENTTABLE_ID?;
     string? LANGUAGE?;
     string? ADDRESS_COUNTRY?;
     string? ADDRESS_POSTALCODE?;
@@ -8631,6 +9123,7 @@ public type PatientTableUpdate record {|
 
 public type CoverageTable record {|
     readonly int ID;
+    string COVERAGETABLE_ID;
     string? STATUS;
     string? DEPENDENT;
     string? IDENTIFIER;
@@ -8646,6 +9139,7 @@ public type CoverageTable record {|
 
 public type CoverageTableOptionalized record {|
     int ID?;
+    string COVERAGETABLE_ID?;
     string? STATUS?;
     string? DEPENDENT?;
     string? IDENTIFIER?;
@@ -8662,6 +9156,7 @@ public type CoverageTableOptionalized record {|
 public type CoverageTableTargetType typedesc<CoverageTableOptionalized>;
 
 public type CoverageTableInsert record {|
+    string COVERAGETABLE_ID;
     string? STATUS;
     string? DEPENDENT;
     string? IDENTIFIER;
@@ -8676,6 +9171,7 @@ public type CoverageTableInsert record {|
 |};
 
 public type CoverageTableUpdate record {|
+    string COVERAGETABLE_ID?;
     string? STATUS?;
     string? DEPENDENT?;
     string? IDENTIFIER?;
@@ -8691,6 +9187,7 @@ public type CoverageTableUpdate record {|
 
 public type SubstanceTable record {|
     readonly int ID;
+    string SUBSTANCETABLE_ID;
     string? CONTAINER_IDENTIFIER;
     string? CODE;
     string? STATUS;
@@ -8707,6 +9204,7 @@ public type SubstanceTable record {|
 
 public type SubstanceTableOptionalized record {|
     int ID?;
+    string SUBSTANCETABLE_ID?;
     string? CONTAINER_IDENTIFIER?;
     string? CODE?;
     string? STATUS?;
@@ -8724,6 +9222,7 @@ public type SubstanceTableOptionalized record {|
 public type SubstanceTableTargetType typedesc<SubstanceTableOptionalized>;
 
 public type SubstanceTableInsert record {|
+    string SUBSTANCETABLE_ID;
     string? CONTAINER_IDENTIFIER;
     string? CODE;
     string? STATUS;
@@ -8739,6 +9238,7 @@ public type SubstanceTableInsert record {|
 |};
 
 public type SubstanceTableUpdate record {|
+    string SUBSTANCETABLE_ID?;
     string? CONTAINER_IDENTIFIER?;
     string? CODE?;
     string? STATUS?;
@@ -8755,6 +9255,7 @@ public type SubstanceTableUpdate record {|
 
 public type ChargeItemDefinitionTable record {|
     readonly int ID;
+    string CHARGEITEMDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -8777,6 +9278,7 @@ public type ChargeItemDefinitionTable record {|
 
 public type ChargeItemDefinitionTableOptionalized record {|
     int ID?;
+    string CHARGEITEMDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -8800,6 +9302,7 @@ public type ChargeItemDefinitionTableOptionalized record {|
 public type ChargeItemDefinitionTableTargetType typedesc<ChargeItemDefinitionTableOptionalized>;
 
 public type ChargeItemDefinitionTableInsert record {|
+    string CHARGEITEMDEFINITIONTABLE_ID;
     string? PUBLISHER;
     string? JURISDICTION;
     time:Date? EFFECTIVE;
@@ -8821,6 +9324,7 @@ public type ChargeItemDefinitionTableInsert record {|
 |};
 
 public type ChargeItemDefinitionTableUpdate record {|
+    string CHARGEITEMDEFINITIONTABLE_ID?;
     string? PUBLISHER?;
     string? JURISDICTION?;
     time:Date? EFFECTIVE?;
@@ -8843,6 +9347,7 @@ public type ChargeItemDefinitionTableUpdate record {|
 
 public type MedicinalProductInteractionTable record {|
     readonly int ID;
+    string MEDICINALPRODUCTINTERACTIONTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -8852,6 +9357,7 @@ public type MedicinalProductInteractionTable record {|
 
 public type MedicinalProductInteractionTableOptionalized record {|
     int ID?;
+    string MEDICINALPRODUCTINTERACTIONTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -8862,6 +9368,7 @@ public type MedicinalProductInteractionTableOptionalized record {|
 public type MedicinalProductInteractionTableTargetType typedesc<MedicinalProductInteractionTableOptionalized>;
 
 public type MedicinalProductInteractionTableInsert record {|
+    string MEDICINALPRODUCTINTERACTIONTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -8870,6 +9377,7 @@ public type MedicinalProductInteractionTableInsert record {|
 |};
 
 public type MedicinalProductInteractionTableUpdate record {|
+    string MEDICINALPRODUCTINTERACTIONTABLE_ID?;
     int VERSION_ID?;
     time:Civil CREATED_AT?;
     time:Civil UPDATED_AT?;
@@ -8879,6 +9387,7 @@ public type MedicinalProductInteractionTableUpdate record {|
 
 public type AccountTable record {|
     readonly int ID;
+    string ACCOUNTTABLE_ID;
     string? STATUS;
     time:Date? PERIOD;
     string? IDENTIFIER;
@@ -8893,6 +9402,7 @@ public type AccountTable record {|
 
 public type AccountTableOptionalized record {|
     int ID?;
+    string ACCOUNTTABLE_ID?;
     string? STATUS?;
     time:Date? PERIOD?;
     string? IDENTIFIER?;
@@ -8908,6 +9418,7 @@ public type AccountTableOptionalized record {|
 public type AccountTableTargetType typedesc<AccountTableOptionalized>;
 
 public type AccountTableInsert record {|
+    string ACCOUNTTABLE_ID;
     string? STATUS;
     time:Date? PERIOD;
     string? IDENTIFIER;
@@ -8921,6 +9432,7 @@ public type AccountTableInsert record {|
 |};
 
 public type AccountTableUpdate record {|
+    string ACCOUNTTABLE_ID?;
     string? STATUS?;
     time:Date? PERIOD?;
     string? IDENTIFIER?;
@@ -8935,6 +9447,7 @@ public type AccountTableUpdate record {|
 
 public type MessageHeaderTable record {|
     readonly int ID;
+    string MESSAGEHEADERTABLE_ID;
     string? CODE;
     string? SOURCE_URI;
     string? DESTINATION;
@@ -8951,6 +9464,7 @@ public type MessageHeaderTable record {|
 
 public type MessageHeaderTableOptionalized record {|
     int ID?;
+    string MESSAGEHEADERTABLE_ID?;
     string? CODE?;
     string? SOURCE_URI?;
     string? DESTINATION?;
@@ -8968,6 +9482,7 @@ public type MessageHeaderTableOptionalized record {|
 public type MessageHeaderTableTargetType typedesc<MessageHeaderTableOptionalized>;
 
 public type MessageHeaderTableInsert record {|
+    string MESSAGEHEADERTABLE_ID;
     string? CODE;
     string? SOURCE_URI;
     string? DESTINATION;
@@ -8983,6 +9498,7 @@ public type MessageHeaderTableInsert record {|
 |};
 
 public type MessageHeaderTableUpdate record {|
+    string MESSAGEHEADERTABLE_ID?;
     string? CODE?;
     string? SOURCE_URI?;
     string? DESTINATION?;
@@ -8999,6 +9515,7 @@ public type MessageHeaderTableUpdate record {|
 
 public type AuditEventTable record {|
     readonly int ID;
+    string AUDITEVENTTABLE_ID;
     string? SUBTYPE;
     string? SITE;
     string? OUTCOME;
@@ -9022,6 +9539,7 @@ public type AuditEventTable record {|
 
 public type AuditEventTableOptionalized record {|
     int ID?;
+    string AUDITEVENTTABLE_ID?;
     string? SUBTYPE?;
     string? SITE?;
     string? OUTCOME?;
@@ -9046,6 +9564,7 @@ public type AuditEventTableOptionalized record {|
 public type AuditEventTableTargetType typedesc<AuditEventTableOptionalized>;
 
 public type AuditEventTableInsert record {|
+    string AUDITEVENTTABLE_ID;
     string? SUBTYPE;
     string? SITE;
     string? OUTCOME;
@@ -9068,6 +9587,7 @@ public type AuditEventTableInsert record {|
 |};
 
 public type AuditEventTableUpdate record {|
+    string AUDITEVENTTABLE_ID?;
     string? SUBTYPE?;
     string? SITE?;
     string? OUTCOME?;
@@ -9091,6 +9611,7 @@ public type AuditEventTableUpdate record {|
 
 public type NutritionOrderTable record {|
     readonly int ID;
+    string NUTRITIONORDERTABLE_ID;
     string? SUPPLEMENT;
     string? STATUS;
     time:Date? DATETIME;
@@ -9108,6 +9629,7 @@ public type NutritionOrderTable record {|
 
 public type NutritionOrderTableOptionalized record {|
     int ID?;
+    string NUTRITIONORDERTABLE_ID?;
     string? SUPPLEMENT?;
     string? STATUS?;
     time:Date? DATETIME?;
@@ -9126,6 +9648,7 @@ public type NutritionOrderTableOptionalized record {|
 public type NutritionOrderTableTargetType typedesc<NutritionOrderTableOptionalized>;
 
 public type NutritionOrderTableInsert record {|
+    string NUTRITIONORDERTABLE_ID;
     string? SUPPLEMENT;
     string? STATUS;
     time:Date? DATETIME;
@@ -9142,6 +9665,7 @@ public type NutritionOrderTableInsert record {|
 |};
 
 public type NutritionOrderTableUpdate record {|
+    string NUTRITIONORDERTABLE_ID?;
     string? SUPPLEMENT?;
     string? STATUS?;
     time:Date? DATETIME?;
@@ -9159,6 +9683,7 @@ public type NutritionOrderTableUpdate record {|
 
 public type QuestionnaireTable record {|
     readonly int ID;
+    string QUESTIONNAIRETABLE_ID;
     string? DEFINITION;
     string? PUBLISHER;
     string? JURISDICTION;
@@ -9185,6 +9710,7 @@ public type QuestionnaireTable record {|
 
 public type QuestionnaireTableOptionalized record {|
     int ID?;
+    string QUESTIONNAIRETABLE_ID?;
     string? DEFINITION?;
     string? PUBLISHER?;
     string? JURISDICTION?;
@@ -9212,6 +9738,7 @@ public type QuestionnaireTableOptionalized record {|
 public type QuestionnaireTableTargetType typedesc<QuestionnaireTableOptionalized>;
 
 public type QuestionnaireTableInsert record {|
+    string QUESTIONNAIRETABLE_ID;
     string? DEFINITION;
     string? PUBLISHER;
     string? JURISDICTION;
@@ -9237,6 +9764,7 @@ public type QuestionnaireTableInsert record {|
 |};
 
 public type QuestionnaireTableUpdate record {|
+    string QUESTIONNAIRETABLE_ID?;
     string? DEFINITION?;
     string? PUBLISHER?;
     string? JURISDICTION?;
@@ -9263,6 +9791,7 @@ public type QuestionnaireTableUpdate record {|
 
 public type AppointmentResponseTable record {|
     readonly int ID;
+    string APPOINTMENTRESPONSETABLE_ID;
     string? PART_STATUS;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -9274,6 +9803,7 @@ public type AppointmentResponseTable record {|
 
 public type AppointmentResponseTableOptionalized record {|
     int ID?;
+    string APPOINTMENTRESPONSETABLE_ID?;
     string? PART_STATUS?;
     string? IDENTIFIER?;
     int VERSION_ID?;
@@ -9286,6 +9816,7 @@ public type AppointmentResponseTableOptionalized record {|
 public type AppointmentResponseTableTargetType typedesc<AppointmentResponseTableOptionalized>;
 
 public type AppointmentResponseTableInsert record {|
+    string APPOINTMENTRESPONSETABLE_ID;
     string? PART_STATUS;
     string? IDENTIFIER;
     int VERSION_ID;
@@ -9296,6 +9827,7 @@ public type AppointmentResponseTableInsert record {|
 |};
 
 public type AppointmentResponseTableUpdate record {|
+    string APPOINTMENTRESPONSETABLE_ID?;
     string? PART_STATUS?;
     string? IDENTIFIER?;
     int VERSION_ID?;

@@ -23,6 +23,15 @@ public class DBHandler {
     public function initializePersistClient() returns db_store:Client|error {
         return new ();
     }
+    
+    public function isDBExsists(jdbc:Client jdbcClient) returns boolean | error {
+        sql:ParameterizedQuery query = `SELECT COUNT(ID) FROM SEARCH_PARAM_RES_EXPRESSIONS`;
+        int count = check jdbcClient->queryRow(query);
+        if (count > 0){
+            return true;
+        }
+        return false;
+    }
 
     private function convertToParameterizedQuery(readonly & string[] strQuery) returns sql:ParameterizedQuery {
         sql:ParameterizedQuery parameterizedQuery = ``;
@@ -79,7 +88,7 @@ public class DBHandler {
     }
 
     private function populateSearchParamExpressionTable(db_store:Client persistClient) returns error? {
-        final string dataFilePath = "./assets/searchParam-Expression.csv";
+        final string dataFilePath = "./assets/r4-searchParam-Expression.csv";
         final string[] readLines = check io:fileReadLines(dataFilePath);
         final string:RegExp regex = re `,`;
         int i = 0;
@@ -101,14 +110,14 @@ public class DBHandler {
                 string searchParamType = data[2];
                 string expression = data[3];
 
-                db_store:SEARCH_PARAM_RES_EXPRESSION_TABLEInsert searchParamResourceExpression = {
+                db_store:SEARCH_PARAM_RES_EXPRESSIONSInsert searchParamResourceExpression = {
                     SEARCH_PARAM_NAME: searchParamName,
                     SEARCH_PARAM_TYPE: searchParamType,
                     RESOURCE_NAME: 'resource,
                     EXPRESSION: expression
                 };
 
-                int[] recordId = check persistClient->/search_param_res_expression_tables.post([searchParamResourceExpression]);
+                int[] recordId = check persistClient->/search_param_res_expressions.post([searchParamResourceExpression]);
                 totRecords = recordId[0]; // tot_records = last_rec_id
             }
         }
@@ -120,7 +129,7 @@ public class DBHandler {
         sql:ExecutionResult createQueryResult = {affectedRowCount: 0, lastInsertId: 0};
 
         error? isError = self.retreiveQueriesFromSchema();
-        
+
         if (isError is error) {
             io:println("An error occured when reading the db schema");
             io:println(isError);
@@ -143,7 +152,7 @@ public class DBHandler {
         if (isSearchParamsPopulated is error) {
             io:print("An error occured while populating the SEARCH_PARAM_EXPRESSION_TABLE: " + isSearchParamsPopulated.toString());
         } else {
-            io:println("SEARCH_PARAM_EXPRESSION_TABLE populated successfully!");
+            io:println("SEARCH_PARAM_EXPRESSION TABLE populated successfully!");
         }
     }
 }
