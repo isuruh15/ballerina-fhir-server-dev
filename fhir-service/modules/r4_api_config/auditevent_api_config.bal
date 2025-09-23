@@ -24,193 +24,192 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig auditeventApiConfig = {
     resourceType: "AuditEvent",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ehrsrle-auditevent",
-            
-                "http://hl7.org/fhir/StructureDefinition/AuditEvent"
-        
+        "http://hl7.org/fhir/StructureDefinition/ehrsrle-auditevent",
+
+        "http://hl7.org/fhir/StructureDefinition/AuditEvent"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "entity-name",
-        active: true,
-        information: {
-            description: "Descriptor for entity",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-name"
-        }
-    },
+            name: "entity-name",
+            active: true,
+            information: {
+                description: "Descriptor for entity",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-name"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Identifier of who",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Identifier of who",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-patient"
+            }
+        },
 
         {
-        name: "address",
-        active: true,
-        information: {
-            description: "Identifier for the network access point of the user device",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-address"
-        }
-    },
+            name: "address",
+            active: true,
+            information: {
+                description: "Identifier for the network access point of the user device",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-address"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "Type/identifier of event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "Type/identifier of event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-type"
+            }
+        },
 
         {
-        name: "site",
-        active: true,
-        information: {
-            description: "Logical source location within the enterprise",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-site"
-        }
-    },
+            name: "site",
+            active: true,
+            information: {
+                description: "Logical source location within the enterprise",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-site"
+            }
+        },
 
         {
-        name: "agent-name",
-        active: true,
-        information: {
-            description: "Human friendly name for the agent",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-agent-name"
-        }
-    },
+            name: "agent-name",
+            active: true,
+            information: {
+                description: "Human friendly name for the agent",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-agent-name"
+            }
+        },
 
         {
-        name: "agent",
-        active: true,
-        information: {
-            description: "Identifier of who",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-agent"
-        }
-    },
+            name: "agent",
+            active: true,
+            information: {
+                description: "Identifier of who",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-agent"
+            }
+        },
 
         {
-        name: "entity-role",
-        active: true,
-        information: {
-            description: "What role the entity played",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-role"
-        }
-    },
+            name: "entity-role",
+            active: true,
+            information: {
+                description: "What role the entity played",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-role"
+            }
+        },
 
         {
-        name: "entity",
-        active: true,
-        information: {
-            description: "Specific instance of resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-entity"
-        }
-    },
+            name: "entity",
+            active: true,
+            information: {
+                description: "Specific instance of resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-entity"
+            }
+        },
 
         {
-        name: "outcome",
-        active: true,
-        information: {
-            description: "Whether the event succeeded or failed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-outcome"
-        }
-    },
+            name: "outcome",
+            active: true,
+            information: {
+                description: "Whether the event succeeded or failed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-outcome"
+            }
+        },
 
         {
-        name: "altid",
-        active: true,
-        information: {
-            description: "Alternative User identity",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-altid"
-        }
-    },
+            name: "altid",
+            active: true,
+            information: {
+                description: "Alternative User identity",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-altid"
+            }
+        },
 
         {
-        name: "subtype",
-        active: true,
-        information: {
-            description: "More specific type/id for the event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-subtype"
-        }
-    },
+            name: "subtype",
+            active: true,
+            information: {
+                description: "More specific type/id for the event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-subtype"
+            }
+        },
 
         {
-        name: "entity-type",
-        active: true,
-        information: {
-            description: "Type of entity involved",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-type"
-        }
-    },
+            name: "entity-type",
+            active: true,
+            information: {
+                description: "Type of entity involved",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-type"
+            }
+        },
 
         {
-        name: "action",
-        active: true,
-        information: {
-            description: "Type of action performed during the event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-action"
-        }
-    },
+            name: "action",
+            active: true,
+            information: {
+                description: "Type of action performed during the event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-action"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "Time when the event was recorded",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "Time when the event was recorded",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-date"
+            }
+        },
 
         {
-        name: "source",
-        active: true,
-        information: {
-            description: "The identity of source detecting the event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-source"
-        }
-    },
+            name: "source",
+            active: true,
+            information: {
+                description: "The identity of source detecting the event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-source"
+            }
+        },
 
         {
-        name: "agent-role",
-        active: true,
-        information: {
-            description: "Agent role in the event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-agent-role"
-        }
-    },
+            name: "agent-role",
+            active: true,
+            information: {
+                description: "Agent role in the event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-agent-role"
+            }
+        },
 
         {
-        name: "policy",
-        active: true,
-        information: {
-            description: "Policy that authorized event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-policy"
+            name: "policy",
+            active: true,
+            information: {
+                description: "Policy that authorized event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AuditEvent-policy"
+            }
         }
-    }
 
     ],
     operations: [

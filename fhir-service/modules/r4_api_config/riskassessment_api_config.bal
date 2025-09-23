@@ -24,121 +24,120 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig riskassessmentApiConfig = {
     resourceType: "RiskAssessment",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/RiskAssessment"
-        
+        "http://hl7.org/fhir/StructureDefinition/RiskAssessment"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "performer",
-        active: true,
-        information: {
-            description: "Who did assessment?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-performer"
-        }
-    },
+            name: "performer",
+            active: true,
+            information: {
+                description: "Who did assessment?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-performer"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[RiskAssessment](riskassessment.html): Unique identifier for the assessment",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[RiskAssessment](riskassessment.html): Unique identifier for the assessment",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "condition",
-        active: true,
-        information: {
-            description: "Condition assessed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-condition"
-        }
-    },
+            name: "condition",
+            active: true,
+            information: {
+                description: "Condition assessed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-condition"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[RiskAssessment](riskassessment.html): When was assessment made?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[RiskAssessment](riskassessment.html): When was assessment made?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[RiskAssessment](riskassessment.html): Who/what does assessment apply to?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[RiskAssessment](riskassessment.html): Who/what does assessment apply to?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "probability",
-        active: true,
-        information: {
-            description: "Likelihood of specified outcome",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-probability"
-        }
-    },
+            name: "probability",
+            active: true,
+            information: {
+                description: "Likelihood of specified outcome",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-probability"
+            }
+        },
 
         {
-        name: "method",
-        active: true,
-        information: {
-            description: "Evaluation mechanism",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-method"
-        }
-    },
+            name: "method",
+            active: true,
+            information: {
+                description: "Evaluation mechanism",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-method"
+            }
+        },
 
         {
-        name: "risk",
-        active: true,
-        information: {
-            description: "Likelihood of specified outcome as a qualitative value",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-risk"
-        }
-    },
+            name: "risk",
+            active: true,
+            information: {
+                description: "Likelihood of specified outcome as a qualitative value",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-risk"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "[RiskAssessment](riskassessment.html): Where was assessment performed?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "[RiskAssessment](riskassessment.html): Where was assessment performed?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Who/what does assessment apply to?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-subject"
+            name: "subject",
+            active: true,
+            information: {
+                description: "Who/what does assessment apply to?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskAssessment-subject"
+            }
         }
-    }
 
     ],
     operations: [

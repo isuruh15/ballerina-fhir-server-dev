@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig substancenucleicacidApiConfig = {
     resourceType: "SubstanceNucleicAcid",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/SubstanceNucleicAcid"
-        
+        "http://hl7.org/fhir/StructureDefinition/SubstanceNucleicAcid"
 
     ],
     defaultProfile: (),

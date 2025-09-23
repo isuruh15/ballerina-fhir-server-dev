@@ -24,91 +24,90 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig careteamApiConfig = {
     resourceType: "CareTeam",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/CareTeam"
-        
+        "http://hl7.org/fhir/StructureDefinition/CareTeam"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "Encounter created as part of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "Encounter created as part of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-encounter"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "proposed | active | suspended | inactive | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "proposed | active | suspended | inactive | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-status"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[CareTeam](careteam.html): External Ids for this team",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[CareTeam](careteam.html): External Ids for this team",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[CareTeam](careteam.html): Time period team covers",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[CareTeam](careteam.html): Time period team covers",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[CareTeam](careteam.html): Who care team is for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[CareTeam](careteam.html): Who care team is for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Type of team",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Type of team",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-category"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Who care team is for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Who care team is for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-subject"
+            }
+        },
 
         {
-        name: "participant",
-        active: true,
-        information: {
-            description: "Who is involved",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-participant"
+            name: "participant",
+            active: true,
+            information: {
+                description: "Who is involved",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CareTeam-participant"
+            }
         }
-    }
 
     ],
     operations: [

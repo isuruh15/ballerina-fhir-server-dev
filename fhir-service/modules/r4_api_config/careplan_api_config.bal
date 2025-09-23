@@ -24,251 +24,250 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig careplanApiConfig = {
     resourceType: "CarePlan",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/CarePlan"
-        
+        "http://hl7.org/fhir/StructureDefinition/CarePlan"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "workflow-protectiveFactorRef",
-        active: true,
-        information: {
-            description: "SearchParameter for Protective Factor Extension with Reference data type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorRef"
-        }
-    },
+            name: "workflow-protectiveFactorRef",
+            active: true,
+            information: {
+                description: "SearchParameter for Protective Factor Extension with Reference data type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorRef"
+            }
+        },
 
         {
-        name: "activity-code",
-        active: true,
-        information: {
-            description: "Detail type of activity",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-activity-code"
-        }
-    },
+            name: "activity-code",
+            active: true,
+            information: {
+                description: "Detail type of activity",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-activity-code"
+            }
+        },
 
         {
-        name: "workflow-barrierRef",
-        active: true,
-        information: {
-            description: "SearchParameter for Barrier Extension with Reference value",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierRef"
-        }
-    },
+            name: "workflow-barrierRef",
+            active: true,
+            information: {
+                description: "SearchParameter for Barrier Extension with Reference value",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierRef"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Who the care plan is for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Who the care plan is for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-subject"
+            }
+        },
 
         {
-        name: "workflow-protectiveFactorCode",
-        active: true,
-        information: {
-            description: "SearchParameter for Protective Factor Extension with CodeableConcept data type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorCode"
-        }
-    },
+            name: "workflow-protectiveFactorCode",
+            active: true,
+            information: {
+                description: "SearchParameter for Protective Factor Extension with CodeableConcept data type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorCode"
+            }
+        },
 
         {
-        name: "activity-date",
-        active: true,
-        information: {
-            description: "Specified date occurs within period specified by CarePlan.activity.detail.scheduled[x]",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-activity-date"
-        }
-    },
+            name: "activity-date",
+            active: true,
+            information: {
+                description: "Specified date occurs within period specified by CarePlan.activity.detail.scheduled[x]",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-activity-date"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "Encounter created as part of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "Encounter created as part of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-encounter"
+            }
+        },
 
         {
-        name: "goal",
-        active: true,
-        information: {
-            description: "Desired outcome of plan",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-goal"
-        }
-    },
+            name: "goal",
+            active: true,
+            information: {
+                description: "Desired outcome of plan",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-goal"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[CarePlan](careplan.html): External Ids for this plan",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[CarePlan](careplan.html): External Ids for this plan",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "intent",
-        active: true,
-        information: {
-            description: "proposal | plan | order | option",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-intent"
-        }
-    },
+            name: "intent",
+            active: true,
+            information: {
+                description: "proposal | plan | order | option",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-intent"
+            }
+        },
 
         {
-        name: "replaces",
-        active: true,
-        information: {
-            description: "CarePlan replaced by this CarePlan",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-replaces"
-        }
-    },
+            name: "replaces",
+            active: true,
+            information: {
+                description: "CarePlan replaced by this CarePlan",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-replaces"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[CarePlan](careplan.html): Time period plan covers",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[CarePlan](careplan.html): Time period plan covers",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[CarePlan](careplan.html): Who the care plan is for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[CarePlan](careplan.html): Who the care plan is for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "based-on",
-        active: true,
-        information: {
-            description: "Fulfills CarePlan",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-based-on"
-        }
-    },
+            name: "based-on",
+            active: true,
+            information: {
+                description: "Fulfills CarePlan",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-based-on"
+            }
+        },
 
         {
-        name: "care-team",
-        active: true,
-        information: {
-            description: "Who's involved in plan?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-care-team"
-        }
-    },
+            name: "care-team",
+            active: true,
+            information: {
+                description: "Who's involved in plan?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-care-team"
+            }
+        },
 
         {
-        name: "activity-reference",
-        active: true,
-        information: {
-            description: "Activity details defined in specific resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-activity-reference"
-        }
-    },
+            name: "activity-reference",
+            active: true,
+            information: {
+                description: "Activity details defined in specific resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-activity-reference"
+            }
+        },
 
         {
-        name: "performer",
-        active: true,
-        information: {
-            description: "Matches if the practitioner is listed as a performer in any of the simple activities.  (For performers of the detailed activities, chain through the activitydetail search parameter.)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-performer"
-        }
-    },
+            name: "performer",
+            active: true,
+            information: {
+                description: "Matches if the practitioner is listed as a performer in any of the simple activities.  (For performers of the detailed activities, chain through the activitydetail search parameter.)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-performer"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Type of plan",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Type of plan",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-category"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-status"
+            }
+        },
 
         {
-        name: "part-of",
-        active: true,
-        information: {
-            description: "Part of referenced CarePlan",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-part-of"
-        }
-    },
+            name: "part-of",
+            active: true,
+            information: {
+                description: "Part of referenced CarePlan",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-part-of"
+            }
+        },
 
         {
-        name: "instantiates-uri",
-        active: true,
-        information: {
-            description: "Instantiates external protocol or definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-instantiates-uri"
-        }
-    },
+            name: "instantiates-uri",
+            active: true,
+            information: {
+                description: "Instantiates external protocol or definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-instantiates-uri"
+            }
+        },
 
         {
-        name: "workflow-barrierCode",
-        active: true,
-        information: {
-            description: "SearchParameter for Barrier Extension with CodeableConcept value",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierCode"
-        }
-    },
+            name: "workflow-barrierCode",
+            active: true,
+            information: {
+                description: "SearchParameter for Barrier Extension with CodeableConcept value",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierCode"
+            }
+        },
 
         {
-        name: "instantiates-canonical",
-        active: true,
-        information: {
-            description: "Instantiates FHIR protocol or definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-instantiates-canonical"
-        }
-    },
+            name: "instantiates-canonical",
+            active: true,
+            information: {
+                description: "Instantiates FHIR protocol or definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-instantiates-canonical"
+            }
+        },
 
         {
-        name: "condition",
-        active: true,
-        information: {
-            description: "Health issues this plan addresses",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-condition"
+            name: "condition",
+            active: true,
+            information: {
+                description: "Health issues this plan addresses",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CarePlan-condition"
+            }
         }
-    }
 
     ],
     operations: [

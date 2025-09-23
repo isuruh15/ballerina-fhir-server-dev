@@ -24,171 +24,170 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicationdispenseApiConfig = {
     resourceType: "MedicationDispense",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicationDispense"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "destination",
-        active: true,
-        information: {
-            description: "Returns dispenses that should be sent to a specific destination",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-destination"
-        }
-    },
+            name: "destination",
+            active: true,
+            information: {
+                description: "Returns dispenses that should be sent to a specific destination",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-destination"
+            }
+        },
 
         {
-        name: "responsibleparty",
-        active: true,
-        information: {
-            description: "Returns dispenses with the specified responsible party",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-responsibleparty"
-        }
-    },
+            name: "responsibleparty",
+            active: true,
+            information: {
+                description: "Returns dispenses with the specified responsible party",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-responsibleparty"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "[MedicationDispense](medicationdispense.html): Returns dispenses of this medicine code",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "[MedicationDispense](medicationdispense.html): Returns dispenses of this medicine code",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
+            }
+        },
 
         {
-        name: "prescription",
-        active: true,
-        information: {
-            description: "[MedicationDispense](medicationdispense.html): The identity of a prescription to list dispenses from",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/medications-prescription"
-        }
-    },
+            name: "prescription",
+            active: true,
+            information: {
+                description: "[MedicationDispense](medicationdispense.html): The identity of a prescription to list dispenses from",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/medications-prescription"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[MedicationDispense](medicationdispense.html): Returns dispenses with this external identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[MedicationDispense](medicationdispense.html): Returns dispenses with this external identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[MedicationDispense](medicationdispense.html): The identity of a patient to list dispenses  for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[MedicationDispense](medicationdispense.html): The identity of a patient to list dispenses  for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "Returns dispenses of a specific type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "Returns dispenses of a specific type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-type"
+            }
+        },
 
         {
-        name: "medication",
-        active: true,
-        information: {
-            description: "[MedicationDispense](medicationdispense.html): Returns dispenses of this medicine resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/medications-medication"
-        }
-    },
+            name: "medication",
+            active: true,
+            information: {
+                description: "[MedicationDispense](medicationdispense.html): Returns dispenses of this medicine resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/medications-medication"
+            }
+        },
 
         {
-        name: "receiver",
-        active: true,
-        information: {
-            description: "The identity of a receiver to list dispenses for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-receiver"
-        }
-    },
+            name: "receiver",
+            active: true,
+            information: {
+                description: "The identity of a receiver to list dispenses for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-receiver"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "whenprepared",
-        active: true,
-        information: {
-            description: "Returns dispenses prepared on this date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-whenprepared"
-        }
-    },
+            name: "whenprepared",
+            active: true,
+            information: {
+                description: "Returns dispenses prepared on this date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-whenprepared"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The identity of a patient for whom to list dispenses",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The identity of a patient for whom to list dispenses",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-subject"
+            }
+        },
 
         {
-        name: "whenhandedover",
-        active: true,
-        information: {
-            description: "Returns dispenses handed over on this date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-whenhandedover"
-        }
-    },
+            name: "whenhandedover",
+            active: true,
+            information: {
+                description: "Returns dispenses handed over on this date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-whenhandedover"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "[MedicationDispense](medicationdispense.html): Returns dispenses with a specified dispense status",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/medications-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "[MedicationDispense](medicationdispense.html): Returns dispenses with a specified dispense status",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/medications-status"
+            }
+        },
 
         {
-        name: "performer",
-        active: true,
-        information: {
-            description: "Returns dispenses performed by a specific individual",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-performer"
-        }
-    },
+            name: "performer",
+            active: true,
+            information: {
+                description: "Returns dispenses performed by a specific individual",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-performer"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "Returns dispenses with a specific context (episode or episode of care)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-context"
+            name: "context",
+            active: true,
+            information: {
+                description: "Returns dispenses with a specific context (episode or episode of care)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationDispense-context"
+            }
         }
-    }
 
     ],
     operations: [

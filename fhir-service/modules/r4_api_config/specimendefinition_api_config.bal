@@ -24,41 +24,40 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig specimendefinitionApiConfig = {
     resourceType: "SpecimenDefinition",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"
-        
+        "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "The type of collected specimen",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SpecimenDefinition-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "The type of collected specimen",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SpecimenDefinition-type"
+            }
+        },
 
         {
-        name: "container",
-        active: true,
-        information: {
-            description: "The type of specimen conditioned in container expected by the lab",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SpecimenDefinition-container"
-        }
-    },
+            name: "container",
+            active: true,
+            information: {
+                description: "The type of specimen conditioned in container expected by the lab",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SpecimenDefinition-container"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The unique identifier associated with the specimen",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SpecimenDefinition-identifier"
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The unique identifier associated with the specimen",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SpecimenDefinition-identifier"
+            }
         }
-    }
 
     ],
     operations: [

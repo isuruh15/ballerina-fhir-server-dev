@@ -24,131 +24,130 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig specimenApiConfig = {
     resourceType: "Specimen",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Specimen"
-        
+        "http://hl7.org/fhir/StructureDefinition/Specimen"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "bodysite",
-        active: true,
-        information: {
-            description: "The code for the body site from where the specimen originated",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-bodysite"
-        }
-    },
+            name: "bodysite",
+            active: true,
+            information: {
+                description: "The code for the body site from where the specimen originated",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-bodysite"
+            }
+        },
 
         {
-        name: "container-id",
-        active: true,
-        information: {
-            description: "The unique identifier associated with the specimen container",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-container-id"
-        }
-    },
+            name: "container-id",
+            active: true,
+            information: {
+                description: "The unique identifier associated with the specimen container",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-container-id"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "available | unavailable | unsatisfactory | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "available | unavailable | unsatisfactory | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-status"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The subject of the specimen",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The subject of the specimen",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-subject"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "The specimen type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "The specimen type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-type"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The patient the specimen comes from",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The patient the specimen comes from",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-patient"
+            }
+        },
 
         {
-        name: "collector",
-        active: true,
-        information: {
-            description: "Who collected the specimen",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-collector"
-        }
-    },
+            name: "collector",
+            active: true,
+            information: {
+                description: "Who collected the specimen",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-collector"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The unique identifier associated with the specimen",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The unique identifier associated with the specimen",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-identifier"
+            }
+        },
 
         {
-        name: "parent",
-        active: true,
-        information: {
-            description: "The parent of the specimen",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-parent"
-        }
-    },
+            name: "parent",
+            active: true,
+            information: {
+                description: "The parent of the specimen",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-parent"
+            }
+        },
 
         {
-        name: "accession",
-        active: true,
-        information: {
-            description: "The accession number associated with the specimen",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-accession"
-        }
-    },
+            name: "accession",
+            active: true,
+            information: {
+                description: "The accession number associated with the specimen",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-accession"
+            }
+        },
 
         {
-        name: "container",
-        active: true,
-        information: {
-            description: "The kind of specimen container",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-container"
-        }
-    },
+            name: "container",
+            active: true,
+            information: {
+                description: "The kind of specimen container",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-container"
+            }
+        },
 
         {
-        name: "collected",
-        active: true,
-        information: {
-            description: "The date the specimen was collected",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Specimen-collected"
+            name: "collected",
+            active: true,
+            information: {
+                description: "The date the specimen was collected",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Specimen-collected"
+            }
         }
-    }
 
     ],
     operations: [

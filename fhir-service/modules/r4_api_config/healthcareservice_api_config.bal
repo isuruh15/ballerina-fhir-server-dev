@@ -24,131 +24,130 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig healthcareserviceApiConfig = {
     resourceType: "HealthcareService",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/HealthcareService"
-        
+        "http://hl7.org/fhir/StructureDefinition/HealthcareService"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "organization",
-        active: true,
-        information: {
-            description: "The organization that provides this Healthcare Service",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-organization"
-        }
-    },
+            name: "organization",
+            active: true,
+            information: {
+                description: "The organization that provides this Healthcare Service",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-organization"
+            }
+        },
 
         {
-        name: "service-category",
-        active: true,
-        information: {
-            description: "Service Category of the Healthcare Service",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-service-category"
-        }
-    },
+            name: "service-category",
+            active: true,
+            information: {
+                description: "Service Category of the Healthcare Service",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-service-category"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "The location of the Healthcare Service",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "The location of the Healthcare Service",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-location"
+            }
+        },
 
         {
-        name: "endpoint",
-        active: true,
-        information: {
-            description: "Technical endpoints providing access to electronic services operated for the healthcare service",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-endpoint"
-        }
-    },
+            name: "endpoint",
+            active: true,
+            information: {
+                description: "Technical endpoints providing access to electronic services operated for the healthcare service",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-endpoint"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "A portion of the Healthcare service name",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "A portion of the Healthcare service name",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-name"
+            }
+        },
 
         {
-        name: "service-type",
-        active: true,
-        information: {
-            description: "The type of service provided by this healthcare service",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-service-type"
-        }
-    },
+            name: "service-type",
+            active: true,
+            information: {
+                description: "The type of service provided by this healthcare service",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-service-type"
+            }
+        },
 
         {
-        name: "specialty",
-        active: true,
-        information: {
-            description: "The specialty of the service provided by this healthcare service",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-specialty"
-        }
-    },
+            name: "specialty",
+            active: true,
+            information: {
+                description: "The specialty of the service provided by this healthcare service",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-specialty"
+            }
+        },
 
         {
-        name: "program",
-        active: true,
-        information: {
-            description: "One of the Programs supported by this HealthcareService",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-program"
-        }
-    },
+            name: "program",
+            active: true,
+            information: {
+                description: "One of the Programs supported by this HealthcareService",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-program"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "External identifiers for this item",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "External identifiers for this item",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"
+            }
+        },
 
         {
-        name: "active",
-        active: true,
-        information: {
-            description: "The Healthcare Service is currently marked as active",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-active"
-        }
-    },
+            name: "active",
+            active: true,
+            information: {
+                description: "The Healthcare Service is currently marked as active",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-active"
+            }
+        },
 
         {
-        name: "characteristic",
-        active: true,
-        information: {
-            description: "One of the HealthcareService's characteristics",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-characteristic"
-        }
-    },
+            name: "characteristic",
+            active: true,
+            information: {
+                description: "One of the HealthcareService's characteristics",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-characteristic"
+            }
+        },
 
         {
-        name: "coverage-area",
-        active: true,
-        information: {
-            description: "Location(s) service is intended for/available to",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-coverage-area"
+            name: "coverage-area",
+            active: true,
+            information: {
+                description: "Location(s) service is intended for/available to",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/HealthcareService-coverage-area"
+            }
         }
-    }
 
     ],
     operations: [

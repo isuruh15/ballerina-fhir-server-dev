@@ -24,131 +24,130 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig adverseeventApiConfig = {
     resourceType: "AdverseEvent",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/AdverseEvent"
-        
+        "http://hl7.org/fhir/StructureDefinition/AdverseEvent"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "When the event occurred",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "When the event occurred",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-date"
+            }
+        },
 
         {
-        name: "severity",
-        active: true,
-        information: {
-            description: "mild | moderate | severe",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-severity"
-        }
-    },
+            name: "severity",
+            active: true,
+            information: {
+                description: "mild | moderate | severe",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-severity"
+            }
+        },
 
         {
-        name: "substance",
-        active: true,
-        information: {
-            description: "Refers to the specific entity that caused the adverse event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-substance"
-        }
-    },
+            name: "substance",
+            active: true,
+            information: {
+                description: "Refers to the specific entity that caused the adverse event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-substance"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Subject impacted by event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Subject impacted by event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-subject"
+            }
+        },
 
         {
-        name: "study",
-        active: true,
-        information: {
-            description: "AdverseEvent.study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-study"
-        }
-    },
+            name: "study",
+            active: true,
+            information: {
+                description: "AdverseEvent.study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-study"
+            }
+        },
 
         {
-        name: "actuality",
-        active: true,
-        information: {
-            description: "actual | potential",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-actuality"
-        }
-    },
+            name: "actuality",
+            active: true,
+            information: {
+                description: "actual | potential",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-actuality"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "Location where adverse event occurred",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "Location where adverse event occurred",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-location"
+            }
+        },
 
         {
-        name: "recorder",
-        active: true,
-        information: {
-            description: "Who recorded the adverse event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-recorder"
-        }
-    },
+            name: "recorder",
+            active: true,
+            information: {
+                description: "Who recorded the adverse event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-recorder"
+            }
+        },
 
         {
-        name: "seriousness",
-        active: true,
-        information: {
-            description: "Seriousness of the event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-seriousness"
-        }
-    },
+            name: "seriousness",
+            active: true,
+            information: {
+                description: "Seriousness of the event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-seriousness"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "product-problem | product-quality | product-use-error | wrong-dose | incorrect-prescribing-information | wrong-technique | wrong-route-of-administration | wrong-rate | wrong-duration | wrong-time | expired-drug | medical-device-use-error | problem-different-manufacturer | unsafe-physical-environment",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "product-problem | product-quality | product-use-error | wrong-dose | incorrect-prescribing-information | wrong-technique | wrong-route-of-administration | wrong-rate | wrong-duration | wrong-time | expired-drug | medical-device-use-error | problem-different-manufacturer | unsafe-physical-environment",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-category"
+            }
+        },
 
         {
-        name: "resultingcondition",
-        active: true,
-        information: {
-            description: "Effect on the subject due to this event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-resultingcondition"
-        }
-    },
+            name: "resultingcondition",
+            active: true,
+            information: {
+                description: "Effect on the subject due to this event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-resultingcondition"
+            }
+        },
 
         {
-        name: "event",
-        active: true,
-        information: {
-            description: "Type of the event itself in relation to the subject",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-event"
+            name: "event",
+            active: true,
+            information: {
+                description: "Type of the event itself in relation to the subject",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AdverseEvent-event"
+            }
         }
-    }
 
     ],
     operations: [

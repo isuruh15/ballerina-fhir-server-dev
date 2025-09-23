@@ -24,271 +24,270 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig documentreferenceApiConfig = {
     resourceType: "DocumentReference",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-        
+        "http://hl7.org/fhir/StructureDefinition/DocumentReference"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Categorization of document",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Categorization of document",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-category"
+            }
+        },
 
         {
-        name: "relatesto",
-        active: true,
-        information: {
-            description: "Target of the relationship",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-relatesto"
-        }
-    },
+            name: "relatesto",
+            active: true,
+            information: {
+                description: "Target of the relationship",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-relatesto"
+            }
+        },
 
         {
-        name: "facility",
-        active: true,
-        information: {
-            description: "Kind of facility where patient was seen",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-facility"
-        }
-    },
+            name: "facility",
+            active: true,
+            information: {
+                description: "Kind of facility where patient was seen",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-facility"
+            }
+        },
 
         {
-        name: "relation",
-        active: true,
-        information: {
-            description: "replaces | transforms | signs | appends",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-relation"
-        }
-    },
+            name: "relation",
+            active: true,
+            information: {
+                description: "replaces | transforms | signs | appends",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-relation"
+            }
+        },
 
         {
-        name: "period",
-        active: true,
-        information: {
-            description: "Time of service that is being documented",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-period"
-        }
-    },
+            name: "period",
+            active: true,
+            information: {
+                description: "Time of service that is being documented",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-period"
+            }
+        },
 
         {
-        name: "related",
-        active: true,
-        information: {
-            description: "Related identifiers or resources",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-related"
-        }
-    },
+            name: "related",
+            active: true,
+            information: {
+                description: "Related identifiers or resources",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-related"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[DocumentReference](documentreference.html): Master Version Specific Identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[DocumentReference](documentreference.html): Master Version Specific Identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "contenttype",
-        active: true,
-        information: {
-            description: "Mime type of the content, with charset etc.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-contenttype"
-        }
-    },
+            name: "contenttype",
+            active: true,
+            information: {
+                description: "Mime type of the content, with charset etc.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-contenttype"
+            }
+        },
 
         {
-        name: "security-label",
-        active: true,
-        information: {
-            description: "Document security-tags",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-security-label"
-        }
-    },
+            name: "security-label",
+            active: true,
+            information: {
+                description: "Document security-tags",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-security-label"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "Human-readable description",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "Human-readable description",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-description"
+            }
+        },
 
         {
-        name: "author",
-        active: true,
-        information: {
-            description: "Who and/or what authored the document",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-author"
-        }
-    },
+            name: "author",
+            active: true,
+            information: {
+                description: "Who and/or what authored the document",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-author"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[DocumentReference](documentreference.html): Who/what is the subject of the document",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[DocumentReference](documentreference.html): Who/what is the subject of the document",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "event",
-        active: true,
-        information: {
-            description: "Main clinical acts documented",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-event"
-        }
-    },
+            name: "event",
+            active: true,
+            information: {
+                description: "Main clinical acts documented",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-event"
+            }
+        },
 
         {
-        name: "format",
-        active: true,
-        information: {
-            description: "Format/content rules for the document",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-format"
-        }
-    },
+            name: "format",
+            active: true,
+            information: {
+                description: "Format/content rules for the document",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-format"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "[DocumentReference](documentreference.html): Kind of document (LOINC if possible)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "[DocumentReference](documentreference.html): Kind of document (LOINC if possible)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
+            }
+        },
 
         {
-        name: "relationship",
-        active: true,
-        information: {
-            description: "Combination of relation and relatesTo",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-relationship"
-        }
-    },
+            name: "relationship",
+            active: true,
+            information: {
+                description: "Combination of relation and relatesTo",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-relationship"
+            }
+        },
 
         {
-        name: "authenticator",
-        active: true,
-        information: {
-            description: "Who/what authenticated the document",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-authenticator"
-        }
-    },
+            name: "authenticator",
+            active: true,
+            information: {
+                description: "Who/what authenticated the document",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-authenticator"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "Uri where the data can be found",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "Uri where the data can be found",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-location"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "When this document reference was created",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "When this document reference was created",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-date"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "[DocumentReference](documentreference.html): Context of the document  content",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "[DocumentReference](documentreference.html): Context of the document  content",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+            }
+        },
 
         {
-        name: "setting",
-        active: true,
-        information: {
-            description: "Additional details about where the content was created (e.g. clinical specialty)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-setting"
-        }
-    },
+            name: "setting",
+            active: true,
+            information: {
+                description: "Additional details about where the content was created (e.g. clinical specialty)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-setting"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "current | superseded | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "current | superseded | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-status"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Who/what is the subject of the document",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Who/what is the subject of the document",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-subject"
+            }
+        },
 
         {
-        name: "custodian",
-        active: true,
-        information: {
-            description: "Organization which maintains the document",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-custodian"
-        }
-    },
+            name: "custodian",
+            active: true,
+            information: {
+                description: "Organization which maintains the document",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-custodian"
+            }
+        },
 
         {
-        name: "language",
-        active: true,
-        information: {
-            description: "Human language of the content (BCP-47)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-language"
+            name: "language",
+            active: true,
+            information: {
+                description: "Human language of the content (BCP-47)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentReference-language"
+            }
         }
-    }
 
     ],
     operations: [

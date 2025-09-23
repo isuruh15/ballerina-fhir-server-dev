@@ -24,101 +24,100 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig coverageeligibilityresponseApiConfig = {
     resourceType: "CoverageEligibilityResponse",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse"
-        
+        "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The EligibilityRequest status",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The EligibilityRequest status",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-status"
+            }
+        },
 
         {
-        name: "disposition",
-        active: true,
-        information: {
-            description: "The contents of the disposition message",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-disposition"
-        }
-    },
+            name: "disposition",
+            active: true,
+            information: {
+                description: "The contents of the disposition message",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-disposition"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The reference to the patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The reference to the patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-patient"
+            }
+        },
 
         {
-        name: "created",
-        active: true,
-        information: {
-            description: "The creation date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-created"
-        }
-    },
+            name: "created",
+            active: true,
+            information: {
+                description: "The creation date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-created"
+            }
+        },
 
         {
-        name: "outcome",
-        active: true,
-        information: {
-            description: "The processing outcome",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-outcome"
-        }
-    },
+            name: "outcome",
+            active: true,
+            information: {
+                description: "The processing outcome",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-outcome"
+            }
+        },
 
         {
-        name: "insurer",
-        active: true,
-        information: {
-            description: "The organization which generated this resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-insurer"
-        }
-    },
+            name: "insurer",
+            active: true,
+            information: {
+                description: "The organization which generated this resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-insurer"
+            }
+        },
 
         {
-        name: "requestor",
-        active: true,
-        information: {
-            description: "The EligibilityRequest provider",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-requestor"
-        }
-    },
+            name: "requestor",
+            active: true,
+            information: {
+                description: "The EligibilityRequest provider",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-requestor"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The business identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The business identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-identifier"
+            }
+        },
 
         {
-        name: "request",
-        active: true,
-        information: {
-            description: "The EligibilityRequest reference",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-request"
+            name: "request",
+            active: true,
+            information: {
+                description: "The EligibilityRequest reference",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityResponse-request"
+            }
         }
-    }
 
     ],
     operations: [

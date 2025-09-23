@@ -24,91 +24,90 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig immunizationrecommendationApiConfig = {
     resourceType: "ImmunizationRecommendation",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"
-        
+        "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Who this profile is for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Who this profile is for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-patient"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "Vaccine recommendation status",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "Vaccine recommendation status",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-status"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Business identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Business identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-identifier"
+            }
+        },
 
         {
-        name: "target-disease",
-        active: true,
-        information: {
-            description: "Disease to be immunized against",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-target-disease"
-        }
-    },
+            name: "target-disease",
+            active: true,
+            information: {
+                description: "Disease to be immunized against",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-target-disease"
+            }
+        },
 
         {
-        name: "vaccine-type",
-        active: true,
-        information: {
-            description: "Vaccine  or vaccine group recommendation applies to",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-vaccine-type"
-        }
-    },
+            name: "vaccine-type",
+            active: true,
+            information: {
+                description: "Vaccine  or vaccine group recommendation applies to",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-vaccine-type"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "Date recommendation(s) created",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "Date recommendation(s) created",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-date"
+            }
+        },
 
         {
-        name: "support",
-        active: true,
-        information: {
-            description: "Past immunizations supporting recommendation",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-support"
-        }
-    },
+            name: "support",
+            active: true,
+            information: {
+                description: "Past immunizations supporting recommendation",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-support"
+            }
+        },
 
         {
-        name: "information",
-        active: true,
-        information: {
-            description: "Patient observations supporting recommendation",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-information"
+            name: "information",
+            active: true,
+            information: {
+                description: "Patient observations supporting recommendation",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationRecommendation-information"
+            }
         }
-    }
 
     ],
     operations: [

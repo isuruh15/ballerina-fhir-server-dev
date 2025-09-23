@@ -24,21 +24,20 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicinalproductinteractionApiConfig = {
     resourceType: "MedicinalProductInteraction",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicinalProductInteraction"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicinalProductInteraction"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The medication for which this is an interaction",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductInteraction-subject"
+            name: "subject",
+            active: true,
+            information: {
+                description: "The medication for which this is an interaction",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductInteraction-subject"
+            }
         }
-    }
 
     ],
     operations: [

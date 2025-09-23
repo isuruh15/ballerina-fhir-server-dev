@@ -24,101 +24,100 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicationApiConfig = {
     resourceType: "Medication",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Medication"
-        
+        "http://hl7.org/fhir/StructureDefinition/Medication"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "form",
-        active: true,
-        information: {
-            description: "Returns medications for a specific dose form",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Medication-form"
-        }
-    },
+            name: "form",
+            active: true,
+            information: {
+                description: "Returns medications for a specific dose form",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Medication-form"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "[Medication](medication.html): Returns medications for a specific code",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "[Medication](medication.html): Returns medications for a specific code",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
+            }
+        },
 
         {
-        name: "lot-number",
-        active: true,
-        information: {
-            description: "Returns medications in a batch with this lot number",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Medication-lot-number"
-        }
-    },
+            name: "lot-number",
+            active: true,
+            information: {
+                description: "Returns medications in a batch with this lot number",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Medication-lot-number"
+            }
+        },
 
         {
-        name: "expiration-date",
-        active: true,
-        information: {
-            description: "Returns medications in a batch with this expiration date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Medication-expiration-date"
-        }
-    },
+            name: "expiration-date",
+            active: true,
+            information: {
+                description: "Returns medications in a batch with this expiration date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Medication-expiration-date"
+            }
+        },
 
         {
-        name: "ingredient-code",
-        active: true,
-        information: {
-            description: "Returns medications for this ingredient code",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Medication-ingredient-code"
-        }
-    },
+            name: "ingredient-code",
+            active: true,
+            information: {
+                description: "Returns medications for this ingredient code",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Medication-ingredient-code"
+            }
+        },
 
         {
-        name: "ingredient",
-        active: true,
-        information: {
-            description: "Returns medications for this ingredient reference",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Medication-ingredient"
-        }
-    },
+            name: "ingredient",
+            active: true,
+            information: {
+                description: "Returns medications for this ingredient reference",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Medication-ingredient"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Returns medications with this external identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Medication-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Returns medications with this external identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Medication-identifier"
+            }
+        },
 
         {
-        name: "manufacturer",
-        active: true,
-        information: {
-            description: "Returns medications made or sold for this manufacturer",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Medication-manufacturer"
-        }
-    },
+            name: "manufacturer",
+            active: true,
+            information: {
+                description: "Returns medications made or sold for this manufacturer",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Medication-manufacturer"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "Returns medications for this status",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Medication-status"
+            name: "status",
+            active: true,
+            information: {
+                description: "Returns medications for this status",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Medication-status"
+            }
         }
-    }
 
     ],
     operations: [

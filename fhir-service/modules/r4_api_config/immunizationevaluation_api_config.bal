@@ -24,81 +24,80 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig immunizationevaluationApiConfig = {
     resourceType: "ImmunizationEvaluation",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ImmunizationEvaluation"
-        
+        "http://hl7.org/fhir/StructureDefinition/ImmunizationEvaluation"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "immunization-event",
-        active: true,
-        information: {
-            description: "The vaccine administration event being evaluated",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-immunization-event"
-        }
-    },
+            name: "immunization-event",
+            active: true,
+            information: {
+                description: "The vaccine administration event being evaluated",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-immunization-event"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "Date the evaluation was generated",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "Date the evaluation was generated",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-date"
+            }
+        },
 
         {
-        name: "target-disease",
-        active: true,
-        information: {
-            description: "The vaccine preventable disease being evaluated against",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-target-disease"
-        }
-    },
+            name: "target-disease",
+            active: true,
+            information: {
+                description: "The vaccine preventable disease being evaluated against",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-target-disease"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "ID of the evaluation",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "ID of the evaluation",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-identifier"
+            }
+        },
 
         {
-        name: "dose-status",
-        active: true,
-        information: {
-            description: "The status of the dose relative to published recommendations",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-dose-status"
-        }
-    },
+            name: "dose-status",
+            active: true,
+            information: {
+                description: "The status of the dose relative to published recommendations",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-dose-status"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The patient being evaluated",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The patient being evaluated",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-patient"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "Immunization evaluation status",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-status"
+            name: "status",
+            active: true,
+            information: {
+                description: "Immunization evaluation status",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImmunizationEvaluation-status"
+            }
         }
-    }
 
     ],
     operations: [

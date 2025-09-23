@@ -24,171 +24,170 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig consentApiConfig = {
     resourceType: "Consent",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Consent"
-        
+        "http://hl7.org/fhir/StructureDefinition/Consent"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "organization",
-        active: true,
-        information: {
-            description: "Custodian of the consent",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-organization"
-        }
-    },
+            name: "organization",
+            active: true,
+            information: {
+                description: "Custodian of the consent",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-organization"
+            }
+        },
 
         {
-        name: "data",
-        active: true,
-        information: {
-            description: "The actual data reference",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-data"
-        }
-    },
+            name: "data",
+            active: true,
+            information: {
+                description: "The actual data reference",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-data"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "draft | proposed | active | rejected | inactive | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "draft | proposed | active | rejected | inactive | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-status"
+            }
+        },
 
         {
-        name: "scope",
-        active: true,
-        information: {
-            description: "Which of the four areas this resource covers (extensible)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-scope"
-        }
-    },
+            name: "scope",
+            active: true,
+            information: {
+                description: "Which of the four areas this resource covers (extensible)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-scope"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[Consent](consent.html): Identifier for this record (external references)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[Consent](consent.html): Identifier for this record (external references)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "source-reference",
-        active: true,
-        information: {
-            description: "Search by reference to a Consent, DocumentReference, Contract  or QuestionnaireResponse",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-source-reference"
-        }
-    },
+            name: "source-reference",
+            active: true,
+            information: {
+                description: "Search by reference to a Consent, DocumentReference, Contract  or QuestionnaireResponse",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-source-reference"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[Consent](consent.html): When this Consent was created or indexed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[Consent](consent.html): When this Consent was created or indexed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[Consent](consent.html): Who the consent applies to",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[Consent](consent.html): Who the consent applies to",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Classification of the consent statement - for indexing/retrieval",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Classification of the consent statement - for indexing/retrieval",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-category"
+            }
+        },
 
         {
-        name: "security-label",
-        active: true,
-        information: {
-            description: "Security Labels that define affected resources",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-security-label"
-        }
-    },
+            name: "security-label",
+            active: true,
+            information: {
+                description: "Security Labels that define affected resources",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-security-label"
+            }
+        },
 
         {
-        name: "period",
-        active: true,
-        information: {
-            description: "Timeframe for this rule",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-period"
-        }
-    },
+            name: "period",
+            active: true,
+            information: {
+                description: "Timeframe for this rule",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-period"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "purpose",
-        active: true,
-        information: {
-            description: "Context of activities covered by this rule",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-purpose"
-        }
-    },
+            name: "purpose",
+            active: true,
+            information: {
+                description: "Context of activities covered by this rule",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-purpose"
+            }
+        },
 
         {
-        name: "consentor",
-        active: true,
-        information: {
-            description: "Who is agreeing to the policy and rules",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-consentor"
-        }
-    },
+            name: "consentor",
+            active: true,
+            information: {
+                description: "Who is agreeing to the policy and rules",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-consentor"
+            }
+        },
 
         {
-        name: "actor",
-        active: true,
-        information: {
-            description: "Resource for the actor (or group, by role)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-actor"
-        }
-    },
+            name: "actor",
+            active: true,
+            information: {
+                description: "Resource for the actor (or group, by role)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-actor"
+            }
+        },
 
         {
-        name: "action",
-        active: true,
-        information: {
-            description: "Actions controlled by this rule",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Consent-action"
+            name: "action",
+            active: true,
+            information: {
+                description: "Actions controlled by this rule",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Consent-action"
+            }
         }
-    }
 
     ],
     operations: [

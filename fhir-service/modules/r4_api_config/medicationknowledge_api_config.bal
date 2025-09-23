@@ -24,141 +24,140 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicationknowledgeApiConfig = {
     resourceType: "MedicationKnowledge",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicationKnowledge"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicationKnowledge"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "monograph",
-        active: true,
-        information: {
-            description: "Associated documentation about the medication",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-monograph"
-        }
-    },
+            name: "monograph",
+            active: true,
+            information: {
+                description: "Associated documentation about the medication",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-monograph"
+            }
+        },
 
         {
-        name: "ingredient-code",
-        active: true,
-        information: {
-            description: "Medication(s) or substance(s) contained in the medication",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-ingredient-code"
-        }
-    },
+            name: "ingredient-code",
+            active: true,
+            information: {
+                description: "Medication(s) or substance(s) contained in the medication",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-ingredient-code"
+            }
+        },
 
         {
-        name: "monograph-type",
-        active: true,
-        information: {
-            description: "The category of medication document",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-monograph-type"
-        }
-    },
+            name: "monograph-type",
+            active: true,
+            information: {
+                description: "The category of medication document",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-monograph-type"
+            }
+        },
 
         {
-        name: "monitoring-program-type",
-        active: true,
-        information: {
-            description: "Type of program under which the medication is monitored",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-monitoring-program-type"
-        }
-    },
+            name: "monitoring-program-type",
+            active: true,
+            information: {
+                description: "Type of program under which the medication is monitored",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-monitoring-program-type"
+            }
+        },
 
         {
-        name: "doseform",
-        active: true,
-        information: {
-            description: "powder | tablets | capsule +",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-doseform"
-        }
-    },
+            name: "doseform",
+            active: true,
+            information: {
+                description: "powder | tablets | capsule +",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-doseform"
+            }
+        },
 
         {
-        name: "classification",
-        active: true,
-        information: {
-            description: "Specific category assigned to the medication",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-classification"
-        }
-    },
+            name: "classification",
+            active: true,
+            information: {
+                description: "Specific category assigned to the medication",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-classification"
+            }
+        },
 
         {
-        name: "ingredient",
-        active: true,
-        information: {
-            description: "Medication(s) or substance(s) contained in the medication",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-ingredient"
-        }
-    },
+            name: "ingredient",
+            active: true,
+            information: {
+                description: "Medication(s) or substance(s) contained in the medication",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-ingredient"
+            }
+        },
 
         {
-        name: "source-cost",
-        active: true,
-        information: {
-            description: "The source or owner for the price information",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-source-cost"
-        }
-    },
+            name: "source-cost",
+            active: true,
+            information: {
+                description: "The source or owner for the price information",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-source-cost"
+            }
+        },
 
         {
-        name: "classification-type",
-        active: true,
-        information: {
-            description: "The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-classification-type"
-        }
-    },
+            name: "classification-type",
+            active: true,
+            information: {
+                description: "The type of category for the medication (for example, therapeutic classification, therapeutic sub-classification)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-classification-type"
+            }
+        },
 
         {
-        name: "manufacturer",
-        active: true,
-        information: {
-            description: "Manufacturer of the item",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-manufacturer"
-        }
-    },
+            name: "manufacturer",
+            active: true,
+            information: {
+                description: "Manufacturer of the item",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-manufacturer"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "Code that identifies this medication",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "Code that identifies this medication",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-code"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "active | inactive | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "active | inactive | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-status"
+            }
+        },
 
         {
-        name: "monitoring-program-name",
-        active: true,
-        information: {
-            description: "Name of the reviewing program",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-monitoring-program-name"
+            name: "monitoring-program-name",
+            active: true,
+            information: {
+                description: "Name of the reviewing program",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationKnowledge-monitoring-program-name"
+            }
         }
-    }
 
     ],
     operations: [

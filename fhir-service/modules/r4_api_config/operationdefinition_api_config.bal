@@ -24,231 +24,230 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig operationdefinitionApiConfig = {
     resourceType: "OperationDefinition",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/OperationDefinition"
-        
+        "http://hl7.org/fhir/StructureDefinition/OperationDefinition"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): The current status of the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): The current status of the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): A type of use context assigned to the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): A type of use context assigned to the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
+            }
+        },
 
         {
-        name: "kind",
-        active: true,
-        information: {
-            description: "operation | query",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-kind"
-        }
-    },
+            name: "kind",
+            active: true,
+            information: {
+                description: "operation | query",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-kind"
+            }
+        },
 
         {
-        name: "system",
-        active: true,
-        information: {
-            description: "Invoke at the system level?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-system"
-        }
-    },
+            name: "system",
+            active: true,
+            information: {
+                description: "Invoke at the system level?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-system"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): Intended jurisdiction for the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): Intended jurisdiction for the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): A use context type and value assigned to the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): A use context type and value assigned to the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): The description of the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): The description of the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
+            }
+        },
 
         {
-        name: "instance",
-        active: true,
-        information: {
-            description: "Invoke on an instance?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-instance"
-        }
-    },
+            name: "instance",
+            active: true,
+            information: {
+                description: "Invoke on an instance?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-instance"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): A use context type and quantity- or range-based value assigned to the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): A use context type and quantity- or range-based value assigned to the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): The human-friendly name of the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): The human-friendly name of the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-title"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): A quantity- or range-valued use context assigned to the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): A quantity- or range-valued use context assigned to the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): A use context assigned to the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): A use context assigned to the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): Computationally friendly name of the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): Computationally friendly name of the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "Invoke at the type level?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "Invoke at the type level?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-type"
+            }
+        },
 
         {
-        name: "base",
-        active: true,
-        information: {
-            description: "Marks this as a profile of the base",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-base"
-        }
-    },
+            name: "base",
+            active: true,
+            information: {
+                description: "Marks this as a profile of the base",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-base"
+            }
+        },
 
         {
-        name: "input-profile",
-        active: true,
-        information: {
-            description: "Validation information for in parameters",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-input-profile"
-        }
-    },
+            name: "input-profile",
+            active: true,
+            information: {
+                description: "Validation information for in parameters",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-input-profile"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): Name of the publisher of the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): Name of the publisher of the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): The uri that identifies the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): The uri that identifies the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-url"
+            }
+        },
 
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): The business version of the operation definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): The business version of the operation definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-version"
+            }
+        },
 
         {
-        name: "output-profile",
-        active: true,
-        information: {
-            description: "Validation information for out parameters",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-output-profile"
-        }
-    },
+            name: "output-profile",
+            active: true,
+            information: {
+                description: "Validation information for out parameters",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-output-profile"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[OperationDefinition](operationdefinition.html): The operation definition publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[OperationDefinition](operationdefinition.html): The operation definition publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "Name used to invoke the operation",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-code"
+            name: "code",
+            active: true,
+            information: {
+                description: "Name used to invoke the operation",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OperationDefinition-code"
+            }
         }
-    }
 
     ],
     operations: [

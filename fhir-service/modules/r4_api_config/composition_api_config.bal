@@ -24,205 +24,204 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig compositionApiConfig = {
     resourceType: "Composition",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/clinicaldocument",
-            
-                "http://hl7.org/fhir/StructureDefinition/Composition",
-            
-                "http://hl7.org/fhir/StructureDefinition/catalog"
-        
+        "http://hl7.org/fhir/StructureDefinition/clinicaldocument",
+
+        "http://hl7.org/fhir/StructureDefinition/Composition",
+
+        "http://hl7.org/fhir/StructureDefinition/catalog"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "period",
-        active: true,
-        information: {
-            description: "The period covered by the documentation",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-period"
-        }
-    },
+            name: "period",
+            active: true,
+            information: {
+                description: "The period covered by the documentation",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-period"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "Human Readable name/title",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "Human Readable name/title",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-title"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Who and/or what the composition is about",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Who and/or what the composition is about",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-subject"
+            }
+        },
 
         {
-        name: "confidentiality",
-        active: true,
-        information: {
-            description: "As defined by affinity domain",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-confidentiality"
-        }
-    },
+            name: "confidentiality",
+            active: true,
+            information: {
+                description: "As defined by affinity domain",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-confidentiality"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "Code(s) that apply to the event being documented",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "Code(s) that apply to the event being documented",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-context"
+            }
+        },
 
         {
-        name: "attester",
-        active: true,
-        information: {
-            description: "Who attested the composition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-attester"
-        }
-    },
+            name: "attester",
+            active: true,
+            information: {
+                description: "Who attested the composition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-attester"
+            }
+        },
 
         {
-        name: "entry",
-        active: true,
-        information: {
-            description: "A reference to data that supports this section",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-entry"
-        }
-    },
+            name: "entry",
+            active: true,
+            information: {
+                description: "A reference to data that supports this section",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-entry"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Categorization of Composition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Categorization of Composition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-category"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[Composition](composition.html): Version-independent identifier for the Composition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[Composition](composition.html): Version-independent identifier for the Composition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "related-ref",
-        active: true,
-        information: {
-            description: "Target of the relationship",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-related-ref"
-        }
-    },
+            name: "related-ref",
+            active: true,
+            information: {
+                description: "Target of the relationship",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-related-ref"
+            }
+        },
 
         {
-        name: "related-id",
-        active: true,
-        information: {
-            description: "Target of the relationship",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-related-id"
-        }
-    },
+            name: "related-id",
+            active: true,
+            information: {
+                description: "Target of the relationship",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-related-id"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[Composition](composition.html): Composition editing time",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[Composition](composition.html): Composition editing time",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[Composition](composition.html): Who and/or what the composition is about",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[Composition](composition.html): Who and/or what the composition is about",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "[Composition](composition.html): Kind of composition (LOINC if possible)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "[Composition](composition.html): Kind of composition (LOINC if possible)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
+            }
+        },
 
         {
-        name: "section",
-        active: true,
-        information: {
-            description: "Classification of section (recommended)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-section"
-        }
-    },
+            name: "section",
+            active: true,
+            information: {
+                description: "Classification of section (recommended)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-section"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "preliminary | final | amended | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "preliminary | final | amended | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-status"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "[Composition](composition.html): Context of the Composition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "[Composition](composition.html): Context of the Composition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "author",
-        active: true,
-        information: {
-            description: "Who and/or what authored the composition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Composition-author"
+            name: "author",
+            active: true,
+            information: {
+                description: "Who and/or what authored the composition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Composition-author"
+            }
         }
-    }
 
     ],
     operations: [

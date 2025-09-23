@@ -24,51 +24,50 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig deviceusestatementApiConfig = {
     resourceType: "DeviceUseStatement",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"
-        
+        "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Search by subject",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceUseStatement-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Search by subject",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceUseStatement-subject"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[DeviceUseStatement](deviceusestatement.html): Search by subject - a patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[DeviceUseStatement](deviceusestatement.html): Search by subject - a patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Search by identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceUseStatement-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Search by identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceUseStatement-identifier"
+            }
+        },
 
         {
-        name: "device",
-        active: true,
-        information: {
-            description: "Search by device",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceUseStatement-device"
+            name: "device",
+            active: true,
+            information: {
+                description: "Search by device",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceUseStatement-device"
+            }
         }
-    }
 
     ],
     operations: [

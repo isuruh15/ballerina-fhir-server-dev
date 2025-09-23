@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig substancereferenceinformationApiConfig = {
     resourceType: "SubstanceReferenceInformation",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/SubstanceReferenceInformation"
-        
+        "http://hl7.org/fhir/StructureDefinition/SubstanceReferenceInformation"
 
     ],
     defaultProfile: (),

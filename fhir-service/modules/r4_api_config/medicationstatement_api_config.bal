@@ -24,131 +24,130 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicationstatementApiConfig = {
     resourceType: "MedicationStatement",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "source",
-        active: true,
-        information: {
-            description: "Who or where the information in the statement came from",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-source"
-        }
-    },
+            name: "source",
+            active: true,
+            information: {
+                description: "Who or where the information in the statement came from",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-source"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "[MedicationStatement](medicationstatement.html): Return statements of this medication code",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "[MedicationStatement](medicationstatement.html): Return statements of this medication code",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[MedicationStatement](medicationstatement.html): Return statements with this external identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[MedicationStatement](medicationstatement.html): Return statements with this external identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[MedicationStatement](medicationstatement.html): Returns statements for a specific patient.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[MedicationStatement](medicationstatement.html): Returns statements for a specific patient.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "part-of",
-        active: true,
-        information: {
-            description: "Returns statements that are part of another event.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-part-of"
-        }
-    },
+            name: "part-of",
+            active: true,
+            information: {
+                description: "Returns statements that are part of another event.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-part-of"
+            }
+        },
 
         {
-        name: "effective",
-        active: true,
-        information: {
-            description: "Date when patient was taking (or not taking) the medication",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-effective"
-        }
-    },
+            name: "effective",
+            active: true,
+            information: {
+                description: "Date when patient was taking (or not taking) the medication",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-effective"
+            }
+        },
 
         {
-        name: "medication",
-        active: true,
-        information: {
-            description: "[MedicationStatement](medicationstatement.html): Return statements of this medication reference",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/medications-medication"
-        }
-    },
+            name: "medication",
+            active: true,
+            information: {
+                description: "[MedicationStatement](medicationstatement.html): Return statements of this medication reference",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/medications-medication"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The identity of a patient, animal or group to list statements for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The identity of a patient, animal or group to list statements for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-subject"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Returns statements of this category of medicationstatement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Returns statements of this category of medicationstatement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-category"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "Returns statements for a specific context (episode or episode of Care).",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "Returns statements for a specific context (episode or episode of Care).",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicationStatement-context"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "[MedicationStatement](medicationstatement.html): Return statements that match the given status",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/medications-status"
+            name: "status",
+            active: true,
+            information: {
+                description: "[MedicationStatement](medicationstatement.html): Return statements that match the given status",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/medications-status"
+            }
         }
-    }
 
     ],
     operations: [

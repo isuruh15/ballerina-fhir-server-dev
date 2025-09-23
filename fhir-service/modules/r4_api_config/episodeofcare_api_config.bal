@@ -24,101 +24,100 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig episodeofcareApiConfig = {
     resourceType: "EpisodeOfCare",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
-        
+        "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "care-manager",
-        active: true,
-        information: {
-            description: "Care manager/care coordinator for the patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-care-manager"
-        }
-    },
+            name: "care-manager",
+            active: true,
+            information: {
+                description: "Care manager/care coordinator for the patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-care-manager"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[EpisodeOfCare](episodeofcare.html): Business Identifier(s) relevant for this EpisodeOfCare",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[EpisodeOfCare](episodeofcare.html): Business Identifier(s) relevant for this EpisodeOfCare",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[EpisodeOfCare](episodeofcare.html): The provided date search value falls within the episode of care's period",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[EpisodeOfCare](episodeofcare.html): The provided date search value falls within the episode of care's period",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[EpisodeOfCare](episodeofcare.html): The patient who is the focus of this episode of care",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[EpisodeOfCare](episodeofcare.html): The patient who is the focus of this episode of care",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "[EpisodeOfCare](episodeofcare.html): Type/class  - e.g. specialist referral, disease management",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "[EpisodeOfCare](episodeofcare.html): Type/class  - e.g. specialist referral, disease management",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
+            }
+        },
 
         {
-        name: "incoming-referral",
-        active: true,
-        information: {
-            description: "Incoming Referral Request",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-incoming-referral"
-        }
-    },
+            name: "incoming-referral",
+            active: true,
+            information: {
+                description: "Incoming Referral Request",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-incoming-referral"
+            }
+        },
 
         {
-        name: "condition",
-        active: true,
-        information: {
-            description: "Conditions/problems/diagnoses this episode of care is for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-condition"
-        }
-    },
+            name: "condition",
+            active: true,
+            information: {
+                description: "Conditions/problems/diagnoses this episode of care is for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-condition"
+            }
+        },
 
         {
-        name: "organization",
-        active: true,
-        information: {
-            description: "The organization that has assumed the specific responsibilities of this EpisodeOfCare",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-organization"
-        }
-    },
+            name: "organization",
+            active: true,
+            information: {
+                description: "The organization that has assumed the specific responsibilities of this EpisodeOfCare",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-organization"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The current status of the Episode of Care as provided (does not check the status history collection)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-status"
+            name: "status",
+            active: true,
+            information: {
+                description: "The current status of the Episode of Care as provided (does not check the status history collection)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EpisodeOfCare-status"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,41 +24,40 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig linkageApiConfig = {
     resourceType: "Linkage",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Linkage"
-        
+        "http://hl7.org/fhir/StructureDefinition/Linkage"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "source",
-        active: true,
-        information: {
-            description: "Matches on any item in the Linkage with a type of 'source'",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Linkage-source"
-        }
-    },
+            name: "source",
+            active: true,
+            information: {
+                description: "Matches on any item in the Linkage with a type of 'source'",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Linkage-source"
+            }
+        },
 
         {
-        name: "author",
-        active: true,
-        information: {
-            description: "Author of the Linkage",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Linkage-author"
-        }
-    },
+            name: "author",
+            active: true,
+            information: {
+                description: "Author of the Linkage",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Linkage-author"
+            }
+        },
 
         {
-        name: "item",
-        active: true,
-        information: {
-            description: "Matches on any item in the Linkage",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Linkage-item"
+            name: "item",
+            active: true,
+            information: {
+                description: "Matches on any item in the Linkage",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Linkage-item"
+            }
         }
-    }
 
     ],
     operations: [

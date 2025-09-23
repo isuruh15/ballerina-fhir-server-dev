@@ -24,141 +24,140 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig invoiceApiConfig = {
     resourceType: "Invoice",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Invoice"
-        
+        "http://hl7.org/fhir/StructureDefinition/Invoice"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "draft | issued | balanced | cancelled | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "draft | issued | balanced | cancelled | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-status"
+            }
+        },
 
         {
-        name: "totalnet",
-        active: true,
-        information: {
-            description: "Net total of this Invoice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-totalnet"
-        }
-    },
+            name: "totalnet",
+            active: true,
+            information: {
+                description: "Net total of this Invoice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-totalnet"
+            }
+        },
 
         {
-        name: "account",
-        active: true,
-        information: {
-            description: "Account that is being balanced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-account"
-        }
-    },
+            name: "account",
+            active: true,
+            information: {
+                description: "Account that is being balanced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-account"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Recipient(s) of goods and services",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Recipient(s) of goods and services",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-patient"
+            }
+        },
 
         {
-        name: "recipient",
-        active: true,
-        information: {
-            description: "Recipient of this invoice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-recipient"
-        }
-    },
+            name: "recipient",
+            active: true,
+            information: {
+                description: "Recipient of this invoice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-recipient"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "Invoice date / posting date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "Invoice date / posting date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-date"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "Type of Invoice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "Type of Invoice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-type"
+            }
+        },
 
         {
-        name: "issuer",
-        active: true,
-        information: {
-            description: "Issuing Organization of Invoice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-issuer"
-        }
-    },
+            name: "issuer",
+            active: true,
+            information: {
+                description: "Issuing Organization of Invoice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-issuer"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Recipient(s) of goods and services",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Recipient(s) of goods and services",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-subject"
+            }
+        },
 
         {
-        name: "totalgross",
-        active: true,
-        information: {
-            description: "Gross total of this Invoice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-totalgross"
-        }
-    },
+            name: "totalgross",
+            active: true,
+            information: {
+                description: "Gross total of this Invoice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-totalgross"
+            }
+        },
 
         {
-        name: "participant",
-        active: true,
-        information: {
-            description: "Individual who was involved",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-participant"
-        }
-    },
+            name: "participant",
+            active: true,
+            information: {
+                description: "Individual who was involved",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-participant"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Business Identifier for item",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Business Identifier for item",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-identifier"
+            }
+        },
 
         {
-        name: "participant-role",
-        active: true,
-        information: {
-            description: "Type of involvement in creation of this Invoice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Invoice-participant-role"
+            name: "participant-role",
+            active: true,
+            information: {
+                description: "Type of involvement in creation of this Invoice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Invoice-participant-role"
+            }
         }
-    }
 
     ],
     operations: [

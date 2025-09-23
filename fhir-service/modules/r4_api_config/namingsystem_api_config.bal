@@ -24,201 +24,200 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig namingsystemApiConfig = {
     resourceType: "NamingSystem",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/NamingSystem"
-        
+        "http://hl7.org/fhir/StructureDefinition/NamingSystem"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "responsible",
-        active: true,
-        information: {
-            description: "Who maintains system namespace?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-responsible"
-        }
-    },
+            name: "responsible",
+            active: true,
+            information: {
+                description: "Who maintains system namespace?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-responsible"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): The current status of the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): The current status of the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
+            }
+        },
 
         {
-        name: "id-type",
-        active: true,
-        information: {
-            description: "oid | uuid | uri | other",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-id-type"
-        }
-    },
+            name: "id-type",
+            active: true,
+            information: {
+                description: "oid | uuid | uri | other",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-id-type"
+            }
+        },
 
         {
-        name: "kind",
-        active: true,
-        information: {
-            description: "codesystem | identifier | root",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-kind"
-        }
-    },
+            name: "kind",
+            active: true,
+            information: {
+                description: "codesystem | identifier | root",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-kind"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): A type of use context assigned to the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): A type of use context assigned to the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): Intended jurisdiction for the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): Intended jurisdiction for the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): A use context type and value assigned to the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): A use context type and value assigned to the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): The description of the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): The description of the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): A use context type and quantity- or range-based value assigned to the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): A use context type and quantity- or range-based value assigned to the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): A quantity- or range-valued use context assigned to the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): A quantity- or range-valued use context assigned to the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): A use context assigned to the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): A use context assigned to the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
+            }
+        },
 
         {
-        name: "period",
-        active: true,
-        information: {
-            description: "When is identifier valid?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-period"
-        }
-    },
+            name: "period",
+            active: true,
+            information: {
+                description: "When is identifier valid?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-period"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): Computationally friendly name of the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): Computationally friendly name of the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
+            }
+        },
 
         {
-        name: "telecom",
-        active: true,
-        information: {
-            description: "Contact details for individual or organization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-telecom"
-        }
-    },
+            name: "telecom",
+            active: true,
+            information: {
+                description: "Contact details for individual or organization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-telecom"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): Name of the publisher of the naming system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): Name of the publisher of the naming system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
+            }
+        },
 
         {
-        name: "contact",
-        active: true,
-        information: {
-            description: "Name of an individual to contact",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-contact"
-        }
-    },
+            name: "contact",
+            active: true,
+            information: {
+                description: "Name of an individual to contact",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-contact"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "e.g. driver,  provider,  patient, bank etc.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "e.g. driver,  provider,  patient, bank etc.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-type"
+            }
+        },
 
         {
-        name: "value",
-        active: true,
-        information: {
-            description: "The unique identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-value"
-        }
-    },
+            name: "value",
+            active: true,
+            information: {
+                description: "The unique identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NamingSystem-value"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[NamingSystem](namingsystem.html): The naming system publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
+            name: "date",
+            active: true,
+            information: {
+                description: "[NamingSystem](namingsystem.html): The naming system publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
+            }
         }
-    }
 
     ],
     operations: [

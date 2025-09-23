@@ -24,141 +24,140 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig documentmanifestApiConfig = {
     resourceType: "DocumentManifest",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/DocumentManifest"
-        
+        "http://hl7.org/fhir/StructureDefinition/DocumentManifest"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "Human-readable description (title)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "Human-readable description (title)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-description"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[DocumentManifest](documentmanifest.html): Unique Identifier for the set of documents",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[DocumentManifest](documentmanifest.html): Unique Identifier for the set of documents",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "created",
-        active: true,
-        information: {
-            description: "When this document manifest created",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-created"
-        }
-    },
+            name: "created",
+            active: true,
+            information: {
+                description: "When this document manifest created",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-created"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[DocumentManifest](documentmanifest.html): The subject of the set of documents",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[DocumentManifest](documentmanifest.html): The subject of the set of documents",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "source",
-        active: true,
-        information: {
-            description: "The source system/application/software",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-source"
-        }
-    },
+            name: "source",
+            active: true,
+            information: {
+                description: "The source system/application/software",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-source"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "[DocumentManifest](documentmanifest.html): Kind of document set",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "[DocumentManifest](documentmanifest.html): Kind of document set",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The subject of the set of documents",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The subject of the set of documents",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-subject"
+            }
+        },
 
         {
-        name: "related-ref",
-        active: true,
-        information: {
-            description: "Related Resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-related-ref"
-        }
-    },
+            name: "related-ref",
+            active: true,
+            information: {
+                description: "Related Resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-related-ref"
+            }
+        },
 
         {
-        name: "related-id",
-        active: true,
-        information: {
-            description: "Identifiers of things that are related",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-related-id"
-        }
-    },
+            name: "related-id",
+            active: true,
+            information: {
+                description: "Identifiers of things that are related",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-related-id"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "current | superseded | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "current | superseded | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-status"
+            }
+        },
 
         {
-        name: "item",
-        active: true,
-        information: {
-            description: "Items in manifest",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-item"
-        }
-    },
+            name: "item",
+            active: true,
+            information: {
+                description: "Items in manifest",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-item"
+            }
+        },
 
         {
-        name: "author",
-        active: true,
-        information: {
-            description: "Who and/or what authored the DocumentManifest",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-author"
-        }
-    },
+            name: "author",
+            active: true,
+            information: {
+                description: "Who and/or what authored the DocumentManifest",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-author"
+            }
+        },
 
         {
-        name: "recipient",
-        active: true,
-        information: {
-            description: "Intended to get notified about this set of documents",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-recipient"
+            name: "recipient",
+            active: true,
+            information: {
+                description: "Intended to get notified about this set of documents",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DocumentManifest-recipient"
+            }
         }
-    }
 
     ],
     operations: [

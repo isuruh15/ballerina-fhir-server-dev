@@ -24,61 +24,60 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicinalproductauthorizationApiConfig = {
     resourceType: "MedicinalProductAuthorization",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicinalProductAuthorization"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicinalProductAuthorization"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "country",
-        active: true,
-        information: {
-            description: "The country in which the marketing authorization has been granted",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-country"
-        }
-    },
+            name: "country",
+            active: true,
+            information: {
+                description: "The country in which the marketing authorization has been granted",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-country"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The medicinal product that is being authorized",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The medicinal product that is being authorized",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-subject"
+            }
+        },
 
         {
-        name: "holder",
-        active: true,
-        information: {
-            description: "Marketing Authorization Holder",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-holder"
-        }
-    },
+            name: "holder",
+            active: true,
+            information: {
+                description: "Marketing Authorization Holder",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-holder"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the marketing authorization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the marketing authorization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-status"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Business identifier for the marketing authorization, as assigned by a regulator",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-identifier"
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Business identifier for the marketing authorization, as assigned by a regulator",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductAuthorization-identifier"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,231 +24,230 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig researchdefinitionApiConfig = {
     resourceType: "ResearchDefinition",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ResearchDefinition"
-        
+        "http://hl7.org/fhir/StructureDefinition/ResearchDefinition"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "A use context type and quantity- or range-based value assigned to the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "A use context type and quantity- or range-based value assigned to the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context-type-quantity"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "The research definition publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "The research definition publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-date"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "A quantity- or range-valued use context assigned to the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "A quantity- or range-valued use context assigned to the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context-quantity"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The current status of the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The current status of the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-status"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "Intended jurisdiction for the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "Intended jurisdiction for the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-jurisdiction"
+            }
+        },
 
         {
-        name: "composed-of",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-composed-of"
-        }
-    },
+            name: "composed-of",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-composed-of"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "The human-friendly name of the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "The human-friendly name of the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-title"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "A use context assigned to the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "A use context assigned to the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "A type of use context assigned to the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "A type of use context assigned to the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context-type"
+            }
+        },
 
         {
-        name: "topic",
-        active: true,
-        information: {
-            description: "Topics associated with the ResearchDefinition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-topic"
-        }
-    },
+            name: "topic",
+            active: true,
+            information: {
+                description: "Topics associated with the ResearchDefinition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-topic"
+            }
+        },
 
         {
-        name: "effective",
-        active: true,
-        information: {
-            description: "The time during which the research definition is intended to be in use",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-effective"
-        }
-    },
+            name: "effective",
+            active: true,
+            information: {
+                description: "The time during which the research definition is intended to be in use",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-effective"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "The uri that identifies the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "The uri that identifies the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-url"
+            }
+        },
 
         {
-        name: "successor",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-successor"
-        }
-    },
+            name: "successor",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-successor"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "A use context type and value assigned to the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "A use context type and value assigned to the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-context-type-value"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "The description of the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "The description of the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-description"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "Name of the publisher of the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "Name of the publisher of the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-publisher"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "Computationally friendly name of the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "Computationally friendly name of the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-name"
+            }
+        },
 
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "The business version of the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "The business version of the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-version"
+            }
+        },
 
         {
-        name: "derived-from",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-derived-from"
-        }
-    },
+            name: "derived-from",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-derived-from"
+            }
+        },
 
         {
-        name: "predecessor",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-predecessor"
-        }
-    },
+            name: "predecessor",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-predecessor"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "External identifier for the research definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "External identifier for the research definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-identifier"
+            }
+        },
 
         {
-        name: "depends-on",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-depends-on"
+            name: "depends-on",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchDefinition-depends-on"
+            }
         }
-    }
 
     ],
     operations: [

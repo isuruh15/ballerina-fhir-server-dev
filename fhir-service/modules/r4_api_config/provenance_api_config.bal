@@ -24,115 +24,114 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig provenanceApiConfig = {
     resourceType: "Provenance",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/provenance-relevant-history",
-            
-                "http://hl7.org/fhir/StructureDefinition/Provenance",
-            
-                "http://hl7.org/fhir/StructureDefinition/ehrsrle-provenance"
-        
+        "http://hl7.org/fhir/StructureDefinition/provenance-relevant-history",
+
+        "http://hl7.org/fhir/StructureDefinition/Provenance",
+
+        "http://hl7.org/fhir/StructureDefinition/ehrsrle-provenance"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "signature-type",
-        active: true,
-        information: {
-            description: "Indication of the reason the entity signed the object(s)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-signature-type"
-        }
-    },
+            name: "signature-type",
+            active: true,
+            information: {
+                description: "Indication of the reason the entity signed the object(s)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-signature-type"
+            }
+        },
 
         {
-        name: "entity",
-        active: true,
-        information: {
-            description: "Identity of entity",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-entity"
-        }
-    },
+            name: "entity",
+            active: true,
+            information: {
+                description: "Identity of entity",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-entity"
+            }
+        },
 
         {
-        name: "agent-role",
-        active: true,
-        information: {
-            description: "What the agents role was",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-agent-role"
-        }
-    },
+            name: "agent-role",
+            active: true,
+            information: {
+                description: "What the agents role was",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-agent-role"
+            }
+        },
 
         {
-        name: "when",
-        active: true,
-        information: {
-            description: "When the activity occurred",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-when"
-        }
-    },
+            name: "when",
+            active: true,
+            information: {
+                description: "When the activity occurred",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-when"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "Where the activity occurred, if relevant",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "Where the activity occurred, if relevant",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-location"
+            }
+        },
 
         {
-        name: "recorded",
-        active: true,
-        information: {
-            description: "When the activity was recorded / updated",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-recorded"
-        }
-    },
+            name: "recorded",
+            active: true,
+            information: {
+                description: "When the activity was recorded / updated",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-recorded"
+            }
+        },
 
         {
-        name: "target",
-        active: true,
-        information: {
-            description: "Target Reference(s) (usually version specific)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-target"
-        }
-    },
+            name: "target",
+            active: true,
+            information: {
+                description: "Target Reference(s) (usually version specific)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-target"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Target Reference(s) (usually version specific)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Target Reference(s) (usually version specific)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-patient"
+            }
+        },
 
         {
-        name: "agent",
-        active: true,
-        information: {
-            description: "Who participated",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-agent"
-        }
-    },
+            name: "agent",
+            active: true,
+            information: {
+                description: "Who participated",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-agent"
+            }
+        },
 
         {
-        name: "agent-type",
-        active: true,
-        information: {
-            description: "How the agent participated",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Provenance-agent-type"
+            name: "agent-type",
+            active: true,
+            information: {
+                description: "How the agent participated",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Provenance-agent-type"
+            }
         }
-    }
 
     ],
     operations: [

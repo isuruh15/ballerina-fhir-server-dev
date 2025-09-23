@@ -24,233 +24,232 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig evidencevariableApiConfig = {
     resourceType: "EvidenceVariable",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/picoelement",
-            
-                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
-        
+        "http://hl7.org/fhir/StructureDefinition/picoelement",
+
+        "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "The business version of the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "The business version of the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-version"
+            }
+        },
 
         {
-        name: "topic",
-        active: true,
-        information: {
-            description: "Topics associated with the EvidenceVariable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-topic"
-        }
-    },
+            name: "topic",
+            active: true,
+            information: {
+                description: "Topics associated with the EvidenceVariable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-topic"
+            }
+        },
 
         {
-        name: "effective",
-        active: true,
-        information: {
-            description: "The time during which the evidence variable is intended to be in use",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-effective"
-        }
-    },
+            name: "effective",
+            active: true,
+            information: {
+                description: "The time during which the evidence variable is intended to be in use",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-effective"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "A use context type and quantity- or range-based value assigned to the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "A use context type and quantity- or range-based value assigned to the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context-type-quantity"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "The description of the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "The description of the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-description"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "Computationally friendly name of the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "Computationally friendly name of the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-name"
+            }
+        },
 
         {
-        name: "predecessor",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-predecessor"
-        }
-    },
+            name: "predecessor",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-predecessor"
+            }
+        },
 
         {
-        name: "successor",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-successor"
-        }
-    },
+            name: "successor",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-successor"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "The uri that identifies the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "The uri that identifies the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-url"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "External identifier for the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "External identifier for the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-identifier"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "The human-friendly name of the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "The human-friendly name of the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-title"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "A type of use context assigned to the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "A type of use context assigned to the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context-type"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "Name of the publisher of the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "Name of the publisher of the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-publisher"
+            }
+        },
 
         {
-        name: "depends-on",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-depends-on"
-        }
-    },
+            name: "depends-on",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-depends-on"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "A quantity- or range-valued use context assigned to the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "A quantity- or range-valued use context assigned to the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context-quantity"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "A use context assigned to the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "A use context assigned to the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The current status of the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The current status of the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-status"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "The evidence variable publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "The evidence variable publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-date"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "Intended jurisdiction for the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "Intended jurisdiction for the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-jurisdiction"
+            }
+        },
 
         {
-        name: "composed-of",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-composed-of"
-        }
-    },
+            name: "composed-of",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-composed-of"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "A use context type and value assigned to the evidence variable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "A use context type and value assigned to the evidence variable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-context-type-value"
+            }
+        },
 
         {
-        name: "derived-from",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-derived-from"
+            name: "derived-from",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EvidenceVariable-derived-from"
+            }
         }
-    }
 
     ],
     operations: [

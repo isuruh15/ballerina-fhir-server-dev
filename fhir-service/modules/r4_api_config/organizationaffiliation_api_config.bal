@@ -24,151 +24,150 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig organizationaffiliationApiConfig = {
     resourceType: "OrganizationAffiliation",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation"
-        
+        "http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "The period during which the participatingOrganization is affiliated with the primary organization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "The period during which the participatingOrganization is affiliated with the primary organization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-date"
+            }
+        },
 
         {
-        name: "email",
-        active: true,
-        information: {
-            description: "A value in an email contact",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-email"
-        }
-    },
+            name: "email",
+            active: true,
+            information: {
+                description: "A value in an email contact",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-email"
+            }
+        },
 
         {
-        name: "role",
-        active: true,
-        information: {
-            description: "Definition of the role the participatingOrganization plays",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-role"
-        }
-    },
+            name: "role",
+            active: true,
+            information: {
+                description: "Definition of the role the participatingOrganization plays",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-role"
+            }
+        },
 
         {
-        name: "specialty",
-        active: true,
-        information: {
-            description: "Specific specialty of the participatingOrganization in the context of the role",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-specialty"
-        }
-    },
+            name: "specialty",
+            active: true,
+            information: {
+                description: "Specific specialty of the participatingOrganization in the context of the role",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-specialty"
+            }
+        },
 
         {
-        name: "telecom",
-        active: true,
-        information: {
-            description: "The value in any kind of contact",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-telecom"
-        }
-    },
+            name: "telecom",
+            active: true,
+            information: {
+                description: "The value in any kind of contact",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-telecom"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "The location(s) at which the role occurs",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "The location(s) at which the role occurs",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-location"
+            }
+        },
 
         {
-        name: "network",
-        active: true,
-        information: {
-            description: "Health insurance provider network in which the participatingOrganization provides the role's services (if defined) at the indicated locations (if defined)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-network"
-        }
-    },
+            name: "network",
+            active: true,
+            information: {
+                description: "Health insurance provider network in which the participatingOrganization provides the role's services (if defined) at the indicated locations (if defined)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-network"
+            }
+        },
 
         {
-        name: "active",
-        active: true,
-        information: {
-            description: "Whether this organization affiliation record is in active use",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-active"
-        }
-    },
+            name: "active",
+            active: true,
+            information: {
+                description: "Whether this organization affiliation record is in active use",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-active"
+            }
+        },
 
         {
-        name: "participating-organization",
-        active: true,
-        information: {
-            description: "The organization that provides services to the primary organization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-participating-organization"
-        }
-    },
+            name: "participating-organization",
+            active: true,
+            information: {
+                description: "The organization that provides services to the primary organization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-participating-organization"
+            }
+        },
 
         {
-        name: "primary-organization",
-        active: true,
-        information: {
-            description: "The organization that receives the services from the participating organization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-primary-organization"
-        }
-    },
+            name: "primary-organization",
+            active: true,
+            information: {
+                description: "The organization that receives the services from the participating organization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-primary-organization"
+            }
+        },
 
         {
-        name: "endpoint",
-        active: true,
-        information: {
-            description: "Technical endpoints providing access to services operated for this role",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-endpoint"
-        }
-    },
+            name: "endpoint",
+            active: true,
+            information: {
+                description: "Technical endpoints providing access to services operated for this role",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-endpoint"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "An organization affiliation's Identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "An organization affiliation's Identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-identifier"
+            }
+        },
 
         {
-        name: "phone",
-        active: true,
-        information: {
-            description: "A value in a phone contact",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-phone"
-        }
-    },
+            name: "phone",
+            active: true,
+            information: {
+                description: "A value in a phone contact",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-phone"
+            }
+        },
 
         {
-        name: "service",
-        active: true,
-        information: {
-            description: "Healthcare services provided through the role",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-service"
+            name: "service",
+            active: true,
+            information: {
+                description: "Healthcare services provided through the role",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/OrganizationAffiliation-service"
+            }
         }
-    }
 
     ],
     operations: [

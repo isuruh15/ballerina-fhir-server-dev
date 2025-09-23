@@ -24,31 +24,30 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicinalproductpackagedApiConfig = {
     resourceType: "MedicinalProductPackaged",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicinalProductPackaged"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicinalProductPackaged"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The product with this is a pack for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPackaged-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The product with this is a pack for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPackaged-subject"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Unique identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPackaged-identifier"
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Unique identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPackaged-identifier"
+            }
         }
-    }
 
     ],
     operations: [

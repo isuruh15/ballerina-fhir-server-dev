@@ -24,151 +24,150 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig practitionerroleApiConfig = {
     resourceType: "PractitionerRole",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-        
+        "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "The period during which the practitioner is authorized to perform in these role(s)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "The period during which the practitioner is authorized to perform in these role(s)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-date"
+            }
+        },
 
         {
-        name: "specialty",
-        active: true,
-        information: {
-            description: "The practitioner has this specialty at an organization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty"
-        }
-    },
+            name: "specialty",
+            active: true,
+            information: {
+                description: "The practitioner has this specialty at an organization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty"
+            }
+        },
 
         {
-        name: "email",
-        active: true,
-        information: {
-            description: "[PractitionerRole](practitionerrole.html): A value in an email contact",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/individual-email"
-        }
-    },
+            name: "email",
+            active: true,
+            information: {
+                description: "[PractitionerRole](practitionerrole.html): A value in an email contact",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/individual-email"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "One of the locations at which this practitioner provides care",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "One of the locations at which this practitioner provides care",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-location"
+            }
+        },
 
         {
-        name: "active",
-        active: true,
-        information: {
-            description: "Whether this practitioner role record is in active use",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-active"
-        }
-    },
+            name: "active",
+            active: true,
+            information: {
+                description: "Whether this practitioner role record is in active use",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-active"
+            }
+        },
 
         {
-        name: "phone",
-        active: true,
-        information: {
-            description: "[PractitionerRole](practitionerrole.html): A value in a phone contact",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/individual-phone"
-        }
-    },
+            name: "phone",
+            active: true,
+            information: {
+                description: "[PractitionerRole](practitionerrole.html): A value in a phone contact",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/individual-phone"
+            }
+        },
 
         {
-        name: "genderIdentity",
-        active: true,
-        information: {
-            description: "Search based on individual's gender identity",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/individual-genderIdentity"
-        }
-    },
+            name: "genderIdentity",
+            active: true,
+            information: {
+                description: "Search based on individual's gender identity",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/individual-genderIdentity"
+            }
+        },
 
         {
-        name: "organization",
-        active: true,
-        information: {
-            description: "The identity of the organization the practitioner represents / acts on behalf of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-organization"
-        }
-    },
+            name: "organization",
+            active: true,
+            information: {
+                description: "The identity of the organization the practitioner represents / acts on behalf of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-organization"
+            }
+        },
 
         {
-        name: "telecom",
-        active: true,
-        information: {
-            description: "[PractitionerRole](practitionerrole.html): The value in any kind of contact",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/individual-telecom"
-        }
-    },
+            name: "telecom",
+            active: true,
+            information: {
+                description: "[PractitionerRole](practitionerrole.html): The value in any kind of contact",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/individual-telecom"
+            }
+        },
 
         {
-        name: "endpoint",
-        active: true,
-        information: {
-            description: "Technical endpoints providing access to services operated for the practitioner with this role",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-endpoint"
-        }
-    },
+            name: "endpoint",
+            active: true,
+            information: {
+                description: "Technical endpoints providing access to services operated for the practitioner with this role",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-endpoint"
+            }
+        },
 
         {
-        name: "service",
-        active: true,
-        information: {
-            description: "The list of healthcare services that this worker provides for this role's Organization/Location(s)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-service"
-        }
-    },
+            name: "service",
+            active: true,
+            information: {
+                description: "The list of healthcare services that this worker provides for this role's Organization/Location(s)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-service"
+            }
+        },
 
         {
-        name: "practitioner",
-        active: true,
-        information: {
-            description: "Practitioner that is able to provide the defined services for the organization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"
-        }
-    },
+            name: "practitioner",
+            active: true,
+            information: {
+                description: "Practitioner that is able to provide the defined services for the organization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"
+            }
+        },
 
         {
-        name: "role",
-        active: true,
-        information: {
-            description: "The practitioner can perform this role at for the organization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-role"
-        }
-    },
+            name: "role",
+            active: true,
+            information: {
+                description: "The practitioner can perform this role at for the organization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-role"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "A practitioner's Identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
+            name: "identifier",
+            active: true,
+            information: {
+                description: "A practitioner's Identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
+            }
         }
-    }
 
     ],
     operations: [

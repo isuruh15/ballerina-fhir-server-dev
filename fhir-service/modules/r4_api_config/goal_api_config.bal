@@ -24,131 +24,130 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig goalApiConfig = {
     resourceType: "Goal",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Goal"
-        
+        "http://hl7.org/fhir/StructureDefinition/Goal"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "workflow-protectiveFactorRef",
-        active: true,
-        information: {
-            description: "SearchParameter for Protective Factor Extension with Reference data type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorRef"
-        }
-    },
+            name: "workflow-protectiveFactorRef",
+            active: true,
+            information: {
+                description: "SearchParameter for Protective Factor Extension with Reference data type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorRef"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "E.g. Treatment, dietary, behavioral, etc.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Goal-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "E.g. Treatment, dietary, behavioral, etc.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Goal-category"
+            }
+        },
 
         {
-        name: "target-date",
-        active: true,
-        information: {
-            description: "Reach goal on or before",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Goal-target-date"
-        }
-    },
+            name: "target-date",
+            active: true,
+            information: {
+                description: "Reach goal on or before",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Goal-target-date"
+            }
+        },
 
         {
-        name: "workflow-barrierRef",
-        active: true,
-        information: {
-            description: "SearchParameter for Barrier Extension with Reference value",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierRef"
-        }
-    },
+            name: "workflow-barrierRef",
+            active: true,
+            information: {
+                description: "SearchParameter for Barrier Extension with Reference value",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierRef"
+            }
+        },
 
         {
-        name: "achievement-status",
-        active: true,
-        information: {
-            description: "in-progress | improving | worsening | no-change | achieved | sustaining | not-achieved | no-progress | not-attainable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Goal-achievement-status"
-        }
-    },
+            name: "achievement-status",
+            active: true,
+            information: {
+                description: "in-progress | improving | worsening | no-change | achieved | sustaining | not-achieved | no-progress | not-attainable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Goal-achievement-status"
+            }
+        },
 
         {
-        name: "workflow-protectiveFactorCode",
-        active: true,
-        information: {
-            description: "SearchParameter for Protective Factor Extension with CodeableConcept data type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorCode"
-        }
-    },
+            name: "workflow-protectiveFactorCode",
+            active: true,
+            information: {
+                description: "SearchParameter for Protective Factor Extension with CodeableConcept data type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorCode"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[Goal](goal.html): External Ids for this goal",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[Goal](goal.html): External Ids for this goal",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "start-date",
-        active: true,
-        information: {
-            description: "When goal pursuit begins",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Goal-start-date"
-        }
-    },
+            name: "start-date",
+            active: true,
+            information: {
+                description: "When goal pursuit begins",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Goal-start-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[Goal](goal.html): Who this goal is intended for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[Goal](goal.html): Who this goal is intended for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Who this goal is intended for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Goal-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Who this goal is intended for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Goal-subject"
+            }
+        },
 
         {
-        name: "lifecycle-status",
-        active: true,
-        information: {
-            description: "proposed | planned | accepted | active | on-hold | completed | cancelled | entered-in-error | rejected",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Goal-lifecycle-status"
-        }
-    },
+            name: "lifecycle-status",
+            active: true,
+            information: {
+                description: "proposed | planned | accepted | active | on-hold | completed | cancelled | entered-in-error | rejected",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Goal-lifecycle-status"
+            }
+        },
 
         {
-        name: "workflow-barrierCode",
-        active: true,
-        information: {
-            description: "SearchParameter for Barrier Extension with CodeableConcept value",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierCode"
+            name: "workflow-barrierCode",
+            active: true,
+            information: {
+                description: "SearchParameter for Barrier Extension with CodeableConcept value",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierCode"
+            }
         }
-    }
 
     ],
     operations: [

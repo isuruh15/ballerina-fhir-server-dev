@@ -24,81 +24,80 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig appointmentresponseApiConfig = {
     resourceType: "AppointmentResponse",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/AppointmentResponse"
-        
+        "http://hl7.org/fhir/StructureDefinition/AppointmentResponse"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "This Response is for this Location",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "This Response is for this Location",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-location"
+            }
+        },
 
         {
-        name: "appointment",
-        active: true,
-        information: {
-            description: "The appointment that the response is attached to",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-appointment"
-        }
-    },
+            name: "appointment",
+            active: true,
+            information: {
+                description: "The appointment that the response is attached to",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-appointment"
+            }
+        },
 
         {
-        name: "part-status",
-        active: true,
-        information: {
-            description: "The participants acceptance status for this appointment",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-part-status"
-        }
-    },
+            name: "part-status",
+            active: true,
+            information: {
+                description: "The participants acceptance status for this appointment",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-part-status"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "An Identifier in this appointment response",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "An Identifier in this appointment response",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-identifier"
+            }
+        },
 
         {
-        name: "practitioner",
-        active: true,
-        information: {
-            description: "This Response is for this Practitioner",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-practitioner"
-        }
-    },
+            name: "practitioner",
+            active: true,
+            information: {
+                description: "This Response is for this Practitioner",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-practitioner"
+            }
+        },
 
         {
-        name: "actor",
-        active: true,
-        information: {
-            description: "The Person, Location/HealthcareService or Device that this appointment response replies for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-actor"
-        }
-    },
+            name: "actor",
+            active: true,
+            information: {
+                description: "The Person, Location/HealthcareService or Device that this appointment response replies for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-actor"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "This Response is for this Patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-patient"
+            name: "patient",
+            active: true,
+            information: {
+                description: "This Response is for this Patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AppointmentResponse-patient"
+            }
         }
-    }
 
     ],
     operations: [

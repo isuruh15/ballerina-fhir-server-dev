@@ -24,131 +24,130 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig nutritionorderApiConfig = {
     resourceType: "NutritionOrder",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/NutritionOrder"
-        
+        "http://hl7.org/fhir/StructureDefinition/NutritionOrder"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "oraldiet",
-        active: true,
-        information: {
-            description: "Type of diet that can be consumed orally (i.e., take via the mouth).",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-oraldiet"
-        }
-    },
+            name: "oraldiet",
+            active: true,
+            information: {
+                description: "Type of diet that can be consumed orally (i.e., take via the mouth).",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-oraldiet"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "Status of the nutrition order.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "Status of the nutrition order.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-status"
+            }
+        },
 
         {
-        name: "additive",
-        active: true,
-        information: {
-            description: "Type of module component to add to the feeding",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-additive"
-        }
-    },
+            name: "additive",
+            active: true,
+            information: {
+                description: "Type of module component to add to the feeding",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-additive"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[NutritionOrder](nutritionorder.html): Return nutrition orders with this external identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[NutritionOrder](nutritionorder.html): Return nutrition orders with this external identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[NutritionOrder](nutritionorder.html): The identity of the person who requires the diet, formula or nutritional supplement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[NutritionOrder](nutritionorder.html): The identity of the person who requires the diet, formula or nutritional supplement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "instantiates-uri",
-        active: true,
-        information: {
-            description: "Instantiates external protocol or definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-instantiates-uri"
-        }
-    },
+            name: "instantiates-uri",
+            active: true,
+            information: {
+                description: "Instantiates external protocol or definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-instantiates-uri"
+            }
+        },
 
         {
-        name: "supplement",
-        active: true,
-        information: {
-            description: "Type of supplement product requested",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-supplement"
-        }
-    },
+            name: "supplement",
+            active: true,
+            information: {
+                description: "Type of supplement product requested",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-supplement"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "[NutritionOrder](nutritionorder.html): Return nutrition orders with this encounter identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "[NutritionOrder](nutritionorder.html): Return nutrition orders with this encounter identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+            }
+        },
 
         {
-        name: "provider",
-        active: true,
-        information: {
-            description: "The identity of the provider who placed the nutrition order",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-provider"
-        }
-    },
+            name: "provider",
+            active: true,
+            information: {
+                description: "The identity of the provider who placed the nutrition order",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-provider"
+            }
+        },
 
         {
-        name: "datetime",
-        active: true,
-        information: {
-            description: "Return nutrition orders requested on this date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-datetime"
-        }
-    },
+            name: "datetime",
+            active: true,
+            information: {
+                description: "Return nutrition orders requested on this date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-datetime"
+            }
+        },
 
         {
-        name: "instantiates-canonical",
-        active: true,
-        information: {
-            description: "Instantiates FHIR protocol or definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-instantiates-canonical"
-        }
-    },
+            name: "instantiates-canonical",
+            active: true,
+            information: {
+                description: "Instantiates FHIR protocol or definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-instantiates-canonical"
+            }
+        },
 
         {
-        name: "formula",
-        active: true,
-        information: {
-            description: "Type of enteral or infant formula",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-formula"
+            name: "formula",
+            active: true,
+            information: {
+                description: "Type of enteral or infant formula",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/NutritionOrder-formula"
+            }
         }
-    }
 
     ],
     operations: [

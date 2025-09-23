@@ -24,41 +24,40 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig enrollmentresponseApiConfig = {
     resourceType: "EnrollmentResponse",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/EnrollmentResponse"
-        
+        "http://hl7.org/fhir/StructureDefinition/EnrollmentResponse"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "request",
-        active: true,
-        information: {
-            description: "The reference to the claim",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentResponse-request"
-        }
-    },
+            name: "request",
+            active: true,
+            information: {
+                description: "The reference to the claim",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentResponse-request"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The business identifier of the EnrollmentResponse",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentResponse-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The business identifier of the EnrollmentResponse",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentResponse-identifier"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the enrollment response",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentResponse-status"
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the enrollment response",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentResponse-status"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,41 +24,40 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig devicedefinitionApiConfig = {
     resourceType: "DeviceDefinition",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/DeviceDefinition"
-        
+        "http://hl7.org/fhir/StructureDefinition/DeviceDefinition"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The identifier of the component",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceDefinition-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The identifier of the component",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceDefinition-identifier"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "The device component type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceDefinition-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "The device component type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceDefinition-type"
+            }
+        },
 
         {
-        name: "parent",
-        active: true,
-        information: {
-            description: "The parent DeviceDefinition resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceDefinition-parent"
+            name: "parent",
+            active: true,
+            information: {
+                description: "The parent DeviceDefinition resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceDefinition-parent"
+            }
         }
-    }
 
     ],
     operations: [

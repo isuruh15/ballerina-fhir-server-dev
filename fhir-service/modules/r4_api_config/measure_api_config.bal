@@ -24,233 +24,232 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig measureApiConfig = {
     resourceType: "Measure",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/shareablemeasure",
-            
-                "http://hl7.org/fhir/StructureDefinition/Measure"
-        
+        "http://hl7.org/fhir/StructureDefinition/shareablemeasure",
+
+        "http://hl7.org/fhir/StructureDefinition/Measure"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "The measure publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "The measure publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-date"
+            }
+        },
 
         {
-        name: "successor",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-successor"
-        }
-    },
+            name: "successor",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-successor"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "Intended jurisdiction for the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "Intended jurisdiction for the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-jurisdiction"
+            }
+        },
 
         {
-        name: "depends-on",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-depends-on"
-        }
-    },
+            name: "depends-on",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-depends-on"
+            }
+        },
 
         {
-        name: "effective",
-        active: true,
-        information: {
-            description: "The time during which the measure is intended to be in use",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-effective"
-        }
-    },
+            name: "effective",
+            active: true,
+            information: {
+                description: "The time during which the measure is intended to be in use",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-effective"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "The human-friendly name of the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "The human-friendly name of the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-title"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The current status of the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The current status of the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-status"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "A use context type and quantity- or range-based value assigned to the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "A use context type and quantity- or range-based value assigned to the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-context-type-quantity"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "A type of use context assigned to the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "A type of use context assigned to the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-context-type"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "The uri that identifies the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "The uri that identifies the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-url"
+            }
+        },
 
         {
-        name: "composed-of",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-composed-of"
-        }
-    },
+            name: "composed-of",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-composed-of"
+            }
+        },
 
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "The business version of the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "The business version of the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-version"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "Name of the publisher of the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "Name of the publisher of the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-publisher"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "A quantity- or range-valued use context assigned to the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "A quantity- or range-valued use context assigned to the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-context-quantity"
+            }
+        },
 
         {
-        name: "topic",
-        active: true,
-        information: {
-            description: "Topics associated with the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-topic"
-        }
-    },
+            name: "topic",
+            active: true,
+            information: {
+                description: "Topics associated with the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-topic"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "Computationally friendly name of the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "Computationally friendly name of the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-name"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "External identifier for the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "External identifier for the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-identifier"
+            }
+        },
 
         {
-        name: "predecessor",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-predecessor"
-        }
-    },
+            name: "predecessor",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-predecessor"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "A use context assigned to the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "A use context assigned to the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-context"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "The description of the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "The description of the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-description"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "A use context type and value assigned to the measure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "A use context type and value assigned to the measure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-context-type-value"
+            }
+        },
 
         {
-        name: "derived-from",
-        active: true,
-        information: {
-            description: "What resource is being referenced",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Measure-derived-from"
+            name: "derived-from",
+            active: true,
+            information: {
+                description: "What resource is being referenced",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Measure-derived-from"
+            }
         }
-    }
 
     ],
     operations: [

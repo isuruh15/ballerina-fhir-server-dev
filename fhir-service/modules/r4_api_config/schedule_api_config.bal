@@ -24,81 +24,80 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig scheduleApiConfig = {
     resourceType: "Schedule",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Schedule"
-        
+        "http://hl7.org/fhir/StructureDefinition/Schedule"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "specialty",
-        active: true,
-        information: {
-            description: "Type of specialty needed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Schedule-specialty"
-        }
-    },
+            name: "specialty",
+            active: true,
+            information: {
+                description: "Type of specialty needed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Schedule-specialty"
+            }
+        },
 
         {
-        name: "service-type",
-        active: true,
-        information: {
-            description: "The type of appointments that can be booked into associated slot(s)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Schedule-service-type"
-        }
-    },
+            name: "service-type",
+            active: true,
+            information: {
+                description: "The type of appointments that can be booked into associated slot(s)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Schedule-service-type"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "Search for Schedule resources that have a period that contains this date specified",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Schedule-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "Search for Schedule resources that have a period that contains this date specified",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Schedule-date"
+            }
+        },
 
         {
-        name: "actor",
-        active: true,
-        information: {
-            description: "The individual(HealthcareService, Practitioner, Location, ...) to find a Schedule for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Schedule-actor"
-        }
-    },
+            name: "actor",
+            active: true,
+            information: {
+                description: "The individual(HealthcareService, Practitioner, Location, ...) to find a Schedule for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Schedule-actor"
+            }
+        },
 
         {
-        name: "active",
-        active: true,
-        information: {
-            description: "Is the schedule in active use",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Schedule-active"
-        }
-    },
+            name: "active",
+            active: true,
+            information: {
+                description: "Is the schedule in active use",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Schedule-active"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "A Schedule Identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Schedule-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "A Schedule Identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Schedule-identifier"
+            }
+        },
 
         {
-        name: "service-category",
-        active: true,
-        information: {
-            description: "High-level category",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Schedule-service-category"
+            name: "service-category",
+            active: true,
+            information: {
+                description: "High-level category",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Schedule-service-category"
+            }
         }
-    }
 
     ],
     operations: [

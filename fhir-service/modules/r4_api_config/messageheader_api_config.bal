@@ -24,151 +24,150 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig messageheaderApiConfig = {
     resourceType: "MessageHeader",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MessageHeader"
-        
+        "http://hl7.org/fhir/StructureDefinition/MessageHeader"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "focus",
-        active: true,
-        information: {
-            description: "The actual content of the message",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-focus"
-        }
-    },
+            name: "focus",
+            active: true,
+            information: {
+                description: "The actual content of the message",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-focus"
+            }
+        },
 
         {
-        name: "author",
-        active: true,
-        information: {
-            description: "The source of the decision",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-author"
-        }
-    },
+            name: "author",
+            active: true,
+            information: {
+                description: "The source of the decision",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-author"
+            }
+        },
 
         {
-        name: "enterer",
-        active: true,
-        information: {
-            description: "The source of the data entry",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-enterer"
-        }
-    },
+            name: "enterer",
+            active: true,
+            information: {
+                description: "The source of the data entry",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-enterer"
+            }
+        },
 
         {
-        name: "responsible",
-        active: true,
-        information: {
-            description: "Final responsibility for event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-responsible"
-        }
-    },
+            name: "responsible",
+            active: true,
+            information: {
+                description: "Final responsibility for event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-responsible"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "ok | transient-error | fatal-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "ok | transient-error | fatal-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-code"
+            }
+        },
 
         {
-        name: "source",
-        active: true,
-        information: {
-            description: "Name of system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-source"
-        }
-    },
+            name: "source",
+            active: true,
+            information: {
+                description: "Name of system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-source"
+            }
+        },
 
         {
-        name: "response-id",
-        active: true,
-        information: {
-            description: "Id of original message",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-response-id"
-        }
-    },
+            name: "response-id",
+            active: true,
+            information: {
+                description: "Id of original message",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-response-id"
+            }
+        },
 
         {
-        name: "event",
-        active: true,
-        information: {
-            description: "Code for the event this message represents or link to event definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-event"
-        }
-    },
+            name: "event",
+            active: true,
+            information: {
+                description: "Code for the event this message represents or link to event definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-event"
+            }
+        },
 
         {
-        name: "source-uri",
-        active: true,
-        information: {
-            description: "Actual message source address or id",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-source-uri"
-        }
-    },
+            name: "source-uri",
+            active: true,
+            information: {
+                description: "Actual message source address or id",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-source-uri"
+            }
+        },
 
         {
-        name: "sender",
-        active: true,
-        information: {
-            description: "Real world sender of the message",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-sender"
-        }
-    },
+            name: "sender",
+            active: true,
+            information: {
+                description: "Real world sender of the message",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-sender"
+            }
+        },
 
         {
-        name: "receiver",
-        active: true,
-        information: {
-            description: "Intended real-world recipient for the data",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-receiver"
-        }
-    },
+            name: "receiver",
+            active: true,
+            information: {
+                description: "Intended real-world recipient for the data",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-receiver"
+            }
+        },
 
         {
-        name: "destination-uri",
-        active: true,
-        information: {
-            description: "Actual destination address or id",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-destination-uri"
-        }
-    },
+            name: "destination-uri",
+            active: true,
+            information: {
+                description: "Actual destination address or id",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-destination-uri"
+            }
+        },
 
         {
-        name: "destination",
-        active: true,
-        information: {
-            description: "Name of system",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-destination"
-        }
-    },
+            name: "destination",
+            active: true,
+            information: {
+                description: "Name of system",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-destination"
+            }
+        },
 
         {
-        name: "target",
-        active: true,
-        information: {
-            description: "Particular delivery destination within the destination",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-target"
+            name: "target",
+            active: true,
+            information: {
+                description: "Particular delivery destination within the destination",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MessageHeader-target"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,211 +24,210 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig communicationrequestApiConfig = {
     resourceType: "CommunicationRequest",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"
-        
+        "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-status"
+            }
+        },
 
         {
-        name: "workflow-protectiveFactorRef",
-        active: true,
-        information: {
-            description: "SearchParameter for Protective Factor Extension with Reference data type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorRef"
-        }
-    },
+            name: "workflow-protectiveFactorRef",
+            active: true,
+            information: {
+                description: "SearchParameter for Protective Factor Extension with Reference data type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorRef"
+            }
+        },
 
         {
-        name: "group-identifier",
-        active: true,
-        information: {
-            description: "Composite request this is part of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-group-identifier"
-        }
-    },
+            name: "group-identifier",
+            active: true,
+            information: {
+                description: "Composite request this is part of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-group-identifier"
+            }
+        },
 
         {
-        name: "workflow-barrierRef",
-        active: true,
-        information: {
-            description: "SearchParameter for Barrier Extension with Reference value",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierRef"
-        }
-    },
+            name: "workflow-barrierRef",
+            active: true,
+            information: {
+                description: "SearchParameter for Barrier Extension with Reference value",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierRef"
+            }
+        },
 
         {
-        name: "workflow-protectiveFactorCode",
-        active: true,
-        information: {
-            description: "SearchParameter for Protective Factor Extension with CodeableConcept data type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorCode"
-        }
-    },
+            name: "workflow-protectiveFactorCode",
+            active: true,
+            information: {
+                description: "SearchParameter for Protective Factor Extension with CodeableConcept data type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-protectiveFactorCode"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "Encounter created as part of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "Encounter created as part of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-encounter"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Message category",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Message category",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-category"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Unique identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Unique identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-identifier"
+            }
+        },
 
         {
-        name: "occurrence",
-        active: true,
-        information: {
-            description: "When scheduled",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-occurrence"
-        }
-    },
+            name: "occurrence",
+            active: true,
+            information: {
+                description: "When scheduled",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-occurrence"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Focus of message",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Focus of message",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-patient"
+            }
+        },
 
         {
-        name: "sender",
-        active: true,
-        information: {
-            description: "Message sender",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-sender"
-        }
-    },
+            name: "sender",
+            active: true,
+            information: {
+                description: "Message sender",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-sender"
+            }
+        },
 
         {
-        name: "medium",
-        active: true,
-        information: {
-            description: "A channel of communication",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-medium"
-        }
-    },
+            name: "medium",
+            active: true,
+            information: {
+                description: "A channel of communication",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-medium"
+            }
+        },
 
         {
-        name: "recipient",
-        active: true,
-        information: {
-            description: "Message recipient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-recipient"
-        }
-    },
+            name: "recipient",
+            active: true,
+            information: {
+                description: "Message recipient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-recipient"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Focus of message",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Focus of message",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-subject"
+            }
+        },
 
         {
-        name: "replaces",
-        active: true,
-        information: {
-            description: "Request(s) replaced by this request",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-replaces"
-        }
-    },
+            name: "replaces",
+            active: true,
+            information: {
+                description: "Request(s) replaced by this request",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-replaces"
+            }
+        },
 
         {
-        name: "authored",
-        active: true,
-        information: {
-            description: "When request transitioned to being actionable",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-authored"
-        }
-    },
+            name: "authored",
+            active: true,
+            information: {
+                description: "When request transitioned to being actionable",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-authored"
+            }
+        },
 
         {
-        name: "based-on",
-        active: true,
-        information: {
-            description: "Fulfills plan or proposal",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-based-on"
-        }
-    },
+            name: "based-on",
+            active: true,
+            information: {
+                description: "Fulfills plan or proposal",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-based-on"
+            }
+        },
 
         {
-        name: "requester",
-        active: true,
-        information: {
-            description: "Who/what is requesting service",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-requester"
-        }
-    },
+            name: "requester",
+            active: true,
+            information: {
+                description: "Who/what is requesting service",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-requester"
+            }
+        },
 
         {
-        name: "workflow-barrierCode",
-        active: true,
-        information: {
-            description: "SearchParameter for Barrier Extension with CodeableConcept value",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierCode"
-        }
-    },
+            name: "workflow-barrierCode",
+            active: true,
+            information: {
+                description: "SearchParameter for Barrier Extension with CodeableConcept value",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-barrierCode"
+            }
+        },
 
         {
-        name: "priority",
-        active: true,
-        information: {
-            description: "routine | urgent | asap | stat",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-priority"
+            name: "priority",
+            active: true,
+            information: {
+                description: "routine | urgent | asap | stat",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CommunicationRequest-priority"
+            }
         }
-    }
 
     ],
     operations: [

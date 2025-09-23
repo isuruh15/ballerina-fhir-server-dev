@@ -24,81 +24,80 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig coverageeligibilityrequestApiConfig = {
     resourceType: "CoverageEligibilityRequest",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest"
-        
+        "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "enterer",
-        active: true,
-        information: {
-            description: "The party who is responsible for the request",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-enterer"
-        }
-    },
+            name: "enterer",
+            active: true,
+            information: {
+                description: "The party who is responsible for the request",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-enterer"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the EligibilityRequest",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the EligibilityRequest",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-status"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The business identifier of the Eligibility",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The business identifier of the Eligibility",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-identifier"
+            }
+        },
 
         {
-        name: "created",
-        active: true,
-        information: {
-            description: "The creation date for the EOB",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-created"
-        }
-    },
+            name: "created",
+            active: true,
+            information: {
+                description: "The creation date for the EOB",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-created"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The reference to the patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The reference to the patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-patient"
+            }
+        },
 
         {
-        name: "provider",
-        active: true,
-        information: {
-            description: "The reference to the provider",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-provider"
-        }
-    },
+            name: "provider",
+            active: true,
+            information: {
+                description: "The reference to the provider",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-provider"
+            }
+        },
 
         {
-        name: "facility",
-        active: true,
-        information: {
-            description: "Facility responsible for the goods and services",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-facility"
+            name: "facility",
+            active: true,
+            information: {
+                description: "Facility responsible for the goods and services",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-facility"
+            }
         }
-    }
 
     ],
     operations: [

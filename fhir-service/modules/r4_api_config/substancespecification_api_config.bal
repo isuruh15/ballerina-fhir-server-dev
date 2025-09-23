@@ -24,21 +24,20 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig substancespecificationApiConfig = {
     resourceType: "SubstanceSpecification",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/SubstanceSpecification"
-        
+        "http://hl7.org/fhir/StructureDefinition/SubstanceSpecification"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "The specific code",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SubstanceSpecification-code"
+            name: "code",
+            active: true,
+            information: {
+                description: "The specific code",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SubstanceSpecification-code"
+            }
         }
-    }
 
     ],
     operations: [

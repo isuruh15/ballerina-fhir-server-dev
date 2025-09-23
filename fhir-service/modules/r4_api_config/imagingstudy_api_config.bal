@@ -24,181 +24,180 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig imagingstudyApiConfig = {
     resourceType: "ImagingStudy",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ImagingStudy"
-        
+        "http://hl7.org/fhir/StructureDefinition/ImagingStudy"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "bodysite",
-        active: true,
-        information: {
-            description: "The body site studied",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-bodysite"
-        }
-    },
+            name: "bodysite",
+            active: true,
+            information: {
+                description: "The body site studied",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-bodysite"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Who the study is about",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Who the study is about",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-subject"
+            }
+        },
 
         {
-        name: "performer",
-        active: true,
-        information: {
-            description: "The person who performed the study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-performer"
-        }
-    },
+            name: "performer",
+            active: true,
+            information: {
+                description: "The person who performed the study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-performer"
+            }
+        },
 
         {
-        name: "reason",
-        active: true,
-        information: {
-            description: "The reason for the study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-reason"
-        }
-    },
+            name: "reason",
+            active: true,
+            information: {
+                description: "The reason for the study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-reason"
+            }
+        },
 
         {
-        name: "started",
-        active: true,
-        information: {
-            description: "When the study was started",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-started"
-        }
-    },
+            name: "started",
+            active: true,
+            information: {
+                description: "When the study was started",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-started"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[ImagingStudy](imagingstudy.html): Identifiers for the Study, such as DICOM Study Instance UID and Accession number",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[ImagingStudy](imagingstudy.html): Identifiers for the Study, such as DICOM Study Instance UID and Accession number",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-status"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[ImagingStudy](imagingstudy.html): Who the study is about",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[ImagingStudy](imagingstudy.html): Who the study is about",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "dicom-class",
-        active: true,
-        information: {
-            description: "The type of the instance",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-dicom-class"
-        }
-    },
+            name: "dicom-class",
+            active: true,
+            information: {
+                description: "The type of the instance",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-dicom-class"
+            }
+        },
 
         {
-        name: "series",
-        active: true,
-        information: {
-            description: "DICOM Series Instance UID for a series",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-series"
-        }
-    },
+            name: "series",
+            active: true,
+            information: {
+                description: "DICOM Series Instance UID for a series",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-series"
+            }
+        },
 
         {
-        name: "endpoint",
-        active: true,
-        information: {
-            description: "The endpoint for the study or series",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-endpoint"
-        }
-    },
+            name: "endpoint",
+            active: true,
+            information: {
+                description: "The endpoint for the study or series",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-endpoint"
+            }
+        },
 
         {
-        name: "referrer",
-        active: true,
-        information: {
-            description: "The referring physician",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-referrer"
-        }
-    },
+            name: "referrer",
+            active: true,
+            information: {
+                description: "The referring physician",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-referrer"
+            }
+        },
 
         {
-        name: "interpreter",
-        active: true,
-        information: {
-            description: "Who interpreted the images",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-interpreter"
-        }
-    },
+            name: "interpreter",
+            active: true,
+            information: {
+                description: "Who interpreted the images",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-interpreter"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "The context of the study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "The context of the study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-encounter"
+            }
+        },
 
         {
-        name: "modality",
-        active: true,
-        information: {
-            description: "The modality of the series",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-modality"
-        }
-    },
+            name: "modality",
+            active: true,
+            information: {
+                description: "The modality of the series",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-modality"
+            }
+        },
 
         {
-        name: "instance",
-        active: true,
-        information: {
-            description: "SOP Instance UID for an instance",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-instance"
-        }
-    },
+            name: "instance",
+            active: true,
+            information: {
+                description: "SOP Instance UID for an instance",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-instance"
+            }
+        },
 
         {
-        name: "basedon",
-        active: true,
-        information: {
-            description: "The order for the image",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-basedon"
+            name: "basedon",
+            active: true,
+            information: {
+                description: "The order for the image",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImagingStudy-basedon"
+            }
         }
-    }
 
     ],
     operations: [

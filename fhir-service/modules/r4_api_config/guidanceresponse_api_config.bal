@@ -24,53 +24,52 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig guidanceresponseApiConfig = {
     resourceType: "GuidanceResponse",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/GuidanceResponse",
-            
-                "http://hl7.org/fhir/StructureDefinition/cdshooksguidanceresponse"
-        
+        "http://hl7.org/fhir/StructureDefinition/GuidanceResponse",
+
+        "http://hl7.org/fhir/StructureDefinition/cdshooksguidanceresponse"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The subject that the guidance response is about",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/GuidanceResponse-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The subject that the guidance response is about",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/GuidanceResponse-subject"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The identifier of the guidance response",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/GuidanceResponse-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The identifier of the guidance response",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/GuidanceResponse-identifier"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The identity of a patient to search for guidance response results",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/GuidanceResponse-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The identity of a patient to search for guidance response results",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/GuidanceResponse-patient"
+            }
+        },
 
         {
-        name: "request",
-        active: true,
-        information: {
-            description: "The identifier of the request associated with the response",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/GuidanceResponse-request"
+            name: "request",
+            active: true,
+            information: {
+                description: "The identifier of the request associated with the response",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/GuidanceResponse-request"
+            }
         }
-    }
 
     ],
     operations: [

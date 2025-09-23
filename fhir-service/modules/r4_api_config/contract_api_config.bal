@@ -24,111 +24,110 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig contractApiConfig = {
     resourceType: "Contract",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Contract"
-        
+        "http://hl7.org/fhir/StructureDefinition/Contract"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The identity of the subject of the contract (if a patient)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The identity of the subject of the contract (if a patient)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-patient"
+            }
+        },
 
         {
-        name: "issued",
-        active: true,
-        information: {
-            description: "The date/time the contract was issued",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-issued"
-        }
-    },
+            name: "issued",
+            active: true,
+            information: {
+                description: "The date/time the contract was issued",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-issued"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The identity of the contract",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The identity of the contract",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-identifier"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the contract",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the contract",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-status"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "The basal contract definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "The basal contract definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-url"
+            }
+        },
 
         {
-        name: "domain",
-        active: true,
-        information: {
-            description: "The domain of the contract",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-domain"
-        }
-    },
+            name: "domain",
+            active: true,
+            information: {
+                description: "The domain of the contract",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-domain"
+            }
+        },
 
         {
-        name: "signer",
-        active: true,
-        information: {
-            description: "Contract Signatory Party",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-signer"
-        }
-    },
+            name: "signer",
+            active: true,
+            information: {
+                description: "Contract Signatory Party",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-signer"
+            }
+        },
 
         {
-        name: "authority",
-        active: true,
-        information: {
-            description: "The authority of the contract",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-authority"
-        }
-    },
+            name: "authority",
+            active: true,
+            information: {
+                description: "The authority of the contract",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-authority"
+            }
+        },
 
         {
-        name: "instantiates",
-        active: true,
-        information: {
-            description: "A source definition of the contract",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-instantiates"
-        }
-    },
+            name: "instantiates",
+            active: true,
+            information: {
+                description: "A source definition of the contract",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-instantiates"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The identity of the subject of the contract",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Contract-subject"
+            name: "subject",
+            active: true,
+            information: {
+                description: "The identity of the subject of the contract",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Contract-subject"
+            }
         }
-    }
 
     ],
     operations: [

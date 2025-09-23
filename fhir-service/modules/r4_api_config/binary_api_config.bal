@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig binaryApiConfig = {
     resourceType: "Binary",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Binary"
-        
+        "http://hl7.org/fhir/StructureDefinition/Binary"
 
     ],
     defaultProfile: (),

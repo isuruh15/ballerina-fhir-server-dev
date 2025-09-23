@@ -24,91 +24,90 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig substanceApiConfig = {
     resourceType: "Substance",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Substance"
-        
+        "http://hl7.org/fhir/StructureDefinition/Substance"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "The category of the substance",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Substance-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "The category of the substance",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Substance-category"
+            }
+        },
 
         {
-        name: "quantity",
-        active: true,
-        information: {
-            description: "Amount of substance in the package",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Substance-quantity"
-        }
-    },
+            name: "quantity",
+            active: true,
+            information: {
+                description: "Amount of substance in the package",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Substance-quantity"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Unique identifier for the substance",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Substance-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Unique identifier for the substance",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Substance-identifier"
+            }
+        },
 
         {
-        name: "expiry",
-        active: true,
-        information: {
-            description: "Expiry date of package or container of substance",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Substance-expiry"
-        }
-    },
+            name: "expiry",
+            active: true,
+            information: {
+                description: "Expiry date of package or container of substance",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Substance-expiry"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "active | inactive | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Substance-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "active | inactive | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Substance-status"
+            }
+        },
 
         {
-        name: "substance-reference",
-        active: true,
-        information: {
-            description: "A component of the substance",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Substance-substance-reference"
-        }
-    },
+            name: "substance-reference",
+            active: true,
+            information: {
+                description: "A component of the substance",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Substance-substance-reference"
+            }
+        },
 
         {
-        name: "container-identifier",
-        active: true,
-        information: {
-            description: "Identifier of the package/container",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Substance-container-identifier"
-        }
-    },
+            name: "container-identifier",
+            active: true,
+            information: {
+                description: "Identifier of the package/container",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Substance-container-identifier"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "The code of the substance or ingredient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Substance-code"
+            name: "code",
+            active: true,
+            information: {
+                description: "The code of the substance or ingredient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Substance-code"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,171 +24,170 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig allergyintoleranceApiConfig = {
     resourceType: "AllergyIntolerance",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"
-        
+        "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "recorder",
-        active: true,
-        information: {
-            description: "Who recorded the sensitivity",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-recorder"
-        }
-    },
+            name: "recorder",
+            active: true,
+            information: {
+                description: "Who recorded the sensitivity",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-recorder"
+            }
+        },
 
         {
-        name: "onset",
-        active: true,
-        information: {
-            description: "Date(/time) when manifestations showed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-onset"
-        }
-    },
+            name: "onset",
+            active: true,
+            information: {
+                description: "Date(/time) when manifestations showed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-onset"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "[AllergyIntolerance](allergyintolerance.html): Code that identifies the allergy or intolerance",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "[AllergyIntolerance](allergyintolerance.html): Code that identifies the allergy or intolerance",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
+            }
+        },
 
         {
-        name: "last-date",
-        active: true,
-        information: {
-            description: "Date(/time) of last known occurrence of a reaction",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-last-date"
-        }
-    },
+            name: "last-date",
+            active: true,
+            information: {
+                description: "Date(/time) of last known occurrence of a reaction",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-last-date"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[AllergyIntolerance](allergyintolerance.html): External ids for this item",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[AllergyIntolerance](allergyintolerance.html): External ids for this item",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "clinical-status",
-        active: true,
-        information: {
-            description: "active | inactive | resolved",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status"
-        }
-    },
+            name: "clinical-status",
+            active: true,
+            information: {
+                description: "active | inactive | resolved",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "food | medication | environment | biologic",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "food | medication | environment | biologic",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-category"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[AllergyIntolerance](allergyintolerance.html): Date first version of the resource instance was recorded",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[AllergyIntolerance](allergyintolerance.html): Date first version of the resource instance was recorded",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[AllergyIntolerance](allergyintolerance.html): Who the sensitivity is for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[AllergyIntolerance](allergyintolerance.html): Who the sensitivity is for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "[AllergyIntolerance](allergyintolerance.html): allergy | intolerance - Underlying mechanism (if known)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "[AllergyIntolerance](allergyintolerance.html): allergy | intolerance - Underlying mechanism (if known)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-type"
+            }
+        },
 
         {
-        name: "asserter",
-        active: true,
-        information: {
-            description: "Source of the information about the allergy",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-asserter"
-        }
-    },
+            name: "asserter",
+            active: true,
+            information: {
+                description: "Source of the information about the allergy",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-asserter"
+            }
+        },
 
         {
-        name: "verification-status",
-        active: true,
-        information: {
-            description: "unconfirmed | confirmed | refuted | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-verification-status"
-        }
-    },
+            name: "verification-status",
+            active: true,
+            information: {
+                description: "unconfirmed | confirmed | refuted | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-verification-status"
+            }
+        },
 
         {
-        name: "route",
-        active: true,
-        information: {
-            description: "How the subject was exposed to the substance",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-route"
-        }
-    },
+            name: "route",
+            active: true,
+            information: {
+                description: "How the subject was exposed to the substance",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-route"
+            }
+        },
 
         {
-        name: "criticality",
-        active: true,
-        information: {
-            description: "low | high | unable-to-assess",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-criticality"
-        }
-    },
+            name: "criticality",
+            active: true,
+            information: {
+                description: "low | high | unable-to-assess",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-criticality"
+            }
+        },
 
         {
-        name: "severity",
-        active: true,
-        information: {
-            description: "mild | moderate | severe (of event as a whole)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-severity"
-        }
-    },
+            name: "severity",
+            active: true,
+            information: {
+                description: "mild | moderate | severe (of event as a whole)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-severity"
+            }
+        },
 
         {
-        name: "manifestation",
-        active: true,
-        information: {
-            description: "Clinical symptoms/signs associated with the Event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-manifestation"
+            name: "manifestation",
+            active: true,
+            information: {
+                description: "Clinical symptoms/signs associated with the Event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-manifestation"
+            }
         }
-    }
 
     ],
     operations: [

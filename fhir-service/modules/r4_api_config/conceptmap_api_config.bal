@@ -24,271 +24,270 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig conceptmapApiConfig = {
     resourceType: "ConceptMap",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ConceptMap"
-        
+        "http://hl7.org/fhir/StructureDefinition/ConceptMap"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): The current status of the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): The current status of the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): A type of use context assigned to the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): A type of use context assigned to the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): Intended jurisdiction for the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): Intended jurisdiction for the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
+            }
+        },
 
         {
-        name: "target-system",
-        active: true,
-        information: {
-            description: "Target system that the concepts are to be mapped to",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-target-system"
-        }
-    },
+            name: "target-system",
+            active: true,
+            information: {
+                description: "Target system that the concepts are to be mapped to",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-target-system"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): A use context type and value assigned to the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): A use context type and value assigned to the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
+            }
+        },
 
         {
-        name: "source",
-        active: true,
-        information: {
-            description: "The source value set that contains the concepts that are being mapped",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-source"
-        }
-    },
+            name: "source",
+            active: true,
+            information: {
+                description: "The source value set that contains the concepts that are being mapped",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-source"
+            }
+        },
 
         {
-        name: "target-uri",
-        active: true,
-        information: {
-            description: "The target value set which provides context for the mappings",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-target-uri"
-        }
-    },
+            name: "target-uri",
+            active: true,
+            information: {
+                description: "The target value set which provides context for the mappings",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-target-uri"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): The description of the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): The description of the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): A use context type and quantity- or range-based value assigned to the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): A use context type and quantity- or range-based value assigned to the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): The human-friendly name of the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): The human-friendly name of the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-title"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): A quantity- or range-valued use context assigned to the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): A quantity- or range-valued use context assigned to the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): A use context assigned to the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): A use context assigned to the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
+            }
+        },
 
         {
-        name: "source-code",
-        active: true,
-        information: {
-            description: "Identifies element being mapped",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-source-code"
-        }
-    },
+            name: "source-code",
+            active: true,
+            information: {
+                description: "Identifies element being mapped",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-source-code"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): Computationally friendly name of the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): Computationally friendly name of the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
+            }
+        },
 
         {
-        name: "source-system",
-        active: true,
-        information: {
-            description: "Source system where concepts to be mapped are defined",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-source-system"
-        }
-    },
+            name: "source-system",
+            active: true,
+            information: {
+                description: "Source system where concepts to be mapped are defined",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-source-system"
+            }
+        },
 
         {
-        name: "product",
-        active: true,
-        information: {
-            description: "Reference to property mapping depends on",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-product"
-        }
-    },
+            name: "product",
+            active: true,
+            information: {
+                description: "Reference to property mapping depends on",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-product"
+            }
+        },
 
         {
-        name: "target-code",
-        active: true,
-        information: {
-            description: "Code that identifies the target element",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-target-code"
-        }
-    },
+            name: "target-code",
+            active: true,
+            information: {
+                description: "Code that identifies the target element",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-target-code"
+            }
+        },
 
         {
-        name: "source-uri",
-        active: true,
-        information: {
-            description: "The source value set that contains the concepts that are being mapped",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-source-uri"
-        }
-    },
+            name: "source-uri",
+            active: true,
+            information: {
+                description: "The source value set that contains the concepts that are being mapped",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-source-uri"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): Name of the publisher of the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): Name of the publisher of the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): The uri that identifies the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): The uri that identifies the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-url"
+            }
+        },
 
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): The business version of the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): The business version of the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-version"
+            }
+        },
 
         {
-        name: "dependson",
-        active: true,
-        information: {
-            description: "Reference to property mapping depends on",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-dependson"
-        }
-    },
+            name: "dependson",
+            active: true,
+            information: {
+                description: "Reference to property mapping depends on",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-dependson"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): External identifier for the concept map",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): External identifier for the concept map",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-identifier"
+            }
+        },
 
         {
-        name: "target",
-        active: true,
-        information: {
-            description: "The target value set which provides context for the mappings",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-target"
-        }
-    },
+            name: "target",
+            active: true,
+            information: {
+                description: "The target value set which provides context for the mappings",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-target"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[ConceptMap](conceptmap.html): The concept map publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[ConceptMap](conceptmap.html): The concept map publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
+            }
+        },
 
         {
-        name: "other",
-        active: true,
-        information: {
-            description: "canonical reference to an additional ConceptMap to use for mapping if the source concept is unmapped",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-other"
+            name: "other",
+            active: true,
+            information: {
+                description: "canonical reference to an additional ConceptMap to use for mapping if the source concept is unmapped",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ConceptMap-other"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,153 +24,152 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig requestgroupApiConfig = {
     resourceType: "RequestGroup",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/RequestGroup",
-            
-                "http://hl7.org/fhir/StructureDefinition/cdshooksrequestgroup"
-        
+        "http://hl7.org/fhir/StructureDefinition/RequestGroup",
+
+        "http://hl7.org/fhir/StructureDefinition/cdshooksrequestgroup"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "The encounter the request group applies to",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "The encounter the request group applies to",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-encounter"
+            }
+        },
 
         {
-        name: "instantiates-canonical",
-        active: true,
-        information: {
-            description: "The FHIR-based definition from which the request group is realized",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-instantiates-canonical"
-        }
-    },
+            name: "instantiates-canonical",
+            active: true,
+            information: {
+                description: "The FHIR-based definition from which the request group is realized",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-instantiates-canonical"
+            }
+        },
 
         {
-        name: "authored",
-        active: true,
-        information: {
-            description: "The date the request group was authored",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-authored"
-        }
-    },
+            name: "authored",
+            active: true,
+            information: {
+                description: "The date the request group was authored",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-authored"
+            }
+        },
 
         {
-        name: "intent",
-        active: true,
-        information: {
-            description: "The intent of the request group",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-intent"
-        }
-    },
+            name: "intent",
+            active: true,
+            information: {
+                description: "The intent of the request group",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-intent"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The identity of a patient to search for request groups",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The identity of a patient to search for request groups",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-patient"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the request group",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the request group",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-status"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "External identifiers for the request group",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "External identifiers for the request group",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-identifier"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "The code of the request group",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "The code of the request group",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-code"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The subject that the request group is about",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The subject that the request group is about",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-subject"
+            }
+        },
 
         {
-        name: "instantiates-uri",
-        active: true,
-        information: {
-            description: "The external definition from which the request group is realized",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-instantiates-uri"
-        }
-    },
+            name: "instantiates-uri",
+            active: true,
+            information: {
+                description: "The external definition from which the request group is realized",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-instantiates-uri"
+            }
+        },
 
         {
-        name: "priority",
-        active: true,
-        information: {
-            description: "The priority of the request group",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-priority"
-        }
-    },
+            name: "priority",
+            active: true,
+            information: {
+                description: "The priority of the request group",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-priority"
+            }
+        },
 
         {
-        name: "participant",
-        active: true,
-        information: {
-            description: "The participant in the requests in the group",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-participant"
-        }
-    },
+            name: "participant",
+            active: true,
+            information: {
+                description: "The participant in the requests in the group",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-participant"
+            }
+        },
 
         {
-        name: "group-identifier",
-        active: true,
-        information: {
-            description: "The group identifier for the request group",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-group-identifier"
-        }
-    },
+            name: "group-identifier",
+            active: true,
+            information: {
+                description: "The group identifier for the request group",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-group-identifier"
+            }
+        },
 
         {
-        name: "author",
-        active: true,
-        information: {
-            description: "The author of the request group",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-author"
+            name: "author",
+            active: true,
+            information: {
+                description: "The author of the request group",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RequestGroup-author"
+            }
         }
-    }
 
     ],
     operations: [

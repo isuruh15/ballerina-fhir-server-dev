@@ -24,71 +24,70 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig researchsubjectApiConfig = {
     resourceType: "ResearchSubject",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
-        
+        "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "Start and end of participation",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "Start and end of participation",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-date"
+            }
+        },
 
         {
-        name: "individual",
-        active: true,
-        information: {
-            description: "Who is part of study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-individual"
-        }
-    },
+            name: "individual",
+            active: true,
+            information: {
+                description: "Who is part of study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-individual"
+            }
+        },
 
         {
-        name: "study",
-        active: true,
-        information: {
-            description: "Study subject is part of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-study"
-        }
-    },
+            name: "study",
+            active: true,
+            information: {
+                description: "Study subject is part of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-study"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "candidate | eligible | follow-up | ineligible | not-registered | off-study | on-study | on-study-intervention | on-study-observation | pending-on-study | potential-candidate | screening | withdrawn",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "candidate | eligible | follow-up | ineligible | not-registered | off-study | on-study | on-study-intervention | on-study-observation | pending-on-study | potential-candidate | screening | withdrawn",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-status"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Who is part of study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Who is part of study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-patient"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Business Identifier for research subject in a study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-identifier"
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Business Identifier for research subject in a study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchSubject-identifier"
+            }
         }
-    }
 
     ],
     operations: [

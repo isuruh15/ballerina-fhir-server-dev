@@ -24,231 +24,230 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig conditionApiConfig = {
     resourceType: "Condition",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Condition"
-        
+        "http://hl7.org/fhir/StructureDefinition/Condition"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Search by condition subject",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/example-reference"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Search by condition subject",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/example-reference"
+            }
+        },
 
         {
-        name: "clinical-status",
-        active: true,
-        information: {
-            description: "The clinical status of the condition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-clinical-status"
-        }
-    },
+            name: "clinical-status",
+            active: true,
+            information: {
+                description: "The clinical status of the condition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-clinical-status"
+            }
+        },
 
         {
-        name: "abatement-age",
-        active: true,
-        information: {
-            description: "Abatement as age or age range",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-abatement-age"
-        }
-    },
+            name: "abatement-age",
+            active: true,
+            information: {
+                description: "Abatement as age or age range",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-abatement-age"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "[Condition](condition.html): Code for the condition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "[Condition](condition.html): Code for the condition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
+            }
+        },
 
         {
-        name: "recorded-date",
-        active: true,
-        information: {
-            description: "Date record was first recorded",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-recorded-date"
-        }
-    },
+            name: "recorded-date",
+            active: true,
+            information: {
+                description: "Date record was first recorded",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-recorded-date"
+            }
+        },
 
         {
-        name: "evidence-detail",
-        active: true,
-        information: {
-            description: "Supporting information found elsewhere",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-evidence-detail"
-        }
-    },
+            name: "evidence-detail",
+            active: true,
+            information: {
+                description: "Supporting information found elsewhere",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-evidence-detail"
+            }
+        },
 
         {
-        name: "abatement-string",
-        active: true,
-        information: {
-            description: "Abatement as a string",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-abatement-string"
-        }
-    },
+            name: "abatement-string",
+            active: true,
+            information: {
+                description: "Abatement as a string",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-abatement-string"
+            }
+        },
 
         {
-        name: "onset-info",
-        active: true,
-        information: {
-            description: "Onsets as a string",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-onset-info"
-        }
-    },
+            name: "onset-info",
+            active: true,
+            information: {
+                description: "Onsets as a string",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-onset-info"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[Condition](condition.html): A unique identifier of the condition record",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[Condition](condition.html): A unique identifier of the condition record",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "onset-age",
-        active: true,
-        information: {
-            description: "Onsets as age or age range",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-onset-age"
-        }
-    },
+            name: "onset-age",
+            active: true,
+            information: {
+                description: "Onsets as age or age range",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-onset-age"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[Condition](condition.html): Who has the condition?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[Condition](condition.html): Who has the condition?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "The category of the condition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "The category of the condition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-category"
+            }
+        },
 
         {
-        name: "abatement-date",
-        active: true,
-        information: {
-            description: "Date-related abatements (dateTime and period)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-abatement-date"
-        }
-    },
+            name: "abatement-date",
+            active: true,
+            information: {
+                description: "Date-related abatements (dateTime and period)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-abatement-date"
+            }
+        },
 
         {
-        name: "asserter",
-        active: true,
-        information: {
-            description: "Person who asserts this condition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-asserter"
-        }
-    },
+            name: "asserter",
+            active: true,
+            information: {
+                description: "Person who asserts this condition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-asserter"
+            }
+        },
 
         {
-        name: "stage",
-        active: true,
-        information: {
-            description: "Simple summary (disease specific)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-stage"
-        }
-    },
+            name: "stage",
+            active: true,
+            information: {
+                description: "Simple summary (disease specific)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-stage"
+            }
+        },
 
         {
-        name: "onset-date",
-        active: true,
-        information: {
-            description: "Date related onsets (dateTime and Period)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-onset-date"
-        }
-    },
+            name: "onset-date",
+            active: true,
+            information: {
+                description: "Date related onsets (dateTime and Period)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-onset-date"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Who has the condition?",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Who has the condition?",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-subject"
+            }
+        },
 
         {
-        name: "body-site",
-        active: true,
-        information: {
-            description: "Anatomical location, if relevant",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-body-site"
-        }
-    },
+            name: "body-site",
+            active: true,
+            information: {
+                description: "Anatomical location, if relevant",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-body-site"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "Encounter created as part of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "Encounter created as part of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-encounter"
+            }
+        },
 
         {
-        name: "severity",
-        active: true,
-        information: {
-            description: "The severity of the condition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-severity"
-        }
-    },
+            name: "severity",
+            active: true,
+            information: {
+                description: "The severity of the condition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-severity"
+            }
+        },
 
         {
-        name: "evidence",
-        active: true,
-        information: {
-            description: "Manifestation/symptom",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-evidence"
-        }
-    },
+            name: "evidence",
+            active: true,
+            information: {
+                description: "Manifestation/symptom",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-evidence"
+            }
+        },
 
         {
-        name: "verification-status",
-        active: true,
-        information: {
-            description: "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Condition-verification-status"
+            name: "verification-status",
+            active: true,
+            information: {
+                description: "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Condition-verification-status"
+            }
         }
-    }
 
     ],
     operations: [

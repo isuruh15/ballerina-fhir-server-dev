@@ -24,81 +24,80 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig paymentnoticeApiConfig = {
     resourceType: "PaymentNotice",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/PaymentNotice"
-        
+        "http://hl7.org/fhir/StructureDefinition/PaymentNotice"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "request",
-        active: true,
-        information: {
-            description: "The Claim",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-request"
-        }
-    },
+            name: "request",
+            active: true,
+            information: {
+                description: "The Claim",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-request"
+            }
+        },
 
         {
-        name: "payment-status",
-        active: true,
-        information: {
-            description: "The type of payment notice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-payment-status"
-        }
-    },
+            name: "payment-status",
+            active: true,
+            information: {
+                description: "The type of payment notice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-payment-status"
+            }
+        },
 
         {
-        name: "created",
-        active: true,
-        information: {
-            description: "Creation date fro the notice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-created"
-        }
-    },
+            name: "created",
+            active: true,
+            information: {
+                description: "Creation date fro the notice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-created"
+            }
+        },
 
         {
-        name: "provider",
-        active: true,
-        information: {
-            description: "The reference to the provider",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-provider"
-        }
-    },
+            name: "provider",
+            active: true,
+            information: {
+                description: "The reference to the provider",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-provider"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the payment notice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the payment notice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-status"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The business identifier of the notice",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The business identifier of the notice",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-identifier"
+            }
+        },
 
         {
-        name: "response",
-        active: true,
-        information: {
-            description: "The ClaimResponse",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-response"
+            name: "response",
+            active: true,
+            information: {
+                description: "The ClaimResponse",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentNotice-response"
+            }
         }
-    }
 
     ],
     operations: [

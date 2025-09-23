@@ -24,141 +24,140 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig researchstudyApiConfig = {
     resourceType: "ResearchStudy",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ResearchStudy"
-        
+        "http://hl7.org/fhir/StructureDefinition/ResearchStudy"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "active | administratively-completed | approved | closed-to-accrual | closed-to-accrual-and-intervention | completed | disapproved | in-review | temporarily-closed-to-accrual | temporarily-closed-to-accrual-and-intervention | withdrawn",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "active | administratively-completed | approved | closed-to-accrual | closed-to-accrual-and-intervention | completed | disapproved | in-review | temporarily-closed-to-accrual | temporarily-closed-to-accrual-and-intervention | withdrawn",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-status"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "Name for this study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "Name for this study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-title"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "Geographic region(s) for study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "Geographic region(s) for study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-location"
+            }
+        },
 
         {
-        name: "sponsor",
-        active: true,
-        information: {
-            description: "Organization that initiates and is legally responsible for the study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-sponsor"
-        }
-    },
+            name: "sponsor",
+            active: true,
+            information: {
+                description: "Organization that initiates and is legally responsible for the study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-sponsor"
+            }
+        },
 
         {
-        name: "principalinvestigator",
-        active: true,
-        information: {
-            description: "Researcher who oversees multiple aspects of the study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-principalinvestigator"
-        }
-    },
+            name: "principalinvestigator",
+            active: true,
+            information: {
+                description: "Researcher who oversees multiple aspects of the study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-principalinvestigator"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "When the study began and ended",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "When the study began and ended",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-date"
+            }
+        },
 
         {
-        name: "protocol",
-        active: true,
-        information: {
-            description: "Steps followed in executing study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-protocol"
-        }
-    },
+            name: "protocol",
+            active: true,
+            information: {
+                description: "Steps followed in executing study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-protocol"
+            }
+        },
 
         {
-        name: "site",
-        active: true,
-        information: {
-            description: "Facility where study activities are conducted",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-site"
-        }
-    },
+            name: "site",
+            active: true,
+            information: {
+                description: "Facility where study activities are conducted",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-site"
+            }
+        },
 
         {
-        name: "focus",
-        active: true,
-        information: {
-            description: "Drugs, devices, etc. under study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-focus"
-        }
-    },
+            name: "focus",
+            active: true,
+            information: {
+                description: "Drugs, devices, etc. under study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-focus"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Classifications for the study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Classifications for the study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-category"
+            }
+        },
 
         {
-        name: "keyword",
-        active: true,
-        information: {
-            description: "Used to search for the study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-keyword"
-        }
-    },
+            name: "keyword",
+            active: true,
+            information: {
+                description: "Used to search for the study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-keyword"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Business Identifier for study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Business Identifier for study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-identifier"
+            }
+        },
 
         {
-        name: "partof",
-        active: true,
-        information: {
-            description: "Part of larger study",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-partof"
+            name: "partof",
+            active: true,
+            information: {
+                description: "Part of larger study",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ResearchStudy-partof"
+            }
         }
-    }
 
     ],
     operations: [

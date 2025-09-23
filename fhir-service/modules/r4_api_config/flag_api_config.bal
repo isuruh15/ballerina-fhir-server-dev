@@ -24,71 +24,70 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig flagApiConfig = {
     resourceType: "Flag",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Flag"
-        
+        "http://hl7.org/fhir/StructureDefinition/Flag"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The identity of a subject to list flags for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Flag-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The identity of a subject to list flags for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Flag-subject"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[Flag](flag.html): Time period when flag is active",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[Flag](flag.html): Time period when flag is active",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[Flag](flag.html): The identity of a subject to list flags for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[Flag](flag.html): The identity of a subject to list flags for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Business identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Flag-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Business identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Flag-identifier"
+            }
+        },
 
         {
-        name: "author",
-        active: true,
-        information: {
-            description: "Flag creator",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Flag-author"
-        }
-    },
+            name: "author",
+            active: true,
+            information: {
+                description: "Flag creator",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Flag-author"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "[Flag](flag.html): Alert relevant during encounter",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+            name: "encounter",
+            active: true,
+            information: {
+                description: "[Flag](flag.html): Alert relevant during encounter",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig substancesourcematerialApiConfig = {
     resourceType: "SubstanceSourceMaterial",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/SubstanceSourceMaterial"
-        
+        "http://hl7.org/fhir/StructureDefinition/SubstanceSourceMaterial"
 
     ],
     defaultProfile: (),

@@ -24,161 +24,160 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig chargeitemdefinitionApiConfig = {
     resourceType: "ChargeItemDefinition",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"
-        
+        "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "A type of use context assigned to the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "A type of use context assigned to the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context-type"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The current status of the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The current status of the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-status"
+            }
+        },
 
         {
-        name: "effective",
-        active: true,
-        information: {
-            description: "The time during which the charge item definition is intended to be in use",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-effective"
-        }
-    },
+            name: "effective",
+            active: true,
+            information: {
+                description: "The time during which the charge item definition is intended to be in use",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-effective"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "External identifier for the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "External identifier for the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-identifier"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "A quantity- or range-valued use context assigned to the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "A quantity- or range-valued use context assigned to the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context-quantity"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "The uri that identifies the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "The uri that identifies the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-url"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "The human-friendly name of the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "The human-friendly name of the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-title"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "Intended jurisdiction for the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "Intended jurisdiction for the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-jurisdiction"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "A use context assigned to the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "A use context assigned to the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "A use context type and value assigned to the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "A use context type and value assigned to the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context-type-value"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "The charge item definition publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "The charge item definition publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-date"
+            }
+        },
 
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "The business version of the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "The business version of the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-version"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "A use context type and quantity- or range-based value assigned to the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "A use context type and quantity- or range-based value assigned to the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-context-type-quantity"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "The description of the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "The description of the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-description"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "Name of the publisher of the charge item definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-publisher"
+            name: "publisher",
+            active: true,
+            information: {
+                description: "Name of the publisher of the charge item definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ChargeItemDefinition-publisher"
+            }
         }
-    }
 
     ],
     operations: [

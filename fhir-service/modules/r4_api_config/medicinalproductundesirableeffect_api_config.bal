@@ -24,21 +24,20 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicinalproductundesirableeffectApiConfig = {
     resourceType: "MedicinalProductUndesirableEffect",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicinalProductUndesirableEffect"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicinalProductUndesirableEffect"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The medication for which this is an undesirable effect",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductUndesirableEffect-subject"
+            name: "subject",
+            active: true,
+            information: {
+                description: "The medication for which this is an undesirable effect",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductUndesirableEffect-subject"
+            }
         }
-    }
 
     ],
     operations: [

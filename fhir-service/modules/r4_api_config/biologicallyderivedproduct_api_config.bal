@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig biologicallyderivedproductApiConfig = {
     resourceType: "BiologicallyDerivedProduct",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"
-        
+        "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"
 
     ],
     defaultProfile: (),

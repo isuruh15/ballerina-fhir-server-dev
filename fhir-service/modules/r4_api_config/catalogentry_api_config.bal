@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig catalogentryApiConfig = {
     resourceType: "CatalogEntry",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/CatalogEntry"
-        
+        "http://hl7.org/fhir/StructureDefinition/CatalogEntry"
 
     ],
     defaultProfile: (),

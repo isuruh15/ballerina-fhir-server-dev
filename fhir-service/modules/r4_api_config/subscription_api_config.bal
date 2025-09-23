@@ -24,71 +24,70 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig subscriptionApiConfig = {
     resourceType: "Subscription",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Subscription"
-        
+        "http://hl7.org/fhir/StructureDefinition/Subscription"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "criteria",
-        active: true,
-        information: {
-            description: "The search rules used to determine when to send a notification",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Subscription-criteria"
-        }
-    },
+            name: "criteria",
+            active: true,
+            information: {
+                description: "The search rules used to determine when to send a notification",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Subscription-criteria"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The current state of the subscription",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Subscription-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The current state of the subscription",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Subscription-status"
+            }
+        },
 
         {
-        name: "payload",
-        active: true,
-        information: {
-            description: "The mime-type of the notification payload",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Subscription-payload"
-        }
-    },
+            name: "payload",
+            active: true,
+            information: {
+                description: "The mime-type of the notification payload",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Subscription-payload"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "The type of channel for the sent notifications",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Subscription-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "The type of channel for the sent notifications",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Subscription-type"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "The uri that will receive the notifications",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Subscription-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "The uri that will receive the notifications",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Subscription-url"
+            }
+        },
 
         {
-        name: "contact",
-        active: true,
-        information: {
-            description: "Contact details for the subscription",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Subscription-contact"
+            name: "contact",
+            active: true,
+            information: {
+                description: "Contact details for the subscription",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Subscription-contact"
+            }
         }
-    }
 
     ],
     operations: [

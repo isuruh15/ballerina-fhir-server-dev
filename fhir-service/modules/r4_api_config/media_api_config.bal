@@ -24,141 +24,140 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig mediaApiConfig = {
     resourceType: "Media",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Media"
-        
+        "http://hl7.org/fhir/StructureDefinition/Media"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "site",
-        active: true,
-        information: {
-            description: "Observed body part",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-site"
-        }
-    },
+            name: "site",
+            active: true,
+            information: {
+                description: "Observed body part",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-site"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "Classification of media as image, video, or audio",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "Classification of media as image, video, or audio",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-type"
+            }
+        },
 
         {
-        name: "created",
-        active: true,
-        information: {
-            description: "When Media was collected",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-created"
-        }
-    },
+            name: "created",
+            active: true,
+            information: {
+                description: "When Media was collected",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-created"
+            }
+        },
 
         {
-        name: "modality",
-        active: true,
-        information: {
-            description: "The type of acquisition equipment/process",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-modality"
-        }
-    },
+            name: "modality",
+            active: true,
+            information: {
+                description: "The type of acquisition equipment/process",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-modality"
+            }
+        },
 
         {
-        name: "operator",
-        active: true,
-        information: {
-            description: "The person who generated the image",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-operator"
-        }
-    },
+            name: "operator",
+            active: true,
+            information: {
+                description: "The person who generated the image",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-operator"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Who/What this Media is a record of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Who/What this Media is a record of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-patient"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "Encounter associated with media",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "Encounter associated with media",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-encounter"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-status"
+            }
+        },
 
         {
-        name: "based-on",
-        active: true,
-        information: {
-            description: "Procedure that caused this media to be created",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-based-on"
-        }
-    },
+            name: "based-on",
+            active: true,
+            information: {
+                description: "Procedure that caused this media to be created",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-based-on"
+            }
+        },
 
         {
-        name: "view",
-        active: true,
-        information: {
-            description: "Imaging view, e.g. Lateral or Antero-posterior",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-view"
-        }
-    },
+            name: "view",
+            active: true,
+            information: {
+                description: "Imaging view, e.g. Lateral or Antero-posterior",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-view"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Who/What this Media is a record of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Who/What this Media is a record of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-subject"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Identifier(s) for the image",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Identifier(s) for the image",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-identifier"
+            }
+        },
 
         {
-        name: "device",
-        active: true,
-        information: {
-            description: "Observing Device",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Media-device"
+            name: "device",
+            active: true,
+            information: {
+                description: "Observing Device",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Media-device"
+            }
         }
-    }
 
     ],
     operations: [

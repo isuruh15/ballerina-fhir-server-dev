@@ -24,81 +24,80 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig supplyrequestApiConfig = {
     resourceType: "SupplyRequest",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/SupplyRequest"
-        
+        "http://hl7.org/fhir/StructureDefinition/SupplyRequest"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "supplier",
-        active: true,
-        information: {
-            description: "Who is intended to fulfill the request",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-supplier"
-        }
-    },
+            name: "supplier",
+            active: true,
+            information: {
+                description: "Who is intended to fulfill the request",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-supplier"
+            }
+        },
 
         {
-        name: "requester",
-        active: true,
-        information: {
-            description: "Individual making the request",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-requester"
-        }
-    },
+            name: "requester",
+            active: true,
+            information: {
+                description: "Individual making the request",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-requester"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[SupplyRequest](supplyrequest.html): Business Identifier for SupplyRequest",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[SupplyRequest](supplyrequest.html): Business Identifier for SupplyRequest",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[SupplyRequest](supplyrequest.html): When the request was made",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[SupplyRequest](supplyrequest.html): When the request was made",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The destination of the supply",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The destination of the supply",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-subject"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "draft | active | suspended +",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "draft | active | suspended +",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-status"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "The kind of supply (central, non-stock, etc.)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-category"
+            name: "category",
+            active: true,
+            information: {
+                description: "The kind of supply (central, non-stock, etc.)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SupplyRequest-category"
+            }
         }
-    }
 
     ],
     operations: [

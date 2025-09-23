@@ -24,181 +24,180 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig immunizationApiConfig = {
     resourceType: "Immunization",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Immunization"
-        
+        "http://hl7.org/fhir/StructureDefinition/Immunization"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "lot-number",
-        active: true,
-        information: {
-            description: "Vaccine Lot Number",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-lot-number"
-        }
-    },
+            name: "lot-number",
+            active: true,
+            information: {
+                description: "Vaccine Lot Number",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-lot-number"
+            }
+        },
 
         {
-        name: "series",
-        active: true,
-        information: {
-            description: "The series being followed by the provider",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-series"
-        }
-    },
+            name: "series",
+            active: true,
+            information: {
+                description: "The series being followed by the provider",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-series"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[Immunization](immunization.html): Business identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[Immunization](immunization.html): Business identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "Immunization event status",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "Immunization event status",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-status"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[Immunization](immunization.html): Vaccination  (non)-Administration Date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[Immunization](immunization.html): Vaccination  (non)-Administration Date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[Immunization](immunization.html): The patient for the vaccination record",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[Immunization](immunization.html): The patient for the vaccination record",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "reaction-date",
-        active: true,
-        information: {
-            description: "When reaction started",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-reaction-date"
-        }
-    },
+            name: "reaction-date",
+            active: true,
+            information: {
+                description: "When reaction started",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-reaction-date"
+            }
+        },
 
         {
-        name: "reaction",
-        active: true,
-        information: {
-            description: "Additional information on reaction",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-reaction"
-        }
-    },
+            name: "reaction",
+            active: true,
+            information: {
+                description: "Additional information on reaction",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-reaction"
+            }
+        },
 
         {
-        name: "vaccine-code",
-        active: true,
-        information: {
-            description: "Vaccine Product Administered",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-vaccine-code"
-        }
-    },
+            name: "vaccine-code",
+            active: true,
+            information: {
+                description: "Vaccine Product Administered",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-vaccine-code"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "target-disease",
-        active: true,
-        information: {
-            description: "The target disease the dose is being administered against",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-target-disease"
-        }
-    },
+            name: "target-disease",
+            active: true,
+            information: {
+                description: "The target disease the dose is being administered against",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-target-disease"
+            }
+        },
 
         {
-        name: "manufacturer",
-        active: true,
-        information: {
-            description: "Vaccine Manufacturer",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-manufacturer"
-        }
-    },
+            name: "manufacturer",
+            active: true,
+            information: {
+                description: "Vaccine Manufacturer",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-manufacturer"
+            }
+        },
 
         {
-        name: "status-reason",
-        active: true,
-        information: {
-            description: "Reason why the vaccine was not administered",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-status-reason"
-        }
-    },
+            name: "status-reason",
+            active: true,
+            information: {
+                description: "Reason why the vaccine was not administered",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-status-reason"
+            }
+        },
 
         {
-        name: "reason-code",
-        active: true,
-        information: {
-            description: "Reason why the vaccine was administered",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-reason-code"
-        }
-    },
+            name: "reason-code",
+            active: true,
+            information: {
+                description: "Reason why the vaccine was administered",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-reason-code"
+            }
+        },
 
         {
-        name: "performer",
-        active: true,
-        information: {
-            description: "The practitioner or organization who played a role in the vaccination",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-performer"
-        }
-    },
+            name: "performer",
+            active: true,
+            information: {
+                description: "The practitioner or organization who played a role in the vaccination",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-performer"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "The service delivery location or facility in which the vaccine was / was to be administered",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "The service delivery location or facility in which the vaccine was / was to be administered",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-location"
+            }
+        },
 
         {
-        name: "reason-reference",
-        active: true,
-        information: {
-            description: "Why immunization occurred",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Immunization-reason-reference"
+            name: "reason-reference",
+            active: true,
+            information: {
+                description: "Why immunization occurred",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Immunization-reason-reference"
+            }
         }
-    }
 
     ],
     operations: [

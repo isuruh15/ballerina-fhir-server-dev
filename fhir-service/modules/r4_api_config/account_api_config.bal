@@ -24,91 +24,90 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig accountApiConfig = {
     resourceType: "Account",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Account"
-        
+        "http://hl7.org/fhir/StructureDefinition/Account"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The entity that caused the expenses",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Account-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The entity that caused the expenses",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Account-subject"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "active | inactive | entered-in-error | on-hold | unknown",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Account-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "active | inactive | entered-in-error | on-hold | unknown",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Account-status"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "Human-readable label",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Account-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "Human-readable label",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Account-name"
+            }
+        },
 
         {
-        name: "owner",
-        active: true,
-        information: {
-            description: "Entity managing the Account",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Account-owner"
-        }
-    },
+            name: "owner",
+            active: true,
+            information: {
+                description: "Entity managing the Account",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Account-owner"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Account number",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Account-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Account number",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Account-identifier"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "E.g. patient, expense, depreciation",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Account-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "E.g. patient, expense, depreciation",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Account-type"
+            }
+        },
 
         {
-        name: "period",
-        active: true,
-        information: {
-            description: "Transaction window",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Account-period"
-        }
-    },
+            name: "period",
+            active: true,
+            information: {
+                description: "Transaction window",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Account-period"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The entity that caused the expenses",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Account-patient"
+            name: "patient",
+            active: true,
+            information: {
+                description: "The entity that caused the expenses",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Account-patient"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,141 +24,140 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig examplescenarioApiConfig = {
     resourceType: "ExampleScenario",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ExampleScenario"
-        
+        "http://hl7.org/fhir/StructureDefinition/ExampleScenario"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "Intended jurisdiction for the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "Intended jurisdiction for the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-jurisdiction"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "A quantity- or range-valued use context assigned to the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "A quantity- or range-valued use context assigned to the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context-quantity"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "A type of use context assigned to the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "A type of use context assigned to the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context-type"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "Computationally friendly name of the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "Computationally friendly name of the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-name"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "The uri that identifies the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "The uri that identifies the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-url"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "External identifier for the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "External identifier for the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-identifier"
+            }
+        },
 
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "The business version of the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "The business version of the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-version"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The current status of the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The current status of the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-status"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "Name of the publisher of the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "Name of the publisher of the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-publisher"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "A use context type and quantity- or range-based value assigned to the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "A use context type and quantity- or range-based value assigned to the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context-type-quantity"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "A use context assigned to the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "A use context assigned to the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "A use context type and value assigned to the example scenario",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "A use context type and value assigned to the example scenario",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-context-type-value"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "The example scenario publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-date"
+            name: "date",
+            active: true,
+            information: {
+                description: "The example scenario publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ExampleScenario-date"
+            }
         }
-    }
 
     ],
     operations: [

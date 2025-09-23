@@ -24,71 +24,70 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig supplydeliveryApiConfig = {
     resourceType: "SupplyDelivery",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/SupplyDelivery"
-        
+        "http://hl7.org/fhir/StructureDefinition/SupplyDelivery"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "receiver",
-        active: true,
-        information: {
-            description: "Who collected the Supply",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SupplyDelivery-receiver"
-        }
-    },
+            name: "receiver",
+            active: true,
+            information: {
+                description: "Who collected the Supply",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SupplyDelivery-receiver"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[SupplyDelivery](supplydelivery.html): External identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[SupplyDelivery](supplydelivery.html): External identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[SupplyDelivery](supplydelivery.html): Patient for whom the item is supplied",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[SupplyDelivery](supplydelivery.html): Patient for whom the item is supplied",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "supplier",
-        active: true,
-        information: {
-            description: "Dispenser",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SupplyDelivery-supplier"
-        }
-    },
+            name: "supplier",
+            active: true,
+            information: {
+                description: "Dispenser",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SupplyDelivery-supplier"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "in-progress | completed | abandoned | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/SupplyDelivery-status"
+            name: "status",
+            active: true,
+            information: {
+                description: "in-progress | completed | abandoned | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/SupplyDelivery-status"
+            }
         }
-    }
 
     ],
     operations: [

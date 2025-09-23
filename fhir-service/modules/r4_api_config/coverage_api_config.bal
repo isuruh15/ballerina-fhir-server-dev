@@ -24,121 +24,120 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig coverageApiConfig = {
     resourceType: "Coverage",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Coverage"
-        
+        "http://hl7.org/fhir/StructureDefinition/Coverage"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "beneficiary",
-        active: true,
-        information: {
-            description: "Covered party",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-beneficiary"
-        }
-    },
+            name: "beneficiary",
+            active: true,
+            information: {
+                description: "Covered party",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-beneficiary"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the Coverage",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the Coverage",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-status"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Retrieve coverages for a patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Retrieve coverages for a patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-patient"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "The kind of coverage (health plan, auto, Workers Compensation)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "The kind of coverage (health plan, auto, Workers Compensation)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-type"
+            }
+        },
 
         {
-        name: "dependent",
-        active: true,
-        information: {
-            description: "Dependent number",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-dependent"
-        }
-    },
+            name: "dependent",
+            active: true,
+            information: {
+                description: "Dependent number",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-dependent"
+            }
+        },
 
         {
-        name: "class-type",
-        active: true,
-        information: {
-            description: "Coverage class (eg. plan, group)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-class-type"
-        }
-    },
+            name: "class-type",
+            active: true,
+            information: {
+                description: "Coverage class (eg. plan, group)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-class-type"
+            }
+        },
 
         {
-        name: "payor",
-        active: true,
-        information: {
-            description: "The identity of the insurer or party paying for services",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-payor"
-        }
-    },
+            name: "payor",
+            active: true,
+            information: {
+                description: "The identity of the insurer or party paying for services",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-payor"
+            }
+        },
 
         {
-        name: "class-value",
-        active: true,
-        information: {
-            description: "Value of the class (eg. Plan number, group number)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-class-value"
-        }
-    },
+            name: "class-value",
+            active: true,
+            information: {
+                description: "Value of the class (eg. Plan number, group number)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-class-value"
+            }
+        },
 
         {
-        name: "policy-holder",
-        active: true,
-        information: {
-            description: "Reference to the policyholder",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-policy-holder"
-        }
-    },
+            name: "policy-holder",
+            active: true,
+            information: {
+                description: "Reference to the policyholder",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-policy-holder"
+            }
+        },
 
         {
-        name: "subscriber",
-        active: true,
-        information: {
-            description: "Reference to the subscriber",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-subscriber"
-        }
-    },
+            name: "subscriber",
+            active: true,
+            information: {
+                description: "Reference to the subscriber",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-subscriber"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The primary identifier of the insured and the coverage",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Coverage-identifier"
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The primary identifier of the insured and the coverage",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Coverage-identifier"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,61 +24,60 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig devicemetricApiConfig = {
     resourceType: "DeviceMetric",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/DeviceMetric"
-        
+        "http://hl7.org/fhir/StructureDefinition/DeviceMetric"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "The component type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "The component type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-type"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The identifier of the metric",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The identifier of the metric",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-identifier"
+            }
+        },
 
         {
-        name: "source",
-        active: true,
-        information: {
-            description: "The device resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-source"
-        }
-    },
+            name: "source",
+            active: true,
+            information: {
+                description: "The device resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-source"
+            }
+        },
 
         {
-        name: "parent",
-        active: true,
-        information: {
-            description: "The parent DeviceMetric resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-parent"
-        }
-    },
+            name: "parent",
+            active: true,
+            information: {
+                description: "The parent DeviceMetric resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-parent"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "The category of the metric",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-category"
+            name: "category",
+            active: true,
+            information: {
+                description: "The category of the metric",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DeviceMetric-category"
+            }
         }
-    }
 
     ],
     operations: [

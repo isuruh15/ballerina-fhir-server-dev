@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig substanceproteinApiConfig = {
     resourceType: "SubstanceProtein",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/SubstanceProtein"
-        
+        "http://hl7.org/fhir/StructureDefinition/SubstanceProtein"
 
     ],
     defaultProfile: (),

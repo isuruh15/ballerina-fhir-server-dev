@@ -24,41 +24,40 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicinalproductpharmaceuticalApiConfig = {
     resourceType: "MedicinalProductPharmaceutical",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicinalProductPharmaceutical"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicinalProductPharmaceutical"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "An identifier for the pharmaceutical medicinal product",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPharmaceutical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "An identifier for the pharmaceutical medicinal product",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPharmaceutical-identifier"
+            }
+        },
 
         {
-        name: "target-species",
-        active: true,
-        information: {
-            description: "Coded expression for the species",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPharmaceutical-target-species"
-        }
-    },
+            name: "target-species",
+            active: true,
+            information: {
+                description: "Coded expression for the species",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPharmaceutical-target-species"
+            }
+        },
 
         {
-        name: "route",
-        active: true,
-        information: {
-            description: "Coded expression for the route",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPharmaceutical-route"
+            name: "route",
+            active: true,
+            information: {
+                description: "Coded expression for the route",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductPharmaceutical-route"
+            }
         }
-    }
 
     ],
     operations: [

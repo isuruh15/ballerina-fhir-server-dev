@@ -24,211 +24,210 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig taskApiConfig = {
     resourceType: "Task",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Task"
-        
+        "http://hl7.org/fhir/StructureDefinition/Task"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "group-identifier",
-        active: true,
-        information: {
-            description: "Search by group identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-group-identifier"
-        }
-    },
+            name: "group-identifier",
+            active: true,
+            information: {
+                description: "Search by group identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-group-identifier"
+            }
+        },
 
         {
-        name: "focus",
-        active: true,
-        information: {
-            description: "Search by task focus",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-focus"
-        }
-    },
+            name: "focus",
+            active: true,
+            information: {
+                description: "Search by task focus",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-focus"
+            }
+        },
 
         {
-        name: "authored-on",
-        active: true,
-        information: {
-            description: "Search by creation date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-authored-on"
-        }
-    },
+            name: "authored-on",
+            active: true,
+            information: {
+                description: "Search by creation date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-authored-on"
+            }
+        },
 
         {
-        name: "intent",
-        active: true,
-        information: {
-            description: "Search by task intent",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-intent"
-        }
-    },
+            name: "intent",
+            active: true,
+            information: {
+                description: "Search by task intent",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-intent"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Search by subject",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Search by subject",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-subject"
+            }
+        },
 
         {
-        name: "modified",
-        active: true,
-        information: {
-            description: "Search by last modification date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-modified"
-        }
-    },
+            name: "modified",
+            active: true,
+            information: {
+                description: "Search by last modification date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-modified"
+            }
+        },
 
         {
-        name: "part-of",
-        active: true,
-        information: {
-            description: "Search by task this task is part of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-part-of"
-        }
-    },
+            name: "part-of",
+            active: true,
+            information: {
+                description: "Search by task this task is part of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-part-of"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "Search by task code",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "Search by task code",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-code"
+            }
+        },
 
         {
-        name: "business-status",
-        active: true,
-        information: {
-            description: "Search by business status",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-business-status"
-        }
-    },
+            name: "business-status",
+            active: true,
+            information: {
+                description: "Search by business status",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-business-status"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Search by patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Search by patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-patient"
+            }
+        },
 
         {
-        name: "requester",
-        active: true,
-        information: {
-            description: "Search by task requester",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-requester"
-        }
-    },
+            name: "requester",
+            active: true,
+            information: {
+                description: "Search by task requester",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-requester"
+            }
+        },
 
         {
-        name: "based-on",
-        active: true,
-        information: {
-            description: "Search by requests this task is based on",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-based-on"
-        }
-    },
+            name: "based-on",
+            active: true,
+            information: {
+                description: "Search by requests this task is based on",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-based-on"
+            }
+        },
 
         {
-        name: "owner",
-        active: true,
-        information: {
-            description: "Search by task owner",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-owner"
-        }
-    },
+            name: "owner",
+            active: true,
+            information: {
+                description: "Search by task owner",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-owner"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "priority",
-        active: true,
-        information: {
-            description: "Search by task priority",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-priority"
-        }
-    },
+            name: "priority",
+            active: true,
+            information: {
+                description: "Search by task priority",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-priority"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "Search by encounter",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "Search by encounter",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-encounter"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Search for a task instance by its business identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Search for a task instance by its business identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-identifier"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "Search by task status",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "Search by task status",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-status"
+            }
+        },
 
         {
-        name: "performer",
-        active: true,
-        information: {
-            description: "Search by recommended type of performer (e.g., Requester, Performer, Scheduler).",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-performer"
-        }
-    },
+            name: "performer",
+            active: true,
+            information: {
+                description: "Search by recommended type of performer (e.g., Requester, Performer, Scheduler).",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-performer"
+            }
+        },
 
         {
-        name: "period",
-        active: true,
-        information: {
-            description: "Search by period Task is/was underway",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Task-period"
+            name: "period",
+            active: true,
+            information: {
+                description: "Search by period Task is/was underway",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Task-period"
+            }
         }
-    }
 
     ],
     operations: [

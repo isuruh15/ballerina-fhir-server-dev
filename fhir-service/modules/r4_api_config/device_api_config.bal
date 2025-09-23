@@ -24,141 +24,140 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig deviceApiConfig = {
     resourceType: "Device",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Device"
-        
+        "http://hl7.org/fhir/StructureDefinition/Device"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "active | inactive | entered-in-error | unknown",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "active | inactive | entered-in-error | unknown",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-status"
+            }
+        },
 
         {
-        name: "din",
-        active: true,
-        information: {
-            description: "The donation identification number (DIN)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/device-extensions-Device-din"
-        }
-    },
+            name: "din",
+            active: true,
+            information: {
+                description: "The donation identification number (DIN)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/device-extensions-Device-din"
+            }
+        },
 
         {
-        name: "manufacturer",
-        active: true,
-        information: {
-            description: "The manufacturer of the device",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-manufacturer"
-        }
-    },
+            name: "manufacturer",
+            active: true,
+            information: {
+                description: "The manufacturer of the device",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-manufacturer"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "Network address to contact device",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "Network address to contact device",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-url"
+            }
+        },
 
         {
-        name: "udi-di",
-        active: true,
-        information: {
-            description: "The udi Device Identifier (DI)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-udi-di"
-        }
-    },
+            name: "udi-di",
+            active: true,
+            information: {
+                description: "The udi Device Identifier (DI)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-udi-di"
+            }
+        },
 
         {
-        name: "udi-carrier",
-        active: true,
-        information: {
-            description: "UDI Barcode (RFID or other technology) string in *HRF* format.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-udi-carrier"
-        }
-    },
+            name: "udi-carrier",
+            active: true,
+            information: {
+                description: "UDI Barcode (RFID or other technology) string in *HRF* format.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-udi-carrier"
+            }
+        },
 
         {
-        name: "model",
-        active: true,
-        information: {
-            description: "The model of the device",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-model"
-        }
-    },
+            name: "model",
+            active: true,
+            information: {
+                description: "The model of the device",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-model"
+            }
+        },
 
         {
-        name: "device-name",
-        active: true,
-        information: {
-            description: "A server defined search that may match any of the string fields in Device.deviceName or Device.type.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-device-name"
-        }
-    },
+            name: "device-name",
+            active: true,
+            information: {
+                description: "A server defined search that may match any of the string fields in Device.deviceName or Device.type.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-device-name"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Patient information, if the resource is affixed to a person",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Patient information, if the resource is affixed to a person",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-patient"
+            }
+        },
 
         {
-        name: "organization",
-        active: true,
-        information: {
-            description: "The organization responsible for the device",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-organization"
-        }
-    },
+            name: "organization",
+            active: true,
+            information: {
+                description: "The organization responsible for the device",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-organization"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "A location, where the resource is found",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-location"
-        }
-    },
+            name: "location",
+            active: true,
+            information: {
+                description: "A location, where the resource is found",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-location"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Instance id from manufacturer, owner, and others",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Instance id from manufacturer, owner, and others",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-identifier"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "The type of the device",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Device-type"
+            name: "type",
+            active: true,
+            information: {
+                description: "The type of the device",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Device-type"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,51 +24,50 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig enrollmentrequestApiConfig = {
     resourceType: "EnrollmentRequest",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/EnrollmentRequest"
-        
+        "http://hl7.org/fhir/StructureDefinition/EnrollmentRequest"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The party to be enrolled",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentRequest-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The party to be enrolled",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentRequest-patient"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the enrollment",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentRequest-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the enrollment",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentRequest-status"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The party to be enrolled",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentRequest-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The party to be enrolled",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentRequest-subject"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The business identifier of the Enrollment",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentRequest-identifier"
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The business identifier of the Enrollment",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/EnrollmentRequest-identifier"
+            }
         }
-    }
 
     ],
     operations: [

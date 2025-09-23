@@ -24,191 +24,190 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig implementationguideApiConfig = {
     resourceType: "ImplementationGuide",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ImplementationGuide"
-        
+        "http://hl7.org/fhir/StructureDefinition/ImplementationGuide"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): The current status of the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): The current status of the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): A type of use context assigned to the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): A type of use context assigned to the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
+            }
+        },
 
         {
-        name: "resource",
-        active: true,
-        information: {
-            description: "Location of the resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImplementationGuide-resource"
-        }
-    },
+            name: "resource",
+            active: true,
+            information: {
+                description: "Location of the resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImplementationGuide-resource"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): Intended jurisdiction for the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): Intended jurisdiction for the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): A use context type and value assigned to the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): A use context type and value assigned to the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): The description of the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): The description of the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): A use context type and quantity- or range-based value assigned to the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): A use context type and quantity- or range-based value assigned to the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): The human-friendly name of the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): The human-friendly name of the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-title"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): A quantity- or range-valued use context assigned to the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): A quantity- or range-valued use context assigned to the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): A use context assigned to the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): A use context assigned to the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): Computationally friendly name of the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): Computationally friendly name of the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): Name of the publisher of the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): Name of the publisher of the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): The uri that identifies the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): The uri that identifies the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-url"
+            }
+        },
 
         {
-        name: "global",
-        active: true,
-        information: {
-            description: "Profile that all resources must conform to",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImplementationGuide-global"
-        }
-    },
+            name: "global",
+            active: true,
+            information: {
+                description: "Profile that all resources must conform to",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImplementationGuide-global"
+            }
+        },
 
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): The business version of the implementation guide",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): The business version of the implementation guide",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-version"
+            }
+        },
 
         {
-        name: "experimental",
-        active: true,
-        information: {
-            description: "For testing purposes, not real usage",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImplementationGuide-experimental"
-        }
-    },
+            name: "experimental",
+            active: true,
+            information: {
+                description: "For testing purposes, not real usage",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImplementationGuide-experimental"
+            }
+        },
 
         {
-        name: "depends-on",
-        active: true,
-        information: {
-            description: "Identity of the IG that this depends on",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ImplementationGuide-depends-on"
-        }
-    },
+            name: "depends-on",
+            active: true,
+            information: {
+                description: "Identity of the IG that this depends on",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ImplementationGuide-depends-on"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[ImplementationGuide](implementationguide.html): The implementation guide publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
+            name: "date",
+            active: true,
+            information: {
+                description: "[ImplementationGuide](implementationguide.html): The implementation guide publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
+            }
         }
-    }
 
     ],
     operations: [

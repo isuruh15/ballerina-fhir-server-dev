@@ -24,71 +24,70 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig testreportApiConfig = {
     resourceType: "TestReport",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/TestReport"
-        
+        "http://hl7.org/fhir/StructureDefinition/TestReport"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "An external identifier for the test report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/TestReport-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "An external identifier for the test report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/TestReport-identifier"
+            }
+        },
 
         {
-        name: "tester",
-        active: true,
-        information: {
-            description: "The name of the testing organization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/TestReport-tester"
-        }
-    },
+            name: "tester",
+            active: true,
+            information: {
+                description: "The name of the testing organization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/TestReport-tester"
+            }
+        },
 
         {
-        name: "issued",
-        active: true,
-        information: {
-            description: "The test report generation date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/TestReport-issued"
-        }
-    },
+            name: "issued",
+            active: true,
+            information: {
+                description: "The test report generation date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/TestReport-issued"
+            }
+        },
 
         {
-        name: "result",
-        active: true,
-        information: {
-            description: "The result disposition of the test execution",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/TestReport-result"
-        }
-    },
+            name: "result",
+            active: true,
+            information: {
+                description: "The result disposition of the test execution",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/TestReport-result"
+            }
+        },
 
         {
-        name: "testscript",
-        active: true,
-        information: {
-            description: "The test script executed to produce this report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/TestReport-testscript"
-        }
-    },
+            name: "testscript",
+            active: true,
+            information: {
+                description: "The test script executed to produce this report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/TestReport-testscript"
+            }
+        },
 
         {
-        name: "participant",
-        active: true,
-        information: {
-            description: "The reference to a participant in the test execution",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/TestReport-participant"
+            name: "participant",
+            active: true,
+            information: {
+                description: "The reference to a participant in the test execution",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/TestReport-participant"
+            }
         }
-    }
 
     ],
     operations: [

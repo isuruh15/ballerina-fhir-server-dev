@@ -24,181 +24,180 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig procedureApiConfig = {
     resourceType: "Procedure",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Procedure"
-        
+        "http://hl7.org/fhir/StructureDefinition/Procedure"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "[Procedure](procedure.html): A code to identify a  procedure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "[Procedure](procedure.html): A code to identify a  procedure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
+            }
+        },
 
         {
-        name: "reason-reference",
-        active: true,
-        information: {
-            description: "The justification that the procedure was performed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-reason-reference"
-        }
-    },
+            name: "reason-reference",
+            active: true,
+            information: {
+                description: "The justification that the procedure was performed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-reason-reference"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[Procedure](procedure.html): A unique identifier for a procedure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[Procedure](procedure.html): A unique identifier for a procedure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "performer",
-        active: true,
-        information: {
-            description: "The reference to the practitioner",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-performer"
-        }
-    },
+            name: "performer",
+            active: true,
+            information: {
+                description: "The reference to the practitioner",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-performer"
+            }
+        },
 
         {
-        name: "reason-code",
-        active: true,
-        information: {
-            description: "Coded reason procedure performed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-reason-code"
-        }
-    },
+            name: "reason-code",
+            active: true,
+            information: {
+                description: "Coded reason procedure performed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-reason-code"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[Procedure](procedure.html): When the procedure was performed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[Procedure](procedure.html): When the procedure was performed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[Procedure](procedure.html): Search by subject - a patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[Procedure](procedure.html): Search by subject - a patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Search by subject",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Search by subject",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-subject"
+            }
+        },
 
         {
-        name: "part-of",
-        active: true,
-        information: {
-            description: "Part of referenced event",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-part-of"
-        }
-    },
+            name: "part-of",
+            active: true,
+            information: {
+                description: "Part of referenced event",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-part-of"
+            }
+        },
 
         {
-        name: "based-on",
-        active: true,
-        information: {
-            description: "A request for this procedure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-based-on"
-        }
-    },
+            name: "based-on",
+            active: true,
+            information: {
+                description: "A request for this procedure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-based-on"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Classification of the procedure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Classification of the procedure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-category"
+            }
+        },
 
         {
-        name: "instantiates-uri",
-        active: true,
-        information: {
-            description: "Instantiates external protocol or definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-instantiates-uri"
-        }
-    },
+            name: "instantiates-uri",
+            active: true,
+            information: {
+                description: "Instantiates external protocol or definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-instantiates-uri"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "[Procedure](procedure.html): Encounter created as part of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "[Procedure](procedure.html): Encounter created as part of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+            }
+        },
 
         {
-        name: "instantiates-canonical",
-        active: true,
-        information: {
-            description: "Instantiates FHIR protocol or definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-instantiates-canonical"
-        }
-    },
+            name: "instantiates-canonical",
+            active: true,
+            information: {
+                description: "Instantiates FHIR protocol or definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-instantiates-canonical"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-status"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "Where the procedure happened",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Procedure-location"
+            name: "location",
+            active: true,
+            information: {
+                description: "Where the procedure happened",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Procedure-location"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,151 +24,150 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig insuranceplanApiConfig = {
     resourceType: "InsurancePlan",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/InsurancePlan"
-        
+        "http://hl7.org/fhir/StructureDefinition/InsurancePlan"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "endpoint",
-        active: true,
-        information: {
-            description: "Technical endpoint",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-endpoint"
-        }
-    },
+            name: "endpoint",
+            active: true,
+            information: {
+                description: "Technical endpoint",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-endpoint"
+            }
+        },
 
         {
-        name: "address-postalcode",
-        active: true,
-        information: {
-            description: "A postal code specified in an address",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-postalcode"
-        }
-    },
+            name: "address-postalcode",
+            active: true,
+            information: {
+                description: "A postal code specified in an address",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-postalcode"
+            }
+        },
 
         {
-        name: "type",
-        active: true,
-        information: {
-            description: "A code for the type of organization",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-type"
-        }
-    },
+            name: "type",
+            active: true,
+            information: {
+                description: "A code for the type of organization",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-type"
+            }
+        },
 
         {
-        name: "address-use",
-        active: true,
-        information: {
-            description: "A use code specified in an address",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-use"
-        }
-    },
+            name: "address-use",
+            active: true,
+            information: {
+                description: "A use code specified in an address",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-use"
+            }
+        },
 
         {
-        name: "phonetic",
-        active: true,
-        information: {
-            description: "A portion of the organization's name using some kind of phonetic matching algorithm",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-phonetic"
-        }
-    },
+            name: "phonetic",
+            active: true,
+            information: {
+                description: "A portion of the organization's name using some kind of phonetic matching algorithm",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-phonetic"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "Is the Organization record active",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "Is the Organization record active",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-status"
+            }
+        },
 
         {
-        name: "owned-by",
-        active: true,
-        information: {
-            description: "An organization of which this organization forms a part",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-owned-by"
-        }
-    },
+            name: "owned-by",
+            active: true,
+            information: {
+                description: "An organization of which this organization forms a part",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-owned-by"
+            }
+        },
 
         {
-        name: "address-country",
-        active: true,
-        information: {
-            description: "A country specified in an address",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-country"
-        }
-    },
+            name: "address-country",
+            active: true,
+            information: {
+                description: "A country specified in an address",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-country"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Any identifier for the organization (not the accreditation issuer's identifier)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Any identifier for the organization (not the accreditation issuer's identifier)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-identifier"
+            }
+        },
 
         {
-        name: "address",
-        active: true,
-        information: {
-            description: "A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address"
-        }
-    },
+            name: "address",
+            active: true,
+            information: {
+                description: "A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "A portion of the organization's name or alias",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "A portion of the organization's name or alias",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-name"
+            }
+        },
 
         {
-        name: "address-state",
-        active: true,
-        information: {
-            description: "A state specified in an address",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-state"
-        }
-    },
+            name: "address-state",
+            active: true,
+            information: {
+                description: "A state specified in an address",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-state"
+            }
+        },
 
         {
-        name: "address-city",
-        active: true,
-        information: {
-            description: "A city specified in an address",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-city"
-        }
-    },
+            name: "address-city",
+            active: true,
+            information: {
+                description: "A city specified in an address",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-address-city"
+            }
+        },
 
         {
-        name: "administered-by",
-        active: true,
-        information: {
-            description: "Product administrator",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-administered-by"
+            name: "administered-by",
+            active: true,
+            information: {
+                description: "Product administrator",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/InsurancePlan-administered-by"
+            }
         }
-    }
 
     ],
     operations: [

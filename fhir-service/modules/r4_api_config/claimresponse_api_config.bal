@@ -24,121 +24,120 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig claimresponseApiConfig = {
     resourceType: "ClaimResponse",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ClaimResponse"
-        
+        "http://hl7.org/fhir/StructureDefinition/ClaimResponse"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "created",
-        active: true,
-        information: {
-            description: "The creation date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-created"
-        }
-    },
+            name: "created",
+            active: true,
+            information: {
+                description: "The creation date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-created"
+            }
+        },
 
         {
-        name: "request",
-        active: true,
-        information: {
-            description: "The claim reference",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-request"
-        }
-    },
+            name: "request",
+            active: true,
+            information: {
+                description: "The claim reference",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-request"
+            }
+        },
 
         {
-        name: "payment-date",
-        active: true,
-        information: {
-            description: "The expected payment date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-payment-date"
-        }
-    },
+            name: "payment-date",
+            active: true,
+            information: {
+                description: "The expected payment date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-payment-date"
+            }
+        },
 
         {
-        name: "outcome",
-        active: true,
-        information: {
-            description: "The processing outcome",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-outcome"
-        }
-    },
+            name: "outcome",
+            active: true,
+            information: {
+                description: "The processing outcome",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-outcome"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the ClaimResponse",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the ClaimResponse",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-status"
+            }
+        },
 
         {
-        name: "requestor",
-        active: true,
-        information: {
-            description: "The Provider of the claim",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-requestor"
-        }
-    },
+            name: "requestor",
+            active: true,
+            information: {
+                description: "The Provider of the claim",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-requestor"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The identity of the ClaimResponse",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The identity of the ClaimResponse",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-identifier"
+            }
+        },
 
         {
-        name: "use",
-        active: true,
-        information: {
-            description: "The type of claim",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-use"
-        }
-    },
+            name: "use",
+            active: true,
+            information: {
+                description: "The type of claim",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-use"
+            }
+        },
 
         {
-        name: "insurer",
-        active: true,
-        information: {
-            description: "The organization which generated this resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-insurer"
-        }
-    },
+            name: "insurer",
+            active: true,
+            information: {
+                description: "The organization which generated this resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-insurer"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The subject of care",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The subject of care",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-patient"
+            }
+        },
 
         {
-        name: "disposition",
-        active: true,
-        information: {
-            description: "The contents of the disposition message",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-disposition"
+            name: "disposition",
+            active: true,
+            information: {
+                description: "The contents of the disposition message",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClaimResponse-disposition"
+            }
         }
-    }
 
     ],
     operations: [

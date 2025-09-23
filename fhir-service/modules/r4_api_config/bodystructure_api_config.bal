@@ -24,51 +24,50 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig bodystructureApiConfig = {
     resourceType: "BodyStructure",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/BodyStructure"
-        
+        "http://hl7.org/fhir/StructureDefinition/BodyStructure"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Bodystructure identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/BodyStructure-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Bodystructure identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/BodyStructure-identifier"
+            }
+        },
 
         {
-        name: "morphology",
-        active: true,
-        information: {
-            description: "Kind of Structure",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/BodyStructure-morphology"
-        }
-    },
+            name: "morphology",
+            active: true,
+            information: {
+                description: "Kind of Structure",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/BodyStructure-morphology"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Who this is about",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/BodyStructure-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Who this is about",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/BodyStructure-patient"
+            }
+        },
 
         {
-        name: "location",
-        active: true,
-        information: {
-            description: "Body site",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/BodyStructure-location"
+            name: "location",
+            active: true,
+            information: {
+                description: "Body site",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/BodyStructure-location"
+            }
         }
-    }
 
     ],
     operations: [

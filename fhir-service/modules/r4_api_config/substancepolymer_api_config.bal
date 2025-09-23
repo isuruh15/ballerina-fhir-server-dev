@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig substancepolymerApiConfig = {
     resourceType: "SubstancePolymer",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/SubstancePolymer"
-        
+        "http://hl7.org/fhir/StructureDefinition/SubstancePolymer"
 
     ],
     defaultProfile: (),

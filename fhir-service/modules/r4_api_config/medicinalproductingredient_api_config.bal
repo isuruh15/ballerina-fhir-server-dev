@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicinalproductingredientApiConfig = {
     resourceType: "MedicinalProductIngredient",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicinalProductIngredient"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicinalProductIngredient"
 
     ],
     defaultProfile: (),

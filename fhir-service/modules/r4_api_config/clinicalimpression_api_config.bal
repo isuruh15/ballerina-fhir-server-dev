@@ -24,141 +24,140 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig clinicalimpressionApiConfig = {
     resourceType: "ClinicalImpression",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ClinicalImpression"
-        
+        "http://hl7.org/fhir/StructureDefinition/ClinicalImpression"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "supporting-info",
-        active: true,
-        information: {
-            description: "Information supporting the clinical impression",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-supporting-info"
-        }
-    },
+            name: "supporting-info",
+            active: true,
+            information: {
+                description: "Information supporting the clinical impression",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-supporting-info"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "in-progress | completed | entered-in-error",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "in-progress | completed | entered-in-error",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-status"
+            }
+        },
 
         {
-        name: "finding-code",
-        active: true,
-        information: {
-            description: "What was found",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-finding-code"
-        }
-    },
+            name: "finding-code",
+            active: true,
+            information: {
+                description: "What was found",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-finding-code"
+            }
+        },
 
         {
-        name: "assessor",
-        active: true,
-        information: {
-            description: "The clinician performing the assessment",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-assessor"
-        }
-    },
+            name: "assessor",
+            active: true,
+            information: {
+                description: "The clinician performing the assessment",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-assessor"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Patient or group assessed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Patient or group assessed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-subject"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[ClinicalImpression](clinicalimpression.html): When the assessment was documented",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[ClinicalImpression](clinicalimpression.html): When the assessment was documented",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[ClinicalImpression](clinicalimpression.html): Patient or group assessed",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[ClinicalImpression](clinicalimpression.html): Patient or group assessed",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "previous",
-        active: true,
-        information: {
-            description: "Reference to last assessment",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-previous"
-        }
-    },
+            name: "previous",
+            active: true,
+            information: {
+                description: "Reference to last assessment",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-previous"
+            }
+        },
 
         {
-        name: "investigation",
-        active: true,
-        information: {
-            description: "Record of a specific investigation",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-investigation"
-        }
-    },
+            name: "investigation",
+            active: true,
+            information: {
+                description: "Record of a specific investigation",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-investigation"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Business identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Business identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-identifier"
+            }
+        },
 
         {
-        name: "problem",
-        active: true,
-        information: {
-            description: "Relevant impressions of patient state",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-problem"
-        }
-    },
+            name: "problem",
+            active: true,
+            information: {
+                description: "Relevant impressions of patient state",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-problem"
+            }
+        },
 
         {
-        name: "finding-ref",
-        active: true,
-        information: {
-            description: "What was found",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-finding-ref"
-        }
-    },
+            name: "finding-ref",
+            active: true,
+            information: {
+                description: "What was found",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-finding-ref"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "Encounter created as part of",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-encounter"
+            name: "encounter",
+            active: true,
+            information: {
+                description: "Encounter created as part of",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/ClinicalImpression-encounter"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,101 +24,100 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig measurereportApiConfig = {
     resourceType: "MeasureReport",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MeasureReport"
-        
+        "http://hl7.org/fhir/StructureDefinition/MeasureReport"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "External identifier of the measure report to be returned",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "External identifier of the measure report to be returned",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-identifier"
+            }
+        },
 
         {
-        name: "reporter",
-        active: true,
-        information: {
-            description: "The reporter to return measure report results for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-reporter"
-        }
-    },
+            name: "reporter",
+            active: true,
+            information: {
+                description: "The reporter to return measure report results for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-reporter"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The identity of a subject to search for individual measure report results for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The identity of a subject to search for individual measure report results for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-subject"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "The date of the measure report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "The date of the measure report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-date"
+            }
+        },
 
         {
-        name: "period",
-        active: true,
-        information: {
-            description: "The period of the measure report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-period"
-        }
-    },
+            name: "period",
+            active: true,
+            information: {
+                description: "The period of the measure report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-period"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the measure report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the measure report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-status"
+            }
+        },
 
         {
-        name: "measure",
-        active: true,
-        information: {
-            description: "The measure to return measure report results for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-measure"
-        }
-    },
+            name: "measure",
+            active: true,
+            information: {
+                description: "The measure to return measure report results for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-measure"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "The identity of a patient to search for individual measure report results for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "The identity of a patient to search for individual measure report results for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-patient"
+            }
+        },
 
         {
-        name: "evaluated-resource",
-        active: true,
-        information: {
-            description: "An evaluated resource referenced by the measure report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-evaluated-resource"
+            name: "evaluated-resource",
+            active: true,
+            information: {
+                description: "An evaluated resource referenced by the measure report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MeasureReport-evaluated-resource"
+            }
         }
-    }
 
     ],
     operations: [

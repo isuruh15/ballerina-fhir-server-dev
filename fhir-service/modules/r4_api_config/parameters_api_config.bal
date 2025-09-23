@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig parametersApiConfig = {
     resourceType: "Parameters",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Parameters"
-        
+        "http://hl7.org/fhir/StructureDefinition/Parameters"
 
     ],
     defaultProfile: (),

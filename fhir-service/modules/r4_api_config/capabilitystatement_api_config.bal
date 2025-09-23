@@ -24,241 +24,240 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig capabilitystatementApiConfig = {
     resourceType: "CapabilityStatement",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"
-        
+        "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): The current status of the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): The current status of the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-status"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): A type of use context assigned to the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): A type of use context assigned to the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): Intended jurisdiction for the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): Intended jurisdiction for the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-jurisdiction"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): A use context type and value assigned to the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): A use context type and value assigned to the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-value"
+            }
+        },
 
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): The description of the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): The description of the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-description"
+            }
+        },
 
         {
-        name: "security-service",
-        active: true,
-        information: {
-            description: "OAuth | SMART-on-FHIR | NTLM | Basic | Kerberos | Certificates",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-security-service"
-        }
-    },
+            name: "security-service",
+            active: true,
+            information: {
+                description: "OAuth | SMART-on-FHIR | NTLM | Basic | Kerberos | Certificates",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-security-service"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): A use context type and quantity- or range-based value assigned to the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): A use context type and quantity- or range-based value assigned to the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-type-quantity"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): The human-friendly name of the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): The human-friendly name of the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-title"
+            }
+        },
 
         {
-        name: "fhirversion",
-        active: true,
-        information: {
-            description: "The version of FHIR",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-fhirversion"
-        }
-    },
+            name: "fhirversion",
+            active: true,
+            information: {
+                description: "The version of FHIR",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-fhirversion"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): A quantity- or range-valued use context assigned to the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): A quantity- or range-valued use context assigned to the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context-quantity"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): A use context assigned to the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): A use context assigned to the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-context"
+            }
+        },
 
         {
-        name: "guide",
-        active: true,
-        information: {
-            description: "Implementation guides supported",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-guide"
-        }
-    },
+            name: "guide",
+            active: true,
+            information: {
+                description: "Implementation guides supported",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-guide"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): Computationally friendly name of the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): Computationally friendly name of the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-name"
+            }
+        },
 
         {
-        name: "mode",
-        active: true,
-        information: {
-            description: "Mode - restful (server/client) or messaging (sender/receiver)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-mode"
-        }
-    },
+            name: "mode",
+            active: true,
+            information: {
+                description: "Mode - restful (server/client) or messaging (sender/receiver)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-mode"
+            }
+        },
 
         {
-        name: "format",
-        active: true,
-        information: {
-            description: "formats supported (xml | json | ttl | mime type)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-format"
-        }
-    },
+            name: "format",
+            active: true,
+            information: {
+                description: "formats supported (xml | json | ttl | mime type)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-format"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): Name of the publisher of the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): Name of the publisher of the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-publisher"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): The uri that identifies the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): The uri that identifies the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-url"
+            }
+        },
 
         {
-        name: "resource",
-        active: true,
-        information: {
-            description: "Name of a resource mentioned in a capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-resource"
-        }
-    },
+            name: "resource",
+            active: true,
+            information: {
+                description: "Name of a resource mentioned in a capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-resource"
+            }
+        },
 
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): The business version of the capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): The business version of the capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-version"
+            }
+        },
 
         {
-        name: "software",
-        active: true,
-        information: {
-            description: "Part of the name of a software application",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-software"
-        }
-    },
+            name: "software",
+            active: true,
+            information: {
+                description: "Part of the name of a software application",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-software"
+            }
+        },
 
         {
-        name: "resource-profile",
-        active: true,
-        information: {
-            description: "A profile id invoked in a capability statement",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-resource-profile"
-        }
-    },
+            name: "resource-profile",
+            active: true,
+            information: {
+                description: "A profile id invoked in a capability statement",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-resource-profile"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[CapabilityStatement](capabilitystatement.html): The capability statement publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[CapabilityStatement](capabilitystatement.html): The capability statement publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/conformance-date"
+            }
+        },
 
         {
-        name: "supported-profile",
-        active: true,
-        information: {
-            description: "Profiles for use cases supported",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-supported-profile"
+            name: "supported-profile",
+            active: true,
+            information: {
+                description: "Profiles for use cases supported",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/CapabilityStatement-supported-profile"
+            }
         }
-    }
 
     ],
     operations: [

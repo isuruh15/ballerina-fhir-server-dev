@@ -24,21 +24,20 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicinalproductcontraindicationApiConfig = {
     resourceType: "MedicinalProductContraindication",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicinalProductContraindication"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicinalProductContraindication"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The medication for which this is an contraindication",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductContraindication-subject"
+            name: "subject",
+            active: true,
+            information: {
+                description: "The medication for which this is an contraindication",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductContraindication-subject"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,171 +24,170 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig riskevidencesynthesisApiConfig = {
     resourceType: "RiskEvidenceSynthesis",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/RiskEvidenceSynthesis"
-        
+        "http://hl7.org/fhir/StructureDefinition/RiskEvidenceSynthesis"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "description",
-        active: true,
-        information: {
-            description: "The description of the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-description"
-        }
-    },
+            name: "description",
+            active: true,
+            information: {
+                description: "The description of the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-description"
+            }
+        },
 
         {
-        name: "effective",
-        active: true,
-        information: {
-            description: "The time during which the risk evidence synthesis is intended to be in use",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-effective"
-        }
-    },
+            name: "effective",
+            active: true,
+            information: {
+                description: "The time during which the risk evidence synthesis is intended to be in use",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-effective"
+            }
+        },
 
         {
-        name: "version",
-        active: true,
-        information: {
-            description: "The business version of the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-version"
-        }
-    },
+            name: "version",
+            active: true,
+            information: {
+                description: "The business version of the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-version"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "External identifier for the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "External identifier for the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-identifier"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "Computationally friendly name of the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "Computationally friendly name of the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-name"
+            }
+        },
 
         {
-        name: "context-type-quantity",
-        active: true,
-        information: {
-            description: "A use context type and quantity- or range-based value assigned to the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context-type-quantity"
-        }
-    },
+            name: "context-type-quantity",
+            active: true,
+            information: {
+                description: "A use context type and quantity- or range-based value assigned to the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context-type-quantity"
+            }
+        },
 
         {
-        name: "context-type-value",
-        active: true,
-        information: {
-            description: "A use context type and value assigned to the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context-type-value"
-        }
-    },
+            name: "context-type-value",
+            active: true,
+            information: {
+                description: "A use context type and value assigned to the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context-type-value"
+            }
+        },
 
         {
-        name: "title",
-        active: true,
-        information: {
-            description: "The human-friendly name of the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-title"
-        }
-    },
+            name: "title",
+            active: true,
+            information: {
+                description: "The human-friendly name of the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-title"
+            }
+        },
 
         {
-        name: "publisher",
-        active: true,
-        information: {
-            description: "Name of the publisher of the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-publisher"
-        }
-    },
+            name: "publisher",
+            active: true,
+            information: {
+                description: "Name of the publisher of the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-publisher"
+            }
+        },
 
         {
-        name: "url",
-        active: true,
-        information: {
-            description: "The uri that identifies the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-url"
-        }
-    },
+            name: "url",
+            active: true,
+            information: {
+                description: "The uri that identifies the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-url"
+            }
+        },
 
         {
-        name: "context",
-        active: true,
-        information: {
-            description: "A use context assigned to the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context"
-        }
-    },
+            name: "context",
+            active: true,
+            information: {
+                description: "A use context assigned to the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context"
+            }
+        },
 
         {
-        name: "context-type",
-        active: true,
-        information: {
-            description: "A type of use context assigned to the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context-type"
-        }
-    },
+            name: "context-type",
+            active: true,
+            information: {
+                description: "A type of use context assigned to the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context-type"
+            }
+        },
 
         {
-        name: "jurisdiction",
-        active: true,
-        information: {
-            description: "Intended jurisdiction for the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-jurisdiction"
-        }
-    },
+            name: "jurisdiction",
+            active: true,
+            information: {
+                description: "Intended jurisdiction for the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-jurisdiction"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "The risk evidence synthesis publication date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "The risk evidence synthesis publication date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-date"
+            }
+        },
 
         {
-        name: "context-quantity",
-        active: true,
-        information: {
-            description: "A quantity- or range-valued use context assigned to the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context-quantity"
-        }
-    },
+            name: "context-quantity",
+            active: true,
+            information: {
+                description: "A quantity- or range-valued use context assigned to the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-context-quantity"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The current status of the risk evidence synthesis",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-status"
+            name: "status",
+            active: true,
+            information: {
+                description: "The current status of the risk evidence synthesis",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/RiskEvidenceSynthesis-status"
+            }
         }
-    }
 
     ],
     operations: [

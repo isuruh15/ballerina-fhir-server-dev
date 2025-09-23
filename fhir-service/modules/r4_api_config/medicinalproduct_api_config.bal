@@ -24,41 +24,40 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicinalproductApiConfig = {
     resourceType: "MedicinalProduct",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicinalProduct"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicinalProduct"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Business identifier for this product. Could be an MPID",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProduct-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Business identifier for this product. Could be an MPID",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProduct-identifier"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "The full product name",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProduct-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "The full product name",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProduct-name"
+            }
+        },
 
         {
-        name: "name-language",
-        active: true,
-        information: {
-            description: "Language code for this name",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProduct-name-language"
+            name: "name-language",
+            active: true,
+            information: {
+                description: "Language code for this name",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProduct-name-language"
+            }
         }
-    }
 
     ],
     operations: [

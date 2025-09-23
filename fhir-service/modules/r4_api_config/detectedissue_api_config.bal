@@ -24,71 +24,70 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig detectedissueApiConfig = {
     resourceType: "DetectedIssue",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/DetectedIssue"
-        
+        "http://hl7.org/fhir/StructureDefinition/DetectedIssue"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "Issue Category, e.g. drug-drug, duplicate therapy, etc.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DetectedIssue-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "Issue Category, e.g. drug-drug, duplicate therapy, etc.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DetectedIssue-code"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[DetectedIssue](detectedissue.html): Unique id for the detected issue",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[DetectedIssue](detectedissue.html): Unique id for the detected issue",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "implicated",
-        active: true,
-        information: {
-            description: "Problem resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DetectedIssue-implicated"
-        }
-    },
+            name: "implicated",
+            active: true,
+            information: {
+                description: "Problem resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DetectedIssue-implicated"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[DetectedIssue](detectedissue.html): Associated patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[DetectedIssue](detectedissue.html): Associated patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "author",
-        active: true,
-        information: {
-            description: "The provider or device that identified the issue",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DetectedIssue-author"
-        }
-    },
+            name: "author",
+            active: true,
+            information: {
+                description: "The provider or device that identified the issue",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DetectedIssue-author"
+            }
+        },
 
         {
-        name: "identified",
-        active: true,
-        information: {
-            description: "When identified",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DetectedIssue-identified"
+            name: "identified",
+            active: true,
+            information: {
+                description: "When identified",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DetectedIssue-identified"
+            }
         }
-    }
 
     ],
     operations: [

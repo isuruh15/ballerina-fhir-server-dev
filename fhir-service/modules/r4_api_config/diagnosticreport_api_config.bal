@@ -24,197 +24,196 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig diagnosticreportApiConfig = {
     resourceType: "DiagnosticReport",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-            
-                "http://hl7.org/fhir/StructureDefinition/lipidprofile",
-            
-                "http://hl7.org/fhir/StructureDefinition/hlaresult",
-            
-                "http://hl7.org/fhir/StructureDefinition/diagnosticreport-genetics"
-        
+        "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+
+        "http://hl7.org/fhir/StructureDefinition/lipidprofile",
+
+        "http://hl7.org/fhir/StructureDefinition/hlaresult",
+
+        "http://hl7.org/fhir/StructureDefinition/diagnosticreport-genetics"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "[DiagnosticReport](diagnosticreport.html): The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "[DiagnosticReport](diagnosticreport.html): The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
+            }
+        },
 
         {
-        name: "result",
-        active: true,
-        information: {
-            description: "Link to an atomic result (observation resource)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-result"
-        }
-    },
+            name: "result",
+            active: true,
+            information: {
+                description: "Link to an atomic result (observation resource)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-result"
+            }
+        },
 
         {
-        name: "based-on",
-        active: true,
-        information: {
-            description: "Reference to the service request.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-based-on"
-        }
-    },
+            name: "based-on",
+            active: true,
+            information: {
+                description: "Reference to the service request.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-based-on"
+            }
+        },
 
         {
-        name: "issued",
-        active: true,
-        information: {
-            description: "When the report was issued",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued"
-        }
-    },
+            name: "issued",
+            active: true,
+            information: {
+                description: "When the report was issued",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[DiagnosticReport](diagnosticreport.html): An identifier for the report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[DiagnosticReport](diagnosticreport.html): An identifier for the report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[DiagnosticReport](diagnosticreport.html): The clinically relevant time of the report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[DiagnosticReport](diagnosticreport.html): The clinically relevant time of the report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[DiagnosticReport](diagnosticreport.html): The subject of the report if a patient",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[DiagnosticReport](diagnosticreport.html): The subject of the report if a patient",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "assessed-condition",
-        active: true,
-        information: {
-            description: "Condition assessed by genetic test",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/diagnosticreport-genetic-DiagnosticReport-assessed-condition"
-        }
-    },
+            name: "assessed-condition",
+            active: true,
+            information: {
+                description: "Condition assessed by genetic test",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/diagnosticreport-genetic-DiagnosticReport-assessed-condition"
+            }
+        },
 
         {
-        name: "conclusion",
-        active: true,
-        information: {
-            description: "A coded conclusion (interpretation/impression) on the report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion"
-        }
-    },
+            name: "conclusion",
+            active: true,
+            information: {
+                description: "A coded conclusion (interpretation/impression) on the report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion"
+            }
+        },
 
         {
-        name: "specimen",
-        active: true,
-        information: {
-            description: "The specimen details",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen"
-        }
-    },
+            name: "specimen",
+            active: true,
+            information: {
+                description: "The specimen details",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "[DiagnosticReport](diagnosticreport.html): The Encounter when the order was made",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "[DiagnosticReport](diagnosticreport.html): The Encounter when the order was made",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+            }
+        },
 
         {
-        name: "category",
-        active: true,
-        information: {
-            description: "Which diagnostic discipline/department created the report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category"
-        }
-    },
+            name: "category",
+            active: true,
+            information: {
+                description: "Which diagnostic discipline/department created the report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
-        }
-    },
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The subject of the report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "The subject of the report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject"
+            }
+        },
 
         {
-        name: "results-interpreter",
-        active: true,
-        information: {
-            description: "Who was the source of the report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-results-interpreter"
-        }
-    },
+            name: "results-interpreter",
+            active: true,
+            information: {
+                description: "Who was the source of the report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-results-interpreter"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status"
+            }
+        },
 
         {
-        name: "media",
-        active: true,
-        information: {
-            description: "A reference to the image source.",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-media"
-        }
-    },
+            name: "media",
+            active: true,
+            information: {
+                description: "A reference to the image source.",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-media"
+            }
+        },
 
         {
-        name: "performer",
-        active: true,
-        information: {
-            description: "Who is responsible for the report",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer"
+            name: "performer",
+            active: true,
+            information: {
+                description: "Who is responsible for the report",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,21 +24,20 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig medicinalproductindicationApiConfig = {
     resourceType: "MedicinalProductIndication",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/MedicinalProductIndication"
-        
+        "http://hl7.org/fhir/StructureDefinition/MedicinalProductIndication"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "The medication for which this is an indication",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductIndication-subject"
+            name: "subject",
+            active: true,
+            information: {
+                description: "The medication for which this is an indication",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/MedicinalProductIndication-subject"
+            }
         }
-    }
 
     ],
     operations: [

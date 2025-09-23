@@ -24,91 +24,90 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig paymentreconciliationApiConfig = {
     resourceType: "PaymentReconciliation",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"
-        
+        "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "The business identifier of the ExplanationOfBenefit",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "The business identifier of the ExplanationOfBenefit",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-identifier"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the payment reconciliation",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the payment reconciliation",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-status"
+            }
+        },
 
         {
-        name: "requestor",
-        active: true,
-        information: {
-            description: "The reference to the provider who submitted the claim",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-requestor"
-        }
-    },
+            name: "requestor",
+            active: true,
+            information: {
+                description: "The reference to the provider who submitted the claim",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-requestor"
+            }
+        },
 
         {
-        name: "request",
-        active: true,
-        information: {
-            description: "The reference to the claim",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-request"
-        }
-    },
+            name: "request",
+            active: true,
+            information: {
+                description: "The reference to the claim",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-request"
+            }
+        },
 
         {
-        name: "disposition",
-        active: true,
-        information: {
-            description: "The contents of the disposition message",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-disposition"
-        }
-    },
+            name: "disposition",
+            active: true,
+            information: {
+                description: "The contents of the disposition message",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-disposition"
+            }
+        },
 
         {
-        name: "created",
-        active: true,
-        information: {
-            description: "The creation date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-created"
-        }
-    },
+            name: "created",
+            active: true,
+            information: {
+                description: "The creation date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-created"
+            }
+        },
 
         {
-        name: "payment-issuer",
-        active: true,
-        information: {
-            description: "The organization which generated this resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-payment-issuer"
-        }
-    },
+            name: "payment-issuer",
+            active: true,
+            information: {
+                description: "The organization which generated this resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-payment-issuer"
+            }
+        },
 
         {
-        name: "outcome",
-        active: true,
-        information: {
-            description: "The processing outcome",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-outcome"
+            name: "outcome",
+            active: true,
+            information: {
+                description: "The processing outcome",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-outcome"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,21 +24,20 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig verificationresultApiConfig = {
     resourceType: "VerificationResult",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/VerificationResult"
-        
+        "http://hl7.org/fhir/StructureDefinition/VerificationResult"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "target",
-        active: true,
-        information: {
-            description: "A resource that was validated",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/VerificationResult-target"
+            name: "target",
+            active: true,
+            information: {
+                description: "A resource that was validated",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/VerificationResult-target"
+            }
         }
-    }
 
     ],
     operations: [

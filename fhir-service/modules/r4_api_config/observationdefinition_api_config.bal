@@ -24,8 +24,7 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig observationdefinitionApiConfig = {
     resourceType: "ObservationDefinition",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/ObservationDefinition"
-        
+        "http://hl7.org/fhir/StructureDefinition/ObservationDefinition"
 
     ],
     defaultProfile: (),

@@ -24,71 +24,70 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig endpointApiConfig = {
     resourceType: "Endpoint",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Endpoint"
-        
+        "http://hl7.org/fhir/StructureDefinition/Endpoint"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "connection-type",
-        active: true,
-        information: {
-            description: "Protocol/Profile/Standard to be used with this endpoint connection",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-connection-type"
-        }
-    },
+            name: "connection-type",
+            active: true,
+            information: {
+                description: "Protocol/Profile/Standard to be used with this endpoint connection",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-connection-type"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Identifies this endpoint across multiple systems",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Identifies this endpoint across multiple systems",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-identifier"
+            }
+        },
 
         {
-        name: "organization",
-        active: true,
-        information: {
-            description: "The organization that is managing the endpoint",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-organization"
-        }
-    },
+            name: "organization",
+            active: true,
+            information: {
+                description: "The organization that is managing the endpoint",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-organization"
+            }
+        },
 
         {
-        name: "name",
-        active: true,
-        information: {
-            description: "A name that this endpoint can be identified by",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-name"
-        }
-    },
+            name: "name",
+            active: true,
+            information: {
+                description: "A name that this endpoint can be identified by",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-name"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The current status of the Endpoint (usually expected to be active)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The current status of the Endpoint (usually expected to be active)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-status"
+            }
+        },
 
         {
-        name: "payload-type",
-        active: true,
-        information: {
-            description: "The type of content that may be used at this endpoint (e.g. XDS Discharge summaries)",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-payload-type"
+            name: "payload-type",
+            active: true,
+            information: {
+                description: "The type of content that may be used at this endpoint (e.g. XDS Discharge summaries)",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Endpoint-payload-type"
+            }
         }
-    }
 
     ],
     operations: [

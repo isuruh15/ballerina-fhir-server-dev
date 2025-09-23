@@ -24,71 +24,70 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig visionprescriptionApiConfig = {
     resourceType: "VisionPrescription",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/VisionPrescription"
-        
+        "http://hl7.org/fhir/StructureDefinition/VisionPrescription"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[VisionPrescription](visionprescription.html): Return prescriptions with this external identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[VisionPrescription](visionprescription.html): Return prescriptions with this external identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "The status of the vision prescription",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/VisionPrescription-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "The status of the vision prescription",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/VisionPrescription-status"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[VisionPrescription](visionprescription.html): The identity of a patient to list dispenses for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[VisionPrescription](visionprescription.html): The identity of a patient to list dispenses for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "encounter",
-        active: true,
-        information: {
-            description: "[VisionPrescription](visionprescription.html): Return prescriptions with this encounter identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
-        }
-    },
+            name: "encounter",
+            active: true,
+            information: {
+                description: "[VisionPrescription](visionprescription.html): Return prescriptions with this encounter identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+            }
+        },
 
         {
-        name: "datewritten",
-        active: true,
-        information: {
-            description: "Return prescriptions written on this date",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/VisionPrescription-datewritten"
-        }
-    },
+            name: "datewritten",
+            active: true,
+            information: {
+                description: "Return prescriptions written on this date",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/VisionPrescription-datewritten"
+            }
+        },
 
         {
-        name: "prescriber",
-        active: true,
-        information: {
-            description: "Who authorized the vision prescription",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/VisionPrescription-prescriber"
+            name: "prescriber",
+            active: true,
+            information: {
+                description: "Who authorized the vision prescription",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/VisionPrescription-prescriber"
+            }
         }
-    }
 
     ],
     operations: [

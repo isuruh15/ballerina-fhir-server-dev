@@ -24,71 +24,70 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig basicApiConfig = {
     resourceType: "Basic",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/Basic"
-        
+        "http://hl7.org/fhir/StructureDefinition/Basic"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "Identifies the focus of this resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Basic-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "Identifies the focus of this resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Basic-patient"
+            }
+        },
 
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "Kind of Resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Basic-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "Kind of Resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Basic-code"
+            }
+        },
 
         {
-        name: "created",
-        active: true,
-        information: {
-            description: "When created",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Basic-created"
-        }
-    },
+            name: "created",
+            active: true,
+            information: {
+                description: "When created",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Basic-created"
+            }
+        },
 
         {
-        name: "subject",
-        active: true,
-        information: {
-            description: "Identifies the focus of this resource",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Basic-subject"
-        }
-    },
+            name: "subject",
+            active: true,
+            information: {
+                description: "Identifies the focus of this resource",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Basic-subject"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "Business identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Basic-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "Business identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Basic-identifier"
+            }
+        },
 
         {
-        name: "author",
-        active: true,
-        information: {
-            description: "Who created",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/Basic-author"
+            name: "author",
+            active: true,
+            information: {
+                description: "Who created",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/Basic-author"
+            }
         }
-    }
 
     ],
     operations: [

@@ -24,113 +24,112 @@ import ballerinax/health.fhir.r4;
 public final r4:ResourceAPIConfig familymemberhistoryApiConfig = {
     resourceType: "FamilyMemberHistory",
     profiles: [
-            "http://hl7.org/fhir/StructureDefinition/familymemberhistory-genetic",
-            
-                "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
-        
+        "http://hl7.org/fhir/StructureDefinition/familymemberhistory-genetic",
+
+        "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
 
     ],
     defaultProfile: (),
     searchParameters: [
         {
-        name: "code",
-        active: true,
-        information: {
-            description: "[FamilyMemberHistory](familymemberhistory.html): A search by a condition code",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
-        }
-    },
+            name: "code",
+            active: true,
+            information: {
+                description: "[FamilyMemberHistory](familymemberhistory.html): A search by a condition code",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-code"
+            }
+        },
 
         {
-        name: "instantiates-uri",
-        active: true,
-        information: {
-            description: "Instantiates external protocol or definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-instantiates-uri"
-        }
-    },
+            name: "instantiates-uri",
+            active: true,
+            information: {
+                description: "Instantiates external protocol or definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-instantiates-uri"
+            }
+        },
 
         {
-        name: "sex",
-        active: true,
-        information: {
-            description: "A search by a sex code of a family member",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-sex"
-        }
-    },
+            name: "sex",
+            active: true,
+            information: {
+                description: "A search by a sex code of a family member",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-sex"
+            }
+        },
 
         {
-        name: "instantiates-canonical",
-        active: true,
-        information: {
-            description: "Instantiates FHIR protocol or definition",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-instantiates-canonical"
-        }
-    },
+            name: "instantiates-canonical",
+            active: true,
+            information: {
+                description: "Instantiates FHIR protocol or definition",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-instantiates-canonical"
+            }
+        },
 
         {
-        name: "relationship",
-        active: true,
-        information: {
-            description: "A search by a relationship type",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-relationship"
-        }
-    },
+            name: "relationship",
+            active: true,
+            information: {
+                description: "A search by a relationship type",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-relationship"
+            }
+        },
 
         {
-        name: "identifier",
-        active: true,
-        information: {
-            description: "[FamilyMemberHistory](familymemberhistory.html): A search by a record identifier",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
-        }
-    },
+            name: "identifier",
+            active: true,
+            information: {
+                description: "[FamilyMemberHistory](familymemberhistory.html): A search by a record identifier",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+            }
+        },
 
         {
-        name: "date",
-        active: true,
-        information: {
-            description: "[FamilyMemberHistory](familymemberhistory.html): When history was recorded or last updated",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
-        }
-    },
+            name: "date",
+            active: true,
+            information: {
+                description: "[FamilyMemberHistory](familymemberhistory.html): When history was recorded or last updated",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-date"
+            }
+        },
 
         {
-        name: "patient",
-        active: true,
-        information: {
-            description: "[FamilyMemberHistory](familymemberhistory.html): The identity of a subject to list family member history items for",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
-        }
-    },
+            name: "patient",
+            active: true,
+            information: {
+                description: "[FamilyMemberHistory](familymemberhistory.html): The identity of a subject to list family member history items for",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/clinical-patient"
+            }
+        },
 
         {
-        name: "status",
-        active: true,
-        information: {
-            description: "partial | completed | entered-in-error | health-unknown",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-status"
-        }
-    },
+            name: "status",
+            active: true,
+            information: {
+                description: "partial | completed | entered-in-error | health-unknown",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-status"
+            }
+        },
 
         {
-        name: "researchStudy",
-        active: true,
-        information: {
-            description: "SearchParameter for Research Study Extension",
-            builtin: false,
-            documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            name: "researchStudy",
+            active: true,
+            information: {
+                description: "SearchParameter for Research Study Extension",
+                builtin: false,
+                documentation: "http://hl7.org/fhir/SearchParameter/workflow-researchStudy"
+            }
         }
-    }
 
     ],
     operations: [
