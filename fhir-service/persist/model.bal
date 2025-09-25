@@ -2,7 +2,7 @@ import ballerina/persist as _;
 import ballerinax/persist.sql;
 import ballerina/time;
 
-public type SEARCH_PARAM_RES_EXPRESSION_TABLE record {|
+public type SEARCH_PARAM_RES_EXPRESSIONS record {|
     @sql:Generated
     readonly int ID;
     string SEARCH_PARAM_NAME;
@@ -11,7 +11,7 @@ public type SEARCH_PARAM_RES_EXPRESSION_TABLE record {|
     string EXPRESSION;
 |};
 
-public type REFERENCE_TABLE record {|
+public type REFERENCES record {|
     @sql:Generated
     readonly int ID;
     string SOURCE_RESOURCE_TYPE;
@@ -19,15 +19,14 @@ public type REFERENCE_TABLE record {|
     string SOURCE_EXPRESSION;
     string TARGET_RESOURCE_TYPE;
     string TARGET_RESOURCE_ID;
-    string TARGET_EXPRESSION;
+    string DISPLAY_VALUE;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
     time:Civil LAST_UPDATED;
 |};
 
 public type TestScriptTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string TESTSCRIPTTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -63,8 +62,7 @@ public type TestScriptTable record {|
 |};
 
 public type TestReportTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string TESTREPORTTABLE_ID;
     time:Date? ISSUED;
     @sql:Varchar {length: 512}
 	string? PARTICIPANT;
@@ -82,8 +80,7 @@ public type TestReportTable record {|
 |};
 
 public type RelatedPersonTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string RELATEDPERSONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? ADDRESS_COUNTRY;
     @sql:Varchar {length: 512}
@@ -123,8 +120,7 @@ public type RelatedPersonTable record {|
 |};
 
 public type EvidenceVariableTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string EVIDENCEVARIABLETABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -161,8 +157,7 @@ public type EvidenceVariableTable record {|
 |};
 
 public type ValueSetTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string VALUESETTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -202,8 +197,7 @@ public type ValueSetTable record {|
 |};
 
 public type DocumentManifestTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string DOCUMENTMANIFESTTABLE_ID;
     time:Date? CREATED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -225,8 +219,7 @@ public type DocumentManifestTable record {|
 |};
 
 public type ImmunizationRecommendationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string IMMUNIZATIONRECOMMENDATIONTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -244,8 +237,7 @@ public type ImmunizationRecommendationTable record {|
 |};
 
 public type DeviceMetricTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string DEVICEMETRICTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CATEGORY;
     @sql:Varchar {length: 2048}
@@ -260,8 +252,7 @@ public type DeviceMetricTable record {|
 |};
 
 public type LocationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string LOCATIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? ADDRESS_COUNTRY;
     @sql:Varchar {length: 512}
@@ -292,8 +283,7 @@ public type LocationTable record {|
 |};
 
 public type ExplanationOfBenefitTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string EXPLANATIONOFBENEFITTABLE_ID;
     time:Date? CREATED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -309,8 +299,7 @@ public type ExplanationOfBenefitTable record {|
 |};
 
 public type FlagTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string FLAGTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? IDENTIFIER;
@@ -322,8 +311,7 @@ public type FlagTable record {|
 |};
 
 public type MedicationStatementTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICATIONSTATEMENTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     @sql:Varchar {length: 2048}
@@ -341,8 +329,7 @@ public type MedicationStatementTable record {|
 |};
 
 public type InsurancePlanTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string INSURANCEPLANTABLE_ID;
     @sql:Varchar {length: 512}
 	string? ADDRESS_COUNTRY;
     @sql:Varchar {length: 512}
@@ -373,8 +360,7 @@ public type InsurancePlanTable record {|
 |};
 
 public type MedicinalProductContraindicationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -383,8 +369,7 @@ public type MedicinalProductContraindicationTable record {|
 |};
 
 public type ClaimResponseTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CLAIMRESPONSETABLE_ID;
     time:Date? CREATED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -405,8 +390,7 @@ public type ClaimResponseTable record {|
 |};
 
 public type MedicinalProductAuthorizationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICINALPRODUCTAUTHORIZATIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     @sql:Varchar {length: 2048}
@@ -421,8 +405,7 @@ public type MedicinalProductAuthorizationTable record {|
 |};
 
 public type ImagingStudyTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string IMAGINGSTUDYTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     @sql:Varchar {length: 2048}
@@ -448,8 +431,7 @@ public type ImagingStudyTable record {|
 |};
 
 public type PractitionerRoleTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string PRACTITIONERROLETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? ROLE;
     time:Date? DATE;
@@ -473,8 +455,7 @@ public type PractitionerRoleTable record {|
 |};
 
 public type GroupTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string GROUPTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CHARACTERISTIC;
     @sql:Varchar {length: 2048}
@@ -497,8 +478,7 @@ public type GroupTable record {|
 |};
 
 public type PersonTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string PERSONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? ADDRESS_COUNTRY;
     @sql:Varchar {length: 512}
@@ -534,8 +514,7 @@ public type PersonTable record {|
 |};
 
 public type PractitionerTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string PRACTITIONERTABLE_ID;
     @sql:Varchar {length: 512}
 	string? ADDRESS_COUNTRY;
     @sql:Varchar {length: 512}
@@ -578,8 +557,7 @@ public type PractitionerTable record {|
 |};
 
 public type ActivityDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ACTIVITYDEFINITIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -616,8 +594,7 @@ public type ActivityDefinitionTable record {|
 |};
 
 public type EvidenceTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string EVIDENCETABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -654,8 +631,7 @@ public type EvidenceTable record {|
 |};
 
 public type DeviceTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string DEVICETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     @sql:Varchar {length: 512}
@@ -682,8 +658,7 @@ public type DeviceTable record {|
 |};
 
 public type FamilyMemberHistoryTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string FAMILYMEMBERHISTORYTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? CODE;
@@ -705,8 +680,7 @@ public type FamilyMemberHistoryTable record {|
 |};
 
 public type AdverseEventTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ADVERSEEVENTTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? CATEGORY;
@@ -726,8 +700,7 @@ public type AdverseEventTable record {|
 |};
 
 public type SupplyRequestTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SUPPLYREQUESTTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -743,8 +716,7 @@ public type SupplyRequestTable record {|
 |};
 
 public type ExampleScenarioTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string EXAMPLESCENARIOTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
@@ -774,8 +746,7 @@ public type ExampleScenarioTable record {|
 |};
 
 public type InvoiceTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string INVOICETABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -797,8 +768,7 @@ public type InvoiceTable record {|
 |};
 
 public type QuestionnaireResponseTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string QUESTIONNAIRERESPONSETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     time:Date? AUTHORED;
@@ -812,8 +782,7 @@ public type QuestionnaireResponseTable record {|
 |};
 
 public type ObservationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string OBSERVATIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? COMPONENT_CODE;
     @sql:Varchar {length: 2048}
@@ -858,8 +827,7 @@ public type ObservationTable record {|
 |};
 
 public type EffectEvidenceSynthesisTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string EFFECTEVIDENCESYNTHESISTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -894,8 +862,7 @@ public type EffectEvidenceSynthesisTable record {|
 |};
 
 public type OperationDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string OPERATIONDEFINITIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? SYSTEM;
     @sql:Varchar {length: 512}
@@ -937,8 +904,7 @@ public type OperationDefinitionTable record {|
 |};
 
 public type MeasureReportTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEASUREREPORTTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -953,8 +919,7 @@ public type MeasureReportTable record {|
 |};
 
 public type SupplyDeliveryTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SUPPLYDELIVERYTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     @sql:Varchar {length: 2048}
@@ -967,8 +932,7 @@ public type SupplyDeliveryTable record {|
 |};
 
 public type ServiceRequestTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SERVICEREQUESTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? REQUISITION;
     @sql:Varchar {length: 2048}
@@ -999,8 +963,7 @@ public type ServiceRequestTable record {|
 |};
 
 public type BasicTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string BASICTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     time:Date? CREATED;
@@ -1014,8 +977,7 @@ public type BasicTable record {|
 |};
 
 public type SubscriptionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SUBSCRIPTIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? CRITERIA;
     @sql:Varchar {length: 2048}
@@ -1036,8 +998,7 @@ public type SubscriptionTable record {|
 |};
 
 public type EnrollmentResponseTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ENROLLMENTRESPONSETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     @sql:Varchar {length: 2048}
@@ -1050,8 +1011,7 @@ public type EnrollmentResponseTable record {|
 |};
 
 public type DeviceRequestTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string DEVICEREQUESTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     time:Date? EVENT_DATE;
@@ -1074,8 +1034,7 @@ public type DeviceRequestTable record {|
 |};
 
 public type AppointmentTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string APPOINTMENTTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? SERVICE_CATEGORY;
@@ -1101,8 +1060,7 @@ public type AppointmentTable record {|
 |};
 
 public type NamingSystemTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string NAMINGSYSTEMTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 512}
@@ -1143,8 +1101,7 @@ public type NamingSystemTable record {|
 |};
 
 public type StructureDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string STRUCTUREDEFINITIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? PATH;
     @sql:Varchar {length: 2048}
@@ -1196,8 +1153,7 @@ public type StructureDefinitionTable record {|
 |};
 
 public type ClinicalImpressionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CLINICALIMPRESSIONTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -1213,8 +1169,7 @@ public type ClinicalImpressionTable record {|
 |};
 
 public type CommunicationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string COMMUNICATIONTABLE_ID;
     time:Date? RECEIVED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -1235,8 +1190,7 @@ public type CommunicationTable record {|
 |};
 
 public type OrganizationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ORGANIZATIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? ADDRESS_COUNTRY;
     @sql:Varchar {length: 512}
@@ -1267,8 +1221,7 @@ public type OrganizationTable record {|
 |};
 
 public type CoverageEligibilityResponseTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string COVERAGEELIGIBILITYRESPONSETABLE_ID;
     time:Date? CREATED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -1286,8 +1239,7 @@ public type CoverageEligibilityResponseTable record {|
 |};
 
 public type ResearchStudyTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string RESEARCHSTUDYTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? LOCATION;
     time:Date? DATE;
@@ -1311,8 +1263,7 @@ public type ResearchStudyTable record {|
 |};
 
 public type BundleTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string BUNDLETABLE_ID;
     time:Date? TIMESTAMP;
     @sql:Varchar {length: 2048}
 	string? IDENTIFIER;
@@ -1326,8 +1277,7 @@ public type BundleTable record {|
 |};
 
 public type EncounterTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ENCOUNTERTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? PARTICIPANT_TYPE;
     time:Date? DATE;
@@ -1354,8 +1304,7 @@ public type EncounterTable record {|
 |};
 
 public type RiskAssessmentTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string RISKASSESSMENTTABLE_ID;
     time:Date? DATE;
     int? PROBABILITY;
     @sql:Varchar {length: 2048}
@@ -1372,8 +1321,7 @@ public type RiskAssessmentTable record {|
 |};
 
 public type ListTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string LISTTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 512}
 	string? NOTES;
@@ -1395,8 +1343,7 @@ public type ListTable record {|
 |};
 
 public type OrganizationAffiliationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ORGANIZATIONAFFILIATIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? ROLE;
     time:Date? DATE;
@@ -1420,8 +1367,7 @@ public type OrganizationAffiliationTable record {|
 |};
 
 public type ChargeItemTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CHARGEITEMTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     int? FACTOR_OVERRIDE;
@@ -1443,8 +1389,7 @@ public type ChargeItemTable record {|
 |};
 
 public type MedicationKnowledgeTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICATIONKNOWLEDGETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     @sql:Varchar {length: 2048}
@@ -1473,8 +1418,7 @@ public type MedicationKnowledgeTable record {|
 |};
 
 public type PlanDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string PLANDEFINITIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -1513,8 +1457,7 @@ public type PlanDefinitionTable record {|
 |};
 
 public type CarePlanTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CAREPLANTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -1537,8 +1480,7 @@ public type CarePlanTable record {|
 |};
 
 public type VisionPrescriptionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string VISIONPRESCRIPTIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     @sql:Varchar {length: 2048}
@@ -1552,8 +1494,7 @@ public type VisionPrescriptionTable record {|
 |};
 
 public type EpisodeOfCareTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string EPISODEOFCARETABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -1569,8 +1510,7 @@ public type EpisodeOfCareTable record {|
 |};
 
 public type CareTeamTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CARETEAMTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -1586,8 +1526,7 @@ public type CareTeamTable record {|
 |};
 
 public type MedicationAdministrationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICATIONADMINISTRATIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     @sql:Varchar {length: 2048}
@@ -1607,8 +1546,7 @@ public type MedicationAdministrationTable record {|
 |};
 
 public type ConsentTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CONSENTTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? SECURITY_LABEL;
@@ -1633,8 +1571,7 @@ public type ConsentTable record {|
 |};
 
 public type DetectedIssueTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string DETECTEDISSUETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     time:Date? IDENTIFIED;
@@ -1648,8 +1585,7 @@ public type DetectedIssueTable record {|
 |};
 
 public type SubstanceSpecificationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SUBSTANCESPECIFICATIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     int VERSION_ID;
@@ -1660,8 +1596,7 @@ public type SubstanceSpecificationTable record {|
 |};
 
 public type AllergyIntoleranceTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ALLERGYINTOLERANCETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? ROUTE;
     time:Date? LAST_DATE;
@@ -1693,8 +1628,7 @@ public type AllergyIntoleranceTable record {|
 |};
 
 public type MedicinalProductIndicationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICINALPRODUCTINDICATIONTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -1703,8 +1637,7 @@ public type MedicinalProductIndicationTable record {|
 |};
 
 public type MedicinalProductPharmaceuticalTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICINALPRODUCTPHARMACEUTICALTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? ROUTE;
     @sql:Varchar {length: 2048}
@@ -1719,8 +1652,7 @@ public type MedicinalProductPharmaceuticalTable record {|
 |};
 
 public type SlotTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SLOTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? SERVICE_CATEGORY;
     @sql:Varchar {length: 2048}
@@ -1742,8 +1674,7 @@ public type SlotTable record {|
 |};
 
 public type VerificationResultTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string VERIFICATIONRESULTTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -1752,8 +1683,7 @@ public type VerificationResultTable record {|
 |};
 
 public type SpecimenTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SPECIMENTABLE_ID;
     time:Date? COLLECTED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -1777,8 +1707,7 @@ public type SpecimenTable record {|
 |};
 
 public type ResearchSubjectTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string RESEARCHSUBJECTTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -1792,8 +1721,7 @@ public type ResearchSubjectTable record {|
 |};
 
 public type MedicationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICATIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     @sql:Varchar {length: 2048}
@@ -1815,8 +1743,7 @@ public type MedicationTable record {|
 |};
 
 public type ResearchDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string RESEARCHDEFINITIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -1853,8 +1780,7 @@ public type ResearchDefinitionTable record {|
 |};
 
 public type HealthcareServiceTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string HEALTHCARESERVICETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? SERVICE_CATEGORY;
     @sql:Varchar {length: 2048}
@@ -1879,8 +1805,7 @@ public type HealthcareServiceTable record {|
 |};
 
 public type PaymentNoticeTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string PAYMENTNOTICETABLE_ID;
     time:Date? CREATED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -1896,8 +1821,7 @@ public type PaymentNoticeTable record {|
 |};
 
 public type ProvenanceTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string PROVENANCETABLE_ID;
     time:Date? RECORDED;
     time:Date? WHEN;
     @sql:Varchar {length: 2048}
@@ -1914,8 +1838,7 @@ public type ProvenanceTable record {|
 |};
 
 public type GraphDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string GRAPHDEFINITIONTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
@@ -1947,8 +1870,7 @@ public type GraphDefinitionTable record {|
 |};
 
 public type MediaTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDIATABLE_ID;
     @sql:Varchar {length: 2048}
 	string? SITE;
     time:Date? CREATED;
@@ -1970,8 +1892,7 @@ public type MediaTable record {|
 |};
 
 public type BodyStructureTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string BODYSTRUCTURETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? LOCATION;
     @sql:Varchar {length: 2048}
@@ -1986,8 +1907,7 @@ public type BodyStructureTable record {|
 |};
 
 public type DiagnosticReportTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string DIAGNOSTICREPORTTABLE_ID;
     time:Date? DATE;
     time:Date? ISSUED;
     @sql:Varchar {length: 2048}
@@ -2008,8 +1928,7 @@ public type DiagnosticReportTable record {|
 |};
 
 public type GoalTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string GOALTABLE_ID;
     time:Date? TARGET_DATE;
     @sql:Varchar {length: 2048}
 	string? ACHIEVEMENT_STATUS;
@@ -2028,8 +1947,7 @@ public type GoalTable record {|
 |};
 
 public type CapabilityStatementTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CAPABILITYSTATEMENTTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -2073,8 +1991,7 @@ public type CapabilityStatementTable record {|
 |};
 
 public type DeviceUseStatementTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string DEVICEUSESTATEMENTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? IDENTIFIER;
     int VERSION_ID;
@@ -2085,8 +2002,7 @@ public type DeviceUseStatementTable record {|
 |};
 
 public type ScheduleTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SCHEDULETABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? SERVICE_CATEGORY;
@@ -2106,8 +2022,7 @@ public type ScheduleTable record {|
 |};
 
 public type MedicinalProductPackagedTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICINALPRODUCTPACKAGEDTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? IDENTIFIER;
     int VERSION_ID;
@@ -2118,8 +2033,7 @@ public type MedicinalProductPackagedTable record {|
 |};
 
 public type ProcedureTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string PROCEDURETABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? CODE;
@@ -2141,8 +2055,7 @@ public type ProcedureTable record {|
 |};
 
 public type LibraryTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string LIBRARYTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -2183,8 +2096,7 @@ public type LibraryTable record {|
 |};
 
 public type CodeSystemTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CODESYSTEMTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? LANGUAGE;
     @sql:Varchar {length: 512}
@@ -2226,8 +2138,7 @@ public type CodeSystemTable record {|
 |};
 
 public type CommunicationRequestTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string COMMUNICATIONREQUESTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     @sql:Varchar {length: 2048}
@@ -2250,8 +2161,7 @@ public type CommunicationRequestTable record {|
 |};
 
 public type DocumentReferenceTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string DOCUMENTREFERENCETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? LANGUAGE;
     @sql:Varchar {length: 512}
@@ -2290,8 +2200,7 @@ public type DocumentReferenceTable record {|
 |};
 
 public type RequestGroupTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string REQUESTGROUPTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     @sql:Varchar {length: 2048}
@@ -2315,8 +2224,7 @@ public type RequestGroupTable record {|
 |};
 
 public type ClaimTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CLAIMTABLE_ID;
     time:Date? CREATED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -2334,8 +2242,7 @@ public type ClaimTable record {|
 |};
 
 public type MessageDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MESSAGEDEFINITIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -2375,8 +2282,7 @@ public type MessageDefinitionTable record {|
 |};
 
 public type RiskEvidenceSynthesisTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string RISKEVIDENCESYNTHESISTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -2411,8 +2317,7 @@ public type RiskEvidenceSynthesisTable record {|
 |};
 
 public type TaskTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string TASKTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     @sql:Varchar {length: 2048}
@@ -2440,8 +2345,7 @@ public type TaskTable record {|
 |};
 
 public type ImplementationGuideTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string IMPLEMENTATIONGUIDETABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -2475,8 +2379,7 @@ public type ImplementationGuideTable record {|
 |};
 
 public type StructureMapTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string STRUCTUREMAPTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -2510,8 +2413,7 @@ public type StructureMapTable record {|
 |};
 
 public type MedicinalProductUndesirableEffectTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -2520,8 +2422,7 @@ public type MedicinalProductUndesirableEffectTable record {|
 |};
 
 public type CompartmentDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string COMPARTMENTDEFINITIONTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
@@ -2553,8 +2454,7 @@ public type CompartmentDefinitionTable record {|
 |};
 
 public type EndpointTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ENDPOINTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CONNECTION_TYPE;
     @sql:Varchar {length: 2048}
@@ -2573,8 +2473,7 @@ public type EndpointTable record {|
 |};
 
 public type TerminologyCapabilitiesTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string TERMINOLOGYCAPABILITIESTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
@@ -2606,8 +2505,7 @@ public type TerminologyCapabilitiesTable record {|
 |};
 
 public type ConditionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CONDITIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CLINICAL_STATUS;
     @sql:Varchar {length: 2048}
@@ -2645,8 +2543,7 @@ public type ConditionTable record {|
 |};
 
 public type CompositionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string COMPOSITIONTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -2675,8 +2572,7 @@ public type CompositionTable record {|
 |};
 
 public type ContractTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CONTRACTTABLE_ID;
     time:Date? ISSUED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -2694,8 +2590,7 @@ public type ContractTable record {|
 |};
 
 public type ImmunizationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string IMMUNIZATIONTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? VACCINE_CODE;
@@ -2722,8 +2617,7 @@ public type ImmunizationTable record {|
 |};
 
 public type MedicationDispenseTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICATIONDISPENSETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     @sql:Varchar {length: 2048}
@@ -2742,8 +2636,7 @@ public type MedicationDispenseTable record {|
 |};
 
 public type MolecularSequenceTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MOLECULARSEQUENCETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CHROMOSOME;
     int? VARIANT_START;
@@ -2764,8 +2657,7 @@ public type MolecularSequenceTable record {|
 |};
 
 public type SearchParameterTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SEARCHPARAMETERTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? TARGET;
     @sql:Varchar {length: 512}
@@ -2803,8 +2695,7 @@ public type SearchParameterTable record {|
 |};
 
 public type MedicationRequestTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICATIONREQUESTTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? CODE;
@@ -2829,8 +2720,7 @@ public type MedicationRequestTable record {|
 |};
 
 public type EnrollmentRequestTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ENROLLMENTREQUESTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     @sql:Varchar {length: 2048}
@@ -2843,8 +2733,7 @@ public type EnrollmentRequestTable record {|
 |};
 
 public type SpecimenDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SPECIMENDEFINITIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CONTAINER;
     @sql:Varchar {length: 2048}
@@ -2859,8 +2748,7 @@ public type SpecimenDefinitionTable record {|
 |};
 
 public type EventDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string EVENTDEFINITIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -2897,8 +2785,7 @@ public type EventDefinitionTable record {|
 |};
 
 public type ImmunizationEvaluationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string IMMUNIZATIONEVALUATIONTABLE_ID;
     time:Date? DATE;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -2916,8 +2803,7 @@ public type ImmunizationEvaluationTable record {|
 |};
 
 public type PaymentReconciliationTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string PAYMENTRECONCILIATIONTABLE_ID;
     time:Date? CREATED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -2935,8 +2821,7 @@ public type PaymentReconciliationTable record {|
 |};
 
 public type MeasureTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEASURETABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -2973,8 +2858,7 @@ public type MeasureTable record {|
 |};
 
 public type ConceptMapTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CONCEPTMAPTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -3020,8 +2904,7 @@ public type ConceptMapTable record {|
 |};
 
 public type ResearchElementDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string RESEARCHELEMENTDEFINITIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -3058,8 +2941,7 @@ public type ResearchElementDefinitionTable record {|
 |};
 
 public type GuidanceResponseTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string GUIDANCERESPONSETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? REQUEST;
     @sql:Varchar {length: 2048}
@@ -3072,8 +2954,7 @@ public type GuidanceResponseTable record {|
 |};
 
 public type LinkageTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string LINKAGETABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -3082,8 +2963,7 @@ public type LinkageTable record {|
 |};
 
 public type MedicinalProductTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICINALPRODUCTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? NAME_LANGUAGE;
     @sql:Varchar {length: 2048}
@@ -3098,8 +2978,7 @@ public type MedicinalProductTable record {|
 |};
 
 public type DeviceDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string DEVICEDEFINITIONTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? IDENTIFIER;
     @sql:Varchar {length: 2048}
@@ -3112,8 +2991,7 @@ public type DeviceDefinitionTable record {|
 |};
 
 public type CoverageEligibilityRequestTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string COVERAGEELIGIBILITYREQUESTTABLE_ID;
     time:Date? CREATED;
     @sql:Varchar {length: 2048}
 	string? STATUS;
@@ -3127,8 +3005,7 @@ public type CoverageEligibilityRequestTable record {|
 |};
 
 public type PatientTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string PATIENTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? LANGUAGE;
     @sql:Varchar {length: 512}
@@ -3175,8 +3052,7 @@ public type PatientTable record {|
 |};
 
 public type CoverageTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string COVERAGETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     @sql:Varchar {length: 512}
@@ -3197,8 +3073,7 @@ public type CoverageTable record {|
 |};
 
 public type SubstanceTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string SUBSTANCETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CONTAINER_IDENTIFIER;
     @sql:Varchar {length: 2048}
@@ -3220,8 +3095,7 @@ public type SubstanceTable record {|
 |};
 
 public type ChargeItemDefinitionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string CHARGEITEMDEFINITIONTABLE_ID;
     @sql:Varchar {length: 512}
 	string? PUBLISHER;
     @sql:Varchar {length: 2048}
@@ -3254,8 +3128,7 @@ public type ChargeItemDefinitionTable record {|
 |};
 
 public type MedicinalProductInteractionTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MEDICINALPRODUCTINTERACTIONTABLE_ID;
     int VERSION_ID;
     time:Civil CREATED_AT;
     time:Civil UPDATED_AT;
@@ -3264,8 +3137,7 @@ public type MedicinalProductInteractionTable record {|
 |};
 
 public type AccountTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string ACCOUNTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? STATUS;
     time:Date? PERIOD;
@@ -3283,8 +3155,7 @@ public type AccountTable record {|
 |};
 
 public type MessageHeaderTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string MESSAGEHEADERTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? CODE;
     @sql:Varchar {length: 512}
@@ -3307,8 +3178,7 @@ public type MessageHeaderTable record {|
 |};
 
 public type AuditEventTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string AUDITEVENTTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? SUBTYPE;
     @sql:Varchar {length: 2048}
@@ -3344,8 +3214,7 @@ public type AuditEventTable record {|
 |};
 
 public type NutritionOrderTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string NUTRITIONORDERTABLE_ID;
     @sql:Varchar {length: 2048}
 	string? SUPPLEMENT;
     @sql:Varchar {length: 2048}
@@ -3369,8 +3238,7 @@ public type NutritionOrderTable record {|
 |};
 
 public type QuestionnaireTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string QUESTIONNAIRETABLE_ID;
     @sql:Varchar {length: 512}
 	string? DEFINITION;
     @sql:Varchar {length: 512}
@@ -3411,8 +3279,7 @@ public type QuestionnaireTable record {|
 |};
 
 public type AppointmentResponseTable record {|
-    @sql:Generated
-    readonly int ID;
+    readonly string APPOINTMENTRESPONSETABLE_ID;
     @sql:Varchar {length: 2048}
 	string? PART_STATUS;
     @sql:Varchar {length: 2048}
