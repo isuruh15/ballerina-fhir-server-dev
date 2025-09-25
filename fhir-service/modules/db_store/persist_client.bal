@@ -176,7 +176,7 @@ public isolated client class Client {
                 SOURCE_EXPRESSION: {columnName: "SOURCE_EXPRESSION"},
                 TARGET_RESOURCE_TYPE: {columnName: "TARGET_RESOURCE_TYPE"},
                 TARGET_RESOURCE_ID: {columnName: "TARGET_RESOURCE_ID"},
-                TARGET_EXPRESSION: {columnName: "TARGET_EXPRESSION"},
+                DISPLAY_VALUE: {columnName: "DISPLAY_VALUE"},
                 CREATED_AT: {columnName: "CREATED_AT"},
                 UPDATED_AT: {columnName: "UPDATED_AT"},
                 LAST_UPDATED: {columnName: "LAST_UPDATED"}
@@ -187,7 +187,6 @@ public isolated client class Client {
             entityName: "TestScriptTable",
             tableName: "TestScriptTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 TESTSCRIPTTABLE_ID: {columnName: "TESTSCRIPTTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -209,13 +208,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["TESTSCRIPTTABLE_ID"]
         },
         [TEST_REPORT_TABLE]: {
             entityName: "TestReportTable",
             tableName: "TestReportTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 TESTREPORTTABLE_ID: {columnName: "TESTREPORTTABLE_ID"},
                 ISSUED: {columnName: "ISSUED"},
                 PARTICIPANT: {columnName: "PARTICIPANT"},
@@ -228,13 +226,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["TESTREPORTTABLE_ID"]
         },
         [RELATED_PERSON_TABLE]: {
             entityName: "RelatedPersonTable",
             tableName: "RelatedPersonTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 RELATEDPERSONTABLE_ID: {columnName: "RELATEDPERSONTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
@@ -258,13 +255,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["RELATEDPERSONTABLE_ID"]
         },
         [EVIDENCE_VARIABLE_TABLE]: {
             entityName: "EvidenceVariableTable",
             tableName: "EvidenceVariableTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 EVIDENCEVARIABLETABLE_ID: {columnName: "EVIDENCEVARIABLETABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -287,13 +283,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["EVIDENCEVARIABLETABLE_ID"]
         },
         [VALUE_SET_TABLE]: {
             entityName: "ValueSetTable",
             tableName: "ValueSetTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 VALUESETTABLE_ID: {columnName: "VALUESETTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -317,13 +312,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["VALUESETTABLE_ID"]
         },
         [DOCUMENT_MANIFEST_TABLE]: {
             entityName: "DocumentManifestTable",
             tableName: "DocumentManifestTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 DOCUMENTMANIFESTTABLE_ID: {columnName: "DOCUMENTMANIFESTTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
@@ -338,13 +332,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["DOCUMENTMANIFESTTABLE_ID"]
         },
         [IMMUNIZATION_RECOMMENDATION_TABLE]: {
             entityName: "ImmunizationRecommendationTable",
             tableName: "ImmunizationRecommendationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 IMMUNIZATIONRECOMMENDATIONTABLE_ID: {columnName: "IMMUNIZATIONRECOMMENDATIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -357,13 +350,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["IMMUNIZATIONRECOMMENDATIONTABLE_ID"]
         },
         [DEVICE_METRIC_TABLE]: {
             entityName: "DeviceMetricTable",
             tableName: "DeviceMetricTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 DEVICEMETRICTABLE_ID: {columnName: "DEVICEMETRICTABLE_ID"},
                 CATEGORY: {columnName: "CATEGORY"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -374,13 +366,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["DEVICEMETRICTABLE_ID"]
         },
         [LOCATION_TABLE]: {
             entityName: "LocationTable",
             tableName: "LocationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 LOCATIONTABLE_ID: {columnName: "LOCATIONTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
@@ -399,13 +390,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["LOCATIONTABLE_ID"]
         },
         [EXPLANATION_OF_BENEFIT_TABLE]: {
             entityName: "ExplanationOfBenefitTable",
             tableName: "ExplanationOfBenefitTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 EXPLANATIONOFBENEFITTABLE_ID: {columnName: "EXPLANATIONOFBENEFITTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
@@ -417,13 +407,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["EXPLANATIONOFBENEFITTABLE_ID"]
         },
         [FLAG_TABLE]: {
             entityName: "FlagTable",
             tableName: "FlagTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 FLAGTABLE_ID: {columnName: "FLAGTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -433,13 +422,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["FLAGTABLE_ID"]
         },
         [MEDICATION_STATEMENT_TABLE]: {
             entityName: "MedicationStatementTable",
             tableName: "MedicationStatementTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICATIONSTATEMENTTABLE_ID: {columnName: "MEDICATIONSTATEMENTTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -452,13 +440,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICATIONSTATEMENTTABLE_ID"]
         },
         [INSURANCE_PLAN_TABLE]: {
             entityName: "InsurancePlanTable",
             tableName: "InsurancePlanTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 INSURANCEPLANTABLE_ID: {columnName: "INSURANCEPLANTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
@@ -477,13 +464,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["INSURANCEPLANTABLE_ID"]
         },
         [MEDICINAL_PRODUCT_CONTRAINDICATION_TABLE]: {
             entityName: "MedicinalProductContraindicationTable",
             tableName: "MedicinalProductContraindicationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID: {columnName: "MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
@@ -491,13 +477,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID"]
         },
         [CLAIM_RESPONSE_TABLE]: {
             entityName: "ClaimResponseTable",
             tableName: "ClaimResponseTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CLAIMRESPONSETABLE_ID: {columnName: "CLAIMRESPONSETABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
@@ -512,13 +497,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CLAIMRESPONSETABLE_ID"]
         },
         [MEDICINAL_PRODUCT_AUTHORIZATION_TABLE]: {
             entityName: "MedicinalProductAuthorizationTable",
             tableName: "MedicinalProductAuthorizationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICINALPRODUCTAUTHORIZATIONTABLE_ID: {columnName: "MEDICINALPRODUCTAUTHORIZATIONTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 COUNTRY: {columnName: "COUNTRY"},
@@ -529,13 +513,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICINALPRODUCTAUTHORIZATIONTABLE_ID"]
         },
         [IMAGING_STUDY_TABLE]: {
             entityName: "ImagingStudyTable",
             tableName: "ImagingStudyTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 IMAGINGSTUDYTABLE_ID: {columnName: "IMAGINGSTUDYTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 DICOM_CLASS: {columnName: "DICOM_CLASS"},
@@ -552,13 +535,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["IMAGINGSTUDYTABLE_ID"]
         },
         [PRACTITIONER_ROLE_TABLE]: {
             entityName: "PractitionerRoleTable",
             tableName: "PractitionerRoleTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 PRACTITIONERROLETABLE_ID: {columnName: "PRACTITIONERROLETABLE_ID"},
                 ROLE: {columnName: "ROLE"},
                 DATE: {columnName: "DATE"},
@@ -574,13 +556,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["PRACTITIONERROLETABLE_ID"]
         },
         [GROUP_TABLE]: {
             entityName: "GroupTable",
             tableName: "GroupTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 GROUPTABLE_ID: {columnName: "GROUPTABLE_ID"},
                 CHARACTERISTIC: {columnName: "CHARACTERISTIC"},
                 CODE: {columnName: "CODE"},
@@ -595,13 +576,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["GROUPTABLE_ID"]
         },
         [PERSON_TABLE]: {
             entityName: "PersonTable",
             tableName: "PersonTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 PERSONTABLE_ID: {columnName: "PERSONTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
@@ -623,13 +603,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["PERSONTABLE_ID"]
         },
         [PRACTITIONER_TABLE]: {
             entityName: "PractitionerTable",
             tableName: "PractitionerTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 PRACTITIONERTABLE_ID: {columnName: "PRACTITIONERTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
@@ -654,13 +633,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["PRACTITIONERTABLE_ID"]
         },
         [ACTIVITY_DEFINITION_TABLE]: {
             entityName: "ActivityDefinitionTable",
             tableName: "ActivityDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ACTIVITYDEFINITIONTABLE_ID: {columnName: "ACTIVITYDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -683,13 +661,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ACTIVITYDEFINITIONTABLE_ID"]
         },
         [EVIDENCE_TABLE]: {
             entityName: "EvidenceTable",
             tableName: "EvidenceTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 EVIDENCETABLE_ID: {columnName: "EVIDENCETABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -712,13 +689,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["EVIDENCETABLE_ID"]
         },
         [DEVICE_TABLE]: {
             entityName: "DeviceTable",
             tableName: "DeviceTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 DEVICETABLE_ID: {columnName: "DEVICETABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 UDI_DI: {columnName: "UDI_DI"},
@@ -735,13 +711,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["DEVICETABLE_ID"]
         },
         [FAMILY_MEMBER_HISTORY_TABLE]: {
             entityName: "FamilyMemberHistoryTable",
             tableName: "FamilyMemberHistoryTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 FAMILYMEMBERHISTORYTABLE_ID: {columnName: "FAMILYMEMBERHISTORYTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 CODE: {columnName: "CODE"},
@@ -756,13 +731,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["FAMILYMEMBERHISTORYTABLE_ID"]
         },
         [ADVERSE_EVENT_TABLE]: {
             entityName: "AdverseEventTable",
             tableName: "AdverseEventTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ADVERSEEVENTTABLE_ID: {columnName: "ADVERSEEVENTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 CATEGORY: {columnName: "CATEGORY"},
@@ -776,13 +750,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ADVERSEEVENTTABLE_ID"]
         },
         [SUPPLY_REQUEST_TABLE]: {
             entityName: "SupplyRequestTable",
             tableName: "SupplyRequestTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SUPPLYREQUESTTABLE_ID: {columnName: "SUPPLYREQUESTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -794,13 +767,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SUPPLYREQUESTTABLE_ID"]
         },
         [EXAMPLE_SCENARIO_TABLE]: {
             entityName: "ExampleScenarioTable",
             tableName: "ExampleScenarioTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 EXAMPLESCENARIOTABLE_ID: {columnName: "EXAMPLESCENARIOTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PUBLISHER: {columnName: "PUBLISHER"},
@@ -819,13 +791,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["EXAMPLESCENARIOTABLE_ID"]
         },
         [INVOICE_TABLE]: {
             entityName: "InvoiceTable",
             tableName: "InvoiceTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 INVOICETABLE_ID: {columnName: "INVOICETABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -840,13 +811,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["INVOICETABLE_ID"]
         },
         [QUESTIONNAIRE_RESPONSE_TABLE]: {
             entityName: "QuestionnaireResponseTable",
             tableName: "QuestionnaireResponseTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 QUESTIONNAIRERESPONSETABLE_ID: {columnName: "QUESTIONNAIRERESPONSETABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 AUTHORED: {columnName: "AUTHORED"},
@@ -857,13 +827,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["QUESTIONNAIRERESPONSETABLE_ID"]
         },
         [OBSERVATION_TABLE]: {
             entityName: "ObservationTable",
             tableName: "ObservationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 OBSERVATIONTABLE_ID: {columnName: "OBSERVATIONTABLE_ID"},
                 COMPONENT_CODE: {columnName: "COMPONENT_CODE"},
                 VALUE_QUANTITY: {columnName: "VALUE_QUANTITY"},
@@ -890,13 +859,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["OBSERVATIONTABLE_ID"]
         },
         [EFFECT_EVIDENCE_SYNTHESIS_TABLE]: {
             entityName: "EffectEvidenceSynthesisTable",
             tableName: "EffectEvidenceSynthesisTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 EFFECTEVIDENCESYNTHESISTABLE_ID: {columnName: "EFFECTEVIDENCESYNTHESISTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -918,13 +886,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["EFFECTEVIDENCESYNTHESISTABLE_ID"]
         },
         [OPERATION_DEFINITION_TABLE]: {
             entityName: "OperationDefinitionTable",
             tableName: "OperationDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 OPERATIONDEFINITIONTABLE_ID: {columnName: "OPERATIONDEFINITIONTABLE_ID"},
                 SYSTEM: {columnName: "SYSTEM"},
                 PUBLISHER: {columnName: "PUBLISHER"},
@@ -949,13 +916,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["OPERATIONDEFINITIONTABLE_ID"]
         },
         [MEASURE_REPORT_TABLE]: {
             entityName: "MeasureReportTable",
             tableName: "MeasureReportTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEASUREREPORTTABLE_ID: {columnName: "MEASUREREPORTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -967,13 +933,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEASUREREPORTTABLE_ID"]
         },
         [SUPPLY_DELIVERY_TABLE]: {
             entityName: "SupplyDeliveryTable",
             tableName: "SupplyDeliveryTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SUPPLYDELIVERYTABLE_ID: {columnName: "SUPPLYDELIVERYTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -983,13 +948,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SUPPLYDELIVERYTABLE_ID"]
         },
         [SERVICE_REQUEST_TABLE]: {
             entityName: "ServiceRequestTable",
             tableName: "ServiceRequestTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SERVICEREQUESTTABLE_ID: {columnName: "SERVICEREQUESTTABLE_ID"},
                 REQUISITION: {columnName: "REQUISITION"},
                 CODE: {columnName: "CODE"},
@@ -1009,13 +973,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SERVICEREQUESTTABLE_ID"]
         },
         [BASIC_TABLE]: {
             entityName: "BasicTable",
             tableName: "BasicTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 BASICTABLE_ID: {columnName: "BASICTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 CREATED: {columnName: "CREATED"},
@@ -1026,13 +989,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["BASICTABLE_ID"]
         },
         [SUBSCRIPTION_TABLE]: {
             entityName: "SubscriptionTable",
             tableName: "SubscriptionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SUBSCRIPTIONTABLE_ID: {columnName: "SUBSCRIPTIONTABLE_ID"},
                 CRITERIA: {columnName: "CRITERIA"},
                 CONTACT: {columnName: "CONTACT"},
@@ -1046,13 +1008,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SUBSCRIPTIONTABLE_ID"]
         },
         [ENROLLMENT_RESPONSE_TABLE]: {
             entityName: "EnrollmentResponseTable",
             tableName: "EnrollmentResponseTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ENROLLMENTRESPONSETABLE_ID: {columnName: "ENROLLMENTRESPONSETABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -1062,13 +1023,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ENROLLMENTRESPONSETABLE_ID"]
         },
         [DEVICE_REQUEST_TABLE]: {
             entityName: "DeviceRequestTable",
             tableName: "DeviceRequestTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 DEVICEREQUESTTABLE_ID: {columnName: "DEVICEREQUESTTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 EVENT_DATE: {columnName: "EVENT_DATE"},
@@ -1084,13 +1044,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["DEVICEREQUESTTABLE_ID"]
         },
         [APPOINTMENT_TABLE]: {
             entityName: "AppointmentTable",
             tableName: "AppointmentTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 APPOINTMENTTABLE_ID: {columnName: "APPOINTMENTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 SERVICE_CATEGORY: {columnName: "SERVICE_CATEGORY"},
@@ -1107,13 +1066,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["APPOINTMENTTABLE_ID"]
         },
         [NAMING_SYSTEM_TABLE]: {
             entityName: "NamingSystemTable",
             tableName: "NamingSystemTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 NAMINGSYSTEMTABLE_ID: {columnName: "NAMINGSYSTEMTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 RESPONSIBLE: {columnName: "RESPONSIBLE"},
@@ -1138,13 +1096,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["NAMINGSYSTEMTABLE_ID"]
         },
         [STRUCTURE_DEFINITION_TABLE]: {
             entityName: "StructureDefinitionTable",
             tableName: "StructureDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 STRUCTUREDEFINITIONTABLE_ID: {columnName: "STRUCTUREDEFINITIONTABLE_ID"},
                 PATH: {columnName: "PATH"},
                 DERIVATION: {columnName: "DERIVATION"},
@@ -1174,13 +1131,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["STRUCTUREDEFINITIONTABLE_ID"]
         },
         [CLINICAL_IMPRESSION_TABLE]: {
             entityName: "ClinicalImpressionTable",
             tableName: "ClinicalImpressionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CLINICALIMPRESSIONTABLE_ID: {columnName: "CLINICALIMPRESSIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -1192,13 +1148,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CLINICALIMPRESSIONTABLE_ID"]
         },
         [COMMUNICATION_TABLE]: {
             entityName: "CommunicationTable",
             tableName: "CommunicationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 COMMUNICATIONTABLE_ID: {columnName: "COMMUNICATIONTABLE_ID"},
                 RECEIVED: {columnName: "RECEIVED"},
                 STATUS: {columnName: "STATUS"},
@@ -1213,13 +1168,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["COMMUNICATIONTABLE_ID"]
         },
         [ORGANIZATION_TABLE]: {
             entityName: "OrganizationTable",
             tableName: "OrganizationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ORGANIZATIONTABLE_ID: {columnName: "ORGANIZATIONTABLE_ID"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
                 ADDRESS_POSTALCODE: {columnName: "ADDRESS_POSTALCODE"},
@@ -1238,13 +1192,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ORGANIZATIONTABLE_ID"]
         },
         [COVERAGE_ELIGIBILITY_RESPONSE_TABLE]: {
             entityName: "CoverageEligibilityResponseTable",
             tableName: "CoverageEligibilityResponseTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 COVERAGEELIGIBILITYRESPONSETABLE_ID: {columnName: "COVERAGEELIGIBILITYRESPONSETABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
@@ -1257,13 +1210,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["COVERAGEELIGIBILITYRESPONSETABLE_ID"]
         },
         [RESEARCH_STUDY_TABLE]: {
             entityName: "ResearchStudyTable",
             tableName: "ResearchStudyTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 RESEARCHSTUDYTABLE_ID: {columnName: "RESEARCHSTUDYTABLE_ID"},
                 LOCATION: {columnName: "LOCATION"},
                 DATE: {columnName: "DATE"},
@@ -1279,13 +1231,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["RESEARCHSTUDYTABLE_ID"]
         },
         [BUNDLE_TABLE]: {
             entityName: "BundleTable",
             tableName: "BundleTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 BUNDLETABLE_ID: {columnName: "BUNDLETABLE_ID"},
                 TIMESTAMP: {columnName: "TIMESTAMP"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -1296,13 +1247,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["BUNDLETABLE_ID"]
         },
         [ENCOUNTER_TABLE]: {
             entityName: "EncounterTable",
             tableName: "EncounterTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ENCOUNTERTABLE_ID: {columnName: "ENCOUNTERTABLE_ID"},
                 PARTICIPANT_TYPE: {columnName: "PARTICIPANT_TYPE"},
                 DATE: {columnName: "DATE"},
@@ -1320,13 +1270,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ENCOUNTERTABLE_ID"]
         },
         [RISK_ASSESSMENT_TABLE]: {
             entityName: "RiskAssessmentTable",
             tableName: "RiskAssessmentTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 RISKASSESSMENTTABLE_ID: {columnName: "RISKASSESSMENTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PROBABILITY: {columnName: "PROBABILITY"},
@@ -1339,13 +1288,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["RISKASSESSMENTTABLE_ID"]
         },
         [LIST_TABLE]: {
             entityName: "ListTable",
             tableName: "ListTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 LISTTABLE_ID: {columnName: "LISTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 NOTES: {columnName: "NOTES"},
@@ -1360,13 +1308,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["LISTTABLE_ID"]
         },
         [ORGANIZATION_AFFILIATION_TABLE]: {
             entityName: "OrganizationAffiliationTable",
             tableName: "OrganizationAffiliationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ORGANIZATIONAFFILIATIONTABLE_ID: {columnName: "ORGANIZATIONAFFILIATIONTABLE_ID"},
                 ROLE: {columnName: "ROLE"},
                 DATE: {columnName: "DATE"},
@@ -1382,13 +1329,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ORGANIZATIONAFFILIATIONTABLE_ID"]
         },
         [CHARGE_ITEM_TABLE]: {
             entityName: "ChargeItemTable",
             tableName: "ChargeItemTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CHARGEITEMTABLE_ID: {columnName: "CHARGEITEMTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 FACTOR_OVERRIDE: {columnName: "FACTOR_OVERRIDE"},
@@ -1404,13 +1350,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CHARGEITEMTABLE_ID"]
         },
         [MEDICATION_KNOWLEDGE_TABLE]: {
             entityName: "MedicationKnowledgeTable",
             tableName: "MedicationKnowledgeTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICATIONKNOWLEDGETABLE_ID: {columnName: "MEDICATIONKNOWLEDGETABLE_ID"},
                 CODE: {columnName: "CODE"},
                 SOURCE_COST: {columnName: "SOURCE_COST"},
@@ -1428,13 +1373,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICATIONKNOWLEDGETABLE_ID"]
         },
         [PLAN_DEFINITION_TABLE]: {
             entityName: "PlanDefinitionTable",
             tableName: "PlanDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 PLANDEFINITIONTABLE_ID: {columnName: "PLANDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -1458,13 +1402,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["PLANDEFINITIONTABLE_ID"]
         },
         [CARE_PLAN_TABLE]: {
             entityName: "CarePlanTable",
             tableName: "CarePlanTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CAREPLANTABLE_ID: {columnName: "CAREPLANTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -1480,13 +1423,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CAREPLANTABLE_ID"]
         },
         [VISION_PRESCRIPTION_TABLE]: {
             entityName: "VisionPrescriptionTable",
             tableName: "VisionPrescriptionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 VISIONPRESCRIPTIONTABLE_ID: {columnName: "VISIONPRESCRIPTIONTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -1497,13 +1439,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["VISIONPRESCRIPTIONTABLE_ID"]
         },
         [EPISODE_OF_CARE_TABLE]: {
             entityName: "EpisodeOfCareTable",
             tableName: "EpisodeOfCareTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 EPISODEOFCARETABLE_ID: {columnName: "EPISODEOFCARETABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -1515,13 +1456,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["EPISODEOFCARETABLE_ID"]
         },
         [CARE_TEAM_TABLE]: {
             entityName: "CareTeamTable",
             tableName: "CareTeamTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CARETEAMTABLE_ID: {columnName: "CARETEAMTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -1533,13 +1473,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CARETEAMTABLE_ID"]
         },
         [MEDICATION_ADMINISTRATION_TABLE]: {
             entityName: "MedicationAdministrationTable",
             tableName: "MedicationAdministrationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICATIONADMINISTRATIONTABLE_ID: {columnName: "MEDICATIONADMINISTRATIONTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -1553,13 +1492,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICATIONADMINISTRATIONTABLE_ID"]
         },
         [CONSENT_TABLE]: {
             entityName: "ConsentTable",
             tableName: "ConsentTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CONSENTTABLE_ID: {columnName: "CONSENTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 SECURITY_LABEL: {columnName: "SECURITY_LABEL"},
@@ -1576,13 +1514,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CONSENTTABLE_ID"]
         },
         [DETECTED_ISSUE_TABLE]: {
             entityName: "DetectedIssueTable",
             tableName: "DetectedIssueTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 DETECTEDISSUETABLE_ID: {columnName: "DETECTEDISSUETABLE_ID"},
                 CODE: {columnName: "CODE"},
                 IDENTIFIED: {columnName: "IDENTIFIED"},
@@ -1593,13 +1530,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["DETECTEDISSUETABLE_ID"]
         },
         [SUBSTANCE_SPECIFICATION_TABLE]: {
             entityName: "SubstanceSpecificationTable",
             tableName: "SubstanceSpecificationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SUBSTANCESPECIFICATIONTABLE_ID: {columnName: "SUBSTANCESPECIFICATIONTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -1608,13 +1544,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SUBSTANCESPECIFICATIONTABLE_ID"]
         },
         [ALLERGY_INTOLERANCE_TABLE]: {
             entityName: "AllergyIntoleranceTable",
             tableName: "AllergyIntoleranceTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ALLERGYINTOLERANCETABLE_ID: {columnName: "ALLERGYINTOLERANCETABLE_ID"},
                 ROUTE: {columnName: "ROUTE"},
                 LAST_DATE: {columnName: "LAST_DATE"},
@@ -1635,13 +1570,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ALLERGYINTOLERANCETABLE_ID"]
         },
         [MEDICINAL_PRODUCT_INDICATION_TABLE]: {
             entityName: "MedicinalProductIndicationTable",
             tableName: "MedicinalProductIndicationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICINALPRODUCTINDICATIONTABLE_ID: {columnName: "MEDICINALPRODUCTINDICATIONTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
@@ -1649,13 +1583,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICINALPRODUCTINDICATIONTABLE_ID"]
         },
         [MEDICINAL_PRODUCT_PHARMACEUTICAL_TABLE]: {
             entityName: "MedicinalProductPharmaceuticalTable",
             tableName: "MedicinalProductPharmaceuticalTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICINALPRODUCTPHARMACEUTICALTABLE_ID: {columnName: "MEDICINALPRODUCTPHARMACEUTICALTABLE_ID"},
                 ROUTE: {columnName: "ROUTE"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -1666,13 +1599,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICINALPRODUCTPHARMACEUTICALTABLE_ID"]
         },
         [SLOT_TABLE]: {
             entityName: "SlotTable",
             tableName: "SlotTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SLOTTABLE_ID: {columnName: "SLOTTABLE_ID"},
                 SERVICE_CATEGORY: {columnName: "SERVICE_CATEGORY"},
                 STATUS: {columnName: "STATUS"},
@@ -1687,13 +1619,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SLOTTABLE_ID"]
         },
         [VERIFICATION_RESULT_TABLE]: {
             entityName: "VerificationResultTable",
             tableName: "VerificationResultTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 VERIFICATIONRESULTTABLE_ID: {columnName: "VERIFICATIONRESULTTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
@@ -1701,13 +1632,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["VERIFICATIONRESULTTABLE_ID"]
         },
         [SPECIMEN_TABLE]: {
             entityName: "SpecimenTable",
             tableName: "SpecimenTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SPECIMENTABLE_ID: {columnName: "SPECIMENTABLE_ID"},
                 COLLECTED: {columnName: "COLLECTED"},
                 STATUS: {columnName: "STATUS"},
@@ -1723,13 +1653,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SPECIMENTABLE_ID"]
         },
         [RESEARCH_SUBJECT_TABLE]: {
             entityName: "ResearchSubjectTable",
             tableName: "ResearchSubjectTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 RESEARCHSUBJECTTABLE_ID: {columnName: "RESEARCHSUBJECTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -1740,13 +1669,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["RESEARCHSUBJECTTABLE_ID"]
         },
         [MEDICATION_TABLE]: {
             entityName: "MedicationTable",
             tableName: "MedicationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICATIONTABLE_ID: {columnName: "MEDICATIONTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -1761,13 +1689,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICATIONTABLE_ID"]
         },
         [RESEARCH_DEFINITION_TABLE]: {
             entityName: "ResearchDefinitionTable",
             tableName: "ResearchDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 RESEARCHDEFINITIONTABLE_ID: {columnName: "RESEARCHDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -1790,13 +1717,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["RESEARCHDEFINITIONTABLE_ID"]
         },
         [HEALTHCARE_SERVICE_TABLE]: {
             entityName: "HealthcareServiceTable",
             tableName: "HealthcareServiceTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 HEALTHCARESERVICETABLE_ID: {columnName: "HEALTHCARESERVICETABLE_ID"},
                 SERVICE_CATEGORY: {columnName: "SERVICE_CATEGORY"},
                 CHARACTERISTIC: {columnName: "CHARACTERISTIC"},
@@ -1812,13 +1738,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["HEALTHCARESERVICETABLE_ID"]
         },
         [PAYMENT_NOTICE_TABLE]: {
             entityName: "PaymentNoticeTable",
             tableName: "PaymentNoticeTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 PAYMENTNOTICETABLE_ID: {columnName: "PAYMENTNOTICETABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
@@ -1830,13 +1755,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["PAYMENTNOTICETABLE_ID"]
         },
         [PROVENANCE_TABLE]: {
             entityName: "ProvenanceTable",
             tableName: "ProvenanceTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 PROVENANCETABLE_ID: {columnName: "PROVENANCETABLE_ID"},
                 RECORDED: {columnName: "RECORDED"},
                 WHEN: {columnName: "WHEN"},
@@ -1849,13 +1773,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["PROVENANCETABLE_ID"]
         },
         [GRAPH_DEFINITION_TABLE]: {
             entityName: "GraphDefinitionTable",
             tableName: "GraphDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 GRAPHDEFINITIONTABLE_ID: {columnName: "GRAPHDEFINITIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PUBLISHER: {columnName: "PUBLISHER"},
@@ -1875,13 +1798,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["GRAPHDEFINITIONTABLE_ID"]
         },
         [MEDIA_TABLE]: {
             entityName: "MediaTable",
             tableName: "MediaTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDIATABLE_ID: {columnName: "MEDIATABLE_ID"},
                 SITE: {columnName: "SITE"},
                 CREATED: {columnName: "CREATED"},
@@ -1896,13 +1818,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDIATABLE_ID"]
         },
         [BODY_STRUCTURE_TABLE]: {
             entityName: "BodyStructureTable",
             tableName: "BodyStructureTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 BODYSTRUCTURETABLE_ID: {columnName: "BODYSTRUCTURETABLE_ID"},
                 LOCATION: {columnName: "LOCATION"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -1913,13 +1834,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["BODYSTRUCTURETABLE_ID"]
         },
         [DIAGNOSTIC_REPORT_TABLE]: {
             entityName: "DiagnosticReportTable",
             tableName: "DiagnosticReportTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 DIAGNOSTICREPORTTABLE_ID: {columnName: "DIAGNOSTICREPORTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 ISSUED: {columnName: "ISSUED"},
@@ -1934,13 +1854,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["DIAGNOSTICREPORTTABLE_ID"]
         },
         [GOAL_TABLE]: {
             entityName: "GoalTable",
             tableName: "GoalTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 GOALTABLE_ID: {columnName: "GOALTABLE_ID"},
                 TARGET_DATE: {columnName: "TARGET_DATE"},
                 ACHIEVEMENT_STATUS: {columnName: "ACHIEVEMENT_STATUS"},
@@ -1954,13 +1873,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["GOALTABLE_ID"]
         },
         [CAPABILITY_STATEMENT_TABLE]: {
             entityName: "CapabilityStatementTable",
             tableName: "CapabilityStatementTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CAPABILITYSTATEMENTTABLE_ID: {columnName: "CAPABILITYSTATEMENTTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -1986,13 +1904,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CAPABILITYSTATEMENTTABLE_ID"]
         },
         [DEVICE_USE_STATEMENT_TABLE]: {
             entityName: "DeviceUseStatementTable",
             tableName: "DeviceUseStatementTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 DEVICEUSESTATEMENTTABLE_ID: {columnName: "DEVICEUSESTATEMENTTABLE_ID"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -2001,13 +1918,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["DEVICEUSESTATEMENTTABLE_ID"]
         },
         [SCHEDULE_TABLE]: {
             entityName: "ScheduleTable",
             tableName: "ScheduleTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SCHEDULETABLE_ID: {columnName: "SCHEDULETABLE_ID"},
                 DATE: {columnName: "DATE"},
                 SERVICE_CATEGORY: {columnName: "SERVICE_CATEGORY"},
@@ -2021,13 +1937,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SCHEDULETABLE_ID"]
         },
         [MEDICINAL_PRODUCT_PACKAGED_TABLE]: {
             entityName: "MedicinalProductPackagedTable",
             tableName: "MedicinalProductPackagedTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICINALPRODUCTPACKAGEDTABLE_ID: {columnName: "MEDICINALPRODUCTPACKAGEDTABLE_ID"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 VERSION_ID: {columnName: "VERSION_ID"},
@@ -2036,13 +1951,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICINALPRODUCTPACKAGEDTABLE_ID"]
         },
         [PROCEDURE_TABLE]: {
             entityName: "ProcedureTable",
             tableName: "ProcedureTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 PROCEDURETABLE_ID: {columnName: "PROCEDURETABLE_ID"},
                 DATE: {columnName: "DATE"},
                 CODE: {columnName: "CODE"},
@@ -2057,13 +1971,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["PROCEDURETABLE_ID"]
         },
         [LIBRARY_TABLE]: {
             entityName: "LibraryTable",
             tableName: "LibraryTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 LIBRARYTABLE_ID: {columnName: "LIBRARYTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2088,13 +2001,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["LIBRARYTABLE_ID"]
         },
         [CODE_SYSTEM_TABLE]: {
             entityName: "CodeSystemTable",
             tableName: "CodeSystemTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CODESYSTEMTABLE_ID: {columnName: "CODESYSTEMTABLE_ID"},
                 LANGUAGE: {columnName: "LANGUAGE"},
                 SYSTEM: {columnName: "SYSTEM"},
@@ -2119,13 +2031,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CODESYSTEMTABLE_ID"]
         },
         [COMMUNICATION_REQUEST_TABLE]: {
             entityName: "CommunicationRequestTable",
             tableName: "CommunicationRequestTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 COMMUNICATIONREQUESTTABLE_ID: {columnName: "COMMUNICATIONREQUESTTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 MEDIUM: {columnName: "MEDIUM"},
@@ -2141,13 +2052,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["COMMUNICATIONREQUESTTABLE_ID"]
         },
         [DOCUMENT_REFERENCE_TABLE]: {
             entityName: "DocumentReferenceTable",
             tableName: "DocumentReferenceTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 DOCUMENTREFERENCETABLE_ID: {columnName: "DOCUMENTREFERENCETABLE_ID"},
                 LANGUAGE: {columnName: "LANGUAGE"},
                 LOCATION: {columnName: "LOCATION"},
@@ -2171,13 +2081,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["DOCUMENTREFERENCETABLE_ID"]
         },
         [REQUEST_GROUP_TABLE]: {
             entityName: "RequestGroupTable",
             tableName: "RequestGroupTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 REQUESTGROUPTABLE_ID: {columnName: "REQUESTGROUPTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -2193,13 +2102,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["REQUESTGROUPTABLE_ID"]
         },
         [CLAIM_TABLE]: {
             entityName: "ClaimTable",
             tableName: "ClaimTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CLAIMTABLE_ID: {columnName: "CLAIMTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
@@ -2212,13 +2120,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CLAIMTABLE_ID"]
         },
         [MESSAGE_DEFINITION_TABLE]: {
             entityName: "MessageDefinitionTable",
             tableName: "MessageDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MESSAGEDEFINITIONTABLE_ID: {columnName: "MESSAGEDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2242,13 +2149,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MESSAGEDEFINITIONTABLE_ID"]
         },
         [RISK_EVIDENCE_SYNTHESIS_TABLE]: {
             entityName: "RiskEvidenceSynthesisTable",
             tableName: "RiskEvidenceSynthesisTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 RISKEVIDENCESYNTHESISTABLE_ID: {columnName: "RISKEVIDENCESYNTHESISTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2270,13 +2176,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["RISKEVIDENCESYNTHESISTABLE_ID"]
         },
         [TASK_TABLE]: {
             entityName: "TaskTable",
             tableName: "TaskTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 TASKTABLE_ID: {columnName: "TASKTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -2295,13 +2200,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["TASKTABLE_ID"]
         },
         [IMPLEMENTATION_GUIDE_TABLE]: {
             entityName: "ImplementationGuideTable",
             tableName: "ImplementationGuideTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 IMPLEMENTATIONGUIDETABLE_ID: {columnName: "IMPLEMENTATIONGUIDETABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2322,13 +2226,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["IMPLEMENTATIONGUIDETABLE_ID"]
         },
         [STRUCTURE_MAP_TABLE]: {
             entityName: "StructureMapTable",
             tableName: "StructureMapTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 STRUCTUREMAPTABLE_ID: {columnName: "STRUCTUREMAPTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2349,13 +2252,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["STRUCTUREMAPTABLE_ID"]
         },
         [MEDICINAL_PRODUCT_UNDESIRABLE_EFFECT_TABLE]: {
             entityName: "MedicinalProductUndesirableEffectTable",
             tableName: "MedicinalProductUndesirableEffectTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID: {columnName: "MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
@@ -2363,13 +2265,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID"]
         },
         [COMPARTMENT_DEFINITION_TABLE]: {
             entityName: "CompartmentDefinitionTable",
             tableName: "CompartmentDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 COMPARTMENTDEFINITIONTABLE_ID: {columnName: "COMPARTMENTDEFINITIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PUBLISHER: {columnName: "PUBLISHER"},
@@ -2389,13 +2290,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["COMPARTMENTDEFINITIONTABLE_ID"]
         },
         [ENDPOINT_TABLE]: {
             entityName: "EndpointTable",
             tableName: "EndpointTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ENDPOINTTABLE_ID: {columnName: "ENDPOINTTABLE_ID"},
                 CONNECTION_TYPE: {columnName: "CONNECTION_TYPE"},
                 STATUS: {columnName: "STATUS"},
@@ -2408,13 +2308,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ENDPOINTTABLE_ID"]
         },
         [TERMINOLOGY_CAPABILITIES_TABLE]: {
             entityName: "TerminologyCapabilitiesTable",
             tableName: "TerminologyCapabilitiesTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 TERMINOLOGYCAPABILITIESTABLE_ID: {columnName: "TERMINOLOGYCAPABILITIESTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 PUBLISHER: {columnName: "PUBLISHER"},
@@ -2434,13 +2333,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["TERMINOLOGYCAPABILITIESTABLE_ID"]
         },
         [CONDITION_TABLE]: {
             entityName: "ConditionTable",
             tableName: "ConditionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CONDITIONTABLE_ID: {columnName: "CONDITIONTABLE_ID"},
                 CLINICAL_STATUS: {columnName: "CLINICAL_STATUS"},
                 STAGE: {columnName: "STAGE"},
@@ -2464,13 +2362,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CONDITIONTABLE_ID"]
         },
         [COMPOSITION_TABLE]: {
             entityName: "CompositionTable",
             tableName: "CompositionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 COMPOSITIONTABLE_ID: {columnName: "COMPOSITIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -2489,13 +2386,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["COMPOSITIONTABLE_ID"]
         },
         [CONTRACT_TABLE]: {
             entityName: "ContractTable",
             tableName: "ContractTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CONTRACTTABLE_ID: {columnName: "CONTRACTTABLE_ID"},
                 ISSUED: {columnName: "ISSUED"},
                 STATUS: {columnName: "STATUS"},
@@ -2508,13 +2404,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CONTRACTTABLE_ID"]
         },
         [IMMUNIZATION_TABLE]: {
             entityName: "ImmunizationTable",
             tableName: "ImmunizationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 IMMUNIZATIONTABLE_ID: {columnName: "IMMUNIZATIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 VACCINE_CODE: {columnName: "VACCINE_CODE"},
@@ -2532,13 +2427,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["IMMUNIZATIONTABLE_ID"]
         },
         [MEDICATION_DISPENSE_TABLE]: {
             entityName: "MedicationDispenseTable",
             tableName: "MedicationDispenseTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICATIONDISPENSETABLE_ID: {columnName: "MEDICATIONDISPENSETABLE_ID"},
                 CODE: {columnName: "CODE"},
                 STATUS: {columnName: "STATUS"},
@@ -2552,13 +2446,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICATIONDISPENSETABLE_ID"]
         },
         [MOLECULAR_SEQUENCE_TABLE]: {
             entityName: "MolecularSequenceTable",
             tableName: "MolecularSequenceTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MOLECULARSEQUENCETABLE_ID: {columnName: "MOLECULARSEQUENCETABLE_ID"},
                 CHROMOSOME: {columnName: "CHROMOSOME"},
                 VARIANT_START: {columnName: "VARIANT_START"},
@@ -2574,13 +2467,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MOLECULARSEQUENCETABLE_ID"]
         },
         [SEARCH_PARAMETER_TABLE]: {
             entityName: "SearchParameterTable",
             tableName: "SearchParameterTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SEARCHPARAMETERTABLE_ID: {columnName: "SEARCHPARAMETERTABLE_ID"},
                 TARGET: {columnName: "TARGET"},
                 PUBLISHER: {columnName: "PUBLISHER"},
@@ -2603,13 +2495,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SEARCHPARAMETERTABLE_ID"]
         },
         [MEDICATION_REQUEST_TABLE]: {
             entityName: "MedicationRequestTable",
             tableName: "MedicationRequestTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICATIONREQUESTTABLE_ID: {columnName: "MEDICATIONREQUESTTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 CODE: {columnName: "CODE"},
@@ -2626,13 +2517,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICATIONREQUESTTABLE_ID"]
         },
         [ENROLLMENT_REQUEST_TABLE]: {
             entityName: "EnrollmentRequestTable",
             tableName: "EnrollmentRequestTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ENROLLMENTREQUESTTABLE_ID: {columnName: "ENROLLMENTREQUESTTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -2642,13 +2532,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ENROLLMENTREQUESTTABLE_ID"]
         },
         [SPECIMEN_DEFINITION_TABLE]: {
             entityName: "SpecimenDefinitionTable",
             tableName: "SpecimenDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SPECIMENDEFINITIONTABLE_ID: {columnName: "SPECIMENDEFINITIONTABLE_ID"},
                 CONTAINER: {columnName: "CONTAINER"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -2659,13 +2548,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SPECIMENDEFINITIONTABLE_ID"]
         },
         [EVENT_DEFINITION_TABLE]: {
             entityName: "EventDefinitionTable",
             tableName: "EventDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 EVENTDEFINITIONTABLE_ID: {columnName: "EVENTDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2688,13 +2576,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["EVENTDEFINITIONTABLE_ID"]
         },
         [IMMUNIZATION_EVALUATION_TABLE]: {
             entityName: "ImmunizationEvaluationTable",
             tableName: "ImmunizationEvaluationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 IMMUNIZATIONEVALUATIONTABLE_ID: {columnName: "IMMUNIZATIONEVALUATIONTABLE_ID"},
                 DATE: {columnName: "DATE"},
                 STATUS: {columnName: "STATUS"},
@@ -2707,13 +2594,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["IMMUNIZATIONEVALUATIONTABLE_ID"]
         },
         [PAYMENT_RECONCILIATION_TABLE]: {
             entityName: "PaymentReconciliationTable",
             tableName: "PaymentReconciliationTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 PAYMENTRECONCILIATIONTABLE_ID: {columnName: "PAYMENTRECONCILIATIONTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
@@ -2726,13 +2612,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["PAYMENTRECONCILIATIONTABLE_ID"]
         },
         [MEASURE_TABLE]: {
             entityName: "MeasureTable",
             tableName: "MeasureTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEASURETABLE_ID: {columnName: "MEASURETABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2755,13 +2640,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEASURETABLE_ID"]
         },
         [CONCEPT_MAP_TABLE]: {
             entityName: "ConceptMapTable",
             tableName: "ConceptMapTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CONCEPTMAPTABLE_ID: {columnName: "CONCEPTMAPTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2788,13 +2672,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CONCEPTMAPTABLE_ID"]
         },
         [RESEARCH_ELEMENT_DEFINITION_TABLE]: {
             entityName: "ResearchElementDefinitionTable",
             tableName: "ResearchElementDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 RESEARCHELEMENTDEFINITIONTABLE_ID: {columnName: "RESEARCHELEMENTDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2817,13 +2700,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["RESEARCHELEMENTDEFINITIONTABLE_ID"]
         },
         [GUIDANCE_RESPONSE_TABLE]: {
             entityName: "GuidanceResponseTable",
             tableName: "GuidanceResponseTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 GUIDANCERESPONSETABLE_ID: {columnName: "GUIDANCERESPONSETABLE_ID"},
                 REQUEST: {columnName: "REQUEST"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -2833,13 +2715,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["GUIDANCERESPONSETABLE_ID"]
         },
         [LINKAGE_TABLE]: {
             entityName: "LinkageTable",
             tableName: "LinkageTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 LINKAGETABLE_ID: {columnName: "LINKAGETABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
@@ -2847,13 +2728,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["LINKAGETABLE_ID"]
         },
         [MEDICINAL_PRODUCT_TABLE]: {
             entityName: "MedicinalProductTable",
             tableName: "MedicinalProductTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICINALPRODUCTTABLE_ID: {columnName: "MEDICINALPRODUCTTABLE_ID"},
                 NAME_LANGUAGE: {columnName: "NAME_LANGUAGE"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -2864,13 +2744,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICINALPRODUCTTABLE_ID"]
         },
         [DEVICE_DEFINITION_TABLE]: {
             entityName: "DeviceDefinitionTable",
             tableName: "DeviceDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 DEVICEDEFINITIONTABLE_ID: {columnName: "DEVICEDEFINITIONTABLE_ID"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
                 TYPE: {columnName: "TYPE"},
@@ -2880,13 +2759,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["DEVICEDEFINITIONTABLE_ID"]
         },
         [COVERAGE_ELIGIBILITY_REQUEST_TABLE]: {
             entityName: "CoverageEligibilityRequestTable",
             tableName: "CoverageEligibilityRequestTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 COVERAGEELIGIBILITYREQUESTTABLE_ID: {columnName: "COVERAGEELIGIBILITYREQUESTTABLE_ID"},
                 CREATED: {columnName: "CREATED"},
                 STATUS: {columnName: "STATUS"},
@@ -2897,13 +2775,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["COVERAGEELIGIBILITYREQUESTTABLE_ID"]
         },
         [PATIENT_TABLE]: {
             entityName: "PatientTable",
             tableName: "PatientTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 PATIENTTABLE_ID: {columnName: "PATIENTTABLE_ID"},
                 LANGUAGE: {columnName: "LANGUAGE"},
                 ADDRESS_COUNTRY: {columnName: "ADDRESS_COUNTRY"},
@@ -2931,13 +2808,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["PATIENTTABLE_ID"]
         },
         [COVERAGE_TABLE]: {
             entityName: "CoverageTable",
             tableName: "CoverageTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 COVERAGETABLE_ID: {columnName: "COVERAGETABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 DEPENDENT: {columnName: "DEPENDENT"},
@@ -2951,13 +2827,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["COVERAGETABLE_ID"]
         },
         [SUBSTANCE_TABLE]: {
             entityName: "SubstanceTable",
             tableName: "SubstanceTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 SUBSTANCETABLE_ID: {columnName: "SUBSTANCETABLE_ID"},
                 CONTAINER_IDENTIFIER: {columnName: "CONTAINER_IDENTIFIER"},
                 CODE: {columnName: "CODE"},
@@ -2972,13 +2847,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["SUBSTANCETABLE_ID"]
         },
         [CHARGE_ITEM_DEFINITION_TABLE]: {
             entityName: "ChargeItemDefinitionTable",
             tableName: "ChargeItemDefinitionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 CHARGEITEMDEFINITIONTABLE_ID: {columnName: "CHARGEITEMDEFINITIONTABLE_ID"},
                 PUBLISHER: {columnName: "PUBLISHER"},
                 JURISDICTION: {columnName: "JURISDICTION"},
@@ -2999,13 +2873,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["CHARGEITEMDEFINITIONTABLE_ID"]
         },
         [MEDICINAL_PRODUCT_INTERACTION_TABLE]: {
             entityName: "MedicinalProductInteractionTable",
             tableName: "MedicinalProductInteractionTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MEDICINALPRODUCTINTERACTIONTABLE_ID: {columnName: "MEDICINALPRODUCTINTERACTIONTABLE_ID"},
                 VERSION_ID: {columnName: "VERSION_ID"},
                 CREATED_AT: {columnName: "CREATED_AT"},
@@ -3013,13 +2886,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MEDICINALPRODUCTINTERACTIONTABLE_ID"]
         },
         [ACCOUNT_TABLE]: {
             entityName: "AccountTable",
             tableName: "AccountTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 ACCOUNTTABLE_ID: {columnName: "ACCOUNTTABLE_ID"},
                 STATUS: {columnName: "STATUS"},
                 PERIOD: {columnName: "PERIOD"},
@@ -3032,13 +2904,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["ACCOUNTTABLE_ID"]
         },
         [MESSAGE_HEADER_TABLE]: {
             entityName: "MessageHeaderTable",
             tableName: "MessageHeaderTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 MESSAGEHEADERTABLE_ID: {columnName: "MESSAGEHEADERTABLE_ID"},
                 CODE: {columnName: "CODE"},
                 SOURCE_URI: {columnName: "SOURCE_URI"},
@@ -3053,13 +2924,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["MESSAGEHEADERTABLE_ID"]
         },
         [AUDIT_EVENT_TABLE]: {
             entityName: "AuditEventTable",
             tableName: "AuditEventTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 AUDITEVENTTABLE_ID: {columnName: "AUDITEVENTTABLE_ID"},
                 SUBTYPE: {columnName: "SUBTYPE"},
                 SITE: {columnName: "SITE"},
@@ -3081,13 +2951,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["AUDITEVENTTABLE_ID"]
         },
         [NUTRITION_ORDER_TABLE]: {
             entityName: "NutritionOrderTable",
             tableName: "NutritionOrderTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 NUTRITIONORDERTABLE_ID: {columnName: "NUTRITIONORDERTABLE_ID"},
                 SUPPLEMENT: {columnName: "SUPPLEMENT"},
                 STATUS: {columnName: "STATUS"},
@@ -3103,13 +2972,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["NUTRITIONORDERTABLE_ID"]
         },
         [QUESTIONNAIRE_TABLE]: {
             entityName: "QuestionnaireTable",
             tableName: "QuestionnaireTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 QUESTIONNAIRETABLE_ID: {columnName: "QUESTIONNAIRETABLE_ID"},
                 DEFINITION: {columnName: "DEFINITION"},
                 PUBLISHER: {columnName: "PUBLISHER"},
@@ -3134,13 +3002,12 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["QUESTIONNAIRETABLE_ID"]
         },
         [APPOINTMENT_RESPONSE_TABLE]: {
             entityName: "AppointmentResponseTable",
             tableName: "AppointmentResponseTable",
             fieldMetadata: {
-                ID: {columnName: "ID", dbGenerated: true},
                 APPOINTMENTRESPONSETABLE_ID: {columnName: "APPOINTMENTRESPONSETABLE_ID"},
                 PART_STATUS: {columnName: "PART_STATUS"},
                 IDENTIFIER: {columnName: "IDENTIFIER"},
@@ -3150,7 +3017,7 @@ public isolated client class Client {
                 LAST_UPDATED: {columnName: "LAST_UPDATED"},
                 RESOURCE_JSON: {columnName: "RESOURCE_JSON"}
             },
-            keyFields: ["ID"]
+            keyFields: ["APPOINTMENTRESPONSETABLE_ID"]
         }
     };
 
@@ -3161,151 +3028,151 @@ public isolated client class Client {
         }
         self.dbClient = dbClient;
         self.persistClients = {
-            [S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S]: check new (dbClient, self.metadata.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S), psql:H2_SPECIFICS),
-            [R_E_F_E_R_E_N_C_E_S]: check new (dbClient, self.metadata.get(R_E_F_E_R_E_N_C_E_S), psql:H2_SPECIFICS),
-            [TEST_SCRIPT_TABLE]: check new (dbClient, self.metadata.get(TEST_SCRIPT_TABLE), psql:H2_SPECIFICS),
-            [TEST_REPORT_TABLE]: check new (dbClient, self.metadata.get(TEST_REPORT_TABLE), psql:H2_SPECIFICS),
-            [RELATED_PERSON_TABLE]: check new (dbClient, self.metadata.get(RELATED_PERSON_TABLE), psql:H2_SPECIFICS),
-            [EVIDENCE_VARIABLE_TABLE]: check new (dbClient, self.metadata.get(EVIDENCE_VARIABLE_TABLE), psql:H2_SPECIFICS),
-            [VALUE_SET_TABLE]: check new (dbClient, self.metadata.get(VALUE_SET_TABLE), psql:H2_SPECIFICS),
-            [DOCUMENT_MANIFEST_TABLE]: check new (dbClient, self.metadata.get(DOCUMENT_MANIFEST_TABLE), psql:H2_SPECIFICS),
-            [IMMUNIZATION_RECOMMENDATION_TABLE]: check new (dbClient, self.metadata.get(IMMUNIZATION_RECOMMENDATION_TABLE), psql:H2_SPECIFICS),
-            [DEVICE_METRIC_TABLE]: check new (dbClient, self.metadata.get(DEVICE_METRIC_TABLE), psql:H2_SPECIFICS),
-            [LOCATION_TABLE]: check new (dbClient, self.metadata.get(LOCATION_TABLE), psql:H2_SPECIFICS),
-            [EXPLANATION_OF_BENEFIT_TABLE]: check new (dbClient, self.metadata.get(EXPLANATION_OF_BENEFIT_TABLE), psql:H2_SPECIFICS),
-            [FLAG_TABLE]: check new (dbClient, self.metadata.get(FLAG_TABLE), psql:H2_SPECIFICS),
-            [MEDICATION_STATEMENT_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_STATEMENT_TABLE), psql:H2_SPECIFICS),
-            [INSURANCE_PLAN_TABLE]: check new (dbClient, self.metadata.get(INSURANCE_PLAN_TABLE), psql:H2_SPECIFICS),
-            [MEDICINAL_PRODUCT_CONTRAINDICATION_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_CONTRAINDICATION_TABLE), psql:H2_SPECIFICS),
-            [CLAIM_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(CLAIM_RESPONSE_TABLE), psql:H2_SPECIFICS),
-            [MEDICINAL_PRODUCT_AUTHORIZATION_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_AUTHORIZATION_TABLE), psql:H2_SPECIFICS),
-            [IMAGING_STUDY_TABLE]: check new (dbClient, self.metadata.get(IMAGING_STUDY_TABLE), psql:H2_SPECIFICS),
-            [PRACTITIONER_ROLE_TABLE]: check new (dbClient, self.metadata.get(PRACTITIONER_ROLE_TABLE), psql:H2_SPECIFICS),
-            [GROUP_TABLE]: check new (dbClient, self.metadata.get(GROUP_TABLE), psql:H2_SPECIFICS),
-            [PERSON_TABLE]: check new (dbClient, self.metadata.get(PERSON_TABLE), psql:H2_SPECIFICS),
-            [PRACTITIONER_TABLE]: check new (dbClient, self.metadata.get(PRACTITIONER_TABLE), psql:H2_SPECIFICS),
-            [ACTIVITY_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(ACTIVITY_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [EVIDENCE_TABLE]: check new (dbClient, self.metadata.get(EVIDENCE_TABLE), psql:H2_SPECIFICS),
-            [DEVICE_TABLE]: check new (dbClient, self.metadata.get(DEVICE_TABLE), psql:H2_SPECIFICS),
-            [FAMILY_MEMBER_HISTORY_TABLE]: check new (dbClient, self.metadata.get(FAMILY_MEMBER_HISTORY_TABLE), psql:H2_SPECIFICS),
-            [ADVERSE_EVENT_TABLE]: check new (dbClient, self.metadata.get(ADVERSE_EVENT_TABLE), psql:H2_SPECIFICS),
-            [SUPPLY_REQUEST_TABLE]: check new (dbClient, self.metadata.get(SUPPLY_REQUEST_TABLE), psql:H2_SPECIFICS),
-            [EXAMPLE_SCENARIO_TABLE]: check new (dbClient, self.metadata.get(EXAMPLE_SCENARIO_TABLE), psql:H2_SPECIFICS),
-            [INVOICE_TABLE]: check new (dbClient, self.metadata.get(INVOICE_TABLE), psql:H2_SPECIFICS),
-            [QUESTIONNAIRE_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(QUESTIONNAIRE_RESPONSE_TABLE), psql:H2_SPECIFICS),
-            [OBSERVATION_TABLE]: check new (dbClient, self.metadata.get(OBSERVATION_TABLE), psql:H2_SPECIFICS),
-            [EFFECT_EVIDENCE_SYNTHESIS_TABLE]: check new (dbClient, self.metadata.get(EFFECT_EVIDENCE_SYNTHESIS_TABLE), psql:H2_SPECIFICS),
-            [OPERATION_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(OPERATION_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [MEASURE_REPORT_TABLE]: check new (dbClient, self.metadata.get(MEASURE_REPORT_TABLE), psql:H2_SPECIFICS),
-            [SUPPLY_DELIVERY_TABLE]: check new (dbClient, self.metadata.get(SUPPLY_DELIVERY_TABLE), psql:H2_SPECIFICS),
-            [SERVICE_REQUEST_TABLE]: check new (dbClient, self.metadata.get(SERVICE_REQUEST_TABLE), psql:H2_SPECIFICS),
-            [BASIC_TABLE]: check new (dbClient, self.metadata.get(BASIC_TABLE), psql:H2_SPECIFICS),
-            [SUBSCRIPTION_TABLE]: check new (dbClient, self.metadata.get(SUBSCRIPTION_TABLE), psql:H2_SPECIFICS),
-            [ENROLLMENT_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(ENROLLMENT_RESPONSE_TABLE), psql:H2_SPECIFICS),
-            [DEVICE_REQUEST_TABLE]: check new (dbClient, self.metadata.get(DEVICE_REQUEST_TABLE), psql:H2_SPECIFICS),
-            [APPOINTMENT_TABLE]: check new (dbClient, self.metadata.get(APPOINTMENT_TABLE), psql:H2_SPECIFICS),
-            [NAMING_SYSTEM_TABLE]: check new (dbClient, self.metadata.get(NAMING_SYSTEM_TABLE), psql:H2_SPECIFICS),
-            [STRUCTURE_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(STRUCTURE_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [CLINICAL_IMPRESSION_TABLE]: check new (dbClient, self.metadata.get(CLINICAL_IMPRESSION_TABLE), psql:H2_SPECIFICS),
-            [COMMUNICATION_TABLE]: check new (dbClient, self.metadata.get(COMMUNICATION_TABLE), psql:H2_SPECIFICS),
-            [ORGANIZATION_TABLE]: check new (dbClient, self.metadata.get(ORGANIZATION_TABLE), psql:H2_SPECIFICS),
-            [COVERAGE_ELIGIBILITY_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(COVERAGE_ELIGIBILITY_RESPONSE_TABLE), psql:H2_SPECIFICS),
-            [RESEARCH_STUDY_TABLE]: check new (dbClient, self.metadata.get(RESEARCH_STUDY_TABLE), psql:H2_SPECIFICS),
-            [BUNDLE_TABLE]: check new (dbClient, self.metadata.get(BUNDLE_TABLE), psql:H2_SPECIFICS),
-            [ENCOUNTER_TABLE]: check new (dbClient, self.metadata.get(ENCOUNTER_TABLE), psql:H2_SPECIFICS),
-            [RISK_ASSESSMENT_TABLE]: check new (dbClient, self.metadata.get(RISK_ASSESSMENT_TABLE), psql:H2_SPECIFICS),
-            [LIST_TABLE]: check new (dbClient, self.metadata.get(LIST_TABLE), psql:H2_SPECIFICS),
-            [ORGANIZATION_AFFILIATION_TABLE]: check new (dbClient, self.metadata.get(ORGANIZATION_AFFILIATION_TABLE), psql:H2_SPECIFICS),
-            [CHARGE_ITEM_TABLE]: check new (dbClient, self.metadata.get(CHARGE_ITEM_TABLE), psql:H2_SPECIFICS),
-            [MEDICATION_KNOWLEDGE_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_KNOWLEDGE_TABLE), psql:H2_SPECIFICS),
-            [PLAN_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(PLAN_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [CARE_PLAN_TABLE]: check new (dbClient, self.metadata.get(CARE_PLAN_TABLE), psql:H2_SPECIFICS),
-            [VISION_PRESCRIPTION_TABLE]: check new (dbClient, self.metadata.get(VISION_PRESCRIPTION_TABLE), psql:H2_SPECIFICS),
-            [EPISODE_OF_CARE_TABLE]: check new (dbClient, self.metadata.get(EPISODE_OF_CARE_TABLE), psql:H2_SPECIFICS),
-            [CARE_TEAM_TABLE]: check new (dbClient, self.metadata.get(CARE_TEAM_TABLE), psql:H2_SPECIFICS),
-            [MEDICATION_ADMINISTRATION_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_ADMINISTRATION_TABLE), psql:H2_SPECIFICS),
-            [CONSENT_TABLE]: check new (dbClient, self.metadata.get(CONSENT_TABLE), psql:H2_SPECIFICS),
-            [DETECTED_ISSUE_TABLE]: check new (dbClient, self.metadata.get(DETECTED_ISSUE_TABLE), psql:H2_SPECIFICS),
-            [SUBSTANCE_SPECIFICATION_TABLE]: check new (dbClient, self.metadata.get(SUBSTANCE_SPECIFICATION_TABLE), psql:H2_SPECIFICS),
-            [ALLERGY_INTOLERANCE_TABLE]: check new (dbClient, self.metadata.get(ALLERGY_INTOLERANCE_TABLE), psql:H2_SPECIFICS),
-            [MEDICINAL_PRODUCT_INDICATION_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_INDICATION_TABLE), psql:H2_SPECIFICS),
-            [MEDICINAL_PRODUCT_PHARMACEUTICAL_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_PHARMACEUTICAL_TABLE), psql:H2_SPECIFICS),
-            [SLOT_TABLE]: check new (dbClient, self.metadata.get(SLOT_TABLE), psql:H2_SPECIFICS),
-            [VERIFICATION_RESULT_TABLE]: check new (dbClient, self.metadata.get(VERIFICATION_RESULT_TABLE), psql:H2_SPECIFICS),
-            [SPECIMEN_TABLE]: check new (dbClient, self.metadata.get(SPECIMEN_TABLE), psql:H2_SPECIFICS),
-            [RESEARCH_SUBJECT_TABLE]: check new (dbClient, self.metadata.get(RESEARCH_SUBJECT_TABLE), psql:H2_SPECIFICS),
-            [MEDICATION_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_TABLE), psql:H2_SPECIFICS),
-            [RESEARCH_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(RESEARCH_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [HEALTHCARE_SERVICE_TABLE]: check new (dbClient, self.metadata.get(HEALTHCARE_SERVICE_TABLE), psql:H2_SPECIFICS),
-            [PAYMENT_NOTICE_TABLE]: check new (dbClient, self.metadata.get(PAYMENT_NOTICE_TABLE), psql:H2_SPECIFICS),
-            [PROVENANCE_TABLE]: check new (dbClient, self.metadata.get(PROVENANCE_TABLE), psql:H2_SPECIFICS),
-            [GRAPH_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(GRAPH_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [MEDIA_TABLE]: check new (dbClient, self.metadata.get(MEDIA_TABLE), psql:H2_SPECIFICS),
-            [BODY_STRUCTURE_TABLE]: check new (dbClient, self.metadata.get(BODY_STRUCTURE_TABLE), psql:H2_SPECIFICS),
-            [DIAGNOSTIC_REPORT_TABLE]: check new (dbClient, self.metadata.get(DIAGNOSTIC_REPORT_TABLE), psql:H2_SPECIFICS),
-            [GOAL_TABLE]: check new (dbClient, self.metadata.get(GOAL_TABLE), psql:H2_SPECIFICS),
-            [CAPABILITY_STATEMENT_TABLE]: check new (dbClient, self.metadata.get(CAPABILITY_STATEMENT_TABLE), psql:H2_SPECIFICS),
-            [DEVICE_USE_STATEMENT_TABLE]: check new (dbClient, self.metadata.get(DEVICE_USE_STATEMENT_TABLE), psql:H2_SPECIFICS),
-            [SCHEDULE_TABLE]: check new (dbClient, self.metadata.get(SCHEDULE_TABLE), psql:H2_SPECIFICS),
-            [MEDICINAL_PRODUCT_PACKAGED_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_PACKAGED_TABLE), psql:H2_SPECIFICS),
-            [PROCEDURE_TABLE]: check new (dbClient, self.metadata.get(PROCEDURE_TABLE), psql:H2_SPECIFICS),
-            [LIBRARY_TABLE]: check new (dbClient, self.metadata.get(LIBRARY_TABLE), psql:H2_SPECIFICS),
-            [CODE_SYSTEM_TABLE]: check new (dbClient, self.metadata.get(CODE_SYSTEM_TABLE), psql:H2_SPECIFICS),
-            [COMMUNICATION_REQUEST_TABLE]: check new (dbClient, self.metadata.get(COMMUNICATION_REQUEST_TABLE), psql:H2_SPECIFICS),
-            [DOCUMENT_REFERENCE_TABLE]: check new (dbClient, self.metadata.get(DOCUMENT_REFERENCE_TABLE), psql:H2_SPECIFICS),
-            [REQUEST_GROUP_TABLE]: check new (dbClient, self.metadata.get(REQUEST_GROUP_TABLE), psql:H2_SPECIFICS),
-            [CLAIM_TABLE]: check new (dbClient, self.metadata.get(CLAIM_TABLE), psql:H2_SPECIFICS),
-            [MESSAGE_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(MESSAGE_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [RISK_EVIDENCE_SYNTHESIS_TABLE]: check new (dbClient, self.metadata.get(RISK_EVIDENCE_SYNTHESIS_TABLE), psql:H2_SPECIFICS),
-            [TASK_TABLE]: check new (dbClient, self.metadata.get(TASK_TABLE), psql:H2_SPECIFICS),
-            [IMPLEMENTATION_GUIDE_TABLE]: check new (dbClient, self.metadata.get(IMPLEMENTATION_GUIDE_TABLE), psql:H2_SPECIFICS),
-            [STRUCTURE_MAP_TABLE]: check new (dbClient, self.metadata.get(STRUCTURE_MAP_TABLE), psql:H2_SPECIFICS),
-            [MEDICINAL_PRODUCT_UNDESIRABLE_EFFECT_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_UNDESIRABLE_EFFECT_TABLE), psql:H2_SPECIFICS),
-            [COMPARTMENT_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(COMPARTMENT_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [ENDPOINT_TABLE]: check new (dbClient, self.metadata.get(ENDPOINT_TABLE), psql:H2_SPECIFICS),
-            [TERMINOLOGY_CAPABILITIES_TABLE]: check new (dbClient, self.metadata.get(TERMINOLOGY_CAPABILITIES_TABLE), psql:H2_SPECIFICS),
-            [CONDITION_TABLE]: check new (dbClient, self.metadata.get(CONDITION_TABLE), psql:H2_SPECIFICS),
-            [COMPOSITION_TABLE]: check new (dbClient, self.metadata.get(COMPOSITION_TABLE), psql:H2_SPECIFICS),
-            [CONTRACT_TABLE]: check new (dbClient, self.metadata.get(CONTRACT_TABLE), psql:H2_SPECIFICS),
-            [IMMUNIZATION_TABLE]: check new (dbClient, self.metadata.get(IMMUNIZATION_TABLE), psql:H2_SPECIFICS),
-            [MEDICATION_DISPENSE_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_DISPENSE_TABLE), psql:H2_SPECIFICS),
-            [MOLECULAR_SEQUENCE_TABLE]: check new (dbClient, self.metadata.get(MOLECULAR_SEQUENCE_TABLE), psql:H2_SPECIFICS),
-            [SEARCH_PARAMETER_TABLE]: check new (dbClient, self.metadata.get(SEARCH_PARAMETER_TABLE), psql:H2_SPECIFICS),
-            [MEDICATION_REQUEST_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_REQUEST_TABLE), psql:H2_SPECIFICS),
-            [ENROLLMENT_REQUEST_TABLE]: check new (dbClient, self.metadata.get(ENROLLMENT_REQUEST_TABLE), psql:H2_SPECIFICS),
-            [SPECIMEN_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(SPECIMEN_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [EVENT_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(EVENT_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [IMMUNIZATION_EVALUATION_TABLE]: check new (dbClient, self.metadata.get(IMMUNIZATION_EVALUATION_TABLE), psql:H2_SPECIFICS),
-            [PAYMENT_RECONCILIATION_TABLE]: check new (dbClient, self.metadata.get(PAYMENT_RECONCILIATION_TABLE), psql:H2_SPECIFICS),
-            [MEASURE_TABLE]: check new (dbClient, self.metadata.get(MEASURE_TABLE), psql:H2_SPECIFICS),
-            [CONCEPT_MAP_TABLE]: check new (dbClient, self.metadata.get(CONCEPT_MAP_TABLE), psql:H2_SPECIFICS),
-            [RESEARCH_ELEMENT_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(RESEARCH_ELEMENT_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [GUIDANCE_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(GUIDANCE_RESPONSE_TABLE), psql:H2_SPECIFICS),
-            [LINKAGE_TABLE]: check new (dbClient, self.metadata.get(LINKAGE_TABLE), psql:H2_SPECIFICS),
-            [MEDICINAL_PRODUCT_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_TABLE), psql:H2_SPECIFICS),
-            [DEVICE_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(DEVICE_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [COVERAGE_ELIGIBILITY_REQUEST_TABLE]: check new (dbClient, self.metadata.get(COVERAGE_ELIGIBILITY_REQUEST_TABLE), psql:H2_SPECIFICS),
-            [PATIENT_TABLE]: check new (dbClient, self.metadata.get(PATIENT_TABLE), psql:H2_SPECIFICS),
-            [COVERAGE_TABLE]: check new (dbClient, self.metadata.get(COVERAGE_TABLE), psql:H2_SPECIFICS),
-            [SUBSTANCE_TABLE]: check new (dbClient, self.metadata.get(SUBSTANCE_TABLE), psql:H2_SPECIFICS),
-            [CHARGE_ITEM_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(CHARGE_ITEM_DEFINITION_TABLE), psql:H2_SPECIFICS),
-            [MEDICINAL_PRODUCT_INTERACTION_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_INTERACTION_TABLE), psql:H2_SPECIFICS),
-            [ACCOUNT_TABLE]: check new (dbClient, self.metadata.get(ACCOUNT_TABLE), psql:H2_SPECIFICS),
-            [MESSAGE_HEADER_TABLE]: check new (dbClient, self.metadata.get(MESSAGE_HEADER_TABLE), psql:H2_SPECIFICS),
-            [AUDIT_EVENT_TABLE]: check new (dbClient, self.metadata.get(AUDIT_EVENT_TABLE), psql:H2_SPECIFICS),
-            [NUTRITION_ORDER_TABLE]: check new (dbClient, self.metadata.get(NUTRITION_ORDER_TABLE), psql:H2_SPECIFICS),
-            [QUESTIONNAIRE_TABLE]: check new (dbClient, self.metadata.get(QUESTIONNAIRE_TABLE), psql:H2_SPECIFICS),
-            [APPOINTMENT_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(APPOINTMENT_RESPONSE_TABLE), psql:H2_SPECIFICS)
+            [S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S]: check new (dbClient, self.metadata.get(S_E_A_R_C_H__P_A_R_A_M__R_E_S__E_X_P_R_E_S_S_I_O_N_S), psql:MYSQL_SPECIFICS),
+            [R_E_F_E_R_E_N_C_E_S]: check new (dbClient, self.metadata.get(R_E_F_E_R_E_N_C_E_S), psql:MYSQL_SPECIFICS),
+            [TEST_SCRIPT_TABLE]: check new (dbClient, self.metadata.get(TEST_SCRIPT_TABLE), psql:MYSQL_SPECIFICS),
+            [TEST_REPORT_TABLE]: check new (dbClient, self.metadata.get(TEST_REPORT_TABLE), psql:MYSQL_SPECIFICS),
+            [RELATED_PERSON_TABLE]: check new (dbClient, self.metadata.get(RELATED_PERSON_TABLE), psql:MYSQL_SPECIFICS),
+            [EVIDENCE_VARIABLE_TABLE]: check new (dbClient, self.metadata.get(EVIDENCE_VARIABLE_TABLE), psql:MYSQL_SPECIFICS),
+            [VALUE_SET_TABLE]: check new (dbClient, self.metadata.get(VALUE_SET_TABLE), psql:MYSQL_SPECIFICS),
+            [DOCUMENT_MANIFEST_TABLE]: check new (dbClient, self.metadata.get(DOCUMENT_MANIFEST_TABLE), psql:MYSQL_SPECIFICS),
+            [IMMUNIZATION_RECOMMENDATION_TABLE]: check new (dbClient, self.metadata.get(IMMUNIZATION_RECOMMENDATION_TABLE), psql:MYSQL_SPECIFICS),
+            [DEVICE_METRIC_TABLE]: check new (dbClient, self.metadata.get(DEVICE_METRIC_TABLE), psql:MYSQL_SPECIFICS),
+            [LOCATION_TABLE]: check new (dbClient, self.metadata.get(LOCATION_TABLE), psql:MYSQL_SPECIFICS),
+            [EXPLANATION_OF_BENEFIT_TABLE]: check new (dbClient, self.metadata.get(EXPLANATION_OF_BENEFIT_TABLE), psql:MYSQL_SPECIFICS),
+            [FLAG_TABLE]: check new (dbClient, self.metadata.get(FLAG_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICATION_STATEMENT_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_STATEMENT_TABLE), psql:MYSQL_SPECIFICS),
+            [INSURANCE_PLAN_TABLE]: check new (dbClient, self.metadata.get(INSURANCE_PLAN_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICINAL_PRODUCT_CONTRAINDICATION_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_CONTRAINDICATION_TABLE), psql:MYSQL_SPECIFICS),
+            [CLAIM_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(CLAIM_RESPONSE_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICINAL_PRODUCT_AUTHORIZATION_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_AUTHORIZATION_TABLE), psql:MYSQL_SPECIFICS),
+            [IMAGING_STUDY_TABLE]: check new (dbClient, self.metadata.get(IMAGING_STUDY_TABLE), psql:MYSQL_SPECIFICS),
+            [PRACTITIONER_ROLE_TABLE]: check new (dbClient, self.metadata.get(PRACTITIONER_ROLE_TABLE), psql:MYSQL_SPECIFICS),
+            [GROUP_TABLE]: check new (dbClient, self.metadata.get(GROUP_TABLE), psql:MYSQL_SPECIFICS),
+            [PERSON_TABLE]: check new (dbClient, self.metadata.get(PERSON_TABLE), psql:MYSQL_SPECIFICS),
+            [PRACTITIONER_TABLE]: check new (dbClient, self.metadata.get(PRACTITIONER_TABLE), psql:MYSQL_SPECIFICS),
+            [ACTIVITY_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(ACTIVITY_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [EVIDENCE_TABLE]: check new (dbClient, self.metadata.get(EVIDENCE_TABLE), psql:MYSQL_SPECIFICS),
+            [DEVICE_TABLE]: check new (dbClient, self.metadata.get(DEVICE_TABLE), psql:MYSQL_SPECIFICS),
+            [FAMILY_MEMBER_HISTORY_TABLE]: check new (dbClient, self.metadata.get(FAMILY_MEMBER_HISTORY_TABLE), psql:MYSQL_SPECIFICS),
+            [ADVERSE_EVENT_TABLE]: check new (dbClient, self.metadata.get(ADVERSE_EVENT_TABLE), psql:MYSQL_SPECIFICS),
+            [SUPPLY_REQUEST_TABLE]: check new (dbClient, self.metadata.get(SUPPLY_REQUEST_TABLE), psql:MYSQL_SPECIFICS),
+            [EXAMPLE_SCENARIO_TABLE]: check new (dbClient, self.metadata.get(EXAMPLE_SCENARIO_TABLE), psql:MYSQL_SPECIFICS),
+            [INVOICE_TABLE]: check new (dbClient, self.metadata.get(INVOICE_TABLE), psql:MYSQL_SPECIFICS),
+            [QUESTIONNAIRE_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(QUESTIONNAIRE_RESPONSE_TABLE), psql:MYSQL_SPECIFICS),
+            [OBSERVATION_TABLE]: check new (dbClient, self.metadata.get(OBSERVATION_TABLE), psql:MYSQL_SPECIFICS),
+            [EFFECT_EVIDENCE_SYNTHESIS_TABLE]: check new (dbClient, self.metadata.get(EFFECT_EVIDENCE_SYNTHESIS_TABLE), psql:MYSQL_SPECIFICS),
+            [OPERATION_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(OPERATION_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [MEASURE_REPORT_TABLE]: check new (dbClient, self.metadata.get(MEASURE_REPORT_TABLE), psql:MYSQL_SPECIFICS),
+            [SUPPLY_DELIVERY_TABLE]: check new (dbClient, self.metadata.get(SUPPLY_DELIVERY_TABLE), psql:MYSQL_SPECIFICS),
+            [SERVICE_REQUEST_TABLE]: check new (dbClient, self.metadata.get(SERVICE_REQUEST_TABLE), psql:MYSQL_SPECIFICS),
+            [BASIC_TABLE]: check new (dbClient, self.metadata.get(BASIC_TABLE), psql:MYSQL_SPECIFICS),
+            [SUBSCRIPTION_TABLE]: check new (dbClient, self.metadata.get(SUBSCRIPTION_TABLE), psql:MYSQL_SPECIFICS),
+            [ENROLLMENT_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(ENROLLMENT_RESPONSE_TABLE), psql:MYSQL_SPECIFICS),
+            [DEVICE_REQUEST_TABLE]: check new (dbClient, self.metadata.get(DEVICE_REQUEST_TABLE), psql:MYSQL_SPECIFICS),
+            [APPOINTMENT_TABLE]: check new (dbClient, self.metadata.get(APPOINTMENT_TABLE), psql:MYSQL_SPECIFICS),
+            [NAMING_SYSTEM_TABLE]: check new (dbClient, self.metadata.get(NAMING_SYSTEM_TABLE), psql:MYSQL_SPECIFICS),
+            [STRUCTURE_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(STRUCTURE_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [CLINICAL_IMPRESSION_TABLE]: check new (dbClient, self.metadata.get(CLINICAL_IMPRESSION_TABLE), psql:MYSQL_SPECIFICS),
+            [COMMUNICATION_TABLE]: check new (dbClient, self.metadata.get(COMMUNICATION_TABLE), psql:MYSQL_SPECIFICS),
+            [ORGANIZATION_TABLE]: check new (dbClient, self.metadata.get(ORGANIZATION_TABLE), psql:MYSQL_SPECIFICS),
+            [COVERAGE_ELIGIBILITY_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(COVERAGE_ELIGIBILITY_RESPONSE_TABLE), psql:MYSQL_SPECIFICS),
+            [RESEARCH_STUDY_TABLE]: check new (dbClient, self.metadata.get(RESEARCH_STUDY_TABLE), psql:MYSQL_SPECIFICS),
+            [BUNDLE_TABLE]: check new (dbClient, self.metadata.get(BUNDLE_TABLE), psql:MYSQL_SPECIFICS),
+            [ENCOUNTER_TABLE]: check new (dbClient, self.metadata.get(ENCOUNTER_TABLE), psql:MYSQL_SPECIFICS),
+            [RISK_ASSESSMENT_TABLE]: check new (dbClient, self.metadata.get(RISK_ASSESSMENT_TABLE), psql:MYSQL_SPECIFICS),
+            [LIST_TABLE]: check new (dbClient, self.metadata.get(LIST_TABLE), psql:MYSQL_SPECIFICS),
+            [ORGANIZATION_AFFILIATION_TABLE]: check new (dbClient, self.metadata.get(ORGANIZATION_AFFILIATION_TABLE), psql:MYSQL_SPECIFICS),
+            [CHARGE_ITEM_TABLE]: check new (dbClient, self.metadata.get(CHARGE_ITEM_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICATION_KNOWLEDGE_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_KNOWLEDGE_TABLE), psql:MYSQL_SPECIFICS),
+            [PLAN_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(PLAN_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [CARE_PLAN_TABLE]: check new (dbClient, self.metadata.get(CARE_PLAN_TABLE), psql:MYSQL_SPECIFICS),
+            [VISION_PRESCRIPTION_TABLE]: check new (dbClient, self.metadata.get(VISION_PRESCRIPTION_TABLE), psql:MYSQL_SPECIFICS),
+            [EPISODE_OF_CARE_TABLE]: check new (dbClient, self.metadata.get(EPISODE_OF_CARE_TABLE), psql:MYSQL_SPECIFICS),
+            [CARE_TEAM_TABLE]: check new (dbClient, self.metadata.get(CARE_TEAM_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICATION_ADMINISTRATION_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_ADMINISTRATION_TABLE), psql:MYSQL_SPECIFICS),
+            [CONSENT_TABLE]: check new (dbClient, self.metadata.get(CONSENT_TABLE), psql:MYSQL_SPECIFICS),
+            [DETECTED_ISSUE_TABLE]: check new (dbClient, self.metadata.get(DETECTED_ISSUE_TABLE), psql:MYSQL_SPECIFICS),
+            [SUBSTANCE_SPECIFICATION_TABLE]: check new (dbClient, self.metadata.get(SUBSTANCE_SPECIFICATION_TABLE), psql:MYSQL_SPECIFICS),
+            [ALLERGY_INTOLERANCE_TABLE]: check new (dbClient, self.metadata.get(ALLERGY_INTOLERANCE_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICINAL_PRODUCT_INDICATION_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_INDICATION_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICINAL_PRODUCT_PHARMACEUTICAL_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_PHARMACEUTICAL_TABLE), psql:MYSQL_SPECIFICS),
+            [SLOT_TABLE]: check new (dbClient, self.metadata.get(SLOT_TABLE), psql:MYSQL_SPECIFICS),
+            [VERIFICATION_RESULT_TABLE]: check new (dbClient, self.metadata.get(VERIFICATION_RESULT_TABLE), psql:MYSQL_SPECIFICS),
+            [SPECIMEN_TABLE]: check new (dbClient, self.metadata.get(SPECIMEN_TABLE), psql:MYSQL_SPECIFICS),
+            [RESEARCH_SUBJECT_TABLE]: check new (dbClient, self.metadata.get(RESEARCH_SUBJECT_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICATION_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_TABLE), psql:MYSQL_SPECIFICS),
+            [RESEARCH_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(RESEARCH_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [HEALTHCARE_SERVICE_TABLE]: check new (dbClient, self.metadata.get(HEALTHCARE_SERVICE_TABLE), psql:MYSQL_SPECIFICS),
+            [PAYMENT_NOTICE_TABLE]: check new (dbClient, self.metadata.get(PAYMENT_NOTICE_TABLE), psql:MYSQL_SPECIFICS),
+            [PROVENANCE_TABLE]: check new (dbClient, self.metadata.get(PROVENANCE_TABLE), psql:MYSQL_SPECIFICS),
+            [GRAPH_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(GRAPH_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDIA_TABLE]: check new (dbClient, self.metadata.get(MEDIA_TABLE), psql:MYSQL_SPECIFICS),
+            [BODY_STRUCTURE_TABLE]: check new (dbClient, self.metadata.get(BODY_STRUCTURE_TABLE), psql:MYSQL_SPECIFICS),
+            [DIAGNOSTIC_REPORT_TABLE]: check new (dbClient, self.metadata.get(DIAGNOSTIC_REPORT_TABLE), psql:MYSQL_SPECIFICS),
+            [GOAL_TABLE]: check new (dbClient, self.metadata.get(GOAL_TABLE), psql:MYSQL_SPECIFICS),
+            [CAPABILITY_STATEMENT_TABLE]: check new (dbClient, self.metadata.get(CAPABILITY_STATEMENT_TABLE), psql:MYSQL_SPECIFICS),
+            [DEVICE_USE_STATEMENT_TABLE]: check new (dbClient, self.metadata.get(DEVICE_USE_STATEMENT_TABLE), psql:MYSQL_SPECIFICS),
+            [SCHEDULE_TABLE]: check new (dbClient, self.metadata.get(SCHEDULE_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICINAL_PRODUCT_PACKAGED_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_PACKAGED_TABLE), psql:MYSQL_SPECIFICS),
+            [PROCEDURE_TABLE]: check new (dbClient, self.metadata.get(PROCEDURE_TABLE), psql:MYSQL_SPECIFICS),
+            [LIBRARY_TABLE]: check new (dbClient, self.metadata.get(LIBRARY_TABLE), psql:MYSQL_SPECIFICS),
+            [CODE_SYSTEM_TABLE]: check new (dbClient, self.metadata.get(CODE_SYSTEM_TABLE), psql:MYSQL_SPECIFICS),
+            [COMMUNICATION_REQUEST_TABLE]: check new (dbClient, self.metadata.get(COMMUNICATION_REQUEST_TABLE), psql:MYSQL_SPECIFICS),
+            [DOCUMENT_REFERENCE_TABLE]: check new (dbClient, self.metadata.get(DOCUMENT_REFERENCE_TABLE), psql:MYSQL_SPECIFICS),
+            [REQUEST_GROUP_TABLE]: check new (dbClient, self.metadata.get(REQUEST_GROUP_TABLE), psql:MYSQL_SPECIFICS),
+            [CLAIM_TABLE]: check new (dbClient, self.metadata.get(CLAIM_TABLE), psql:MYSQL_SPECIFICS),
+            [MESSAGE_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(MESSAGE_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [RISK_EVIDENCE_SYNTHESIS_TABLE]: check new (dbClient, self.metadata.get(RISK_EVIDENCE_SYNTHESIS_TABLE), psql:MYSQL_SPECIFICS),
+            [TASK_TABLE]: check new (dbClient, self.metadata.get(TASK_TABLE), psql:MYSQL_SPECIFICS),
+            [IMPLEMENTATION_GUIDE_TABLE]: check new (dbClient, self.metadata.get(IMPLEMENTATION_GUIDE_TABLE), psql:MYSQL_SPECIFICS),
+            [STRUCTURE_MAP_TABLE]: check new (dbClient, self.metadata.get(STRUCTURE_MAP_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICINAL_PRODUCT_UNDESIRABLE_EFFECT_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_UNDESIRABLE_EFFECT_TABLE), psql:MYSQL_SPECIFICS),
+            [COMPARTMENT_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(COMPARTMENT_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [ENDPOINT_TABLE]: check new (dbClient, self.metadata.get(ENDPOINT_TABLE), psql:MYSQL_SPECIFICS),
+            [TERMINOLOGY_CAPABILITIES_TABLE]: check new (dbClient, self.metadata.get(TERMINOLOGY_CAPABILITIES_TABLE), psql:MYSQL_SPECIFICS),
+            [CONDITION_TABLE]: check new (dbClient, self.metadata.get(CONDITION_TABLE), psql:MYSQL_SPECIFICS),
+            [COMPOSITION_TABLE]: check new (dbClient, self.metadata.get(COMPOSITION_TABLE), psql:MYSQL_SPECIFICS),
+            [CONTRACT_TABLE]: check new (dbClient, self.metadata.get(CONTRACT_TABLE), psql:MYSQL_SPECIFICS),
+            [IMMUNIZATION_TABLE]: check new (dbClient, self.metadata.get(IMMUNIZATION_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICATION_DISPENSE_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_DISPENSE_TABLE), psql:MYSQL_SPECIFICS),
+            [MOLECULAR_SEQUENCE_TABLE]: check new (dbClient, self.metadata.get(MOLECULAR_SEQUENCE_TABLE), psql:MYSQL_SPECIFICS),
+            [SEARCH_PARAMETER_TABLE]: check new (dbClient, self.metadata.get(SEARCH_PARAMETER_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICATION_REQUEST_TABLE]: check new (dbClient, self.metadata.get(MEDICATION_REQUEST_TABLE), psql:MYSQL_SPECIFICS),
+            [ENROLLMENT_REQUEST_TABLE]: check new (dbClient, self.metadata.get(ENROLLMENT_REQUEST_TABLE), psql:MYSQL_SPECIFICS),
+            [SPECIMEN_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(SPECIMEN_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [EVENT_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(EVENT_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [IMMUNIZATION_EVALUATION_TABLE]: check new (dbClient, self.metadata.get(IMMUNIZATION_EVALUATION_TABLE), psql:MYSQL_SPECIFICS),
+            [PAYMENT_RECONCILIATION_TABLE]: check new (dbClient, self.metadata.get(PAYMENT_RECONCILIATION_TABLE), psql:MYSQL_SPECIFICS),
+            [MEASURE_TABLE]: check new (dbClient, self.metadata.get(MEASURE_TABLE), psql:MYSQL_SPECIFICS),
+            [CONCEPT_MAP_TABLE]: check new (dbClient, self.metadata.get(CONCEPT_MAP_TABLE), psql:MYSQL_SPECIFICS),
+            [RESEARCH_ELEMENT_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(RESEARCH_ELEMENT_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [GUIDANCE_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(GUIDANCE_RESPONSE_TABLE), psql:MYSQL_SPECIFICS),
+            [LINKAGE_TABLE]: check new (dbClient, self.metadata.get(LINKAGE_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICINAL_PRODUCT_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_TABLE), psql:MYSQL_SPECIFICS),
+            [DEVICE_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(DEVICE_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [COVERAGE_ELIGIBILITY_REQUEST_TABLE]: check new (dbClient, self.metadata.get(COVERAGE_ELIGIBILITY_REQUEST_TABLE), psql:MYSQL_SPECIFICS),
+            [PATIENT_TABLE]: check new (dbClient, self.metadata.get(PATIENT_TABLE), psql:MYSQL_SPECIFICS),
+            [COVERAGE_TABLE]: check new (dbClient, self.metadata.get(COVERAGE_TABLE), psql:MYSQL_SPECIFICS),
+            [SUBSTANCE_TABLE]: check new (dbClient, self.metadata.get(SUBSTANCE_TABLE), psql:MYSQL_SPECIFICS),
+            [CHARGE_ITEM_DEFINITION_TABLE]: check new (dbClient, self.metadata.get(CHARGE_ITEM_DEFINITION_TABLE), psql:MYSQL_SPECIFICS),
+            [MEDICINAL_PRODUCT_INTERACTION_TABLE]: check new (dbClient, self.metadata.get(MEDICINAL_PRODUCT_INTERACTION_TABLE), psql:MYSQL_SPECIFICS),
+            [ACCOUNT_TABLE]: check new (dbClient, self.metadata.get(ACCOUNT_TABLE), psql:MYSQL_SPECIFICS),
+            [MESSAGE_HEADER_TABLE]: check new (dbClient, self.metadata.get(MESSAGE_HEADER_TABLE), psql:MYSQL_SPECIFICS),
+            [AUDIT_EVENT_TABLE]: check new (dbClient, self.metadata.get(AUDIT_EVENT_TABLE), psql:MYSQL_SPECIFICS),
+            [NUTRITION_ORDER_TABLE]: check new (dbClient, self.metadata.get(NUTRITION_ORDER_TABLE), psql:MYSQL_SPECIFICS),
+            [QUESTIONNAIRE_TABLE]: check new (dbClient, self.metadata.get(QUESTIONNAIRE_TABLE), psql:MYSQL_SPECIFICS),
+            [APPOINTMENT_RESPONSE_TABLE]: check new (dbClient, self.metadata.get(APPOINTMENT_RESPONSE_TABLE), psql:MYSQL_SPECIFICS)
         };
     }
 
     isolated resource function get search_param_res_expressions(SEARCH_PARAM_RES_EXPRESSIONSTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
     isolated resource function get search_param_res_expressions/[int ID](SEARCH_PARAM_RES_EXPRESSIONSTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
@@ -3340,12 +3207,12 @@ public isolated client class Client {
     }
 
     isolated resource function get references(REFERENCESTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
     isolated resource function get references/[int ID](REFERENCESTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
@@ -3380,5331 +3247,5198 @@ public isolated client class Client {
     }
 
     isolated resource function get testscripttables(TestScriptTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get testscripttables/[int ID](TestScriptTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get testscripttables/[string TESTSCRIPTTABLE_ID](TestScriptTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post testscripttables(TestScriptTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post testscripttables(TestScriptTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TEST_SCRIPT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from TestScriptTableInsert inserted in data
+            select inserted.TESTSCRIPTTABLE_ID;
     }
 
-    isolated resource function put testscripttables/[int ID](TestScriptTableUpdate value) returns TestScriptTable|persist:Error {
+    isolated resource function put testscripttables/[string TESTSCRIPTTABLE_ID](TestScriptTableUpdate value) returns TestScriptTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TEST_SCRIPT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/testscripttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(TESTSCRIPTTABLE_ID, value);
+        return self->/testscripttables/[TESTSCRIPTTABLE_ID].get();
     }
 
-    isolated resource function delete testscripttables/[int ID]() returns TestScriptTable|persist:Error {
-        TestScriptTable result = check self->/testscripttables/[ID].get();
+    isolated resource function delete testscripttables/[string TESTSCRIPTTABLE_ID]() returns TestScriptTable|persist:Error {
+        TestScriptTable result = check self->/testscripttables/[TESTSCRIPTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TEST_SCRIPT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(TESTSCRIPTTABLE_ID);
         return result;
     }
 
     isolated resource function get testreporttables(TestReportTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get testreporttables/[int ID](TestReportTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get testreporttables/[string TESTREPORTTABLE_ID](TestReportTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post testreporttables(TestReportTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post testreporttables(TestReportTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TEST_REPORT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from TestReportTableInsert inserted in data
+            select inserted.TESTREPORTTABLE_ID;
     }
 
-    isolated resource function put testreporttables/[int ID](TestReportTableUpdate value) returns TestReportTable|persist:Error {
+    isolated resource function put testreporttables/[string TESTREPORTTABLE_ID](TestReportTableUpdate value) returns TestReportTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TEST_REPORT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/testreporttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(TESTREPORTTABLE_ID, value);
+        return self->/testreporttables/[TESTREPORTTABLE_ID].get();
     }
 
-    isolated resource function delete testreporttables/[int ID]() returns TestReportTable|persist:Error {
-        TestReportTable result = check self->/testreporttables/[ID].get();
+    isolated resource function delete testreporttables/[string TESTREPORTTABLE_ID]() returns TestReportTable|persist:Error {
+        TestReportTable result = check self->/testreporttables/[TESTREPORTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TEST_REPORT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(TESTREPORTTABLE_ID);
         return result;
     }
 
     isolated resource function get relatedpersontables(RelatedPersonTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get relatedpersontables/[int ID](RelatedPersonTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get relatedpersontables/[string RELATEDPERSONTABLE_ID](RelatedPersonTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post relatedpersontables(RelatedPersonTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post relatedpersontables(RelatedPersonTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RELATED_PERSON_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from RelatedPersonTableInsert inserted in data
+            select inserted.RELATEDPERSONTABLE_ID;
     }
 
-    isolated resource function put relatedpersontables/[int ID](RelatedPersonTableUpdate value) returns RelatedPersonTable|persist:Error {
+    isolated resource function put relatedpersontables/[string RELATEDPERSONTABLE_ID](RelatedPersonTableUpdate value) returns RelatedPersonTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RELATED_PERSON_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/relatedpersontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(RELATEDPERSONTABLE_ID, value);
+        return self->/relatedpersontables/[RELATEDPERSONTABLE_ID].get();
     }
 
-    isolated resource function delete relatedpersontables/[int ID]() returns RelatedPersonTable|persist:Error {
-        RelatedPersonTable result = check self->/relatedpersontables/[ID].get();
+    isolated resource function delete relatedpersontables/[string RELATEDPERSONTABLE_ID]() returns RelatedPersonTable|persist:Error {
+        RelatedPersonTable result = check self->/relatedpersontables/[RELATEDPERSONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RELATED_PERSON_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(RELATEDPERSONTABLE_ID);
         return result;
     }
 
     isolated resource function get evidencevariabletables(EvidenceVariableTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get evidencevariabletables/[int ID](EvidenceVariableTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get evidencevariabletables/[string EVIDENCEVARIABLETABLE_ID](EvidenceVariableTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post evidencevariabletables(EvidenceVariableTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post evidencevariabletables(EvidenceVariableTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EVIDENCE_VARIABLE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from EvidenceVariableTableInsert inserted in data
+            select inserted.EVIDENCEVARIABLETABLE_ID;
     }
 
-    isolated resource function put evidencevariabletables/[int ID](EvidenceVariableTableUpdate value) returns EvidenceVariableTable|persist:Error {
+    isolated resource function put evidencevariabletables/[string EVIDENCEVARIABLETABLE_ID](EvidenceVariableTableUpdate value) returns EvidenceVariableTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EVIDENCE_VARIABLE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/evidencevariabletables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(EVIDENCEVARIABLETABLE_ID, value);
+        return self->/evidencevariabletables/[EVIDENCEVARIABLETABLE_ID].get();
     }
 
-    isolated resource function delete evidencevariabletables/[int ID]() returns EvidenceVariableTable|persist:Error {
-        EvidenceVariableTable result = check self->/evidencevariabletables/[ID].get();
+    isolated resource function delete evidencevariabletables/[string EVIDENCEVARIABLETABLE_ID]() returns EvidenceVariableTable|persist:Error {
+        EvidenceVariableTable result = check self->/evidencevariabletables/[EVIDENCEVARIABLETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EVIDENCE_VARIABLE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(EVIDENCEVARIABLETABLE_ID);
         return result;
     }
 
     isolated resource function get valuesettables(ValueSetTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get valuesettables/[int ID](ValueSetTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get valuesettables/[string VALUESETTABLE_ID](ValueSetTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post valuesettables(ValueSetTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post valuesettables(ValueSetTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(VALUE_SET_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ValueSetTableInsert inserted in data
+            select inserted.VALUESETTABLE_ID;
     }
 
-    isolated resource function put valuesettables/[int ID](ValueSetTableUpdate value) returns ValueSetTable|persist:Error {
+    isolated resource function put valuesettables/[string VALUESETTABLE_ID](ValueSetTableUpdate value) returns ValueSetTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(VALUE_SET_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/valuesettables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(VALUESETTABLE_ID, value);
+        return self->/valuesettables/[VALUESETTABLE_ID].get();
     }
 
-    isolated resource function delete valuesettables/[int ID]() returns ValueSetTable|persist:Error {
-        ValueSetTable result = check self->/valuesettables/[ID].get();
+    isolated resource function delete valuesettables/[string VALUESETTABLE_ID]() returns ValueSetTable|persist:Error {
+        ValueSetTable result = check self->/valuesettables/[VALUESETTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(VALUE_SET_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(VALUESETTABLE_ID);
         return result;
     }
 
     isolated resource function get documentmanifesttables(DocumentManifestTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get documentmanifesttables/[int ID](DocumentManifestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get documentmanifesttables/[string DOCUMENTMANIFESTTABLE_ID](DocumentManifestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post documentmanifesttables(DocumentManifestTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post documentmanifesttables(DocumentManifestTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DOCUMENT_MANIFEST_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from DocumentManifestTableInsert inserted in data
+            select inserted.DOCUMENTMANIFESTTABLE_ID;
     }
 
-    isolated resource function put documentmanifesttables/[int ID](DocumentManifestTableUpdate value) returns DocumentManifestTable|persist:Error {
+    isolated resource function put documentmanifesttables/[string DOCUMENTMANIFESTTABLE_ID](DocumentManifestTableUpdate value) returns DocumentManifestTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DOCUMENT_MANIFEST_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/documentmanifesttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(DOCUMENTMANIFESTTABLE_ID, value);
+        return self->/documentmanifesttables/[DOCUMENTMANIFESTTABLE_ID].get();
     }
 
-    isolated resource function delete documentmanifesttables/[int ID]() returns DocumentManifestTable|persist:Error {
-        DocumentManifestTable result = check self->/documentmanifesttables/[ID].get();
+    isolated resource function delete documentmanifesttables/[string DOCUMENTMANIFESTTABLE_ID]() returns DocumentManifestTable|persist:Error {
+        DocumentManifestTable result = check self->/documentmanifesttables/[DOCUMENTMANIFESTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DOCUMENT_MANIFEST_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(DOCUMENTMANIFESTTABLE_ID);
         return result;
     }
 
     isolated resource function get immunizationrecommendationtables(ImmunizationRecommendationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get immunizationrecommendationtables/[int ID](ImmunizationRecommendationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get immunizationrecommendationtables/[string IMMUNIZATIONRECOMMENDATIONTABLE_ID](ImmunizationRecommendationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post immunizationrecommendationtables(ImmunizationRecommendationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post immunizationrecommendationtables(ImmunizationRecommendationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMMUNIZATION_RECOMMENDATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ImmunizationRecommendationTableInsert inserted in data
+            select inserted.IMMUNIZATIONRECOMMENDATIONTABLE_ID;
     }
 
-    isolated resource function put immunizationrecommendationtables/[int ID](ImmunizationRecommendationTableUpdate value) returns ImmunizationRecommendationTable|persist:Error {
+    isolated resource function put immunizationrecommendationtables/[string IMMUNIZATIONRECOMMENDATIONTABLE_ID](ImmunizationRecommendationTableUpdate value) returns ImmunizationRecommendationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMMUNIZATION_RECOMMENDATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/immunizationrecommendationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(IMMUNIZATIONRECOMMENDATIONTABLE_ID, value);
+        return self->/immunizationrecommendationtables/[IMMUNIZATIONRECOMMENDATIONTABLE_ID].get();
     }
 
-    isolated resource function delete immunizationrecommendationtables/[int ID]() returns ImmunizationRecommendationTable|persist:Error {
-        ImmunizationRecommendationTable result = check self->/immunizationrecommendationtables/[ID].get();
+    isolated resource function delete immunizationrecommendationtables/[string IMMUNIZATIONRECOMMENDATIONTABLE_ID]() returns ImmunizationRecommendationTable|persist:Error {
+        ImmunizationRecommendationTable result = check self->/immunizationrecommendationtables/[IMMUNIZATIONRECOMMENDATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMMUNIZATION_RECOMMENDATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(IMMUNIZATIONRECOMMENDATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get devicemetrictables(DeviceMetricTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get devicemetrictables/[int ID](DeviceMetricTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get devicemetrictables/[string DEVICEMETRICTABLE_ID](DeviceMetricTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post devicemetrictables(DeviceMetricTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post devicemetrictables(DeviceMetricTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_METRIC_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from DeviceMetricTableInsert inserted in data
+            select inserted.DEVICEMETRICTABLE_ID;
     }
 
-    isolated resource function put devicemetrictables/[int ID](DeviceMetricTableUpdate value) returns DeviceMetricTable|persist:Error {
+    isolated resource function put devicemetrictables/[string DEVICEMETRICTABLE_ID](DeviceMetricTableUpdate value) returns DeviceMetricTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_METRIC_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/devicemetrictables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(DEVICEMETRICTABLE_ID, value);
+        return self->/devicemetrictables/[DEVICEMETRICTABLE_ID].get();
     }
 
-    isolated resource function delete devicemetrictables/[int ID]() returns DeviceMetricTable|persist:Error {
-        DeviceMetricTable result = check self->/devicemetrictables/[ID].get();
+    isolated resource function delete devicemetrictables/[string DEVICEMETRICTABLE_ID]() returns DeviceMetricTable|persist:Error {
+        DeviceMetricTable result = check self->/devicemetrictables/[DEVICEMETRICTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_METRIC_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(DEVICEMETRICTABLE_ID);
         return result;
     }
 
     isolated resource function get locationtables(LocationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get locationtables/[int ID](LocationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get locationtables/[string LOCATIONTABLE_ID](LocationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post locationtables(LocationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post locationtables(LocationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LOCATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from LocationTableInsert inserted in data
+            select inserted.LOCATIONTABLE_ID;
     }
 
-    isolated resource function put locationtables/[int ID](LocationTableUpdate value) returns LocationTable|persist:Error {
+    isolated resource function put locationtables/[string LOCATIONTABLE_ID](LocationTableUpdate value) returns LocationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LOCATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/locationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(LOCATIONTABLE_ID, value);
+        return self->/locationtables/[LOCATIONTABLE_ID].get();
     }
 
-    isolated resource function delete locationtables/[int ID]() returns LocationTable|persist:Error {
-        LocationTable result = check self->/locationtables/[ID].get();
+    isolated resource function delete locationtables/[string LOCATIONTABLE_ID]() returns LocationTable|persist:Error {
+        LocationTable result = check self->/locationtables/[LOCATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LOCATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(LOCATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get explanationofbenefittables(ExplanationOfBenefitTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get explanationofbenefittables/[int ID](ExplanationOfBenefitTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get explanationofbenefittables/[string EXPLANATIONOFBENEFITTABLE_ID](ExplanationOfBenefitTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post explanationofbenefittables(ExplanationOfBenefitTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post explanationofbenefittables(ExplanationOfBenefitTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EXPLANATION_OF_BENEFIT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ExplanationOfBenefitTableInsert inserted in data
+            select inserted.EXPLANATIONOFBENEFITTABLE_ID;
     }
 
-    isolated resource function put explanationofbenefittables/[int ID](ExplanationOfBenefitTableUpdate value) returns ExplanationOfBenefitTable|persist:Error {
+    isolated resource function put explanationofbenefittables/[string EXPLANATIONOFBENEFITTABLE_ID](ExplanationOfBenefitTableUpdate value) returns ExplanationOfBenefitTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EXPLANATION_OF_BENEFIT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/explanationofbenefittables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(EXPLANATIONOFBENEFITTABLE_ID, value);
+        return self->/explanationofbenefittables/[EXPLANATIONOFBENEFITTABLE_ID].get();
     }
 
-    isolated resource function delete explanationofbenefittables/[int ID]() returns ExplanationOfBenefitTable|persist:Error {
-        ExplanationOfBenefitTable result = check self->/explanationofbenefittables/[ID].get();
+    isolated resource function delete explanationofbenefittables/[string EXPLANATIONOFBENEFITTABLE_ID]() returns ExplanationOfBenefitTable|persist:Error {
+        ExplanationOfBenefitTable result = check self->/explanationofbenefittables/[EXPLANATIONOFBENEFITTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EXPLANATION_OF_BENEFIT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(EXPLANATIONOFBENEFITTABLE_ID);
         return result;
     }
 
     isolated resource function get flagtables(FlagTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get flagtables/[int ID](FlagTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get flagtables/[string FLAGTABLE_ID](FlagTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post flagtables(FlagTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post flagtables(FlagTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(FLAG_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from FlagTableInsert inserted in data
+            select inserted.FLAGTABLE_ID;
     }
 
-    isolated resource function put flagtables/[int ID](FlagTableUpdate value) returns FlagTable|persist:Error {
+    isolated resource function put flagtables/[string FLAGTABLE_ID](FlagTableUpdate value) returns FlagTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(FLAG_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/flagtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(FLAGTABLE_ID, value);
+        return self->/flagtables/[FLAGTABLE_ID].get();
     }
 
-    isolated resource function delete flagtables/[int ID]() returns FlagTable|persist:Error {
-        FlagTable result = check self->/flagtables/[ID].get();
+    isolated resource function delete flagtables/[string FLAGTABLE_ID]() returns FlagTable|persist:Error {
+        FlagTable result = check self->/flagtables/[FLAGTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(FLAG_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(FLAGTABLE_ID);
         return result;
     }
 
     isolated resource function get medicationstatementtables(MedicationStatementTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicationstatementtables/[int ID](MedicationStatementTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicationstatementtables/[string MEDICATIONSTATEMENTTABLE_ID](MedicationStatementTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicationstatementtables(MedicationStatementTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicationstatementtables(MedicationStatementTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_STATEMENT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicationStatementTableInsert inserted in data
+            select inserted.MEDICATIONSTATEMENTTABLE_ID;
     }
 
-    isolated resource function put medicationstatementtables/[int ID](MedicationStatementTableUpdate value) returns MedicationStatementTable|persist:Error {
+    isolated resource function put medicationstatementtables/[string MEDICATIONSTATEMENTTABLE_ID](MedicationStatementTableUpdate value) returns MedicationStatementTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_STATEMENT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicationstatementtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICATIONSTATEMENTTABLE_ID, value);
+        return self->/medicationstatementtables/[MEDICATIONSTATEMENTTABLE_ID].get();
     }
 
-    isolated resource function delete medicationstatementtables/[int ID]() returns MedicationStatementTable|persist:Error {
-        MedicationStatementTable result = check self->/medicationstatementtables/[ID].get();
+    isolated resource function delete medicationstatementtables/[string MEDICATIONSTATEMENTTABLE_ID]() returns MedicationStatementTable|persist:Error {
+        MedicationStatementTable result = check self->/medicationstatementtables/[MEDICATIONSTATEMENTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_STATEMENT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICATIONSTATEMENTTABLE_ID);
         return result;
     }
 
     isolated resource function get insuranceplantables(InsurancePlanTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get insuranceplantables/[int ID](InsurancePlanTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get insuranceplantables/[string INSURANCEPLANTABLE_ID](InsurancePlanTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post insuranceplantables(InsurancePlanTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post insuranceplantables(InsurancePlanTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(INSURANCE_PLAN_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from InsurancePlanTableInsert inserted in data
+            select inserted.INSURANCEPLANTABLE_ID;
     }
 
-    isolated resource function put insuranceplantables/[int ID](InsurancePlanTableUpdate value) returns InsurancePlanTable|persist:Error {
+    isolated resource function put insuranceplantables/[string INSURANCEPLANTABLE_ID](InsurancePlanTableUpdate value) returns InsurancePlanTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(INSURANCE_PLAN_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/insuranceplantables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(INSURANCEPLANTABLE_ID, value);
+        return self->/insuranceplantables/[INSURANCEPLANTABLE_ID].get();
     }
 
-    isolated resource function delete insuranceplantables/[int ID]() returns InsurancePlanTable|persist:Error {
-        InsurancePlanTable result = check self->/insuranceplantables/[ID].get();
+    isolated resource function delete insuranceplantables/[string INSURANCEPLANTABLE_ID]() returns InsurancePlanTable|persist:Error {
+        InsurancePlanTable result = check self->/insuranceplantables/[INSURANCEPLANTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(INSURANCE_PLAN_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(INSURANCEPLANTABLE_ID);
         return result;
     }
 
     isolated resource function get medicinalproductcontraindicationtables(MedicinalProductContraindicationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicinalproductcontraindicationtables/[int ID](MedicinalProductContraindicationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicinalproductcontraindicationtables/[string MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID](MedicinalProductContraindicationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicinalproductcontraindicationtables(MedicinalProductContraindicationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicinalproductcontraindicationtables(MedicinalProductContraindicationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_CONTRAINDICATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicinalProductContraindicationTableInsert inserted in data
+            select inserted.MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID;
     }
 
-    isolated resource function put medicinalproductcontraindicationtables/[int ID](MedicinalProductContraindicationTableUpdate value) returns MedicinalProductContraindicationTable|persist:Error {
+    isolated resource function put medicinalproductcontraindicationtables/[string MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID](MedicinalProductContraindicationTableUpdate value) returns MedicinalProductContraindicationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_CONTRAINDICATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicinalproductcontraindicationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID, value);
+        return self->/medicinalproductcontraindicationtables/[MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID].get();
     }
 
-    isolated resource function delete medicinalproductcontraindicationtables/[int ID]() returns MedicinalProductContraindicationTable|persist:Error {
-        MedicinalProductContraindicationTable result = check self->/medicinalproductcontraindicationtables/[ID].get();
+    isolated resource function delete medicinalproductcontraindicationtables/[string MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID]() returns MedicinalProductContraindicationTable|persist:Error {
+        MedicinalProductContraindicationTable result = check self->/medicinalproductcontraindicationtables/[MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_CONTRAINDICATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICINALPRODUCTCONTRAINDICATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get claimresponsetables(ClaimResponseTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get claimresponsetables/[int ID](ClaimResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get claimresponsetables/[string CLAIMRESPONSETABLE_ID](ClaimResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post claimresponsetables(ClaimResponseTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post claimresponsetables(ClaimResponseTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CLAIM_RESPONSE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ClaimResponseTableInsert inserted in data
+            select inserted.CLAIMRESPONSETABLE_ID;
     }
 
-    isolated resource function put claimresponsetables/[int ID](ClaimResponseTableUpdate value) returns ClaimResponseTable|persist:Error {
+    isolated resource function put claimresponsetables/[string CLAIMRESPONSETABLE_ID](ClaimResponseTableUpdate value) returns ClaimResponseTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CLAIM_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/claimresponsetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CLAIMRESPONSETABLE_ID, value);
+        return self->/claimresponsetables/[CLAIMRESPONSETABLE_ID].get();
     }
 
-    isolated resource function delete claimresponsetables/[int ID]() returns ClaimResponseTable|persist:Error {
-        ClaimResponseTable result = check self->/claimresponsetables/[ID].get();
+    isolated resource function delete claimresponsetables/[string CLAIMRESPONSETABLE_ID]() returns ClaimResponseTable|persist:Error {
+        ClaimResponseTable result = check self->/claimresponsetables/[CLAIMRESPONSETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CLAIM_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CLAIMRESPONSETABLE_ID);
         return result;
     }
 
     isolated resource function get medicinalproductauthorizationtables(MedicinalProductAuthorizationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicinalproductauthorizationtables/[int ID](MedicinalProductAuthorizationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicinalproductauthorizationtables/[string MEDICINALPRODUCTAUTHORIZATIONTABLE_ID](MedicinalProductAuthorizationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicinalproductauthorizationtables(MedicinalProductAuthorizationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicinalproductauthorizationtables(MedicinalProductAuthorizationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_AUTHORIZATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicinalProductAuthorizationTableInsert inserted in data
+            select inserted.MEDICINALPRODUCTAUTHORIZATIONTABLE_ID;
     }
 
-    isolated resource function put medicinalproductauthorizationtables/[int ID](MedicinalProductAuthorizationTableUpdate value) returns MedicinalProductAuthorizationTable|persist:Error {
+    isolated resource function put medicinalproductauthorizationtables/[string MEDICINALPRODUCTAUTHORIZATIONTABLE_ID](MedicinalProductAuthorizationTableUpdate value) returns MedicinalProductAuthorizationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_AUTHORIZATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicinalproductauthorizationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICINALPRODUCTAUTHORIZATIONTABLE_ID, value);
+        return self->/medicinalproductauthorizationtables/[MEDICINALPRODUCTAUTHORIZATIONTABLE_ID].get();
     }
 
-    isolated resource function delete medicinalproductauthorizationtables/[int ID]() returns MedicinalProductAuthorizationTable|persist:Error {
-        MedicinalProductAuthorizationTable result = check self->/medicinalproductauthorizationtables/[ID].get();
+    isolated resource function delete medicinalproductauthorizationtables/[string MEDICINALPRODUCTAUTHORIZATIONTABLE_ID]() returns MedicinalProductAuthorizationTable|persist:Error {
+        MedicinalProductAuthorizationTable result = check self->/medicinalproductauthorizationtables/[MEDICINALPRODUCTAUTHORIZATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_AUTHORIZATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICINALPRODUCTAUTHORIZATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get imagingstudytables(ImagingStudyTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get imagingstudytables/[int ID](ImagingStudyTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get imagingstudytables/[string IMAGINGSTUDYTABLE_ID](ImagingStudyTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post imagingstudytables(ImagingStudyTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post imagingstudytables(ImagingStudyTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMAGING_STUDY_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ImagingStudyTableInsert inserted in data
+            select inserted.IMAGINGSTUDYTABLE_ID;
     }
 
-    isolated resource function put imagingstudytables/[int ID](ImagingStudyTableUpdate value) returns ImagingStudyTable|persist:Error {
+    isolated resource function put imagingstudytables/[string IMAGINGSTUDYTABLE_ID](ImagingStudyTableUpdate value) returns ImagingStudyTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMAGING_STUDY_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/imagingstudytables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(IMAGINGSTUDYTABLE_ID, value);
+        return self->/imagingstudytables/[IMAGINGSTUDYTABLE_ID].get();
     }
 
-    isolated resource function delete imagingstudytables/[int ID]() returns ImagingStudyTable|persist:Error {
-        ImagingStudyTable result = check self->/imagingstudytables/[ID].get();
+    isolated resource function delete imagingstudytables/[string IMAGINGSTUDYTABLE_ID]() returns ImagingStudyTable|persist:Error {
+        ImagingStudyTable result = check self->/imagingstudytables/[IMAGINGSTUDYTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMAGING_STUDY_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(IMAGINGSTUDYTABLE_ID);
         return result;
     }
 
     isolated resource function get practitionerroletables(PractitionerRoleTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get practitionerroletables/[int ID](PractitionerRoleTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get practitionerroletables/[string PRACTITIONERROLETABLE_ID](PractitionerRoleTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post practitionerroletables(PractitionerRoleTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post practitionerroletables(PractitionerRoleTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PRACTITIONER_ROLE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from PractitionerRoleTableInsert inserted in data
+            select inserted.PRACTITIONERROLETABLE_ID;
     }
 
-    isolated resource function put practitionerroletables/[int ID](PractitionerRoleTableUpdate value) returns PractitionerRoleTable|persist:Error {
+    isolated resource function put practitionerroletables/[string PRACTITIONERROLETABLE_ID](PractitionerRoleTableUpdate value) returns PractitionerRoleTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PRACTITIONER_ROLE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/practitionerroletables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(PRACTITIONERROLETABLE_ID, value);
+        return self->/practitionerroletables/[PRACTITIONERROLETABLE_ID].get();
     }
 
-    isolated resource function delete practitionerroletables/[int ID]() returns PractitionerRoleTable|persist:Error {
-        PractitionerRoleTable result = check self->/practitionerroletables/[ID].get();
+    isolated resource function delete practitionerroletables/[string PRACTITIONERROLETABLE_ID]() returns PractitionerRoleTable|persist:Error {
+        PractitionerRoleTable result = check self->/practitionerroletables/[PRACTITIONERROLETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PRACTITIONER_ROLE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(PRACTITIONERROLETABLE_ID);
         return result;
     }
 
     isolated resource function get grouptables(GroupTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get grouptables/[int ID](GroupTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get grouptables/[string GROUPTABLE_ID](GroupTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post grouptables(GroupTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post grouptables(GroupTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GROUP_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from GroupTableInsert inserted in data
+            select inserted.GROUPTABLE_ID;
     }
 
-    isolated resource function put grouptables/[int ID](GroupTableUpdate value) returns GroupTable|persist:Error {
+    isolated resource function put grouptables/[string GROUPTABLE_ID](GroupTableUpdate value) returns GroupTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GROUP_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/grouptables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(GROUPTABLE_ID, value);
+        return self->/grouptables/[GROUPTABLE_ID].get();
     }
 
-    isolated resource function delete grouptables/[int ID]() returns GroupTable|persist:Error {
-        GroupTable result = check self->/grouptables/[ID].get();
+    isolated resource function delete grouptables/[string GROUPTABLE_ID]() returns GroupTable|persist:Error {
+        GroupTable result = check self->/grouptables/[GROUPTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GROUP_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(GROUPTABLE_ID);
         return result;
     }
 
     isolated resource function get persontables(PersonTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get persontables/[int ID](PersonTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get persontables/[string PERSONTABLE_ID](PersonTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post persontables(PersonTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post persontables(PersonTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PERSON_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from PersonTableInsert inserted in data
+            select inserted.PERSONTABLE_ID;
     }
 
-    isolated resource function put persontables/[int ID](PersonTableUpdate value) returns PersonTable|persist:Error {
+    isolated resource function put persontables/[string PERSONTABLE_ID](PersonTableUpdate value) returns PersonTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PERSON_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/persontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(PERSONTABLE_ID, value);
+        return self->/persontables/[PERSONTABLE_ID].get();
     }
 
-    isolated resource function delete persontables/[int ID]() returns PersonTable|persist:Error {
-        PersonTable result = check self->/persontables/[ID].get();
+    isolated resource function delete persontables/[string PERSONTABLE_ID]() returns PersonTable|persist:Error {
+        PersonTable result = check self->/persontables/[PERSONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PERSON_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(PERSONTABLE_ID);
         return result;
     }
 
     isolated resource function get practitionertables(PractitionerTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get practitionertables/[int ID](PractitionerTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get practitionertables/[string PRACTITIONERTABLE_ID](PractitionerTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post practitionertables(PractitionerTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post practitionertables(PractitionerTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PRACTITIONER_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from PractitionerTableInsert inserted in data
+            select inserted.PRACTITIONERTABLE_ID;
     }
 
-    isolated resource function put practitionertables/[int ID](PractitionerTableUpdate value) returns PractitionerTable|persist:Error {
+    isolated resource function put practitionertables/[string PRACTITIONERTABLE_ID](PractitionerTableUpdate value) returns PractitionerTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PRACTITIONER_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/practitionertables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(PRACTITIONERTABLE_ID, value);
+        return self->/practitionertables/[PRACTITIONERTABLE_ID].get();
     }
 
-    isolated resource function delete practitionertables/[int ID]() returns PractitionerTable|persist:Error {
-        PractitionerTable result = check self->/practitionertables/[ID].get();
+    isolated resource function delete practitionertables/[string PRACTITIONERTABLE_ID]() returns PractitionerTable|persist:Error {
+        PractitionerTable result = check self->/practitionertables/[PRACTITIONERTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PRACTITIONER_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(PRACTITIONERTABLE_ID);
         return result;
     }
 
     isolated resource function get activitydefinitiontables(ActivityDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get activitydefinitiontables/[int ID](ActivityDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get activitydefinitiontables/[string ACTIVITYDEFINITIONTABLE_ID](ActivityDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post activitydefinitiontables(ActivityDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post activitydefinitiontables(ActivityDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ACTIVITY_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ActivityDefinitionTableInsert inserted in data
+            select inserted.ACTIVITYDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put activitydefinitiontables/[int ID](ActivityDefinitionTableUpdate value) returns ActivityDefinitionTable|persist:Error {
+    isolated resource function put activitydefinitiontables/[string ACTIVITYDEFINITIONTABLE_ID](ActivityDefinitionTableUpdate value) returns ActivityDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ACTIVITY_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/activitydefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ACTIVITYDEFINITIONTABLE_ID, value);
+        return self->/activitydefinitiontables/[ACTIVITYDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete activitydefinitiontables/[int ID]() returns ActivityDefinitionTable|persist:Error {
-        ActivityDefinitionTable result = check self->/activitydefinitiontables/[ID].get();
+    isolated resource function delete activitydefinitiontables/[string ACTIVITYDEFINITIONTABLE_ID]() returns ActivityDefinitionTable|persist:Error {
+        ActivityDefinitionTable result = check self->/activitydefinitiontables/[ACTIVITYDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ACTIVITY_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ACTIVITYDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get evidencetables(EvidenceTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get evidencetables/[int ID](EvidenceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get evidencetables/[string EVIDENCETABLE_ID](EvidenceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post evidencetables(EvidenceTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post evidencetables(EvidenceTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EVIDENCE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from EvidenceTableInsert inserted in data
+            select inserted.EVIDENCETABLE_ID;
     }
 
-    isolated resource function put evidencetables/[int ID](EvidenceTableUpdate value) returns EvidenceTable|persist:Error {
+    isolated resource function put evidencetables/[string EVIDENCETABLE_ID](EvidenceTableUpdate value) returns EvidenceTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EVIDENCE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/evidencetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(EVIDENCETABLE_ID, value);
+        return self->/evidencetables/[EVIDENCETABLE_ID].get();
     }
 
-    isolated resource function delete evidencetables/[int ID]() returns EvidenceTable|persist:Error {
-        EvidenceTable result = check self->/evidencetables/[ID].get();
+    isolated resource function delete evidencetables/[string EVIDENCETABLE_ID]() returns EvidenceTable|persist:Error {
+        EvidenceTable result = check self->/evidencetables/[EVIDENCETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EVIDENCE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(EVIDENCETABLE_ID);
         return result;
     }
 
     isolated resource function get devicetables(DeviceTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get devicetables/[int ID](DeviceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get devicetables/[string DEVICETABLE_ID](DeviceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post devicetables(DeviceTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post devicetables(DeviceTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from DeviceTableInsert inserted in data
+            select inserted.DEVICETABLE_ID;
     }
 
-    isolated resource function put devicetables/[int ID](DeviceTableUpdate value) returns DeviceTable|persist:Error {
+    isolated resource function put devicetables/[string DEVICETABLE_ID](DeviceTableUpdate value) returns DeviceTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/devicetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(DEVICETABLE_ID, value);
+        return self->/devicetables/[DEVICETABLE_ID].get();
     }
 
-    isolated resource function delete devicetables/[int ID]() returns DeviceTable|persist:Error {
-        DeviceTable result = check self->/devicetables/[ID].get();
+    isolated resource function delete devicetables/[string DEVICETABLE_ID]() returns DeviceTable|persist:Error {
+        DeviceTable result = check self->/devicetables/[DEVICETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(DEVICETABLE_ID);
         return result;
     }
 
     isolated resource function get familymemberhistorytables(FamilyMemberHistoryTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get familymemberhistorytables/[int ID](FamilyMemberHistoryTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get familymemberhistorytables/[string FAMILYMEMBERHISTORYTABLE_ID](FamilyMemberHistoryTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post familymemberhistorytables(FamilyMemberHistoryTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post familymemberhistorytables(FamilyMemberHistoryTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(FAMILY_MEMBER_HISTORY_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from FamilyMemberHistoryTableInsert inserted in data
+            select inserted.FAMILYMEMBERHISTORYTABLE_ID;
     }
 
-    isolated resource function put familymemberhistorytables/[int ID](FamilyMemberHistoryTableUpdate value) returns FamilyMemberHistoryTable|persist:Error {
+    isolated resource function put familymemberhistorytables/[string FAMILYMEMBERHISTORYTABLE_ID](FamilyMemberHistoryTableUpdate value) returns FamilyMemberHistoryTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(FAMILY_MEMBER_HISTORY_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/familymemberhistorytables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(FAMILYMEMBERHISTORYTABLE_ID, value);
+        return self->/familymemberhistorytables/[FAMILYMEMBERHISTORYTABLE_ID].get();
     }
 
-    isolated resource function delete familymemberhistorytables/[int ID]() returns FamilyMemberHistoryTable|persist:Error {
-        FamilyMemberHistoryTable result = check self->/familymemberhistorytables/[ID].get();
+    isolated resource function delete familymemberhistorytables/[string FAMILYMEMBERHISTORYTABLE_ID]() returns FamilyMemberHistoryTable|persist:Error {
+        FamilyMemberHistoryTable result = check self->/familymemberhistorytables/[FAMILYMEMBERHISTORYTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(FAMILY_MEMBER_HISTORY_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(FAMILYMEMBERHISTORYTABLE_ID);
         return result;
     }
 
     isolated resource function get adverseeventtables(AdverseEventTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get adverseeventtables/[int ID](AdverseEventTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get adverseeventtables/[string ADVERSEEVENTTABLE_ID](AdverseEventTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post adverseeventtables(AdverseEventTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post adverseeventtables(AdverseEventTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ADVERSE_EVENT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from AdverseEventTableInsert inserted in data
+            select inserted.ADVERSEEVENTTABLE_ID;
     }
 
-    isolated resource function put adverseeventtables/[int ID](AdverseEventTableUpdate value) returns AdverseEventTable|persist:Error {
+    isolated resource function put adverseeventtables/[string ADVERSEEVENTTABLE_ID](AdverseEventTableUpdate value) returns AdverseEventTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ADVERSE_EVENT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/adverseeventtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ADVERSEEVENTTABLE_ID, value);
+        return self->/adverseeventtables/[ADVERSEEVENTTABLE_ID].get();
     }
 
-    isolated resource function delete adverseeventtables/[int ID]() returns AdverseEventTable|persist:Error {
-        AdverseEventTable result = check self->/adverseeventtables/[ID].get();
+    isolated resource function delete adverseeventtables/[string ADVERSEEVENTTABLE_ID]() returns AdverseEventTable|persist:Error {
+        AdverseEventTable result = check self->/adverseeventtables/[ADVERSEEVENTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ADVERSE_EVENT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ADVERSEEVENTTABLE_ID);
         return result;
     }
 
     isolated resource function get supplyrequesttables(SupplyRequestTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get supplyrequesttables/[int ID](SupplyRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get supplyrequesttables/[string SUPPLYREQUESTTABLE_ID](SupplyRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post supplyrequesttables(SupplyRequestTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post supplyrequesttables(SupplyRequestTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUPPLY_REQUEST_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from SupplyRequestTableInsert inserted in data
+            select inserted.SUPPLYREQUESTTABLE_ID;
     }
 
-    isolated resource function put supplyrequesttables/[int ID](SupplyRequestTableUpdate value) returns SupplyRequestTable|persist:Error {
+    isolated resource function put supplyrequesttables/[string SUPPLYREQUESTTABLE_ID](SupplyRequestTableUpdate value) returns SupplyRequestTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUPPLY_REQUEST_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/supplyrequesttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SUPPLYREQUESTTABLE_ID, value);
+        return self->/supplyrequesttables/[SUPPLYREQUESTTABLE_ID].get();
     }
 
-    isolated resource function delete supplyrequesttables/[int ID]() returns SupplyRequestTable|persist:Error {
-        SupplyRequestTable result = check self->/supplyrequesttables/[ID].get();
+    isolated resource function delete supplyrequesttables/[string SUPPLYREQUESTTABLE_ID]() returns SupplyRequestTable|persist:Error {
+        SupplyRequestTable result = check self->/supplyrequesttables/[SUPPLYREQUESTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUPPLY_REQUEST_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SUPPLYREQUESTTABLE_ID);
         return result;
     }
 
     isolated resource function get examplescenariotables(ExampleScenarioTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get examplescenariotables/[int ID](ExampleScenarioTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get examplescenariotables/[string EXAMPLESCENARIOTABLE_ID](ExampleScenarioTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post examplescenariotables(ExampleScenarioTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post examplescenariotables(ExampleScenarioTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EXAMPLE_SCENARIO_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ExampleScenarioTableInsert inserted in data
+            select inserted.EXAMPLESCENARIOTABLE_ID;
     }
 
-    isolated resource function put examplescenariotables/[int ID](ExampleScenarioTableUpdate value) returns ExampleScenarioTable|persist:Error {
+    isolated resource function put examplescenariotables/[string EXAMPLESCENARIOTABLE_ID](ExampleScenarioTableUpdate value) returns ExampleScenarioTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EXAMPLE_SCENARIO_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/examplescenariotables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(EXAMPLESCENARIOTABLE_ID, value);
+        return self->/examplescenariotables/[EXAMPLESCENARIOTABLE_ID].get();
     }
 
-    isolated resource function delete examplescenariotables/[int ID]() returns ExampleScenarioTable|persist:Error {
-        ExampleScenarioTable result = check self->/examplescenariotables/[ID].get();
+    isolated resource function delete examplescenariotables/[string EXAMPLESCENARIOTABLE_ID]() returns ExampleScenarioTable|persist:Error {
+        ExampleScenarioTable result = check self->/examplescenariotables/[EXAMPLESCENARIOTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EXAMPLE_SCENARIO_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(EXAMPLESCENARIOTABLE_ID);
         return result;
     }
 
     isolated resource function get invoicetables(InvoiceTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get invoicetables/[int ID](InvoiceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get invoicetables/[string INVOICETABLE_ID](InvoiceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post invoicetables(InvoiceTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post invoicetables(InvoiceTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(INVOICE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from InvoiceTableInsert inserted in data
+            select inserted.INVOICETABLE_ID;
     }
 
-    isolated resource function put invoicetables/[int ID](InvoiceTableUpdate value) returns InvoiceTable|persist:Error {
+    isolated resource function put invoicetables/[string INVOICETABLE_ID](InvoiceTableUpdate value) returns InvoiceTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(INVOICE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/invoicetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(INVOICETABLE_ID, value);
+        return self->/invoicetables/[INVOICETABLE_ID].get();
     }
 
-    isolated resource function delete invoicetables/[int ID]() returns InvoiceTable|persist:Error {
-        InvoiceTable result = check self->/invoicetables/[ID].get();
+    isolated resource function delete invoicetables/[string INVOICETABLE_ID]() returns InvoiceTable|persist:Error {
+        InvoiceTable result = check self->/invoicetables/[INVOICETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(INVOICE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(INVOICETABLE_ID);
         return result;
     }
 
     isolated resource function get questionnaireresponsetables(QuestionnaireResponseTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get questionnaireresponsetables/[int ID](QuestionnaireResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get questionnaireresponsetables/[string QUESTIONNAIRERESPONSETABLE_ID](QuestionnaireResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post questionnaireresponsetables(QuestionnaireResponseTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post questionnaireresponsetables(QuestionnaireResponseTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(QUESTIONNAIRE_RESPONSE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from QuestionnaireResponseTableInsert inserted in data
+            select inserted.QUESTIONNAIRERESPONSETABLE_ID;
     }
 
-    isolated resource function put questionnaireresponsetables/[int ID](QuestionnaireResponseTableUpdate value) returns QuestionnaireResponseTable|persist:Error {
+    isolated resource function put questionnaireresponsetables/[string QUESTIONNAIRERESPONSETABLE_ID](QuestionnaireResponseTableUpdate value) returns QuestionnaireResponseTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(QUESTIONNAIRE_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/questionnaireresponsetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(QUESTIONNAIRERESPONSETABLE_ID, value);
+        return self->/questionnaireresponsetables/[QUESTIONNAIRERESPONSETABLE_ID].get();
     }
 
-    isolated resource function delete questionnaireresponsetables/[int ID]() returns QuestionnaireResponseTable|persist:Error {
-        QuestionnaireResponseTable result = check self->/questionnaireresponsetables/[ID].get();
+    isolated resource function delete questionnaireresponsetables/[string QUESTIONNAIRERESPONSETABLE_ID]() returns QuestionnaireResponseTable|persist:Error {
+        QuestionnaireResponseTable result = check self->/questionnaireresponsetables/[QUESTIONNAIRERESPONSETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(QUESTIONNAIRE_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(QUESTIONNAIRERESPONSETABLE_ID);
         return result;
     }
 
     isolated resource function get observationtables(ObservationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get observationtables/[int ID](ObservationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get observationtables/[string OBSERVATIONTABLE_ID](ObservationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post observationtables(ObservationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post observationtables(ObservationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(OBSERVATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ObservationTableInsert inserted in data
+            select inserted.OBSERVATIONTABLE_ID;
     }
 
-    isolated resource function put observationtables/[int ID](ObservationTableUpdate value) returns ObservationTable|persist:Error {
+    isolated resource function put observationtables/[string OBSERVATIONTABLE_ID](ObservationTableUpdate value) returns ObservationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(OBSERVATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/observationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(OBSERVATIONTABLE_ID, value);
+        return self->/observationtables/[OBSERVATIONTABLE_ID].get();
     }
 
-    isolated resource function delete observationtables/[int ID]() returns ObservationTable|persist:Error {
-        ObservationTable result = check self->/observationtables/[ID].get();
+    isolated resource function delete observationtables/[string OBSERVATIONTABLE_ID]() returns ObservationTable|persist:Error {
+        ObservationTable result = check self->/observationtables/[OBSERVATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(OBSERVATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(OBSERVATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get effectevidencesynthesistables(EffectEvidenceSynthesisTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get effectevidencesynthesistables/[int ID](EffectEvidenceSynthesisTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get effectevidencesynthesistables/[string EFFECTEVIDENCESYNTHESISTABLE_ID](EffectEvidenceSynthesisTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post effectevidencesynthesistables(EffectEvidenceSynthesisTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post effectevidencesynthesistables(EffectEvidenceSynthesisTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EFFECT_EVIDENCE_SYNTHESIS_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from EffectEvidenceSynthesisTableInsert inserted in data
+            select inserted.EFFECTEVIDENCESYNTHESISTABLE_ID;
     }
 
-    isolated resource function put effectevidencesynthesistables/[int ID](EffectEvidenceSynthesisTableUpdate value) returns EffectEvidenceSynthesisTable|persist:Error {
+    isolated resource function put effectevidencesynthesistables/[string EFFECTEVIDENCESYNTHESISTABLE_ID](EffectEvidenceSynthesisTableUpdate value) returns EffectEvidenceSynthesisTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EFFECT_EVIDENCE_SYNTHESIS_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/effectevidencesynthesistables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(EFFECTEVIDENCESYNTHESISTABLE_ID, value);
+        return self->/effectevidencesynthesistables/[EFFECTEVIDENCESYNTHESISTABLE_ID].get();
     }
 
-    isolated resource function delete effectevidencesynthesistables/[int ID]() returns EffectEvidenceSynthesisTable|persist:Error {
-        EffectEvidenceSynthesisTable result = check self->/effectevidencesynthesistables/[ID].get();
+    isolated resource function delete effectevidencesynthesistables/[string EFFECTEVIDENCESYNTHESISTABLE_ID]() returns EffectEvidenceSynthesisTable|persist:Error {
+        EffectEvidenceSynthesisTable result = check self->/effectevidencesynthesistables/[EFFECTEVIDENCESYNTHESISTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EFFECT_EVIDENCE_SYNTHESIS_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(EFFECTEVIDENCESYNTHESISTABLE_ID);
         return result;
     }
 
     isolated resource function get operationdefinitiontables(OperationDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get operationdefinitiontables/[int ID](OperationDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get operationdefinitiontables/[string OPERATIONDEFINITIONTABLE_ID](OperationDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post operationdefinitiontables(OperationDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post operationdefinitiontables(OperationDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(OPERATION_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from OperationDefinitionTableInsert inserted in data
+            select inserted.OPERATIONDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put operationdefinitiontables/[int ID](OperationDefinitionTableUpdate value) returns OperationDefinitionTable|persist:Error {
+    isolated resource function put operationdefinitiontables/[string OPERATIONDEFINITIONTABLE_ID](OperationDefinitionTableUpdate value) returns OperationDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(OPERATION_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/operationdefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(OPERATIONDEFINITIONTABLE_ID, value);
+        return self->/operationdefinitiontables/[OPERATIONDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete operationdefinitiontables/[int ID]() returns OperationDefinitionTable|persist:Error {
-        OperationDefinitionTable result = check self->/operationdefinitiontables/[ID].get();
+    isolated resource function delete operationdefinitiontables/[string OPERATIONDEFINITIONTABLE_ID]() returns OperationDefinitionTable|persist:Error {
+        OperationDefinitionTable result = check self->/operationdefinitiontables/[OPERATIONDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(OPERATION_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(OPERATIONDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get measurereporttables(MeasureReportTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get measurereporttables/[int ID](MeasureReportTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get measurereporttables/[string MEASUREREPORTTABLE_ID](MeasureReportTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post measurereporttables(MeasureReportTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post measurereporttables(MeasureReportTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEASURE_REPORT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MeasureReportTableInsert inserted in data
+            select inserted.MEASUREREPORTTABLE_ID;
     }
 
-    isolated resource function put measurereporttables/[int ID](MeasureReportTableUpdate value) returns MeasureReportTable|persist:Error {
+    isolated resource function put measurereporttables/[string MEASUREREPORTTABLE_ID](MeasureReportTableUpdate value) returns MeasureReportTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEASURE_REPORT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/measurereporttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEASUREREPORTTABLE_ID, value);
+        return self->/measurereporttables/[MEASUREREPORTTABLE_ID].get();
     }
 
-    isolated resource function delete measurereporttables/[int ID]() returns MeasureReportTable|persist:Error {
-        MeasureReportTable result = check self->/measurereporttables/[ID].get();
+    isolated resource function delete measurereporttables/[string MEASUREREPORTTABLE_ID]() returns MeasureReportTable|persist:Error {
+        MeasureReportTable result = check self->/measurereporttables/[MEASUREREPORTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEASURE_REPORT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEASUREREPORTTABLE_ID);
         return result;
     }
 
     isolated resource function get supplydeliverytables(SupplyDeliveryTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get supplydeliverytables/[int ID](SupplyDeliveryTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get supplydeliverytables/[string SUPPLYDELIVERYTABLE_ID](SupplyDeliveryTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post supplydeliverytables(SupplyDeliveryTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post supplydeliverytables(SupplyDeliveryTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUPPLY_DELIVERY_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from SupplyDeliveryTableInsert inserted in data
+            select inserted.SUPPLYDELIVERYTABLE_ID;
     }
 
-    isolated resource function put supplydeliverytables/[int ID](SupplyDeliveryTableUpdate value) returns SupplyDeliveryTable|persist:Error {
+    isolated resource function put supplydeliverytables/[string SUPPLYDELIVERYTABLE_ID](SupplyDeliveryTableUpdate value) returns SupplyDeliveryTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUPPLY_DELIVERY_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/supplydeliverytables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SUPPLYDELIVERYTABLE_ID, value);
+        return self->/supplydeliverytables/[SUPPLYDELIVERYTABLE_ID].get();
     }
 
-    isolated resource function delete supplydeliverytables/[int ID]() returns SupplyDeliveryTable|persist:Error {
-        SupplyDeliveryTable result = check self->/supplydeliverytables/[ID].get();
+    isolated resource function delete supplydeliverytables/[string SUPPLYDELIVERYTABLE_ID]() returns SupplyDeliveryTable|persist:Error {
+        SupplyDeliveryTable result = check self->/supplydeliverytables/[SUPPLYDELIVERYTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUPPLY_DELIVERY_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SUPPLYDELIVERYTABLE_ID);
         return result;
     }
 
     isolated resource function get servicerequesttables(ServiceRequestTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get servicerequesttables/[int ID](ServiceRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get servicerequesttables/[string SERVICEREQUESTTABLE_ID](ServiceRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post servicerequesttables(ServiceRequestTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post servicerequesttables(ServiceRequestTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SERVICE_REQUEST_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ServiceRequestTableInsert inserted in data
+            select inserted.SERVICEREQUESTTABLE_ID;
     }
 
-    isolated resource function put servicerequesttables/[int ID](ServiceRequestTableUpdate value) returns ServiceRequestTable|persist:Error {
+    isolated resource function put servicerequesttables/[string SERVICEREQUESTTABLE_ID](ServiceRequestTableUpdate value) returns ServiceRequestTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SERVICE_REQUEST_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/servicerequesttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SERVICEREQUESTTABLE_ID, value);
+        return self->/servicerequesttables/[SERVICEREQUESTTABLE_ID].get();
     }
 
-    isolated resource function delete servicerequesttables/[int ID]() returns ServiceRequestTable|persist:Error {
-        ServiceRequestTable result = check self->/servicerequesttables/[ID].get();
+    isolated resource function delete servicerequesttables/[string SERVICEREQUESTTABLE_ID]() returns ServiceRequestTable|persist:Error {
+        ServiceRequestTable result = check self->/servicerequesttables/[SERVICEREQUESTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SERVICE_REQUEST_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SERVICEREQUESTTABLE_ID);
         return result;
     }
 
     isolated resource function get basictables(BasicTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get basictables/[int ID](BasicTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get basictables/[string BASICTABLE_ID](BasicTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post basictables(BasicTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post basictables(BasicTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(BASIC_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from BasicTableInsert inserted in data
+            select inserted.BASICTABLE_ID;
     }
 
-    isolated resource function put basictables/[int ID](BasicTableUpdate value) returns BasicTable|persist:Error {
+    isolated resource function put basictables/[string BASICTABLE_ID](BasicTableUpdate value) returns BasicTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(BASIC_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/basictables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(BASICTABLE_ID, value);
+        return self->/basictables/[BASICTABLE_ID].get();
     }
 
-    isolated resource function delete basictables/[int ID]() returns BasicTable|persist:Error {
-        BasicTable result = check self->/basictables/[ID].get();
+    isolated resource function delete basictables/[string BASICTABLE_ID]() returns BasicTable|persist:Error {
+        BasicTable result = check self->/basictables/[BASICTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(BASIC_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(BASICTABLE_ID);
         return result;
     }
 
     isolated resource function get subscriptiontables(SubscriptionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get subscriptiontables/[int ID](SubscriptionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get subscriptiontables/[string SUBSCRIPTIONTABLE_ID](SubscriptionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post subscriptiontables(SubscriptionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post subscriptiontables(SubscriptionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUBSCRIPTION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from SubscriptionTableInsert inserted in data
+            select inserted.SUBSCRIPTIONTABLE_ID;
     }
 
-    isolated resource function put subscriptiontables/[int ID](SubscriptionTableUpdate value) returns SubscriptionTable|persist:Error {
+    isolated resource function put subscriptiontables/[string SUBSCRIPTIONTABLE_ID](SubscriptionTableUpdate value) returns SubscriptionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUBSCRIPTION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/subscriptiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SUBSCRIPTIONTABLE_ID, value);
+        return self->/subscriptiontables/[SUBSCRIPTIONTABLE_ID].get();
     }
 
-    isolated resource function delete subscriptiontables/[int ID]() returns SubscriptionTable|persist:Error {
-        SubscriptionTable result = check self->/subscriptiontables/[ID].get();
+    isolated resource function delete subscriptiontables/[string SUBSCRIPTIONTABLE_ID]() returns SubscriptionTable|persist:Error {
+        SubscriptionTable result = check self->/subscriptiontables/[SUBSCRIPTIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUBSCRIPTION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SUBSCRIPTIONTABLE_ID);
         return result;
     }
 
     isolated resource function get enrollmentresponsetables(EnrollmentResponseTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get enrollmentresponsetables/[int ID](EnrollmentResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get enrollmentresponsetables/[string ENROLLMENTRESPONSETABLE_ID](EnrollmentResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post enrollmentresponsetables(EnrollmentResponseTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post enrollmentresponsetables(EnrollmentResponseTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENROLLMENT_RESPONSE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from EnrollmentResponseTableInsert inserted in data
+            select inserted.ENROLLMENTRESPONSETABLE_ID;
     }
 
-    isolated resource function put enrollmentresponsetables/[int ID](EnrollmentResponseTableUpdate value) returns EnrollmentResponseTable|persist:Error {
+    isolated resource function put enrollmentresponsetables/[string ENROLLMENTRESPONSETABLE_ID](EnrollmentResponseTableUpdate value) returns EnrollmentResponseTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENROLLMENT_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/enrollmentresponsetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ENROLLMENTRESPONSETABLE_ID, value);
+        return self->/enrollmentresponsetables/[ENROLLMENTRESPONSETABLE_ID].get();
     }
 
-    isolated resource function delete enrollmentresponsetables/[int ID]() returns EnrollmentResponseTable|persist:Error {
-        EnrollmentResponseTable result = check self->/enrollmentresponsetables/[ID].get();
+    isolated resource function delete enrollmentresponsetables/[string ENROLLMENTRESPONSETABLE_ID]() returns EnrollmentResponseTable|persist:Error {
+        EnrollmentResponseTable result = check self->/enrollmentresponsetables/[ENROLLMENTRESPONSETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENROLLMENT_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ENROLLMENTRESPONSETABLE_ID);
         return result;
     }
 
     isolated resource function get devicerequesttables(DeviceRequestTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get devicerequesttables/[int ID](DeviceRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get devicerequesttables/[string DEVICEREQUESTTABLE_ID](DeviceRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post devicerequesttables(DeviceRequestTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post devicerequesttables(DeviceRequestTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_REQUEST_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from DeviceRequestTableInsert inserted in data
+            select inserted.DEVICEREQUESTTABLE_ID;
     }
 
-    isolated resource function put devicerequesttables/[int ID](DeviceRequestTableUpdate value) returns DeviceRequestTable|persist:Error {
+    isolated resource function put devicerequesttables/[string DEVICEREQUESTTABLE_ID](DeviceRequestTableUpdate value) returns DeviceRequestTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_REQUEST_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/devicerequesttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(DEVICEREQUESTTABLE_ID, value);
+        return self->/devicerequesttables/[DEVICEREQUESTTABLE_ID].get();
     }
 
-    isolated resource function delete devicerequesttables/[int ID]() returns DeviceRequestTable|persist:Error {
-        DeviceRequestTable result = check self->/devicerequesttables/[ID].get();
+    isolated resource function delete devicerequesttables/[string DEVICEREQUESTTABLE_ID]() returns DeviceRequestTable|persist:Error {
+        DeviceRequestTable result = check self->/devicerequesttables/[DEVICEREQUESTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_REQUEST_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(DEVICEREQUESTTABLE_ID);
         return result;
     }
 
     isolated resource function get appointmenttables(AppointmentTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get appointmenttables/[int ID](AppointmentTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get appointmenttables/[string APPOINTMENTTABLE_ID](AppointmentTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post appointmenttables(AppointmentTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post appointmenttables(AppointmentTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(APPOINTMENT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from AppointmentTableInsert inserted in data
+            select inserted.APPOINTMENTTABLE_ID;
     }
 
-    isolated resource function put appointmenttables/[int ID](AppointmentTableUpdate value) returns AppointmentTable|persist:Error {
+    isolated resource function put appointmenttables/[string APPOINTMENTTABLE_ID](AppointmentTableUpdate value) returns AppointmentTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(APPOINTMENT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/appointmenttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(APPOINTMENTTABLE_ID, value);
+        return self->/appointmenttables/[APPOINTMENTTABLE_ID].get();
     }
 
-    isolated resource function delete appointmenttables/[int ID]() returns AppointmentTable|persist:Error {
-        AppointmentTable result = check self->/appointmenttables/[ID].get();
+    isolated resource function delete appointmenttables/[string APPOINTMENTTABLE_ID]() returns AppointmentTable|persist:Error {
+        AppointmentTable result = check self->/appointmenttables/[APPOINTMENTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(APPOINTMENT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(APPOINTMENTTABLE_ID);
         return result;
     }
 
     isolated resource function get namingsystemtables(NamingSystemTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get namingsystemtables/[int ID](NamingSystemTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get namingsystemtables/[string NAMINGSYSTEMTABLE_ID](NamingSystemTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post namingsystemtables(NamingSystemTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post namingsystemtables(NamingSystemTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(NAMING_SYSTEM_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from NamingSystemTableInsert inserted in data
+            select inserted.NAMINGSYSTEMTABLE_ID;
     }
 
-    isolated resource function put namingsystemtables/[int ID](NamingSystemTableUpdate value) returns NamingSystemTable|persist:Error {
+    isolated resource function put namingsystemtables/[string NAMINGSYSTEMTABLE_ID](NamingSystemTableUpdate value) returns NamingSystemTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(NAMING_SYSTEM_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/namingsystemtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(NAMINGSYSTEMTABLE_ID, value);
+        return self->/namingsystemtables/[NAMINGSYSTEMTABLE_ID].get();
     }
 
-    isolated resource function delete namingsystemtables/[int ID]() returns NamingSystemTable|persist:Error {
-        NamingSystemTable result = check self->/namingsystemtables/[ID].get();
+    isolated resource function delete namingsystemtables/[string NAMINGSYSTEMTABLE_ID]() returns NamingSystemTable|persist:Error {
+        NamingSystemTable result = check self->/namingsystemtables/[NAMINGSYSTEMTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(NAMING_SYSTEM_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(NAMINGSYSTEMTABLE_ID);
         return result;
     }
 
     isolated resource function get structuredefinitiontables(StructureDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get structuredefinitiontables/[int ID](StructureDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get structuredefinitiontables/[string STRUCTUREDEFINITIONTABLE_ID](StructureDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post structuredefinitiontables(StructureDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post structuredefinitiontables(StructureDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(STRUCTURE_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from StructureDefinitionTableInsert inserted in data
+            select inserted.STRUCTUREDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put structuredefinitiontables/[int ID](StructureDefinitionTableUpdate value) returns StructureDefinitionTable|persist:Error {
+    isolated resource function put structuredefinitiontables/[string STRUCTUREDEFINITIONTABLE_ID](StructureDefinitionTableUpdate value) returns StructureDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(STRUCTURE_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/structuredefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(STRUCTUREDEFINITIONTABLE_ID, value);
+        return self->/structuredefinitiontables/[STRUCTUREDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete structuredefinitiontables/[int ID]() returns StructureDefinitionTable|persist:Error {
-        StructureDefinitionTable result = check self->/structuredefinitiontables/[ID].get();
+    isolated resource function delete structuredefinitiontables/[string STRUCTUREDEFINITIONTABLE_ID]() returns StructureDefinitionTable|persist:Error {
+        StructureDefinitionTable result = check self->/structuredefinitiontables/[STRUCTUREDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(STRUCTURE_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(STRUCTUREDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get clinicalimpressiontables(ClinicalImpressionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get clinicalimpressiontables/[int ID](ClinicalImpressionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get clinicalimpressiontables/[string CLINICALIMPRESSIONTABLE_ID](ClinicalImpressionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post clinicalimpressiontables(ClinicalImpressionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post clinicalimpressiontables(ClinicalImpressionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CLINICAL_IMPRESSION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ClinicalImpressionTableInsert inserted in data
+            select inserted.CLINICALIMPRESSIONTABLE_ID;
     }
 
-    isolated resource function put clinicalimpressiontables/[int ID](ClinicalImpressionTableUpdate value) returns ClinicalImpressionTable|persist:Error {
+    isolated resource function put clinicalimpressiontables/[string CLINICALIMPRESSIONTABLE_ID](ClinicalImpressionTableUpdate value) returns ClinicalImpressionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CLINICAL_IMPRESSION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/clinicalimpressiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CLINICALIMPRESSIONTABLE_ID, value);
+        return self->/clinicalimpressiontables/[CLINICALIMPRESSIONTABLE_ID].get();
     }
 
-    isolated resource function delete clinicalimpressiontables/[int ID]() returns ClinicalImpressionTable|persist:Error {
-        ClinicalImpressionTable result = check self->/clinicalimpressiontables/[ID].get();
+    isolated resource function delete clinicalimpressiontables/[string CLINICALIMPRESSIONTABLE_ID]() returns ClinicalImpressionTable|persist:Error {
+        ClinicalImpressionTable result = check self->/clinicalimpressiontables/[CLINICALIMPRESSIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CLINICAL_IMPRESSION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CLINICALIMPRESSIONTABLE_ID);
         return result;
     }
 
     isolated resource function get communicationtables(CommunicationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get communicationtables/[int ID](CommunicationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get communicationtables/[string COMMUNICATIONTABLE_ID](CommunicationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post communicationtables(CommunicationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post communicationtables(CommunicationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMMUNICATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CommunicationTableInsert inserted in data
+            select inserted.COMMUNICATIONTABLE_ID;
     }
 
-    isolated resource function put communicationtables/[int ID](CommunicationTableUpdate value) returns CommunicationTable|persist:Error {
+    isolated resource function put communicationtables/[string COMMUNICATIONTABLE_ID](CommunicationTableUpdate value) returns CommunicationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMMUNICATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/communicationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(COMMUNICATIONTABLE_ID, value);
+        return self->/communicationtables/[COMMUNICATIONTABLE_ID].get();
     }
 
-    isolated resource function delete communicationtables/[int ID]() returns CommunicationTable|persist:Error {
-        CommunicationTable result = check self->/communicationtables/[ID].get();
+    isolated resource function delete communicationtables/[string COMMUNICATIONTABLE_ID]() returns CommunicationTable|persist:Error {
+        CommunicationTable result = check self->/communicationtables/[COMMUNICATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMMUNICATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(COMMUNICATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get organizationtables(OrganizationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get organizationtables/[int ID](OrganizationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get organizationtables/[string ORGANIZATIONTABLE_ID](OrganizationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post organizationtables(OrganizationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post organizationtables(OrganizationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ORGANIZATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from OrganizationTableInsert inserted in data
+            select inserted.ORGANIZATIONTABLE_ID;
     }
 
-    isolated resource function put organizationtables/[int ID](OrganizationTableUpdate value) returns OrganizationTable|persist:Error {
+    isolated resource function put organizationtables/[string ORGANIZATIONTABLE_ID](OrganizationTableUpdate value) returns OrganizationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ORGANIZATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/organizationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ORGANIZATIONTABLE_ID, value);
+        return self->/organizationtables/[ORGANIZATIONTABLE_ID].get();
     }
 
-    isolated resource function delete organizationtables/[int ID]() returns OrganizationTable|persist:Error {
-        OrganizationTable result = check self->/organizationtables/[ID].get();
+    isolated resource function delete organizationtables/[string ORGANIZATIONTABLE_ID]() returns OrganizationTable|persist:Error {
+        OrganizationTable result = check self->/organizationtables/[ORGANIZATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ORGANIZATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ORGANIZATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get coverageeligibilityresponsetables(CoverageEligibilityResponseTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get coverageeligibilityresponsetables/[int ID](CoverageEligibilityResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get coverageeligibilityresponsetables/[string COVERAGEELIGIBILITYRESPONSETABLE_ID](CoverageEligibilityResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post coverageeligibilityresponsetables(CoverageEligibilityResponseTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post coverageeligibilityresponsetables(CoverageEligibilityResponseTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COVERAGE_ELIGIBILITY_RESPONSE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CoverageEligibilityResponseTableInsert inserted in data
+            select inserted.COVERAGEELIGIBILITYRESPONSETABLE_ID;
     }
 
-    isolated resource function put coverageeligibilityresponsetables/[int ID](CoverageEligibilityResponseTableUpdate value) returns CoverageEligibilityResponseTable|persist:Error {
+    isolated resource function put coverageeligibilityresponsetables/[string COVERAGEELIGIBILITYRESPONSETABLE_ID](CoverageEligibilityResponseTableUpdate value) returns CoverageEligibilityResponseTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COVERAGE_ELIGIBILITY_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/coverageeligibilityresponsetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(COVERAGEELIGIBILITYRESPONSETABLE_ID, value);
+        return self->/coverageeligibilityresponsetables/[COVERAGEELIGIBILITYRESPONSETABLE_ID].get();
     }
 
-    isolated resource function delete coverageeligibilityresponsetables/[int ID]() returns CoverageEligibilityResponseTable|persist:Error {
-        CoverageEligibilityResponseTable result = check self->/coverageeligibilityresponsetables/[ID].get();
+    isolated resource function delete coverageeligibilityresponsetables/[string COVERAGEELIGIBILITYRESPONSETABLE_ID]() returns CoverageEligibilityResponseTable|persist:Error {
+        CoverageEligibilityResponseTable result = check self->/coverageeligibilityresponsetables/[COVERAGEELIGIBILITYRESPONSETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COVERAGE_ELIGIBILITY_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(COVERAGEELIGIBILITYRESPONSETABLE_ID);
         return result;
     }
 
     isolated resource function get researchstudytables(ResearchStudyTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get researchstudytables/[int ID](ResearchStudyTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get researchstudytables/[string RESEARCHSTUDYTABLE_ID](ResearchStudyTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post researchstudytables(ResearchStudyTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post researchstudytables(ResearchStudyTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_STUDY_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ResearchStudyTableInsert inserted in data
+            select inserted.RESEARCHSTUDYTABLE_ID;
     }
 
-    isolated resource function put researchstudytables/[int ID](ResearchStudyTableUpdate value) returns ResearchStudyTable|persist:Error {
+    isolated resource function put researchstudytables/[string RESEARCHSTUDYTABLE_ID](ResearchStudyTableUpdate value) returns ResearchStudyTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_STUDY_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/researchstudytables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(RESEARCHSTUDYTABLE_ID, value);
+        return self->/researchstudytables/[RESEARCHSTUDYTABLE_ID].get();
     }
 
-    isolated resource function delete researchstudytables/[int ID]() returns ResearchStudyTable|persist:Error {
-        ResearchStudyTable result = check self->/researchstudytables/[ID].get();
+    isolated resource function delete researchstudytables/[string RESEARCHSTUDYTABLE_ID]() returns ResearchStudyTable|persist:Error {
+        ResearchStudyTable result = check self->/researchstudytables/[RESEARCHSTUDYTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_STUDY_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(RESEARCHSTUDYTABLE_ID);
         return result;
     }
 
     isolated resource function get bundletables(BundleTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get bundletables/[int ID](BundleTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get bundletables/[string BUNDLETABLE_ID](BundleTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post bundletables(BundleTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post bundletables(BundleTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(BUNDLE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from BundleTableInsert inserted in data
+            select inserted.BUNDLETABLE_ID;
     }
 
-    isolated resource function put bundletables/[int ID](BundleTableUpdate value) returns BundleTable|persist:Error {
+    isolated resource function put bundletables/[string BUNDLETABLE_ID](BundleTableUpdate value) returns BundleTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(BUNDLE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/bundletables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(BUNDLETABLE_ID, value);
+        return self->/bundletables/[BUNDLETABLE_ID].get();
     }
 
-    isolated resource function delete bundletables/[int ID]() returns BundleTable|persist:Error {
-        BundleTable result = check self->/bundletables/[ID].get();
+    isolated resource function delete bundletables/[string BUNDLETABLE_ID]() returns BundleTable|persist:Error {
+        BundleTable result = check self->/bundletables/[BUNDLETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(BUNDLE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(BUNDLETABLE_ID);
         return result;
     }
 
     isolated resource function get encountertables(EncounterTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get encountertables/[int ID](EncounterTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get encountertables/[string ENCOUNTERTABLE_ID](EncounterTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post encountertables(EncounterTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post encountertables(EncounterTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENCOUNTER_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from EncounterTableInsert inserted in data
+            select inserted.ENCOUNTERTABLE_ID;
     }
 
-    isolated resource function put encountertables/[int ID](EncounterTableUpdate value) returns EncounterTable|persist:Error {
+    isolated resource function put encountertables/[string ENCOUNTERTABLE_ID](EncounterTableUpdate value) returns EncounterTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENCOUNTER_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/encountertables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ENCOUNTERTABLE_ID, value);
+        return self->/encountertables/[ENCOUNTERTABLE_ID].get();
     }
 
-    isolated resource function delete encountertables/[int ID]() returns EncounterTable|persist:Error {
-        EncounterTable result = check self->/encountertables/[ID].get();
+    isolated resource function delete encountertables/[string ENCOUNTERTABLE_ID]() returns EncounterTable|persist:Error {
+        EncounterTable result = check self->/encountertables/[ENCOUNTERTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENCOUNTER_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ENCOUNTERTABLE_ID);
         return result;
     }
 
     isolated resource function get riskassessmenttables(RiskAssessmentTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get riskassessmenttables/[int ID](RiskAssessmentTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get riskassessmenttables/[string RISKASSESSMENTTABLE_ID](RiskAssessmentTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post riskassessmenttables(RiskAssessmentTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post riskassessmenttables(RiskAssessmentTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RISK_ASSESSMENT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from RiskAssessmentTableInsert inserted in data
+            select inserted.RISKASSESSMENTTABLE_ID;
     }
 
-    isolated resource function put riskassessmenttables/[int ID](RiskAssessmentTableUpdate value) returns RiskAssessmentTable|persist:Error {
+    isolated resource function put riskassessmenttables/[string RISKASSESSMENTTABLE_ID](RiskAssessmentTableUpdate value) returns RiskAssessmentTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RISK_ASSESSMENT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/riskassessmenttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(RISKASSESSMENTTABLE_ID, value);
+        return self->/riskassessmenttables/[RISKASSESSMENTTABLE_ID].get();
     }
 
-    isolated resource function delete riskassessmenttables/[int ID]() returns RiskAssessmentTable|persist:Error {
-        RiskAssessmentTable result = check self->/riskassessmenttables/[ID].get();
+    isolated resource function delete riskassessmenttables/[string RISKASSESSMENTTABLE_ID]() returns RiskAssessmentTable|persist:Error {
+        RiskAssessmentTable result = check self->/riskassessmenttables/[RISKASSESSMENTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RISK_ASSESSMENT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(RISKASSESSMENTTABLE_ID);
         return result;
     }
 
     isolated resource function get listtables(ListTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get listtables/[int ID](ListTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get listtables/[string LISTTABLE_ID](ListTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post listtables(ListTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post listtables(ListTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LIST_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ListTableInsert inserted in data
+            select inserted.LISTTABLE_ID;
     }
 
-    isolated resource function put listtables/[int ID](ListTableUpdate value) returns ListTable|persist:Error {
+    isolated resource function put listtables/[string LISTTABLE_ID](ListTableUpdate value) returns ListTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LIST_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/listtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(LISTTABLE_ID, value);
+        return self->/listtables/[LISTTABLE_ID].get();
     }
 
-    isolated resource function delete listtables/[int ID]() returns ListTable|persist:Error {
-        ListTable result = check self->/listtables/[ID].get();
+    isolated resource function delete listtables/[string LISTTABLE_ID]() returns ListTable|persist:Error {
+        ListTable result = check self->/listtables/[LISTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LIST_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(LISTTABLE_ID);
         return result;
     }
 
     isolated resource function get organizationaffiliationtables(OrganizationAffiliationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get organizationaffiliationtables/[int ID](OrganizationAffiliationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get organizationaffiliationtables/[string ORGANIZATIONAFFILIATIONTABLE_ID](OrganizationAffiliationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post organizationaffiliationtables(OrganizationAffiliationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post organizationaffiliationtables(OrganizationAffiliationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ORGANIZATION_AFFILIATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from OrganizationAffiliationTableInsert inserted in data
+            select inserted.ORGANIZATIONAFFILIATIONTABLE_ID;
     }
 
-    isolated resource function put organizationaffiliationtables/[int ID](OrganizationAffiliationTableUpdate value) returns OrganizationAffiliationTable|persist:Error {
+    isolated resource function put organizationaffiliationtables/[string ORGANIZATIONAFFILIATIONTABLE_ID](OrganizationAffiliationTableUpdate value) returns OrganizationAffiliationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ORGANIZATION_AFFILIATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/organizationaffiliationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ORGANIZATIONAFFILIATIONTABLE_ID, value);
+        return self->/organizationaffiliationtables/[ORGANIZATIONAFFILIATIONTABLE_ID].get();
     }
 
-    isolated resource function delete organizationaffiliationtables/[int ID]() returns OrganizationAffiliationTable|persist:Error {
-        OrganizationAffiliationTable result = check self->/organizationaffiliationtables/[ID].get();
+    isolated resource function delete organizationaffiliationtables/[string ORGANIZATIONAFFILIATIONTABLE_ID]() returns OrganizationAffiliationTable|persist:Error {
+        OrganizationAffiliationTable result = check self->/organizationaffiliationtables/[ORGANIZATIONAFFILIATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ORGANIZATION_AFFILIATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ORGANIZATIONAFFILIATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get chargeitemtables(ChargeItemTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get chargeitemtables/[int ID](ChargeItemTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get chargeitemtables/[string CHARGEITEMTABLE_ID](ChargeItemTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post chargeitemtables(ChargeItemTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post chargeitemtables(ChargeItemTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CHARGE_ITEM_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ChargeItemTableInsert inserted in data
+            select inserted.CHARGEITEMTABLE_ID;
     }
 
-    isolated resource function put chargeitemtables/[int ID](ChargeItemTableUpdate value) returns ChargeItemTable|persist:Error {
+    isolated resource function put chargeitemtables/[string CHARGEITEMTABLE_ID](ChargeItemTableUpdate value) returns ChargeItemTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CHARGE_ITEM_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/chargeitemtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CHARGEITEMTABLE_ID, value);
+        return self->/chargeitemtables/[CHARGEITEMTABLE_ID].get();
     }
 
-    isolated resource function delete chargeitemtables/[int ID]() returns ChargeItemTable|persist:Error {
-        ChargeItemTable result = check self->/chargeitemtables/[ID].get();
+    isolated resource function delete chargeitemtables/[string CHARGEITEMTABLE_ID]() returns ChargeItemTable|persist:Error {
+        ChargeItemTable result = check self->/chargeitemtables/[CHARGEITEMTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CHARGE_ITEM_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CHARGEITEMTABLE_ID);
         return result;
     }
 
     isolated resource function get medicationknowledgetables(MedicationKnowledgeTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicationknowledgetables/[int ID](MedicationKnowledgeTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicationknowledgetables/[string MEDICATIONKNOWLEDGETABLE_ID](MedicationKnowledgeTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicationknowledgetables(MedicationKnowledgeTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicationknowledgetables(MedicationKnowledgeTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_KNOWLEDGE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicationKnowledgeTableInsert inserted in data
+            select inserted.MEDICATIONKNOWLEDGETABLE_ID;
     }
 
-    isolated resource function put medicationknowledgetables/[int ID](MedicationKnowledgeTableUpdate value) returns MedicationKnowledgeTable|persist:Error {
+    isolated resource function put medicationknowledgetables/[string MEDICATIONKNOWLEDGETABLE_ID](MedicationKnowledgeTableUpdate value) returns MedicationKnowledgeTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_KNOWLEDGE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicationknowledgetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICATIONKNOWLEDGETABLE_ID, value);
+        return self->/medicationknowledgetables/[MEDICATIONKNOWLEDGETABLE_ID].get();
     }
 
-    isolated resource function delete medicationknowledgetables/[int ID]() returns MedicationKnowledgeTable|persist:Error {
-        MedicationKnowledgeTable result = check self->/medicationknowledgetables/[ID].get();
+    isolated resource function delete medicationknowledgetables/[string MEDICATIONKNOWLEDGETABLE_ID]() returns MedicationKnowledgeTable|persist:Error {
+        MedicationKnowledgeTable result = check self->/medicationknowledgetables/[MEDICATIONKNOWLEDGETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_KNOWLEDGE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICATIONKNOWLEDGETABLE_ID);
         return result;
     }
 
     isolated resource function get plandefinitiontables(PlanDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get plandefinitiontables/[int ID](PlanDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get plandefinitiontables/[string PLANDEFINITIONTABLE_ID](PlanDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post plandefinitiontables(PlanDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post plandefinitiontables(PlanDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PLAN_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from PlanDefinitionTableInsert inserted in data
+            select inserted.PLANDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put plandefinitiontables/[int ID](PlanDefinitionTableUpdate value) returns PlanDefinitionTable|persist:Error {
+    isolated resource function put plandefinitiontables/[string PLANDEFINITIONTABLE_ID](PlanDefinitionTableUpdate value) returns PlanDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PLAN_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/plandefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(PLANDEFINITIONTABLE_ID, value);
+        return self->/plandefinitiontables/[PLANDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete plandefinitiontables/[int ID]() returns PlanDefinitionTable|persist:Error {
-        PlanDefinitionTable result = check self->/plandefinitiontables/[ID].get();
+    isolated resource function delete plandefinitiontables/[string PLANDEFINITIONTABLE_ID]() returns PlanDefinitionTable|persist:Error {
+        PlanDefinitionTable result = check self->/plandefinitiontables/[PLANDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PLAN_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(PLANDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get careplantables(CarePlanTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get careplantables/[int ID](CarePlanTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get careplantables/[string CAREPLANTABLE_ID](CarePlanTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post careplantables(CarePlanTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post careplantables(CarePlanTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CARE_PLAN_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CarePlanTableInsert inserted in data
+            select inserted.CAREPLANTABLE_ID;
     }
 
-    isolated resource function put careplantables/[int ID](CarePlanTableUpdate value) returns CarePlanTable|persist:Error {
+    isolated resource function put careplantables/[string CAREPLANTABLE_ID](CarePlanTableUpdate value) returns CarePlanTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CARE_PLAN_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/careplantables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CAREPLANTABLE_ID, value);
+        return self->/careplantables/[CAREPLANTABLE_ID].get();
     }
 
-    isolated resource function delete careplantables/[int ID]() returns CarePlanTable|persist:Error {
-        CarePlanTable result = check self->/careplantables/[ID].get();
+    isolated resource function delete careplantables/[string CAREPLANTABLE_ID]() returns CarePlanTable|persist:Error {
+        CarePlanTable result = check self->/careplantables/[CAREPLANTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CARE_PLAN_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CAREPLANTABLE_ID);
         return result;
     }
 
     isolated resource function get visionprescriptiontables(VisionPrescriptionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get visionprescriptiontables/[int ID](VisionPrescriptionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get visionprescriptiontables/[string VISIONPRESCRIPTIONTABLE_ID](VisionPrescriptionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post visionprescriptiontables(VisionPrescriptionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post visionprescriptiontables(VisionPrescriptionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(VISION_PRESCRIPTION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from VisionPrescriptionTableInsert inserted in data
+            select inserted.VISIONPRESCRIPTIONTABLE_ID;
     }
 
-    isolated resource function put visionprescriptiontables/[int ID](VisionPrescriptionTableUpdate value) returns VisionPrescriptionTable|persist:Error {
+    isolated resource function put visionprescriptiontables/[string VISIONPRESCRIPTIONTABLE_ID](VisionPrescriptionTableUpdate value) returns VisionPrescriptionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(VISION_PRESCRIPTION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/visionprescriptiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(VISIONPRESCRIPTIONTABLE_ID, value);
+        return self->/visionprescriptiontables/[VISIONPRESCRIPTIONTABLE_ID].get();
     }
 
-    isolated resource function delete visionprescriptiontables/[int ID]() returns VisionPrescriptionTable|persist:Error {
-        VisionPrescriptionTable result = check self->/visionprescriptiontables/[ID].get();
+    isolated resource function delete visionprescriptiontables/[string VISIONPRESCRIPTIONTABLE_ID]() returns VisionPrescriptionTable|persist:Error {
+        VisionPrescriptionTable result = check self->/visionprescriptiontables/[VISIONPRESCRIPTIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(VISION_PRESCRIPTION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(VISIONPRESCRIPTIONTABLE_ID);
         return result;
     }
 
     isolated resource function get episodeofcaretables(EpisodeOfCareTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get episodeofcaretables/[int ID](EpisodeOfCareTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get episodeofcaretables/[string EPISODEOFCARETABLE_ID](EpisodeOfCareTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post episodeofcaretables(EpisodeOfCareTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post episodeofcaretables(EpisodeOfCareTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EPISODE_OF_CARE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from EpisodeOfCareTableInsert inserted in data
+            select inserted.EPISODEOFCARETABLE_ID;
     }
 
-    isolated resource function put episodeofcaretables/[int ID](EpisodeOfCareTableUpdate value) returns EpisodeOfCareTable|persist:Error {
+    isolated resource function put episodeofcaretables/[string EPISODEOFCARETABLE_ID](EpisodeOfCareTableUpdate value) returns EpisodeOfCareTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EPISODE_OF_CARE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/episodeofcaretables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(EPISODEOFCARETABLE_ID, value);
+        return self->/episodeofcaretables/[EPISODEOFCARETABLE_ID].get();
     }
 
-    isolated resource function delete episodeofcaretables/[int ID]() returns EpisodeOfCareTable|persist:Error {
-        EpisodeOfCareTable result = check self->/episodeofcaretables/[ID].get();
+    isolated resource function delete episodeofcaretables/[string EPISODEOFCARETABLE_ID]() returns EpisodeOfCareTable|persist:Error {
+        EpisodeOfCareTable result = check self->/episodeofcaretables/[EPISODEOFCARETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EPISODE_OF_CARE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(EPISODEOFCARETABLE_ID);
         return result;
     }
 
     isolated resource function get careteamtables(CareTeamTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get careteamtables/[int ID](CareTeamTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get careteamtables/[string CARETEAMTABLE_ID](CareTeamTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post careteamtables(CareTeamTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post careteamtables(CareTeamTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CARE_TEAM_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CareTeamTableInsert inserted in data
+            select inserted.CARETEAMTABLE_ID;
     }
 
-    isolated resource function put careteamtables/[int ID](CareTeamTableUpdate value) returns CareTeamTable|persist:Error {
+    isolated resource function put careteamtables/[string CARETEAMTABLE_ID](CareTeamTableUpdate value) returns CareTeamTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CARE_TEAM_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/careteamtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CARETEAMTABLE_ID, value);
+        return self->/careteamtables/[CARETEAMTABLE_ID].get();
     }
 
-    isolated resource function delete careteamtables/[int ID]() returns CareTeamTable|persist:Error {
-        CareTeamTable result = check self->/careteamtables/[ID].get();
+    isolated resource function delete careteamtables/[string CARETEAMTABLE_ID]() returns CareTeamTable|persist:Error {
+        CareTeamTable result = check self->/careteamtables/[CARETEAMTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CARE_TEAM_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CARETEAMTABLE_ID);
         return result;
     }
 
     isolated resource function get medicationadministrationtables(MedicationAdministrationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicationadministrationtables/[int ID](MedicationAdministrationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicationadministrationtables/[string MEDICATIONADMINISTRATIONTABLE_ID](MedicationAdministrationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicationadministrationtables(MedicationAdministrationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicationadministrationtables(MedicationAdministrationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_ADMINISTRATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicationAdministrationTableInsert inserted in data
+            select inserted.MEDICATIONADMINISTRATIONTABLE_ID;
     }
 
-    isolated resource function put medicationadministrationtables/[int ID](MedicationAdministrationTableUpdate value) returns MedicationAdministrationTable|persist:Error {
+    isolated resource function put medicationadministrationtables/[string MEDICATIONADMINISTRATIONTABLE_ID](MedicationAdministrationTableUpdate value) returns MedicationAdministrationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_ADMINISTRATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicationadministrationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICATIONADMINISTRATIONTABLE_ID, value);
+        return self->/medicationadministrationtables/[MEDICATIONADMINISTRATIONTABLE_ID].get();
     }
 
-    isolated resource function delete medicationadministrationtables/[int ID]() returns MedicationAdministrationTable|persist:Error {
-        MedicationAdministrationTable result = check self->/medicationadministrationtables/[ID].get();
+    isolated resource function delete medicationadministrationtables/[string MEDICATIONADMINISTRATIONTABLE_ID]() returns MedicationAdministrationTable|persist:Error {
+        MedicationAdministrationTable result = check self->/medicationadministrationtables/[MEDICATIONADMINISTRATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_ADMINISTRATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICATIONADMINISTRATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get consenttables(ConsentTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get consenttables/[int ID](ConsentTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get consenttables/[string CONSENTTABLE_ID](ConsentTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post consenttables(ConsentTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post consenttables(ConsentTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONSENT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ConsentTableInsert inserted in data
+            select inserted.CONSENTTABLE_ID;
     }
 
-    isolated resource function put consenttables/[int ID](ConsentTableUpdate value) returns ConsentTable|persist:Error {
+    isolated resource function put consenttables/[string CONSENTTABLE_ID](ConsentTableUpdate value) returns ConsentTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONSENT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/consenttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CONSENTTABLE_ID, value);
+        return self->/consenttables/[CONSENTTABLE_ID].get();
     }
 
-    isolated resource function delete consenttables/[int ID]() returns ConsentTable|persist:Error {
-        ConsentTable result = check self->/consenttables/[ID].get();
+    isolated resource function delete consenttables/[string CONSENTTABLE_ID]() returns ConsentTable|persist:Error {
+        ConsentTable result = check self->/consenttables/[CONSENTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONSENT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CONSENTTABLE_ID);
         return result;
     }
 
     isolated resource function get detectedissuetables(DetectedIssueTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get detectedissuetables/[int ID](DetectedIssueTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get detectedissuetables/[string DETECTEDISSUETABLE_ID](DetectedIssueTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post detectedissuetables(DetectedIssueTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post detectedissuetables(DetectedIssueTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DETECTED_ISSUE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from DetectedIssueTableInsert inserted in data
+            select inserted.DETECTEDISSUETABLE_ID;
     }
 
-    isolated resource function put detectedissuetables/[int ID](DetectedIssueTableUpdate value) returns DetectedIssueTable|persist:Error {
+    isolated resource function put detectedissuetables/[string DETECTEDISSUETABLE_ID](DetectedIssueTableUpdate value) returns DetectedIssueTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DETECTED_ISSUE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/detectedissuetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(DETECTEDISSUETABLE_ID, value);
+        return self->/detectedissuetables/[DETECTEDISSUETABLE_ID].get();
     }
 
-    isolated resource function delete detectedissuetables/[int ID]() returns DetectedIssueTable|persist:Error {
-        DetectedIssueTable result = check self->/detectedissuetables/[ID].get();
+    isolated resource function delete detectedissuetables/[string DETECTEDISSUETABLE_ID]() returns DetectedIssueTable|persist:Error {
+        DetectedIssueTable result = check self->/detectedissuetables/[DETECTEDISSUETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DETECTED_ISSUE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(DETECTEDISSUETABLE_ID);
         return result;
     }
 
     isolated resource function get substancespecificationtables(SubstanceSpecificationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get substancespecificationtables/[int ID](SubstanceSpecificationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get substancespecificationtables/[string SUBSTANCESPECIFICATIONTABLE_ID](SubstanceSpecificationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post substancespecificationtables(SubstanceSpecificationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post substancespecificationtables(SubstanceSpecificationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUBSTANCE_SPECIFICATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from SubstanceSpecificationTableInsert inserted in data
+            select inserted.SUBSTANCESPECIFICATIONTABLE_ID;
     }
 
-    isolated resource function put substancespecificationtables/[int ID](SubstanceSpecificationTableUpdate value) returns SubstanceSpecificationTable|persist:Error {
+    isolated resource function put substancespecificationtables/[string SUBSTANCESPECIFICATIONTABLE_ID](SubstanceSpecificationTableUpdate value) returns SubstanceSpecificationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUBSTANCE_SPECIFICATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/substancespecificationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SUBSTANCESPECIFICATIONTABLE_ID, value);
+        return self->/substancespecificationtables/[SUBSTANCESPECIFICATIONTABLE_ID].get();
     }
 
-    isolated resource function delete substancespecificationtables/[int ID]() returns SubstanceSpecificationTable|persist:Error {
-        SubstanceSpecificationTable result = check self->/substancespecificationtables/[ID].get();
+    isolated resource function delete substancespecificationtables/[string SUBSTANCESPECIFICATIONTABLE_ID]() returns SubstanceSpecificationTable|persist:Error {
+        SubstanceSpecificationTable result = check self->/substancespecificationtables/[SUBSTANCESPECIFICATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUBSTANCE_SPECIFICATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SUBSTANCESPECIFICATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get allergyintolerancetables(AllergyIntoleranceTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get allergyintolerancetables/[int ID](AllergyIntoleranceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get allergyintolerancetables/[string ALLERGYINTOLERANCETABLE_ID](AllergyIntoleranceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post allergyintolerancetables(AllergyIntoleranceTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post allergyintolerancetables(AllergyIntoleranceTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ALLERGY_INTOLERANCE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from AllergyIntoleranceTableInsert inserted in data
+            select inserted.ALLERGYINTOLERANCETABLE_ID;
     }
 
-    isolated resource function put allergyintolerancetables/[int ID](AllergyIntoleranceTableUpdate value) returns AllergyIntoleranceTable|persist:Error {
+    isolated resource function put allergyintolerancetables/[string ALLERGYINTOLERANCETABLE_ID](AllergyIntoleranceTableUpdate value) returns AllergyIntoleranceTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ALLERGY_INTOLERANCE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/allergyintolerancetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ALLERGYINTOLERANCETABLE_ID, value);
+        return self->/allergyintolerancetables/[ALLERGYINTOLERANCETABLE_ID].get();
     }
 
-    isolated resource function delete allergyintolerancetables/[int ID]() returns AllergyIntoleranceTable|persist:Error {
-        AllergyIntoleranceTable result = check self->/allergyintolerancetables/[ID].get();
+    isolated resource function delete allergyintolerancetables/[string ALLERGYINTOLERANCETABLE_ID]() returns AllergyIntoleranceTable|persist:Error {
+        AllergyIntoleranceTable result = check self->/allergyintolerancetables/[ALLERGYINTOLERANCETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ALLERGY_INTOLERANCE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ALLERGYINTOLERANCETABLE_ID);
         return result;
     }
 
     isolated resource function get medicinalproductindicationtables(MedicinalProductIndicationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicinalproductindicationtables/[int ID](MedicinalProductIndicationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicinalproductindicationtables/[string MEDICINALPRODUCTINDICATIONTABLE_ID](MedicinalProductIndicationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicinalproductindicationtables(MedicinalProductIndicationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicinalproductindicationtables(MedicinalProductIndicationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_INDICATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicinalProductIndicationTableInsert inserted in data
+            select inserted.MEDICINALPRODUCTINDICATIONTABLE_ID;
     }
 
-    isolated resource function put medicinalproductindicationtables/[int ID](MedicinalProductIndicationTableUpdate value) returns MedicinalProductIndicationTable|persist:Error {
+    isolated resource function put medicinalproductindicationtables/[string MEDICINALPRODUCTINDICATIONTABLE_ID](MedicinalProductIndicationTableUpdate value) returns MedicinalProductIndicationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_INDICATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicinalproductindicationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICINALPRODUCTINDICATIONTABLE_ID, value);
+        return self->/medicinalproductindicationtables/[MEDICINALPRODUCTINDICATIONTABLE_ID].get();
     }
 
-    isolated resource function delete medicinalproductindicationtables/[int ID]() returns MedicinalProductIndicationTable|persist:Error {
-        MedicinalProductIndicationTable result = check self->/medicinalproductindicationtables/[ID].get();
+    isolated resource function delete medicinalproductindicationtables/[string MEDICINALPRODUCTINDICATIONTABLE_ID]() returns MedicinalProductIndicationTable|persist:Error {
+        MedicinalProductIndicationTable result = check self->/medicinalproductindicationtables/[MEDICINALPRODUCTINDICATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_INDICATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICINALPRODUCTINDICATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get medicinalproductpharmaceuticaltables(MedicinalProductPharmaceuticalTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicinalproductpharmaceuticaltables/[int ID](MedicinalProductPharmaceuticalTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicinalproductpharmaceuticaltables/[string MEDICINALPRODUCTPHARMACEUTICALTABLE_ID](MedicinalProductPharmaceuticalTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicinalproductpharmaceuticaltables(MedicinalProductPharmaceuticalTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicinalproductpharmaceuticaltables(MedicinalProductPharmaceuticalTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_PHARMACEUTICAL_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicinalProductPharmaceuticalTableInsert inserted in data
+            select inserted.MEDICINALPRODUCTPHARMACEUTICALTABLE_ID;
     }
 
-    isolated resource function put medicinalproductpharmaceuticaltables/[int ID](MedicinalProductPharmaceuticalTableUpdate value) returns MedicinalProductPharmaceuticalTable|persist:Error {
+    isolated resource function put medicinalproductpharmaceuticaltables/[string MEDICINALPRODUCTPHARMACEUTICALTABLE_ID](MedicinalProductPharmaceuticalTableUpdate value) returns MedicinalProductPharmaceuticalTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_PHARMACEUTICAL_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicinalproductpharmaceuticaltables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICINALPRODUCTPHARMACEUTICALTABLE_ID, value);
+        return self->/medicinalproductpharmaceuticaltables/[MEDICINALPRODUCTPHARMACEUTICALTABLE_ID].get();
     }
 
-    isolated resource function delete medicinalproductpharmaceuticaltables/[int ID]() returns MedicinalProductPharmaceuticalTable|persist:Error {
-        MedicinalProductPharmaceuticalTable result = check self->/medicinalproductpharmaceuticaltables/[ID].get();
+    isolated resource function delete medicinalproductpharmaceuticaltables/[string MEDICINALPRODUCTPHARMACEUTICALTABLE_ID]() returns MedicinalProductPharmaceuticalTable|persist:Error {
+        MedicinalProductPharmaceuticalTable result = check self->/medicinalproductpharmaceuticaltables/[MEDICINALPRODUCTPHARMACEUTICALTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_PHARMACEUTICAL_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICINALPRODUCTPHARMACEUTICALTABLE_ID);
         return result;
     }
 
     isolated resource function get slottables(SlotTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get slottables/[int ID](SlotTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get slottables/[string SLOTTABLE_ID](SlotTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post slottables(SlotTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post slottables(SlotTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SLOT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from SlotTableInsert inserted in data
+            select inserted.SLOTTABLE_ID;
     }
 
-    isolated resource function put slottables/[int ID](SlotTableUpdate value) returns SlotTable|persist:Error {
+    isolated resource function put slottables/[string SLOTTABLE_ID](SlotTableUpdate value) returns SlotTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SLOT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/slottables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SLOTTABLE_ID, value);
+        return self->/slottables/[SLOTTABLE_ID].get();
     }
 
-    isolated resource function delete slottables/[int ID]() returns SlotTable|persist:Error {
-        SlotTable result = check self->/slottables/[ID].get();
+    isolated resource function delete slottables/[string SLOTTABLE_ID]() returns SlotTable|persist:Error {
+        SlotTable result = check self->/slottables/[SLOTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SLOT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SLOTTABLE_ID);
         return result;
     }
 
     isolated resource function get verificationresulttables(VerificationResultTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get verificationresulttables/[int ID](VerificationResultTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get verificationresulttables/[string VERIFICATIONRESULTTABLE_ID](VerificationResultTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post verificationresulttables(VerificationResultTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post verificationresulttables(VerificationResultTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(VERIFICATION_RESULT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from VerificationResultTableInsert inserted in data
+            select inserted.VERIFICATIONRESULTTABLE_ID;
     }
 
-    isolated resource function put verificationresulttables/[int ID](VerificationResultTableUpdate value) returns VerificationResultTable|persist:Error {
+    isolated resource function put verificationresulttables/[string VERIFICATIONRESULTTABLE_ID](VerificationResultTableUpdate value) returns VerificationResultTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(VERIFICATION_RESULT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/verificationresulttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(VERIFICATIONRESULTTABLE_ID, value);
+        return self->/verificationresulttables/[VERIFICATIONRESULTTABLE_ID].get();
     }
 
-    isolated resource function delete verificationresulttables/[int ID]() returns VerificationResultTable|persist:Error {
-        VerificationResultTable result = check self->/verificationresulttables/[ID].get();
+    isolated resource function delete verificationresulttables/[string VERIFICATIONRESULTTABLE_ID]() returns VerificationResultTable|persist:Error {
+        VerificationResultTable result = check self->/verificationresulttables/[VERIFICATIONRESULTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(VERIFICATION_RESULT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(VERIFICATIONRESULTTABLE_ID);
         return result;
     }
 
     isolated resource function get specimentables(SpecimenTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get specimentables/[int ID](SpecimenTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get specimentables/[string SPECIMENTABLE_ID](SpecimenTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post specimentables(SpecimenTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post specimentables(SpecimenTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SPECIMEN_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from SpecimenTableInsert inserted in data
+            select inserted.SPECIMENTABLE_ID;
     }
 
-    isolated resource function put specimentables/[int ID](SpecimenTableUpdate value) returns SpecimenTable|persist:Error {
+    isolated resource function put specimentables/[string SPECIMENTABLE_ID](SpecimenTableUpdate value) returns SpecimenTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SPECIMEN_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/specimentables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SPECIMENTABLE_ID, value);
+        return self->/specimentables/[SPECIMENTABLE_ID].get();
     }
 
-    isolated resource function delete specimentables/[int ID]() returns SpecimenTable|persist:Error {
-        SpecimenTable result = check self->/specimentables/[ID].get();
+    isolated resource function delete specimentables/[string SPECIMENTABLE_ID]() returns SpecimenTable|persist:Error {
+        SpecimenTable result = check self->/specimentables/[SPECIMENTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SPECIMEN_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SPECIMENTABLE_ID);
         return result;
     }
 
     isolated resource function get researchsubjecttables(ResearchSubjectTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get researchsubjecttables/[int ID](ResearchSubjectTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get researchsubjecttables/[string RESEARCHSUBJECTTABLE_ID](ResearchSubjectTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post researchsubjecttables(ResearchSubjectTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post researchsubjecttables(ResearchSubjectTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_SUBJECT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ResearchSubjectTableInsert inserted in data
+            select inserted.RESEARCHSUBJECTTABLE_ID;
     }
 
-    isolated resource function put researchsubjecttables/[int ID](ResearchSubjectTableUpdate value) returns ResearchSubjectTable|persist:Error {
+    isolated resource function put researchsubjecttables/[string RESEARCHSUBJECTTABLE_ID](ResearchSubjectTableUpdate value) returns ResearchSubjectTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_SUBJECT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/researchsubjecttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(RESEARCHSUBJECTTABLE_ID, value);
+        return self->/researchsubjecttables/[RESEARCHSUBJECTTABLE_ID].get();
     }
 
-    isolated resource function delete researchsubjecttables/[int ID]() returns ResearchSubjectTable|persist:Error {
-        ResearchSubjectTable result = check self->/researchsubjecttables/[ID].get();
+    isolated resource function delete researchsubjecttables/[string RESEARCHSUBJECTTABLE_ID]() returns ResearchSubjectTable|persist:Error {
+        ResearchSubjectTable result = check self->/researchsubjecttables/[RESEARCHSUBJECTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_SUBJECT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(RESEARCHSUBJECTTABLE_ID);
         return result;
     }
 
     isolated resource function get medicationtables(MedicationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicationtables/[int ID](MedicationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicationtables/[string MEDICATIONTABLE_ID](MedicationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicationtables(MedicationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicationtables(MedicationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicationTableInsert inserted in data
+            select inserted.MEDICATIONTABLE_ID;
     }
 
-    isolated resource function put medicationtables/[int ID](MedicationTableUpdate value) returns MedicationTable|persist:Error {
+    isolated resource function put medicationtables/[string MEDICATIONTABLE_ID](MedicationTableUpdate value) returns MedicationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICATIONTABLE_ID, value);
+        return self->/medicationtables/[MEDICATIONTABLE_ID].get();
     }
 
-    isolated resource function delete medicationtables/[int ID]() returns MedicationTable|persist:Error {
-        MedicationTable result = check self->/medicationtables/[ID].get();
+    isolated resource function delete medicationtables/[string MEDICATIONTABLE_ID]() returns MedicationTable|persist:Error {
+        MedicationTable result = check self->/medicationtables/[MEDICATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get researchdefinitiontables(ResearchDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get researchdefinitiontables/[int ID](ResearchDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get researchdefinitiontables/[string RESEARCHDEFINITIONTABLE_ID](ResearchDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post researchdefinitiontables(ResearchDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post researchdefinitiontables(ResearchDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ResearchDefinitionTableInsert inserted in data
+            select inserted.RESEARCHDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put researchdefinitiontables/[int ID](ResearchDefinitionTableUpdate value) returns ResearchDefinitionTable|persist:Error {
+    isolated resource function put researchdefinitiontables/[string RESEARCHDEFINITIONTABLE_ID](ResearchDefinitionTableUpdate value) returns ResearchDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/researchdefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(RESEARCHDEFINITIONTABLE_ID, value);
+        return self->/researchdefinitiontables/[RESEARCHDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete researchdefinitiontables/[int ID]() returns ResearchDefinitionTable|persist:Error {
-        ResearchDefinitionTable result = check self->/researchdefinitiontables/[ID].get();
+    isolated resource function delete researchdefinitiontables/[string RESEARCHDEFINITIONTABLE_ID]() returns ResearchDefinitionTable|persist:Error {
+        ResearchDefinitionTable result = check self->/researchdefinitiontables/[RESEARCHDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(RESEARCHDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get healthcareservicetables(HealthcareServiceTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get healthcareservicetables/[int ID](HealthcareServiceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get healthcareservicetables/[string HEALTHCARESERVICETABLE_ID](HealthcareServiceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post healthcareservicetables(HealthcareServiceTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post healthcareservicetables(HealthcareServiceTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(HEALTHCARE_SERVICE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from HealthcareServiceTableInsert inserted in data
+            select inserted.HEALTHCARESERVICETABLE_ID;
     }
 
-    isolated resource function put healthcareservicetables/[int ID](HealthcareServiceTableUpdate value) returns HealthcareServiceTable|persist:Error {
+    isolated resource function put healthcareservicetables/[string HEALTHCARESERVICETABLE_ID](HealthcareServiceTableUpdate value) returns HealthcareServiceTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(HEALTHCARE_SERVICE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/healthcareservicetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(HEALTHCARESERVICETABLE_ID, value);
+        return self->/healthcareservicetables/[HEALTHCARESERVICETABLE_ID].get();
     }
 
-    isolated resource function delete healthcareservicetables/[int ID]() returns HealthcareServiceTable|persist:Error {
-        HealthcareServiceTable result = check self->/healthcareservicetables/[ID].get();
+    isolated resource function delete healthcareservicetables/[string HEALTHCARESERVICETABLE_ID]() returns HealthcareServiceTable|persist:Error {
+        HealthcareServiceTable result = check self->/healthcareservicetables/[HEALTHCARESERVICETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(HEALTHCARE_SERVICE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(HEALTHCARESERVICETABLE_ID);
         return result;
     }
 
     isolated resource function get paymentnoticetables(PaymentNoticeTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get paymentnoticetables/[int ID](PaymentNoticeTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get paymentnoticetables/[string PAYMENTNOTICETABLE_ID](PaymentNoticeTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post paymentnoticetables(PaymentNoticeTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post paymentnoticetables(PaymentNoticeTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PAYMENT_NOTICE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from PaymentNoticeTableInsert inserted in data
+            select inserted.PAYMENTNOTICETABLE_ID;
     }
 
-    isolated resource function put paymentnoticetables/[int ID](PaymentNoticeTableUpdate value) returns PaymentNoticeTable|persist:Error {
+    isolated resource function put paymentnoticetables/[string PAYMENTNOTICETABLE_ID](PaymentNoticeTableUpdate value) returns PaymentNoticeTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PAYMENT_NOTICE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/paymentnoticetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(PAYMENTNOTICETABLE_ID, value);
+        return self->/paymentnoticetables/[PAYMENTNOTICETABLE_ID].get();
     }
 
-    isolated resource function delete paymentnoticetables/[int ID]() returns PaymentNoticeTable|persist:Error {
-        PaymentNoticeTable result = check self->/paymentnoticetables/[ID].get();
+    isolated resource function delete paymentnoticetables/[string PAYMENTNOTICETABLE_ID]() returns PaymentNoticeTable|persist:Error {
+        PaymentNoticeTable result = check self->/paymentnoticetables/[PAYMENTNOTICETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PAYMENT_NOTICE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(PAYMENTNOTICETABLE_ID);
         return result;
     }
 
     isolated resource function get provenancetables(ProvenanceTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get provenancetables/[int ID](ProvenanceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get provenancetables/[string PROVENANCETABLE_ID](ProvenanceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post provenancetables(ProvenanceTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post provenancetables(ProvenanceTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PROVENANCE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ProvenanceTableInsert inserted in data
+            select inserted.PROVENANCETABLE_ID;
     }
 
-    isolated resource function put provenancetables/[int ID](ProvenanceTableUpdate value) returns ProvenanceTable|persist:Error {
+    isolated resource function put provenancetables/[string PROVENANCETABLE_ID](ProvenanceTableUpdate value) returns ProvenanceTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PROVENANCE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/provenancetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(PROVENANCETABLE_ID, value);
+        return self->/provenancetables/[PROVENANCETABLE_ID].get();
     }
 
-    isolated resource function delete provenancetables/[int ID]() returns ProvenanceTable|persist:Error {
-        ProvenanceTable result = check self->/provenancetables/[ID].get();
+    isolated resource function delete provenancetables/[string PROVENANCETABLE_ID]() returns ProvenanceTable|persist:Error {
+        ProvenanceTable result = check self->/provenancetables/[PROVENANCETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PROVENANCE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(PROVENANCETABLE_ID);
         return result;
     }
 
     isolated resource function get graphdefinitiontables(GraphDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get graphdefinitiontables/[int ID](GraphDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get graphdefinitiontables/[string GRAPHDEFINITIONTABLE_ID](GraphDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post graphdefinitiontables(GraphDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post graphdefinitiontables(GraphDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GRAPH_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from GraphDefinitionTableInsert inserted in data
+            select inserted.GRAPHDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put graphdefinitiontables/[int ID](GraphDefinitionTableUpdate value) returns GraphDefinitionTable|persist:Error {
+    isolated resource function put graphdefinitiontables/[string GRAPHDEFINITIONTABLE_ID](GraphDefinitionTableUpdate value) returns GraphDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GRAPH_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/graphdefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(GRAPHDEFINITIONTABLE_ID, value);
+        return self->/graphdefinitiontables/[GRAPHDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete graphdefinitiontables/[int ID]() returns GraphDefinitionTable|persist:Error {
-        GraphDefinitionTable result = check self->/graphdefinitiontables/[ID].get();
+    isolated resource function delete graphdefinitiontables/[string GRAPHDEFINITIONTABLE_ID]() returns GraphDefinitionTable|persist:Error {
+        GraphDefinitionTable result = check self->/graphdefinitiontables/[GRAPHDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GRAPH_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(GRAPHDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get mediatables(MediaTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get mediatables/[int ID](MediaTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get mediatables/[string MEDIATABLE_ID](MediaTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post mediatables(MediaTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post mediatables(MediaTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDIA_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MediaTableInsert inserted in data
+            select inserted.MEDIATABLE_ID;
     }
 
-    isolated resource function put mediatables/[int ID](MediaTableUpdate value) returns MediaTable|persist:Error {
+    isolated resource function put mediatables/[string MEDIATABLE_ID](MediaTableUpdate value) returns MediaTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDIA_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/mediatables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDIATABLE_ID, value);
+        return self->/mediatables/[MEDIATABLE_ID].get();
     }
 
-    isolated resource function delete mediatables/[int ID]() returns MediaTable|persist:Error {
-        MediaTable result = check self->/mediatables/[ID].get();
+    isolated resource function delete mediatables/[string MEDIATABLE_ID]() returns MediaTable|persist:Error {
+        MediaTable result = check self->/mediatables/[MEDIATABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDIA_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDIATABLE_ID);
         return result;
     }
 
     isolated resource function get bodystructuretables(BodyStructureTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get bodystructuretables/[int ID](BodyStructureTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get bodystructuretables/[string BODYSTRUCTURETABLE_ID](BodyStructureTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post bodystructuretables(BodyStructureTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post bodystructuretables(BodyStructureTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(BODY_STRUCTURE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from BodyStructureTableInsert inserted in data
+            select inserted.BODYSTRUCTURETABLE_ID;
     }
 
-    isolated resource function put bodystructuretables/[int ID](BodyStructureTableUpdate value) returns BodyStructureTable|persist:Error {
+    isolated resource function put bodystructuretables/[string BODYSTRUCTURETABLE_ID](BodyStructureTableUpdate value) returns BodyStructureTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(BODY_STRUCTURE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/bodystructuretables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(BODYSTRUCTURETABLE_ID, value);
+        return self->/bodystructuretables/[BODYSTRUCTURETABLE_ID].get();
     }
 
-    isolated resource function delete bodystructuretables/[int ID]() returns BodyStructureTable|persist:Error {
-        BodyStructureTable result = check self->/bodystructuretables/[ID].get();
+    isolated resource function delete bodystructuretables/[string BODYSTRUCTURETABLE_ID]() returns BodyStructureTable|persist:Error {
+        BodyStructureTable result = check self->/bodystructuretables/[BODYSTRUCTURETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(BODY_STRUCTURE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(BODYSTRUCTURETABLE_ID);
         return result;
     }
 
     isolated resource function get diagnosticreporttables(DiagnosticReportTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get diagnosticreporttables/[int ID](DiagnosticReportTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get diagnosticreporttables/[string DIAGNOSTICREPORTTABLE_ID](DiagnosticReportTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post diagnosticreporttables(DiagnosticReportTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post diagnosticreporttables(DiagnosticReportTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DIAGNOSTIC_REPORT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from DiagnosticReportTableInsert inserted in data
+            select inserted.DIAGNOSTICREPORTTABLE_ID;
     }
 
-    isolated resource function put diagnosticreporttables/[int ID](DiagnosticReportTableUpdate value) returns DiagnosticReportTable|persist:Error {
+    isolated resource function put diagnosticreporttables/[string DIAGNOSTICREPORTTABLE_ID](DiagnosticReportTableUpdate value) returns DiagnosticReportTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DIAGNOSTIC_REPORT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/diagnosticreporttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(DIAGNOSTICREPORTTABLE_ID, value);
+        return self->/diagnosticreporttables/[DIAGNOSTICREPORTTABLE_ID].get();
     }
 
-    isolated resource function delete diagnosticreporttables/[int ID]() returns DiagnosticReportTable|persist:Error {
-        DiagnosticReportTable result = check self->/diagnosticreporttables/[ID].get();
+    isolated resource function delete diagnosticreporttables/[string DIAGNOSTICREPORTTABLE_ID]() returns DiagnosticReportTable|persist:Error {
+        DiagnosticReportTable result = check self->/diagnosticreporttables/[DIAGNOSTICREPORTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DIAGNOSTIC_REPORT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(DIAGNOSTICREPORTTABLE_ID);
         return result;
     }
 
     isolated resource function get goaltables(GoalTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get goaltables/[int ID](GoalTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get goaltables/[string GOALTABLE_ID](GoalTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post goaltables(GoalTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post goaltables(GoalTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GOAL_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from GoalTableInsert inserted in data
+            select inserted.GOALTABLE_ID;
     }
 
-    isolated resource function put goaltables/[int ID](GoalTableUpdate value) returns GoalTable|persist:Error {
+    isolated resource function put goaltables/[string GOALTABLE_ID](GoalTableUpdate value) returns GoalTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GOAL_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/goaltables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(GOALTABLE_ID, value);
+        return self->/goaltables/[GOALTABLE_ID].get();
     }
 
-    isolated resource function delete goaltables/[int ID]() returns GoalTable|persist:Error {
-        GoalTable result = check self->/goaltables/[ID].get();
+    isolated resource function delete goaltables/[string GOALTABLE_ID]() returns GoalTable|persist:Error {
+        GoalTable result = check self->/goaltables/[GOALTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GOAL_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(GOALTABLE_ID);
         return result;
     }
 
     isolated resource function get capabilitystatementtables(CapabilityStatementTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get capabilitystatementtables/[int ID](CapabilityStatementTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get capabilitystatementtables/[string CAPABILITYSTATEMENTTABLE_ID](CapabilityStatementTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post capabilitystatementtables(CapabilityStatementTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post capabilitystatementtables(CapabilityStatementTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CAPABILITY_STATEMENT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CapabilityStatementTableInsert inserted in data
+            select inserted.CAPABILITYSTATEMENTTABLE_ID;
     }
 
-    isolated resource function put capabilitystatementtables/[int ID](CapabilityStatementTableUpdate value) returns CapabilityStatementTable|persist:Error {
+    isolated resource function put capabilitystatementtables/[string CAPABILITYSTATEMENTTABLE_ID](CapabilityStatementTableUpdate value) returns CapabilityStatementTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CAPABILITY_STATEMENT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/capabilitystatementtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CAPABILITYSTATEMENTTABLE_ID, value);
+        return self->/capabilitystatementtables/[CAPABILITYSTATEMENTTABLE_ID].get();
     }
 
-    isolated resource function delete capabilitystatementtables/[int ID]() returns CapabilityStatementTable|persist:Error {
-        CapabilityStatementTable result = check self->/capabilitystatementtables/[ID].get();
+    isolated resource function delete capabilitystatementtables/[string CAPABILITYSTATEMENTTABLE_ID]() returns CapabilityStatementTable|persist:Error {
+        CapabilityStatementTable result = check self->/capabilitystatementtables/[CAPABILITYSTATEMENTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CAPABILITY_STATEMENT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CAPABILITYSTATEMENTTABLE_ID);
         return result;
     }
 
     isolated resource function get deviceusestatementtables(DeviceUseStatementTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get deviceusestatementtables/[int ID](DeviceUseStatementTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get deviceusestatementtables/[string DEVICEUSESTATEMENTTABLE_ID](DeviceUseStatementTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post deviceusestatementtables(DeviceUseStatementTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post deviceusestatementtables(DeviceUseStatementTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_USE_STATEMENT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from DeviceUseStatementTableInsert inserted in data
+            select inserted.DEVICEUSESTATEMENTTABLE_ID;
     }
 
-    isolated resource function put deviceusestatementtables/[int ID](DeviceUseStatementTableUpdate value) returns DeviceUseStatementTable|persist:Error {
+    isolated resource function put deviceusestatementtables/[string DEVICEUSESTATEMENTTABLE_ID](DeviceUseStatementTableUpdate value) returns DeviceUseStatementTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_USE_STATEMENT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/deviceusestatementtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(DEVICEUSESTATEMENTTABLE_ID, value);
+        return self->/deviceusestatementtables/[DEVICEUSESTATEMENTTABLE_ID].get();
     }
 
-    isolated resource function delete deviceusestatementtables/[int ID]() returns DeviceUseStatementTable|persist:Error {
-        DeviceUseStatementTable result = check self->/deviceusestatementtables/[ID].get();
+    isolated resource function delete deviceusestatementtables/[string DEVICEUSESTATEMENTTABLE_ID]() returns DeviceUseStatementTable|persist:Error {
+        DeviceUseStatementTable result = check self->/deviceusestatementtables/[DEVICEUSESTATEMENTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_USE_STATEMENT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(DEVICEUSESTATEMENTTABLE_ID);
         return result;
     }
 
     isolated resource function get scheduletables(ScheduleTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get scheduletables/[int ID](ScheduleTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get scheduletables/[string SCHEDULETABLE_ID](ScheduleTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post scheduletables(ScheduleTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post scheduletables(ScheduleTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SCHEDULE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ScheduleTableInsert inserted in data
+            select inserted.SCHEDULETABLE_ID;
     }
 
-    isolated resource function put scheduletables/[int ID](ScheduleTableUpdate value) returns ScheduleTable|persist:Error {
+    isolated resource function put scheduletables/[string SCHEDULETABLE_ID](ScheduleTableUpdate value) returns ScheduleTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SCHEDULE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/scheduletables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SCHEDULETABLE_ID, value);
+        return self->/scheduletables/[SCHEDULETABLE_ID].get();
     }
 
-    isolated resource function delete scheduletables/[int ID]() returns ScheduleTable|persist:Error {
-        ScheduleTable result = check self->/scheduletables/[ID].get();
+    isolated resource function delete scheduletables/[string SCHEDULETABLE_ID]() returns ScheduleTable|persist:Error {
+        ScheduleTable result = check self->/scheduletables/[SCHEDULETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SCHEDULE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SCHEDULETABLE_ID);
         return result;
     }
 
     isolated resource function get medicinalproductpackagedtables(MedicinalProductPackagedTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicinalproductpackagedtables/[int ID](MedicinalProductPackagedTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicinalproductpackagedtables/[string MEDICINALPRODUCTPACKAGEDTABLE_ID](MedicinalProductPackagedTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicinalproductpackagedtables(MedicinalProductPackagedTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicinalproductpackagedtables(MedicinalProductPackagedTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_PACKAGED_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicinalProductPackagedTableInsert inserted in data
+            select inserted.MEDICINALPRODUCTPACKAGEDTABLE_ID;
     }
 
-    isolated resource function put medicinalproductpackagedtables/[int ID](MedicinalProductPackagedTableUpdate value) returns MedicinalProductPackagedTable|persist:Error {
+    isolated resource function put medicinalproductpackagedtables/[string MEDICINALPRODUCTPACKAGEDTABLE_ID](MedicinalProductPackagedTableUpdate value) returns MedicinalProductPackagedTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_PACKAGED_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicinalproductpackagedtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICINALPRODUCTPACKAGEDTABLE_ID, value);
+        return self->/medicinalproductpackagedtables/[MEDICINALPRODUCTPACKAGEDTABLE_ID].get();
     }
 
-    isolated resource function delete medicinalproductpackagedtables/[int ID]() returns MedicinalProductPackagedTable|persist:Error {
-        MedicinalProductPackagedTable result = check self->/medicinalproductpackagedtables/[ID].get();
+    isolated resource function delete medicinalproductpackagedtables/[string MEDICINALPRODUCTPACKAGEDTABLE_ID]() returns MedicinalProductPackagedTable|persist:Error {
+        MedicinalProductPackagedTable result = check self->/medicinalproductpackagedtables/[MEDICINALPRODUCTPACKAGEDTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_PACKAGED_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICINALPRODUCTPACKAGEDTABLE_ID);
         return result;
     }
 
     isolated resource function get proceduretables(ProcedureTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get proceduretables/[int ID](ProcedureTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get proceduretables/[string PROCEDURETABLE_ID](ProcedureTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post proceduretables(ProcedureTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post proceduretables(ProcedureTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PROCEDURE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ProcedureTableInsert inserted in data
+            select inserted.PROCEDURETABLE_ID;
     }
 
-    isolated resource function put proceduretables/[int ID](ProcedureTableUpdate value) returns ProcedureTable|persist:Error {
+    isolated resource function put proceduretables/[string PROCEDURETABLE_ID](ProcedureTableUpdate value) returns ProcedureTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PROCEDURE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/proceduretables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(PROCEDURETABLE_ID, value);
+        return self->/proceduretables/[PROCEDURETABLE_ID].get();
     }
 
-    isolated resource function delete proceduretables/[int ID]() returns ProcedureTable|persist:Error {
-        ProcedureTable result = check self->/proceduretables/[ID].get();
+    isolated resource function delete proceduretables/[string PROCEDURETABLE_ID]() returns ProcedureTable|persist:Error {
+        ProcedureTable result = check self->/proceduretables/[PROCEDURETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PROCEDURE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(PROCEDURETABLE_ID);
         return result;
     }
 
     isolated resource function get librarytables(LibraryTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get librarytables/[int ID](LibraryTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get librarytables/[string LIBRARYTABLE_ID](LibraryTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post librarytables(LibraryTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post librarytables(LibraryTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LIBRARY_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from LibraryTableInsert inserted in data
+            select inserted.LIBRARYTABLE_ID;
     }
 
-    isolated resource function put librarytables/[int ID](LibraryTableUpdate value) returns LibraryTable|persist:Error {
+    isolated resource function put librarytables/[string LIBRARYTABLE_ID](LibraryTableUpdate value) returns LibraryTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LIBRARY_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/librarytables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(LIBRARYTABLE_ID, value);
+        return self->/librarytables/[LIBRARYTABLE_ID].get();
     }
 
-    isolated resource function delete librarytables/[int ID]() returns LibraryTable|persist:Error {
-        LibraryTable result = check self->/librarytables/[ID].get();
+    isolated resource function delete librarytables/[string LIBRARYTABLE_ID]() returns LibraryTable|persist:Error {
+        LibraryTable result = check self->/librarytables/[LIBRARYTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LIBRARY_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(LIBRARYTABLE_ID);
         return result;
     }
 
     isolated resource function get codesystemtables(CodeSystemTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get codesystemtables/[int ID](CodeSystemTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get codesystemtables/[string CODESYSTEMTABLE_ID](CodeSystemTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post codesystemtables(CodeSystemTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post codesystemtables(CodeSystemTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CODE_SYSTEM_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CodeSystemTableInsert inserted in data
+            select inserted.CODESYSTEMTABLE_ID;
     }
 
-    isolated resource function put codesystemtables/[int ID](CodeSystemTableUpdate value) returns CodeSystemTable|persist:Error {
+    isolated resource function put codesystemtables/[string CODESYSTEMTABLE_ID](CodeSystemTableUpdate value) returns CodeSystemTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CODE_SYSTEM_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/codesystemtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CODESYSTEMTABLE_ID, value);
+        return self->/codesystemtables/[CODESYSTEMTABLE_ID].get();
     }
 
-    isolated resource function delete codesystemtables/[int ID]() returns CodeSystemTable|persist:Error {
-        CodeSystemTable result = check self->/codesystemtables/[ID].get();
+    isolated resource function delete codesystemtables/[string CODESYSTEMTABLE_ID]() returns CodeSystemTable|persist:Error {
+        CodeSystemTable result = check self->/codesystemtables/[CODESYSTEMTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CODE_SYSTEM_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CODESYSTEMTABLE_ID);
         return result;
     }
 
     isolated resource function get communicationrequesttables(CommunicationRequestTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get communicationrequesttables/[int ID](CommunicationRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get communicationrequesttables/[string COMMUNICATIONREQUESTTABLE_ID](CommunicationRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post communicationrequesttables(CommunicationRequestTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post communicationrequesttables(CommunicationRequestTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMMUNICATION_REQUEST_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CommunicationRequestTableInsert inserted in data
+            select inserted.COMMUNICATIONREQUESTTABLE_ID;
     }
 
-    isolated resource function put communicationrequesttables/[int ID](CommunicationRequestTableUpdate value) returns CommunicationRequestTable|persist:Error {
+    isolated resource function put communicationrequesttables/[string COMMUNICATIONREQUESTTABLE_ID](CommunicationRequestTableUpdate value) returns CommunicationRequestTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMMUNICATION_REQUEST_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/communicationrequesttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(COMMUNICATIONREQUESTTABLE_ID, value);
+        return self->/communicationrequesttables/[COMMUNICATIONREQUESTTABLE_ID].get();
     }
 
-    isolated resource function delete communicationrequesttables/[int ID]() returns CommunicationRequestTable|persist:Error {
-        CommunicationRequestTable result = check self->/communicationrequesttables/[ID].get();
+    isolated resource function delete communicationrequesttables/[string COMMUNICATIONREQUESTTABLE_ID]() returns CommunicationRequestTable|persist:Error {
+        CommunicationRequestTable result = check self->/communicationrequesttables/[COMMUNICATIONREQUESTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMMUNICATION_REQUEST_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(COMMUNICATIONREQUESTTABLE_ID);
         return result;
     }
 
     isolated resource function get documentreferencetables(DocumentReferenceTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get documentreferencetables/[int ID](DocumentReferenceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get documentreferencetables/[string DOCUMENTREFERENCETABLE_ID](DocumentReferenceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post documentreferencetables(DocumentReferenceTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post documentreferencetables(DocumentReferenceTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DOCUMENT_REFERENCE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from DocumentReferenceTableInsert inserted in data
+            select inserted.DOCUMENTREFERENCETABLE_ID;
     }
 
-    isolated resource function put documentreferencetables/[int ID](DocumentReferenceTableUpdate value) returns DocumentReferenceTable|persist:Error {
+    isolated resource function put documentreferencetables/[string DOCUMENTREFERENCETABLE_ID](DocumentReferenceTableUpdate value) returns DocumentReferenceTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DOCUMENT_REFERENCE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/documentreferencetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(DOCUMENTREFERENCETABLE_ID, value);
+        return self->/documentreferencetables/[DOCUMENTREFERENCETABLE_ID].get();
     }
 
-    isolated resource function delete documentreferencetables/[int ID]() returns DocumentReferenceTable|persist:Error {
-        DocumentReferenceTable result = check self->/documentreferencetables/[ID].get();
+    isolated resource function delete documentreferencetables/[string DOCUMENTREFERENCETABLE_ID]() returns DocumentReferenceTable|persist:Error {
+        DocumentReferenceTable result = check self->/documentreferencetables/[DOCUMENTREFERENCETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DOCUMENT_REFERENCE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(DOCUMENTREFERENCETABLE_ID);
         return result;
     }
 
     isolated resource function get requestgrouptables(RequestGroupTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get requestgrouptables/[int ID](RequestGroupTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get requestgrouptables/[string REQUESTGROUPTABLE_ID](RequestGroupTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post requestgrouptables(RequestGroupTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post requestgrouptables(RequestGroupTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(REQUEST_GROUP_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from RequestGroupTableInsert inserted in data
+            select inserted.REQUESTGROUPTABLE_ID;
     }
 
-    isolated resource function put requestgrouptables/[int ID](RequestGroupTableUpdate value) returns RequestGroupTable|persist:Error {
+    isolated resource function put requestgrouptables/[string REQUESTGROUPTABLE_ID](RequestGroupTableUpdate value) returns RequestGroupTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(REQUEST_GROUP_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/requestgrouptables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(REQUESTGROUPTABLE_ID, value);
+        return self->/requestgrouptables/[REQUESTGROUPTABLE_ID].get();
     }
 
-    isolated resource function delete requestgrouptables/[int ID]() returns RequestGroupTable|persist:Error {
-        RequestGroupTable result = check self->/requestgrouptables/[ID].get();
+    isolated resource function delete requestgrouptables/[string REQUESTGROUPTABLE_ID]() returns RequestGroupTable|persist:Error {
+        RequestGroupTable result = check self->/requestgrouptables/[REQUESTGROUPTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(REQUEST_GROUP_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(REQUESTGROUPTABLE_ID);
         return result;
     }
 
     isolated resource function get claimtables(ClaimTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get claimtables/[int ID](ClaimTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get claimtables/[string CLAIMTABLE_ID](ClaimTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post claimtables(ClaimTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post claimtables(ClaimTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CLAIM_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ClaimTableInsert inserted in data
+            select inserted.CLAIMTABLE_ID;
     }
 
-    isolated resource function put claimtables/[int ID](ClaimTableUpdate value) returns ClaimTable|persist:Error {
+    isolated resource function put claimtables/[string CLAIMTABLE_ID](ClaimTableUpdate value) returns ClaimTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CLAIM_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/claimtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CLAIMTABLE_ID, value);
+        return self->/claimtables/[CLAIMTABLE_ID].get();
     }
 
-    isolated resource function delete claimtables/[int ID]() returns ClaimTable|persist:Error {
-        ClaimTable result = check self->/claimtables/[ID].get();
+    isolated resource function delete claimtables/[string CLAIMTABLE_ID]() returns ClaimTable|persist:Error {
+        ClaimTable result = check self->/claimtables/[CLAIMTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CLAIM_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CLAIMTABLE_ID);
         return result;
     }
 
     isolated resource function get messagedefinitiontables(MessageDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get messagedefinitiontables/[int ID](MessageDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get messagedefinitiontables/[string MESSAGEDEFINITIONTABLE_ID](MessageDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post messagedefinitiontables(MessageDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post messagedefinitiontables(MessageDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MESSAGE_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MessageDefinitionTableInsert inserted in data
+            select inserted.MESSAGEDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put messagedefinitiontables/[int ID](MessageDefinitionTableUpdate value) returns MessageDefinitionTable|persist:Error {
+    isolated resource function put messagedefinitiontables/[string MESSAGEDEFINITIONTABLE_ID](MessageDefinitionTableUpdate value) returns MessageDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MESSAGE_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/messagedefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MESSAGEDEFINITIONTABLE_ID, value);
+        return self->/messagedefinitiontables/[MESSAGEDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete messagedefinitiontables/[int ID]() returns MessageDefinitionTable|persist:Error {
-        MessageDefinitionTable result = check self->/messagedefinitiontables/[ID].get();
+    isolated resource function delete messagedefinitiontables/[string MESSAGEDEFINITIONTABLE_ID]() returns MessageDefinitionTable|persist:Error {
+        MessageDefinitionTable result = check self->/messagedefinitiontables/[MESSAGEDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MESSAGE_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MESSAGEDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get riskevidencesynthesistables(RiskEvidenceSynthesisTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get riskevidencesynthesistables/[int ID](RiskEvidenceSynthesisTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get riskevidencesynthesistables/[string RISKEVIDENCESYNTHESISTABLE_ID](RiskEvidenceSynthesisTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post riskevidencesynthesistables(RiskEvidenceSynthesisTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post riskevidencesynthesistables(RiskEvidenceSynthesisTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RISK_EVIDENCE_SYNTHESIS_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from RiskEvidenceSynthesisTableInsert inserted in data
+            select inserted.RISKEVIDENCESYNTHESISTABLE_ID;
     }
 
-    isolated resource function put riskevidencesynthesistables/[int ID](RiskEvidenceSynthesisTableUpdate value) returns RiskEvidenceSynthesisTable|persist:Error {
+    isolated resource function put riskevidencesynthesistables/[string RISKEVIDENCESYNTHESISTABLE_ID](RiskEvidenceSynthesisTableUpdate value) returns RiskEvidenceSynthesisTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RISK_EVIDENCE_SYNTHESIS_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/riskevidencesynthesistables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(RISKEVIDENCESYNTHESISTABLE_ID, value);
+        return self->/riskevidencesynthesistables/[RISKEVIDENCESYNTHESISTABLE_ID].get();
     }
 
-    isolated resource function delete riskevidencesynthesistables/[int ID]() returns RiskEvidenceSynthesisTable|persist:Error {
-        RiskEvidenceSynthesisTable result = check self->/riskevidencesynthesistables/[ID].get();
+    isolated resource function delete riskevidencesynthesistables/[string RISKEVIDENCESYNTHESISTABLE_ID]() returns RiskEvidenceSynthesisTable|persist:Error {
+        RiskEvidenceSynthesisTable result = check self->/riskevidencesynthesistables/[RISKEVIDENCESYNTHESISTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RISK_EVIDENCE_SYNTHESIS_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(RISKEVIDENCESYNTHESISTABLE_ID);
         return result;
     }
 
     isolated resource function get tasktables(TaskTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get tasktables/[int ID](TaskTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get tasktables/[string TASKTABLE_ID](TaskTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post tasktables(TaskTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post tasktables(TaskTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TASK_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from TaskTableInsert inserted in data
+            select inserted.TASKTABLE_ID;
     }
 
-    isolated resource function put tasktables/[int ID](TaskTableUpdate value) returns TaskTable|persist:Error {
+    isolated resource function put tasktables/[string TASKTABLE_ID](TaskTableUpdate value) returns TaskTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TASK_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/tasktables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(TASKTABLE_ID, value);
+        return self->/tasktables/[TASKTABLE_ID].get();
     }
 
-    isolated resource function delete tasktables/[int ID]() returns TaskTable|persist:Error {
-        TaskTable result = check self->/tasktables/[ID].get();
+    isolated resource function delete tasktables/[string TASKTABLE_ID]() returns TaskTable|persist:Error {
+        TaskTable result = check self->/tasktables/[TASKTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TASK_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(TASKTABLE_ID);
         return result;
     }
 
     isolated resource function get implementationguidetables(ImplementationGuideTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get implementationguidetables/[int ID](ImplementationGuideTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get implementationguidetables/[string IMPLEMENTATIONGUIDETABLE_ID](ImplementationGuideTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post implementationguidetables(ImplementationGuideTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post implementationguidetables(ImplementationGuideTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMPLEMENTATION_GUIDE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ImplementationGuideTableInsert inserted in data
+            select inserted.IMPLEMENTATIONGUIDETABLE_ID;
     }
 
-    isolated resource function put implementationguidetables/[int ID](ImplementationGuideTableUpdate value) returns ImplementationGuideTable|persist:Error {
+    isolated resource function put implementationguidetables/[string IMPLEMENTATIONGUIDETABLE_ID](ImplementationGuideTableUpdate value) returns ImplementationGuideTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMPLEMENTATION_GUIDE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/implementationguidetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(IMPLEMENTATIONGUIDETABLE_ID, value);
+        return self->/implementationguidetables/[IMPLEMENTATIONGUIDETABLE_ID].get();
     }
 
-    isolated resource function delete implementationguidetables/[int ID]() returns ImplementationGuideTable|persist:Error {
-        ImplementationGuideTable result = check self->/implementationguidetables/[ID].get();
+    isolated resource function delete implementationguidetables/[string IMPLEMENTATIONGUIDETABLE_ID]() returns ImplementationGuideTable|persist:Error {
+        ImplementationGuideTable result = check self->/implementationguidetables/[IMPLEMENTATIONGUIDETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMPLEMENTATION_GUIDE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(IMPLEMENTATIONGUIDETABLE_ID);
         return result;
     }
 
     isolated resource function get structuremaptables(StructureMapTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get structuremaptables/[int ID](StructureMapTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get structuremaptables/[string STRUCTUREMAPTABLE_ID](StructureMapTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post structuremaptables(StructureMapTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post structuremaptables(StructureMapTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(STRUCTURE_MAP_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from StructureMapTableInsert inserted in data
+            select inserted.STRUCTUREMAPTABLE_ID;
     }
 
-    isolated resource function put structuremaptables/[int ID](StructureMapTableUpdate value) returns StructureMapTable|persist:Error {
+    isolated resource function put structuremaptables/[string STRUCTUREMAPTABLE_ID](StructureMapTableUpdate value) returns StructureMapTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(STRUCTURE_MAP_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/structuremaptables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(STRUCTUREMAPTABLE_ID, value);
+        return self->/structuremaptables/[STRUCTUREMAPTABLE_ID].get();
     }
 
-    isolated resource function delete structuremaptables/[int ID]() returns StructureMapTable|persist:Error {
-        StructureMapTable result = check self->/structuremaptables/[ID].get();
+    isolated resource function delete structuremaptables/[string STRUCTUREMAPTABLE_ID]() returns StructureMapTable|persist:Error {
+        StructureMapTable result = check self->/structuremaptables/[STRUCTUREMAPTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(STRUCTURE_MAP_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(STRUCTUREMAPTABLE_ID);
         return result;
     }
 
     isolated resource function get medicinalproductundesirableeffecttables(MedicinalProductUndesirableEffectTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicinalproductundesirableeffecttables/[int ID](MedicinalProductUndesirableEffectTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicinalproductundesirableeffecttables/[string MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID](MedicinalProductUndesirableEffectTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicinalproductundesirableeffecttables(MedicinalProductUndesirableEffectTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicinalproductundesirableeffecttables(MedicinalProductUndesirableEffectTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_UNDESIRABLE_EFFECT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicinalProductUndesirableEffectTableInsert inserted in data
+            select inserted.MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID;
     }
 
-    isolated resource function put medicinalproductundesirableeffecttables/[int ID](MedicinalProductUndesirableEffectTableUpdate value) returns MedicinalProductUndesirableEffectTable|persist:Error {
+    isolated resource function put medicinalproductundesirableeffecttables/[string MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID](MedicinalProductUndesirableEffectTableUpdate value) returns MedicinalProductUndesirableEffectTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_UNDESIRABLE_EFFECT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicinalproductundesirableeffecttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID, value);
+        return self->/medicinalproductundesirableeffecttables/[MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID].get();
     }
 
-    isolated resource function delete medicinalproductundesirableeffecttables/[int ID]() returns MedicinalProductUndesirableEffectTable|persist:Error {
-        MedicinalProductUndesirableEffectTable result = check self->/medicinalproductundesirableeffecttables/[ID].get();
+    isolated resource function delete medicinalproductundesirableeffecttables/[string MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID]() returns MedicinalProductUndesirableEffectTable|persist:Error {
+        MedicinalProductUndesirableEffectTable result = check self->/medicinalproductundesirableeffecttables/[MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_UNDESIRABLE_EFFECT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICINALPRODUCTUNDESIRABLEEFFECTTABLE_ID);
         return result;
     }
 
     isolated resource function get compartmentdefinitiontables(CompartmentDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get compartmentdefinitiontables/[int ID](CompartmentDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get compartmentdefinitiontables/[string COMPARTMENTDEFINITIONTABLE_ID](CompartmentDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post compartmentdefinitiontables(CompartmentDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post compartmentdefinitiontables(CompartmentDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMPARTMENT_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CompartmentDefinitionTableInsert inserted in data
+            select inserted.COMPARTMENTDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put compartmentdefinitiontables/[int ID](CompartmentDefinitionTableUpdate value) returns CompartmentDefinitionTable|persist:Error {
+    isolated resource function put compartmentdefinitiontables/[string COMPARTMENTDEFINITIONTABLE_ID](CompartmentDefinitionTableUpdate value) returns CompartmentDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMPARTMENT_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/compartmentdefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(COMPARTMENTDEFINITIONTABLE_ID, value);
+        return self->/compartmentdefinitiontables/[COMPARTMENTDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete compartmentdefinitiontables/[int ID]() returns CompartmentDefinitionTable|persist:Error {
-        CompartmentDefinitionTable result = check self->/compartmentdefinitiontables/[ID].get();
+    isolated resource function delete compartmentdefinitiontables/[string COMPARTMENTDEFINITIONTABLE_ID]() returns CompartmentDefinitionTable|persist:Error {
+        CompartmentDefinitionTable result = check self->/compartmentdefinitiontables/[COMPARTMENTDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMPARTMENT_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(COMPARTMENTDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get endpointtables(EndpointTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get endpointtables/[int ID](EndpointTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get endpointtables/[string ENDPOINTTABLE_ID](EndpointTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post endpointtables(EndpointTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post endpointtables(EndpointTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENDPOINT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from EndpointTableInsert inserted in data
+            select inserted.ENDPOINTTABLE_ID;
     }
 
-    isolated resource function put endpointtables/[int ID](EndpointTableUpdate value) returns EndpointTable|persist:Error {
+    isolated resource function put endpointtables/[string ENDPOINTTABLE_ID](EndpointTableUpdate value) returns EndpointTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENDPOINT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/endpointtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ENDPOINTTABLE_ID, value);
+        return self->/endpointtables/[ENDPOINTTABLE_ID].get();
     }
 
-    isolated resource function delete endpointtables/[int ID]() returns EndpointTable|persist:Error {
-        EndpointTable result = check self->/endpointtables/[ID].get();
+    isolated resource function delete endpointtables/[string ENDPOINTTABLE_ID]() returns EndpointTable|persist:Error {
+        EndpointTable result = check self->/endpointtables/[ENDPOINTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENDPOINT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ENDPOINTTABLE_ID);
         return result;
     }
 
     isolated resource function get terminologycapabilitiestables(TerminologyCapabilitiesTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get terminologycapabilitiestables/[int ID](TerminologyCapabilitiesTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get terminologycapabilitiestables/[string TERMINOLOGYCAPABILITIESTABLE_ID](TerminologyCapabilitiesTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post terminologycapabilitiestables(TerminologyCapabilitiesTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post terminologycapabilitiestables(TerminologyCapabilitiesTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TERMINOLOGY_CAPABILITIES_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from TerminologyCapabilitiesTableInsert inserted in data
+            select inserted.TERMINOLOGYCAPABILITIESTABLE_ID;
     }
 
-    isolated resource function put terminologycapabilitiestables/[int ID](TerminologyCapabilitiesTableUpdate value) returns TerminologyCapabilitiesTable|persist:Error {
+    isolated resource function put terminologycapabilitiestables/[string TERMINOLOGYCAPABILITIESTABLE_ID](TerminologyCapabilitiesTableUpdate value) returns TerminologyCapabilitiesTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TERMINOLOGY_CAPABILITIES_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/terminologycapabilitiestables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(TERMINOLOGYCAPABILITIESTABLE_ID, value);
+        return self->/terminologycapabilitiestables/[TERMINOLOGYCAPABILITIESTABLE_ID].get();
     }
 
-    isolated resource function delete terminologycapabilitiestables/[int ID]() returns TerminologyCapabilitiesTable|persist:Error {
-        TerminologyCapabilitiesTable result = check self->/terminologycapabilitiestables/[ID].get();
+    isolated resource function delete terminologycapabilitiestables/[string TERMINOLOGYCAPABILITIESTABLE_ID]() returns TerminologyCapabilitiesTable|persist:Error {
+        TerminologyCapabilitiesTable result = check self->/terminologycapabilitiestables/[TERMINOLOGYCAPABILITIESTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(TERMINOLOGY_CAPABILITIES_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(TERMINOLOGYCAPABILITIESTABLE_ID);
         return result;
     }
 
     isolated resource function get conditiontables(ConditionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get conditiontables/[int ID](ConditionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get conditiontables/[string CONDITIONTABLE_ID](ConditionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post conditiontables(ConditionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post conditiontables(ConditionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONDITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ConditionTableInsert inserted in data
+            select inserted.CONDITIONTABLE_ID;
     }
 
-    isolated resource function put conditiontables/[int ID](ConditionTableUpdate value) returns ConditionTable|persist:Error {
+    isolated resource function put conditiontables/[string CONDITIONTABLE_ID](ConditionTableUpdate value) returns ConditionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONDITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/conditiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CONDITIONTABLE_ID, value);
+        return self->/conditiontables/[CONDITIONTABLE_ID].get();
     }
 
-    isolated resource function delete conditiontables/[int ID]() returns ConditionTable|persist:Error {
-        ConditionTable result = check self->/conditiontables/[ID].get();
+    isolated resource function delete conditiontables/[string CONDITIONTABLE_ID]() returns ConditionTable|persist:Error {
+        ConditionTable result = check self->/conditiontables/[CONDITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONDITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CONDITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get compositiontables(CompositionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get compositiontables/[int ID](CompositionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get compositiontables/[string COMPOSITIONTABLE_ID](CompositionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post compositiontables(CompositionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post compositiontables(CompositionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMPOSITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CompositionTableInsert inserted in data
+            select inserted.COMPOSITIONTABLE_ID;
     }
 
-    isolated resource function put compositiontables/[int ID](CompositionTableUpdate value) returns CompositionTable|persist:Error {
+    isolated resource function put compositiontables/[string COMPOSITIONTABLE_ID](CompositionTableUpdate value) returns CompositionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMPOSITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/compositiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(COMPOSITIONTABLE_ID, value);
+        return self->/compositiontables/[COMPOSITIONTABLE_ID].get();
     }
 
-    isolated resource function delete compositiontables/[int ID]() returns CompositionTable|persist:Error {
-        CompositionTable result = check self->/compositiontables/[ID].get();
+    isolated resource function delete compositiontables/[string COMPOSITIONTABLE_ID]() returns CompositionTable|persist:Error {
+        CompositionTable result = check self->/compositiontables/[COMPOSITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COMPOSITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(COMPOSITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get contracttables(ContractTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get contracttables/[int ID](ContractTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get contracttables/[string CONTRACTTABLE_ID](ContractTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post contracttables(ContractTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post contracttables(ContractTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONTRACT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ContractTableInsert inserted in data
+            select inserted.CONTRACTTABLE_ID;
     }
 
-    isolated resource function put contracttables/[int ID](ContractTableUpdate value) returns ContractTable|persist:Error {
+    isolated resource function put contracttables/[string CONTRACTTABLE_ID](ContractTableUpdate value) returns ContractTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONTRACT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/contracttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CONTRACTTABLE_ID, value);
+        return self->/contracttables/[CONTRACTTABLE_ID].get();
     }
 
-    isolated resource function delete contracttables/[int ID]() returns ContractTable|persist:Error {
-        ContractTable result = check self->/contracttables/[ID].get();
+    isolated resource function delete contracttables/[string CONTRACTTABLE_ID]() returns ContractTable|persist:Error {
+        ContractTable result = check self->/contracttables/[CONTRACTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONTRACT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CONTRACTTABLE_ID);
         return result;
     }
 
     isolated resource function get immunizationtables(ImmunizationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get immunizationtables/[int ID](ImmunizationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get immunizationtables/[string IMMUNIZATIONTABLE_ID](ImmunizationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post immunizationtables(ImmunizationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post immunizationtables(ImmunizationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMMUNIZATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ImmunizationTableInsert inserted in data
+            select inserted.IMMUNIZATIONTABLE_ID;
     }
 
-    isolated resource function put immunizationtables/[int ID](ImmunizationTableUpdate value) returns ImmunizationTable|persist:Error {
+    isolated resource function put immunizationtables/[string IMMUNIZATIONTABLE_ID](ImmunizationTableUpdate value) returns ImmunizationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMMUNIZATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/immunizationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(IMMUNIZATIONTABLE_ID, value);
+        return self->/immunizationtables/[IMMUNIZATIONTABLE_ID].get();
     }
 
-    isolated resource function delete immunizationtables/[int ID]() returns ImmunizationTable|persist:Error {
-        ImmunizationTable result = check self->/immunizationtables/[ID].get();
+    isolated resource function delete immunizationtables/[string IMMUNIZATIONTABLE_ID]() returns ImmunizationTable|persist:Error {
+        ImmunizationTable result = check self->/immunizationtables/[IMMUNIZATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMMUNIZATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(IMMUNIZATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get medicationdispensetables(MedicationDispenseTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicationdispensetables/[int ID](MedicationDispenseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicationdispensetables/[string MEDICATIONDISPENSETABLE_ID](MedicationDispenseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicationdispensetables(MedicationDispenseTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicationdispensetables(MedicationDispenseTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_DISPENSE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicationDispenseTableInsert inserted in data
+            select inserted.MEDICATIONDISPENSETABLE_ID;
     }
 
-    isolated resource function put medicationdispensetables/[int ID](MedicationDispenseTableUpdate value) returns MedicationDispenseTable|persist:Error {
+    isolated resource function put medicationdispensetables/[string MEDICATIONDISPENSETABLE_ID](MedicationDispenseTableUpdate value) returns MedicationDispenseTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_DISPENSE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicationdispensetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICATIONDISPENSETABLE_ID, value);
+        return self->/medicationdispensetables/[MEDICATIONDISPENSETABLE_ID].get();
     }
 
-    isolated resource function delete medicationdispensetables/[int ID]() returns MedicationDispenseTable|persist:Error {
-        MedicationDispenseTable result = check self->/medicationdispensetables/[ID].get();
+    isolated resource function delete medicationdispensetables/[string MEDICATIONDISPENSETABLE_ID]() returns MedicationDispenseTable|persist:Error {
+        MedicationDispenseTable result = check self->/medicationdispensetables/[MEDICATIONDISPENSETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_DISPENSE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICATIONDISPENSETABLE_ID);
         return result;
     }
 
     isolated resource function get molecularsequencetables(MolecularSequenceTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get molecularsequencetables/[int ID](MolecularSequenceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get molecularsequencetables/[string MOLECULARSEQUENCETABLE_ID](MolecularSequenceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post molecularsequencetables(MolecularSequenceTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post molecularsequencetables(MolecularSequenceTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MOLECULAR_SEQUENCE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MolecularSequenceTableInsert inserted in data
+            select inserted.MOLECULARSEQUENCETABLE_ID;
     }
 
-    isolated resource function put molecularsequencetables/[int ID](MolecularSequenceTableUpdate value) returns MolecularSequenceTable|persist:Error {
+    isolated resource function put molecularsequencetables/[string MOLECULARSEQUENCETABLE_ID](MolecularSequenceTableUpdate value) returns MolecularSequenceTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MOLECULAR_SEQUENCE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/molecularsequencetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MOLECULARSEQUENCETABLE_ID, value);
+        return self->/molecularsequencetables/[MOLECULARSEQUENCETABLE_ID].get();
     }
 
-    isolated resource function delete molecularsequencetables/[int ID]() returns MolecularSequenceTable|persist:Error {
-        MolecularSequenceTable result = check self->/molecularsequencetables/[ID].get();
+    isolated resource function delete molecularsequencetables/[string MOLECULARSEQUENCETABLE_ID]() returns MolecularSequenceTable|persist:Error {
+        MolecularSequenceTable result = check self->/molecularsequencetables/[MOLECULARSEQUENCETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MOLECULAR_SEQUENCE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MOLECULARSEQUENCETABLE_ID);
         return result;
     }
 
     isolated resource function get searchparametertables(SearchParameterTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get searchparametertables/[int ID](SearchParameterTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get searchparametertables/[string SEARCHPARAMETERTABLE_ID](SearchParameterTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post searchparametertables(SearchParameterTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post searchparametertables(SearchParameterTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SEARCH_PARAMETER_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from SearchParameterTableInsert inserted in data
+            select inserted.SEARCHPARAMETERTABLE_ID;
     }
 
-    isolated resource function put searchparametertables/[int ID](SearchParameterTableUpdate value) returns SearchParameterTable|persist:Error {
+    isolated resource function put searchparametertables/[string SEARCHPARAMETERTABLE_ID](SearchParameterTableUpdate value) returns SearchParameterTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SEARCH_PARAMETER_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/searchparametertables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SEARCHPARAMETERTABLE_ID, value);
+        return self->/searchparametertables/[SEARCHPARAMETERTABLE_ID].get();
     }
 
-    isolated resource function delete searchparametertables/[int ID]() returns SearchParameterTable|persist:Error {
-        SearchParameterTable result = check self->/searchparametertables/[ID].get();
+    isolated resource function delete searchparametertables/[string SEARCHPARAMETERTABLE_ID]() returns SearchParameterTable|persist:Error {
+        SearchParameterTable result = check self->/searchparametertables/[SEARCHPARAMETERTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SEARCH_PARAMETER_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SEARCHPARAMETERTABLE_ID);
         return result;
     }
 
     isolated resource function get medicationrequesttables(MedicationRequestTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicationrequesttables/[int ID](MedicationRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicationrequesttables/[string MEDICATIONREQUESTTABLE_ID](MedicationRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicationrequesttables(MedicationRequestTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicationrequesttables(MedicationRequestTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_REQUEST_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicationRequestTableInsert inserted in data
+            select inserted.MEDICATIONREQUESTTABLE_ID;
     }
 
-    isolated resource function put medicationrequesttables/[int ID](MedicationRequestTableUpdate value) returns MedicationRequestTable|persist:Error {
+    isolated resource function put medicationrequesttables/[string MEDICATIONREQUESTTABLE_ID](MedicationRequestTableUpdate value) returns MedicationRequestTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_REQUEST_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicationrequesttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICATIONREQUESTTABLE_ID, value);
+        return self->/medicationrequesttables/[MEDICATIONREQUESTTABLE_ID].get();
     }
 
-    isolated resource function delete medicationrequesttables/[int ID]() returns MedicationRequestTable|persist:Error {
-        MedicationRequestTable result = check self->/medicationrequesttables/[ID].get();
+    isolated resource function delete medicationrequesttables/[string MEDICATIONREQUESTTABLE_ID]() returns MedicationRequestTable|persist:Error {
+        MedicationRequestTable result = check self->/medicationrequesttables/[MEDICATIONREQUESTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICATION_REQUEST_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICATIONREQUESTTABLE_ID);
         return result;
     }
 
     isolated resource function get enrollmentrequesttables(EnrollmentRequestTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get enrollmentrequesttables/[int ID](EnrollmentRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get enrollmentrequesttables/[string ENROLLMENTREQUESTTABLE_ID](EnrollmentRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post enrollmentrequesttables(EnrollmentRequestTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post enrollmentrequesttables(EnrollmentRequestTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENROLLMENT_REQUEST_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from EnrollmentRequestTableInsert inserted in data
+            select inserted.ENROLLMENTREQUESTTABLE_ID;
     }
 
-    isolated resource function put enrollmentrequesttables/[int ID](EnrollmentRequestTableUpdate value) returns EnrollmentRequestTable|persist:Error {
+    isolated resource function put enrollmentrequesttables/[string ENROLLMENTREQUESTTABLE_ID](EnrollmentRequestTableUpdate value) returns EnrollmentRequestTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENROLLMENT_REQUEST_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/enrollmentrequesttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ENROLLMENTREQUESTTABLE_ID, value);
+        return self->/enrollmentrequesttables/[ENROLLMENTREQUESTTABLE_ID].get();
     }
 
-    isolated resource function delete enrollmentrequesttables/[int ID]() returns EnrollmentRequestTable|persist:Error {
-        EnrollmentRequestTable result = check self->/enrollmentrequesttables/[ID].get();
+    isolated resource function delete enrollmentrequesttables/[string ENROLLMENTREQUESTTABLE_ID]() returns EnrollmentRequestTable|persist:Error {
+        EnrollmentRequestTable result = check self->/enrollmentrequesttables/[ENROLLMENTREQUESTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ENROLLMENT_REQUEST_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ENROLLMENTREQUESTTABLE_ID);
         return result;
     }
 
     isolated resource function get specimendefinitiontables(SpecimenDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get specimendefinitiontables/[int ID](SpecimenDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get specimendefinitiontables/[string SPECIMENDEFINITIONTABLE_ID](SpecimenDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post specimendefinitiontables(SpecimenDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post specimendefinitiontables(SpecimenDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SPECIMEN_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from SpecimenDefinitionTableInsert inserted in data
+            select inserted.SPECIMENDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put specimendefinitiontables/[int ID](SpecimenDefinitionTableUpdate value) returns SpecimenDefinitionTable|persist:Error {
+    isolated resource function put specimendefinitiontables/[string SPECIMENDEFINITIONTABLE_ID](SpecimenDefinitionTableUpdate value) returns SpecimenDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SPECIMEN_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/specimendefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SPECIMENDEFINITIONTABLE_ID, value);
+        return self->/specimendefinitiontables/[SPECIMENDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete specimendefinitiontables/[int ID]() returns SpecimenDefinitionTable|persist:Error {
-        SpecimenDefinitionTable result = check self->/specimendefinitiontables/[ID].get();
+    isolated resource function delete specimendefinitiontables/[string SPECIMENDEFINITIONTABLE_ID]() returns SpecimenDefinitionTable|persist:Error {
+        SpecimenDefinitionTable result = check self->/specimendefinitiontables/[SPECIMENDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SPECIMEN_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SPECIMENDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get eventdefinitiontables(EventDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get eventdefinitiontables/[int ID](EventDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get eventdefinitiontables/[string EVENTDEFINITIONTABLE_ID](EventDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post eventdefinitiontables(EventDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post eventdefinitiontables(EventDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EVENT_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from EventDefinitionTableInsert inserted in data
+            select inserted.EVENTDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put eventdefinitiontables/[int ID](EventDefinitionTableUpdate value) returns EventDefinitionTable|persist:Error {
+    isolated resource function put eventdefinitiontables/[string EVENTDEFINITIONTABLE_ID](EventDefinitionTableUpdate value) returns EventDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EVENT_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/eventdefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(EVENTDEFINITIONTABLE_ID, value);
+        return self->/eventdefinitiontables/[EVENTDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete eventdefinitiontables/[int ID]() returns EventDefinitionTable|persist:Error {
-        EventDefinitionTable result = check self->/eventdefinitiontables/[ID].get();
+    isolated resource function delete eventdefinitiontables/[string EVENTDEFINITIONTABLE_ID]() returns EventDefinitionTable|persist:Error {
+        EventDefinitionTable result = check self->/eventdefinitiontables/[EVENTDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(EVENT_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(EVENTDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get immunizationevaluationtables(ImmunizationEvaluationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get immunizationevaluationtables/[int ID](ImmunizationEvaluationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get immunizationevaluationtables/[string IMMUNIZATIONEVALUATIONTABLE_ID](ImmunizationEvaluationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post immunizationevaluationtables(ImmunizationEvaluationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post immunizationevaluationtables(ImmunizationEvaluationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMMUNIZATION_EVALUATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ImmunizationEvaluationTableInsert inserted in data
+            select inserted.IMMUNIZATIONEVALUATIONTABLE_ID;
     }
 
-    isolated resource function put immunizationevaluationtables/[int ID](ImmunizationEvaluationTableUpdate value) returns ImmunizationEvaluationTable|persist:Error {
+    isolated resource function put immunizationevaluationtables/[string IMMUNIZATIONEVALUATIONTABLE_ID](ImmunizationEvaluationTableUpdate value) returns ImmunizationEvaluationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMMUNIZATION_EVALUATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/immunizationevaluationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(IMMUNIZATIONEVALUATIONTABLE_ID, value);
+        return self->/immunizationevaluationtables/[IMMUNIZATIONEVALUATIONTABLE_ID].get();
     }
 
-    isolated resource function delete immunizationevaluationtables/[int ID]() returns ImmunizationEvaluationTable|persist:Error {
-        ImmunizationEvaluationTable result = check self->/immunizationevaluationtables/[ID].get();
+    isolated resource function delete immunizationevaluationtables/[string IMMUNIZATIONEVALUATIONTABLE_ID]() returns ImmunizationEvaluationTable|persist:Error {
+        ImmunizationEvaluationTable result = check self->/immunizationevaluationtables/[IMMUNIZATIONEVALUATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(IMMUNIZATION_EVALUATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(IMMUNIZATIONEVALUATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get paymentreconciliationtables(PaymentReconciliationTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get paymentreconciliationtables/[int ID](PaymentReconciliationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get paymentreconciliationtables/[string PAYMENTRECONCILIATIONTABLE_ID](PaymentReconciliationTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post paymentreconciliationtables(PaymentReconciliationTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post paymentreconciliationtables(PaymentReconciliationTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PAYMENT_RECONCILIATION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from PaymentReconciliationTableInsert inserted in data
+            select inserted.PAYMENTRECONCILIATIONTABLE_ID;
     }
 
-    isolated resource function put paymentreconciliationtables/[int ID](PaymentReconciliationTableUpdate value) returns PaymentReconciliationTable|persist:Error {
+    isolated resource function put paymentreconciliationtables/[string PAYMENTRECONCILIATIONTABLE_ID](PaymentReconciliationTableUpdate value) returns PaymentReconciliationTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PAYMENT_RECONCILIATION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/paymentreconciliationtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(PAYMENTRECONCILIATIONTABLE_ID, value);
+        return self->/paymentreconciliationtables/[PAYMENTRECONCILIATIONTABLE_ID].get();
     }
 
-    isolated resource function delete paymentreconciliationtables/[int ID]() returns PaymentReconciliationTable|persist:Error {
-        PaymentReconciliationTable result = check self->/paymentreconciliationtables/[ID].get();
+    isolated resource function delete paymentreconciliationtables/[string PAYMENTRECONCILIATIONTABLE_ID]() returns PaymentReconciliationTable|persist:Error {
+        PaymentReconciliationTable result = check self->/paymentreconciliationtables/[PAYMENTRECONCILIATIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PAYMENT_RECONCILIATION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(PAYMENTRECONCILIATIONTABLE_ID);
         return result;
     }
 
     isolated resource function get measuretables(MeasureTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get measuretables/[int ID](MeasureTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get measuretables/[string MEASURETABLE_ID](MeasureTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post measuretables(MeasureTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post measuretables(MeasureTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEASURE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MeasureTableInsert inserted in data
+            select inserted.MEASURETABLE_ID;
     }
 
-    isolated resource function put measuretables/[int ID](MeasureTableUpdate value) returns MeasureTable|persist:Error {
+    isolated resource function put measuretables/[string MEASURETABLE_ID](MeasureTableUpdate value) returns MeasureTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEASURE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/measuretables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEASURETABLE_ID, value);
+        return self->/measuretables/[MEASURETABLE_ID].get();
     }
 
-    isolated resource function delete measuretables/[int ID]() returns MeasureTable|persist:Error {
-        MeasureTable result = check self->/measuretables/[ID].get();
+    isolated resource function delete measuretables/[string MEASURETABLE_ID]() returns MeasureTable|persist:Error {
+        MeasureTable result = check self->/measuretables/[MEASURETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEASURE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEASURETABLE_ID);
         return result;
     }
 
     isolated resource function get conceptmaptables(ConceptMapTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get conceptmaptables/[int ID](ConceptMapTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get conceptmaptables/[string CONCEPTMAPTABLE_ID](ConceptMapTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post conceptmaptables(ConceptMapTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post conceptmaptables(ConceptMapTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONCEPT_MAP_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ConceptMapTableInsert inserted in data
+            select inserted.CONCEPTMAPTABLE_ID;
     }
 
-    isolated resource function put conceptmaptables/[int ID](ConceptMapTableUpdate value) returns ConceptMapTable|persist:Error {
+    isolated resource function put conceptmaptables/[string CONCEPTMAPTABLE_ID](ConceptMapTableUpdate value) returns ConceptMapTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONCEPT_MAP_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/conceptmaptables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CONCEPTMAPTABLE_ID, value);
+        return self->/conceptmaptables/[CONCEPTMAPTABLE_ID].get();
     }
 
-    isolated resource function delete conceptmaptables/[int ID]() returns ConceptMapTable|persist:Error {
-        ConceptMapTable result = check self->/conceptmaptables/[ID].get();
+    isolated resource function delete conceptmaptables/[string CONCEPTMAPTABLE_ID]() returns ConceptMapTable|persist:Error {
+        ConceptMapTable result = check self->/conceptmaptables/[CONCEPTMAPTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CONCEPT_MAP_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CONCEPTMAPTABLE_ID);
         return result;
     }
 
     isolated resource function get researchelementdefinitiontables(ResearchElementDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get researchelementdefinitiontables/[int ID](ResearchElementDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get researchelementdefinitiontables/[string RESEARCHELEMENTDEFINITIONTABLE_ID](ResearchElementDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post researchelementdefinitiontables(ResearchElementDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post researchelementdefinitiontables(ResearchElementDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_ELEMENT_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ResearchElementDefinitionTableInsert inserted in data
+            select inserted.RESEARCHELEMENTDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put researchelementdefinitiontables/[int ID](ResearchElementDefinitionTableUpdate value) returns ResearchElementDefinitionTable|persist:Error {
+    isolated resource function put researchelementdefinitiontables/[string RESEARCHELEMENTDEFINITIONTABLE_ID](ResearchElementDefinitionTableUpdate value) returns ResearchElementDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_ELEMENT_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/researchelementdefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(RESEARCHELEMENTDEFINITIONTABLE_ID, value);
+        return self->/researchelementdefinitiontables/[RESEARCHELEMENTDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete researchelementdefinitiontables/[int ID]() returns ResearchElementDefinitionTable|persist:Error {
-        ResearchElementDefinitionTable result = check self->/researchelementdefinitiontables/[ID].get();
+    isolated resource function delete researchelementdefinitiontables/[string RESEARCHELEMENTDEFINITIONTABLE_ID]() returns ResearchElementDefinitionTable|persist:Error {
+        ResearchElementDefinitionTable result = check self->/researchelementdefinitiontables/[RESEARCHELEMENTDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(RESEARCH_ELEMENT_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(RESEARCHELEMENTDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get guidanceresponsetables(GuidanceResponseTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get guidanceresponsetables/[int ID](GuidanceResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get guidanceresponsetables/[string GUIDANCERESPONSETABLE_ID](GuidanceResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post guidanceresponsetables(GuidanceResponseTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post guidanceresponsetables(GuidanceResponseTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GUIDANCE_RESPONSE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from GuidanceResponseTableInsert inserted in data
+            select inserted.GUIDANCERESPONSETABLE_ID;
     }
 
-    isolated resource function put guidanceresponsetables/[int ID](GuidanceResponseTableUpdate value) returns GuidanceResponseTable|persist:Error {
+    isolated resource function put guidanceresponsetables/[string GUIDANCERESPONSETABLE_ID](GuidanceResponseTableUpdate value) returns GuidanceResponseTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GUIDANCE_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/guidanceresponsetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(GUIDANCERESPONSETABLE_ID, value);
+        return self->/guidanceresponsetables/[GUIDANCERESPONSETABLE_ID].get();
     }
 
-    isolated resource function delete guidanceresponsetables/[int ID]() returns GuidanceResponseTable|persist:Error {
-        GuidanceResponseTable result = check self->/guidanceresponsetables/[ID].get();
+    isolated resource function delete guidanceresponsetables/[string GUIDANCERESPONSETABLE_ID]() returns GuidanceResponseTable|persist:Error {
+        GuidanceResponseTable result = check self->/guidanceresponsetables/[GUIDANCERESPONSETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(GUIDANCE_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(GUIDANCERESPONSETABLE_ID);
         return result;
     }
 
     isolated resource function get linkagetables(LinkageTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get linkagetables/[int ID](LinkageTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get linkagetables/[string LINKAGETABLE_ID](LinkageTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post linkagetables(LinkageTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post linkagetables(LinkageTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LINKAGE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from LinkageTableInsert inserted in data
+            select inserted.LINKAGETABLE_ID;
     }
 
-    isolated resource function put linkagetables/[int ID](LinkageTableUpdate value) returns LinkageTable|persist:Error {
+    isolated resource function put linkagetables/[string LINKAGETABLE_ID](LinkageTableUpdate value) returns LinkageTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LINKAGE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/linkagetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(LINKAGETABLE_ID, value);
+        return self->/linkagetables/[LINKAGETABLE_ID].get();
     }
 
-    isolated resource function delete linkagetables/[int ID]() returns LinkageTable|persist:Error {
-        LinkageTable result = check self->/linkagetables/[ID].get();
+    isolated resource function delete linkagetables/[string LINKAGETABLE_ID]() returns LinkageTable|persist:Error {
+        LinkageTable result = check self->/linkagetables/[LINKAGETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(LINKAGE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(LINKAGETABLE_ID);
         return result;
     }
 
     isolated resource function get medicinalproducttables(MedicinalProductTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicinalproducttables/[int ID](MedicinalProductTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicinalproducttables/[string MEDICINALPRODUCTTABLE_ID](MedicinalProductTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicinalproducttables(MedicinalProductTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicinalproducttables(MedicinalProductTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicinalProductTableInsert inserted in data
+            select inserted.MEDICINALPRODUCTTABLE_ID;
     }
 
-    isolated resource function put medicinalproducttables/[int ID](MedicinalProductTableUpdate value) returns MedicinalProductTable|persist:Error {
+    isolated resource function put medicinalproducttables/[string MEDICINALPRODUCTTABLE_ID](MedicinalProductTableUpdate value) returns MedicinalProductTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicinalproducttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICINALPRODUCTTABLE_ID, value);
+        return self->/medicinalproducttables/[MEDICINALPRODUCTTABLE_ID].get();
     }
 
-    isolated resource function delete medicinalproducttables/[int ID]() returns MedicinalProductTable|persist:Error {
-        MedicinalProductTable result = check self->/medicinalproducttables/[ID].get();
+    isolated resource function delete medicinalproducttables/[string MEDICINALPRODUCTTABLE_ID]() returns MedicinalProductTable|persist:Error {
+        MedicinalProductTable result = check self->/medicinalproducttables/[MEDICINALPRODUCTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICINALPRODUCTTABLE_ID);
         return result;
     }
 
     isolated resource function get devicedefinitiontables(DeviceDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get devicedefinitiontables/[int ID](DeviceDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get devicedefinitiontables/[string DEVICEDEFINITIONTABLE_ID](DeviceDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post devicedefinitiontables(DeviceDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post devicedefinitiontables(DeviceDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from DeviceDefinitionTableInsert inserted in data
+            select inserted.DEVICEDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put devicedefinitiontables/[int ID](DeviceDefinitionTableUpdate value) returns DeviceDefinitionTable|persist:Error {
+    isolated resource function put devicedefinitiontables/[string DEVICEDEFINITIONTABLE_ID](DeviceDefinitionTableUpdate value) returns DeviceDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/devicedefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(DEVICEDEFINITIONTABLE_ID, value);
+        return self->/devicedefinitiontables/[DEVICEDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete devicedefinitiontables/[int ID]() returns DeviceDefinitionTable|persist:Error {
-        DeviceDefinitionTable result = check self->/devicedefinitiontables/[ID].get();
+    isolated resource function delete devicedefinitiontables/[string DEVICEDEFINITIONTABLE_ID]() returns DeviceDefinitionTable|persist:Error {
+        DeviceDefinitionTable result = check self->/devicedefinitiontables/[DEVICEDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(DEVICE_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(DEVICEDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get coverageeligibilityrequesttables(CoverageEligibilityRequestTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get coverageeligibilityrequesttables/[int ID](CoverageEligibilityRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get coverageeligibilityrequesttables/[string COVERAGEELIGIBILITYREQUESTTABLE_ID](CoverageEligibilityRequestTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post coverageeligibilityrequesttables(CoverageEligibilityRequestTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post coverageeligibilityrequesttables(CoverageEligibilityRequestTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COVERAGE_ELIGIBILITY_REQUEST_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CoverageEligibilityRequestTableInsert inserted in data
+            select inserted.COVERAGEELIGIBILITYREQUESTTABLE_ID;
     }
 
-    isolated resource function put coverageeligibilityrequesttables/[int ID](CoverageEligibilityRequestTableUpdate value) returns CoverageEligibilityRequestTable|persist:Error {
+    isolated resource function put coverageeligibilityrequesttables/[string COVERAGEELIGIBILITYREQUESTTABLE_ID](CoverageEligibilityRequestTableUpdate value) returns CoverageEligibilityRequestTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COVERAGE_ELIGIBILITY_REQUEST_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/coverageeligibilityrequesttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(COVERAGEELIGIBILITYREQUESTTABLE_ID, value);
+        return self->/coverageeligibilityrequesttables/[COVERAGEELIGIBILITYREQUESTTABLE_ID].get();
     }
 
-    isolated resource function delete coverageeligibilityrequesttables/[int ID]() returns CoverageEligibilityRequestTable|persist:Error {
-        CoverageEligibilityRequestTable result = check self->/coverageeligibilityrequesttables/[ID].get();
+    isolated resource function delete coverageeligibilityrequesttables/[string COVERAGEELIGIBILITYREQUESTTABLE_ID]() returns CoverageEligibilityRequestTable|persist:Error {
+        CoverageEligibilityRequestTable result = check self->/coverageeligibilityrequesttables/[COVERAGEELIGIBILITYREQUESTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COVERAGE_ELIGIBILITY_REQUEST_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(COVERAGEELIGIBILITYREQUESTTABLE_ID);
         return result;
     }
 
     isolated resource function get patienttables(PatientTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get patienttables/[int ID](PatientTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get patienttables/[string PATIENTTABLE_ID](PatientTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post patienttables(PatientTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post patienttables(PatientTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PATIENT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from PatientTableInsert inserted in data
+            select inserted.PATIENTTABLE_ID;
     }
 
-    isolated resource function put patienttables/[int ID](PatientTableUpdate value) returns PatientTable|persist:Error {
+    isolated resource function put patienttables/[string PATIENTTABLE_ID](PatientTableUpdate value) returns PatientTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PATIENT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/patienttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(PATIENTTABLE_ID, value);
+        return self->/patienttables/[PATIENTTABLE_ID].get();
     }
 
-    isolated resource function delete patienttables/[int ID]() returns PatientTable|persist:Error {
-        PatientTable result = check self->/patienttables/[ID].get();
+    isolated resource function delete patienttables/[string PATIENTTABLE_ID]() returns PatientTable|persist:Error {
+        PatientTable result = check self->/patienttables/[PATIENTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(PATIENT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(PATIENTTABLE_ID);
         return result;
     }
 
     isolated resource function get coveragetables(CoverageTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get coveragetables/[int ID](CoverageTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get coveragetables/[string COVERAGETABLE_ID](CoverageTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post coveragetables(CoverageTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post coveragetables(CoverageTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COVERAGE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from CoverageTableInsert inserted in data
+            select inserted.COVERAGETABLE_ID;
     }
 
-    isolated resource function put coveragetables/[int ID](CoverageTableUpdate value) returns CoverageTable|persist:Error {
+    isolated resource function put coveragetables/[string COVERAGETABLE_ID](CoverageTableUpdate value) returns CoverageTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COVERAGE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/coveragetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(COVERAGETABLE_ID, value);
+        return self->/coveragetables/[COVERAGETABLE_ID].get();
     }
 
-    isolated resource function delete coveragetables/[int ID]() returns CoverageTable|persist:Error {
-        CoverageTable result = check self->/coveragetables/[ID].get();
+    isolated resource function delete coveragetables/[string COVERAGETABLE_ID]() returns CoverageTable|persist:Error {
+        CoverageTable result = check self->/coveragetables/[COVERAGETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(COVERAGE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(COVERAGETABLE_ID);
         return result;
     }
 
     isolated resource function get substancetables(SubstanceTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get substancetables/[int ID](SubstanceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get substancetables/[string SUBSTANCETABLE_ID](SubstanceTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post substancetables(SubstanceTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post substancetables(SubstanceTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUBSTANCE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from SubstanceTableInsert inserted in data
+            select inserted.SUBSTANCETABLE_ID;
     }
 
-    isolated resource function put substancetables/[int ID](SubstanceTableUpdate value) returns SubstanceTable|persist:Error {
+    isolated resource function put substancetables/[string SUBSTANCETABLE_ID](SubstanceTableUpdate value) returns SubstanceTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUBSTANCE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/substancetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(SUBSTANCETABLE_ID, value);
+        return self->/substancetables/[SUBSTANCETABLE_ID].get();
     }
 
-    isolated resource function delete substancetables/[int ID]() returns SubstanceTable|persist:Error {
-        SubstanceTable result = check self->/substancetables/[ID].get();
+    isolated resource function delete substancetables/[string SUBSTANCETABLE_ID]() returns SubstanceTable|persist:Error {
+        SubstanceTable result = check self->/substancetables/[SUBSTANCETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(SUBSTANCE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(SUBSTANCETABLE_ID);
         return result;
     }
 
     isolated resource function get chargeitemdefinitiontables(ChargeItemDefinitionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get chargeitemdefinitiontables/[int ID](ChargeItemDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get chargeitemdefinitiontables/[string CHARGEITEMDEFINITIONTABLE_ID](ChargeItemDefinitionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post chargeitemdefinitiontables(ChargeItemDefinitionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post chargeitemdefinitiontables(ChargeItemDefinitionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CHARGE_ITEM_DEFINITION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from ChargeItemDefinitionTableInsert inserted in data
+            select inserted.CHARGEITEMDEFINITIONTABLE_ID;
     }
 
-    isolated resource function put chargeitemdefinitiontables/[int ID](ChargeItemDefinitionTableUpdate value) returns ChargeItemDefinitionTable|persist:Error {
+    isolated resource function put chargeitemdefinitiontables/[string CHARGEITEMDEFINITIONTABLE_ID](ChargeItemDefinitionTableUpdate value) returns ChargeItemDefinitionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CHARGE_ITEM_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/chargeitemdefinitiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(CHARGEITEMDEFINITIONTABLE_ID, value);
+        return self->/chargeitemdefinitiontables/[CHARGEITEMDEFINITIONTABLE_ID].get();
     }
 
-    isolated resource function delete chargeitemdefinitiontables/[int ID]() returns ChargeItemDefinitionTable|persist:Error {
-        ChargeItemDefinitionTable result = check self->/chargeitemdefinitiontables/[ID].get();
+    isolated resource function delete chargeitemdefinitiontables/[string CHARGEITEMDEFINITIONTABLE_ID]() returns ChargeItemDefinitionTable|persist:Error {
+        ChargeItemDefinitionTable result = check self->/chargeitemdefinitiontables/[CHARGEITEMDEFINITIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(CHARGE_ITEM_DEFINITION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(CHARGEITEMDEFINITIONTABLE_ID);
         return result;
     }
 
     isolated resource function get medicinalproductinteractiontables(MedicinalProductInteractionTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get medicinalproductinteractiontables/[int ID](MedicinalProductInteractionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get medicinalproductinteractiontables/[string MEDICINALPRODUCTINTERACTIONTABLE_ID](MedicinalProductInteractionTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post medicinalproductinteractiontables(MedicinalProductInteractionTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post medicinalproductinteractiontables(MedicinalProductInteractionTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_INTERACTION_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MedicinalProductInteractionTableInsert inserted in data
+            select inserted.MEDICINALPRODUCTINTERACTIONTABLE_ID;
     }
 
-    isolated resource function put medicinalproductinteractiontables/[int ID](MedicinalProductInteractionTableUpdate value) returns MedicinalProductInteractionTable|persist:Error {
+    isolated resource function put medicinalproductinteractiontables/[string MEDICINALPRODUCTINTERACTIONTABLE_ID](MedicinalProductInteractionTableUpdate value) returns MedicinalProductInteractionTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_INTERACTION_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/medicinalproductinteractiontables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MEDICINALPRODUCTINTERACTIONTABLE_ID, value);
+        return self->/medicinalproductinteractiontables/[MEDICINALPRODUCTINTERACTIONTABLE_ID].get();
     }
 
-    isolated resource function delete medicinalproductinteractiontables/[int ID]() returns MedicinalProductInteractionTable|persist:Error {
-        MedicinalProductInteractionTable result = check self->/medicinalproductinteractiontables/[ID].get();
+    isolated resource function delete medicinalproductinteractiontables/[string MEDICINALPRODUCTINTERACTIONTABLE_ID]() returns MedicinalProductInteractionTable|persist:Error {
+        MedicinalProductInteractionTable result = check self->/medicinalproductinteractiontables/[MEDICINALPRODUCTINTERACTIONTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MEDICINAL_PRODUCT_INTERACTION_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MEDICINALPRODUCTINTERACTIONTABLE_ID);
         return result;
     }
 
     isolated resource function get accounttables(AccountTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get accounttables/[int ID](AccountTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get accounttables/[string ACCOUNTTABLE_ID](AccountTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post accounttables(AccountTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post accounttables(AccountTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ACCOUNT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from AccountTableInsert inserted in data
+            select inserted.ACCOUNTTABLE_ID;
     }
 
-    isolated resource function put accounttables/[int ID](AccountTableUpdate value) returns AccountTable|persist:Error {
+    isolated resource function put accounttables/[string ACCOUNTTABLE_ID](AccountTableUpdate value) returns AccountTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ACCOUNT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/accounttables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(ACCOUNTTABLE_ID, value);
+        return self->/accounttables/[ACCOUNTTABLE_ID].get();
     }
 
-    isolated resource function delete accounttables/[int ID]() returns AccountTable|persist:Error {
-        AccountTable result = check self->/accounttables/[ID].get();
+    isolated resource function delete accounttables/[string ACCOUNTTABLE_ID]() returns AccountTable|persist:Error {
+        AccountTable result = check self->/accounttables/[ACCOUNTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(ACCOUNT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(ACCOUNTTABLE_ID);
         return result;
     }
 
     isolated resource function get messageheadertables(MessageHeaderTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get messageheadertables/[int ID](MessageHeaderTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get messageheadertables/[string MESSAGEHEADERTABLE_ID](MessageHeaderTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post messageheadertables(MessageHeaderTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post messageheadertables(MessageHeaderTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MESSAGE_HEADER_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from MessageHeaderTableInsert inserted in data
+            select inserted.MESSAGEHEADERTABLE_ID;
     }
 
-    isolated resource function put messageheadertables/[int ID](MessageHeaderTableUpdate value) returns MessageHeaderTable|persist:Error {
+    isolated resource function put messageheadertables/[string MESSAGEHEADERTABLE_ID](MessageHeaderTableUpdate value) returns MessageHeaderTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MESSAGE_HEADER_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/messageheadertables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(MESSAGEHEADERTABLE_ID, value);
+        return self->/messageheadertables/[MESSAGEHEADERTABLE_ID].get();
     }
 
-    isolated resource function delete messageheadertables/[int ID]() returns MessageHeaderTable|persist:Error {
-        MessageHeaderTable result = check self->/messageheadertables/[ID].get();
+    isolated resource function delete messageheadertables/[string MESSAGEHEADERTABLE_ID]() returns MessageHeaderTable|persist:Error {
+        MessageHeaderTable result = check self->/messageheadertables/[MESSAGEHEADERTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(MESSAGE_HEADER_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(MESSAGEHEADERTABLE_ID);
         return result;
     }
 
     isolated resource function get auditeventtables(AuditEventTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get auditeventtables/[int ID](AuditEventTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get auditeventtables/[string AUDITEVENTTABLE_ID](AuditEventTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post auditeventtables(AuditEventTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post auditeventtables(AuditEventTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(AUDIT_EVENT_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from AuditEventTableInsert inserted in data
+            select inserted.AUDITEVENTTABLE_ID;
     }
 
-    isolated resource function put auditeventtables/[int ID](AuditEventTableUpdate value) returns AuditEventTable|persist:Error {
+    isolated resource function put auditeventtables/[string AUDITEVENTTABLE_ID](AuditEventTableUpdate value) returns AuditEventTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(AUDIT_EVENT_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/auditeventtables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(AUDITEVENTTABLE_ID, value);
+        return self->/auditeventtables/[AUDITEVENTTABLE_ID].get();
     }
 
-    isolated resource function delete auditeventtables/[int ID]() returns AuditEventTable|persist:Error {
-        AuditEventTable result = check self->/auditeventtables/[ID].get();
+    isolated resource function delete auditeventtables/[string AUDITEVENTTABLE_ID]() returns AuditEventTable|persist:Error {
+        AuditEventTable result = check self->/auditeventtables/[AUDITEVENTTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(AUDIT_EVENT_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(AUDITEVENTTABLE_ID);
         return result;
     }
 
     isolated resource function get nutritionordertables(NutritionOrderTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get nutritionordertables/[int ID](NutritionOrderTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get nutritionordertables/[string NUTRITIONORDERTABLE_ID](NutritionOrderTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post nutritionordertables(NutritionOrderTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post nutritionordertables(NutritionOrderTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(NUTRITION_ORDER_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from NutritionOrderTableInsert inserted in data
+            select inserted.NUTRITIONORDERTABLE_ID;
     }
 
-    isolated resource function put nutritionordertables/[int ID](NutritionOrderTableUpdate value) returns NutritionOrderTable|persist:Error {
+    isolated resource function put nutritionordertables/[string NUTRITIONORDERTABLE_ID](NutritionOrderTableUpdate value) returns NutritionOrderTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(NUTRITION_ORDER_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/nutritionordertables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(NUTRITIONORDERTABLE_ID, value);
+        return self->/nutritionordertables/[NUTRITIONORDERTABLE_ID].get();
     }
 
-    isolated resource function delete nutritionordertables/[int ID]() returns NutritionOrderTable|persist:Error {
-        NutritionOrderTable result = check self->/nutritionordertables/[ID].get();
+    isolated resource function delete nutritionordertables/[string NUTRITIONORDERTABLE_ID]() returns NutritionOrderTable|persist:Error {
+        NutritionOrderTable result = check self->/nutritionordertables/[NUTRITIONORDERTABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(NUTRITION_ORDER_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(NUTRITIONORDERTABLE_ID);
         return result;
     }
 
     isolated resource function get questionnairetables(QuestionnaireTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get questionnairetables/[int ID](QuestionnaireTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get questionnairetables/[string QUESTIONNAIRETABLE_ID](QuestionnaireTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post questionnairetables(QuestionnaireTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post questionnairetables(QuestionnaireTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(QUESTIONNAIRE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from QuestionnaireTableInsert inserted in data
+            select inserted.QUESTIONNAIRETABLE_ID;
     }
 
-    isolated resource function put questionnairetables/[int ID](QuestionnaireTableUpdate value) returns QuestionnaireTable|persist:Error {
+    isolated resource function put questionnairetables/[string QUESTIONNAIRETABLE_ID](QuestionnaireTableUpdate value) returns QuestionnaireTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(QUESTIONNAIRE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/questionnairetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(QUESTIONNAIRETABLE_ID, value);
+        return self->/questionnairetables/[QUESTIONNAIRETABLE_ID].get();
     }
 
-    isolated resource function delete questionnairetables/[int ID]() returns QuestionnaireTable|persist:Error {
-        QuestionnaireTable result = check self->/questionnairetables/[ID].get();
+    isolated resource function delete questionnairetables/[string QUESTIONNAIRETABLE_ID]() returns QuestionnaireTable|persist:Error {
+        QuestionnaireTable result = check self->/questionnairetables/[QUESTIONNAIRETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(QUESTIONNAIRE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(QUESTIONNAIRETABLE_ID);
         return result;
     }
 
     isolated resource function get appointmentresponsetables(AppointmentResponseTableTargetType targetType = <>, sql:ParameterizedQuery whereClause = ``, sql:ParameterizedQuery orderByClause = ``, sql:ParameterizedQuery limitClause = ``, sql:ParameterizedQuery groupByClause = ``) returns stream<targetType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "query"
     } external;
 
-    isolated resource function get appointmentresponsetables/[int ID](AppointmentResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor",
+    isolated resource function get appointmentresponsetables/[string APPOINTMENTRESPONSETABLE_ID](AppointmentResponseTableTargetType targetType = <>) returns targetType|persist:Error = @java:Method {
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor",
         name: "queryOne"
     } external;
 
-    isolated resource function post appointmentresponsetables(AppointmentResponseTableInsert[] data) returns int[]|persist:Error {
+    isolated resource function post appointmentresponsetables(AppointmentResponseTableInsert[] data) returns string[]|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(APPOINTMENT_RESPONSE_TABLE);
         }
-        sql:ExecutionResult[] result = check sqlClient.runBatchInsertQuery(data);
-        return from sql:ExecutionResult inserted in result
-            where inserted.lastInsertId != ()
-            select <int>inserted.lastInsertId;
+        _ = check sqlClient.runBatchInsertQuery(data);
+        return from AppointmentResponseTableInsert inserted in data
+            select inserted.APPOINTMENTRESPONSETABLE_ID;
     }
 
-    isolated resource function put appointmentresponsetables/[int ID](AppointmentResponseTableUpdate value) returns AppointmentResponseTable|persist:Error {
+    isolated resource function put appointmentresponsetables/[string APPOINTMENTRESPONSETABLE_ID](AppointmentResponseTableUpdate value) returns AppointmentResponseTable|persist:Error {
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(APPOINTMENT_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runUpdateQuery(ID, value);
-        return self->/appointmentresponsetables/[ID].get();
+        _ = check sqlClient.runUpdateQuery(APPOINTMENTRESPONSETABLE_ID, value);
+        return self->/appointmentresponsetables/[APPOINTMENTRESPONSETABLE_ID].get();
     }
 
-    isolated resource function delete appointmentresponsetables/[int ID]() returns AppointmentResponseTable|persist:Error {
-        AppointmentResponseTable result = check self->/appointmentresponsetables/[ID].get();
+    isolated resource function delete appointmentresponsetables/[string APPOINTMENTRESPONSETABLE_ID]() returns AppointmentResponseTable|persist:Error {
+        AppointmentResponseTable result = check self->/appointmentresponsetables/[APPOINTMENTRESPONSETABLE_ID].get();
         psql:SQLClient sqlClient;
         lock {
             sqlClient = self.persistClients.get(APPOINTMENT_RESPONSE_TABLE);
         }
-        _ = check sqlClient.runDeleteQuery(ID);
+        _ = check sqlClient.runDeleteQuery(APPOINTMENTRESPONSETABLE_ID);
         return result;
     }
 
     remote isolated function queryNativeSQL(sql:ParameterizedQuery sqlQuery, typedesc<record {}> rowType = <>) returns stream<rowType, persist:Error?> = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor"
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor"
     } external;
 
     remote isolated function executeNativeSQL(sql:ParameterizedQuery sqlQuery) returns psql:ExecutionResult|persist:Error = @java:Method {
-        'class: "io.ballerina.stdlib.persist.sql.datastore.H2Processor"
+        'class: "io.ballerina.stdlib.persist.sql.datastore.MySQLProcessor"
     } external;
 
     public isolated function close() returns persist:Error? {
