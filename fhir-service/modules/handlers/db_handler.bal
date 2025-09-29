@@ -153,6 +153,7 @@ public class DBHandler {
             io:println("Drop Query Result: " + dropQueryResult.toString());
             io:println("Create Query Result: " + createQueryResult.toString());
 
+            // MIGHT BE OBSOLETE: Check whether if necessary
             error? isSearchParamsPopulated = self.populateSearchParamExpressionTable(persistClient);
             if (isSearchParamsPopulated is error) {
                 io:print("An error occured while populating the SEARCH_PARAM_EXPRESSION_TABLE: " + isSearchParamsPopulated.message());

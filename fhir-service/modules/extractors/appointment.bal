@@ -7,7 +7,6 @@ import ballerina/time;
 
 import ballerinax/health.fhir.r4;
 import ballerinax/health.fhir.r4.international401;
-import ballerinax/health.fhir.r4.parser;
 
 public type AppointmentModel record {|
     string id?;
@@ -20,7 +19,6 @@ public type AppointmentModel record {|
     r4:CodeableConcept[] service_type?;
     r4:CodeableConcept[] specialty?;
     international401:AppointmentStatus status;
-
     r4:Reference[]? actor;
     r4:Reference[]? based_on;
     r4:Reference? location;
@@ -33,43 +31,13 @@ public type AppointmentModel record {|
 
 public class AppointmentExtractor {
     private final string[] referenceSearchParams = ["actor", "based-on", "location", "patient", "practitioner", "reason-reference", "slot", "supporting-information"];
-    private final utils:ReferenceContext referenceContext = new utils:ReferenceContext();
-    
+    private final utils:ReferenceContext referenceContext = new();
+    private final utils:TransactionHandler transactionHandler = new();
+
     private r4:Reference? patient = ();
     private r4:Reference? practitioner = ();
     private r4:Reference? location = ();
     private r4:Reference[] actors = [];
-
-    private isolated function convertToFHIR(json resourceBlob) returns international401:Appointment|error {
-        anydata parsedJson = check parser:parse(resourceBlob, targetFHIRModelType = international401:Appointment);
-        international401:Appointment appointment = check parsedJson.ensureType();
-        return appointment;
-    }
-
-    private isolated function resolveParticipants(international401:AppointmentParticipant[] participants) {
-        // Clear previous state
-        self.actors = [];
-        self.patient = ();
-        self.practitioner = ();
-        self.location = ();
-
-        foreach international401:AppointmentParticipant participant in participants {
-            r4:Reference? actor = participant.actor;
-            if actor is r4:Reference {
-                self.actors.push(actor);
-                string? referencePointer = actor.reference;
-                if referencePointer is string {
-                    if referencePointer.includes("Patient") {
-                        self.patient = actor;
-                    } else if referencePointer.includes("Practitioner") {
-                        self.practitioner = actor;
-                    } else if referencePointer.includes("Location") {
-                        self.location = actor;
-                    }
-                }
-            }
-        }
-    }
 
     private isolated function mapToModel(international401:Appointment appointment) returns AppointmentModel => {
         id: appointment.id,
@@ -92,13 +60,19 @@ public class AppointmentExtractor {
         supportingInformation: appointment.supportingInformation
     };
 
+    // private isolated function mapToModelJson(map<json> resrc) returns map<json> {
+    //     map<json> mapj = {};
+    //     mapj["id"] = resrc["id"];
+    // };
+
     // Main save function with transactional support
     public isolated function saveAppointment(db_store:Client persistClient, json appointmentJson) returns string|error {
         utils:TransactionContext 'transaction = {};
 
         do {
             // Convert and process appointment
-            international401:Appointment appointment = check self.convertToFHIR(appointmentJson);
+            r4:DomainResource domainRes = check utils:convertToFHIR(appointmentJson, international401:Appointment);
+            international401:Appointment appointment = <international401:Appointment> domainRes;
             self.resolveParticipants(appointment.participant);
             AppointmentModel appointmentModel = self.mapToModel(appointment);
 
@@ -133,6 +107,95 @@ public class AppointmentExtractor {
         }
     }
 
+    private isolated function saveAllReferences(db_store:Client persistClient, AppointmentModel appointmentModel, utils:TransactionContext 'transaction) returns error? {
+        string resourceId = appointmentModel.id ?: "";
+
+        // Save actor references
+        r4:Reference[]? actorRefs = appointmentModel.actor;
+        if actorRefs is r4:Reference[] {
+            foreach r4:Reference ref in actorRefs {
+                check self.referenceContext.saveIndividualReference(
+                    persistClient,
+                    "Appointment",
+                    resourceId,
+                    "actor",
+                    ref,
+                    'transaction
+                );
+            }
+        }
+
+        // Save single references
+        r4:Reference? patientRef = appointmentModel.patient;
+        if patientRef is r4:Reference {
+            check self.referenceContext.saveIndividualReference(persistClient, "Appointment", resourceId, "patient", patientRef, 'transaction);
+        }
+
+        r4:Reference? practitionerRef = appointmentModel.practitioner;
+        if practitionerRef is r4:Reference {
+            check self.referenceContext.saveIndividualReference(persistClient, "Appointment", resourceId, "practitioner", practitionerRef, 'transaction);
+        }
+
+        r4:Reference? locationRef = appointmentModel.location;
+        if locationRef is r4:Reference {
+            check self.referenceContext.saveIndividualReference(persistClient, "Appointment", resourceId, "location", locationRef, 'transaction);
+        }
+
+        // Save array references
+        r4:Reference[]? basedOnRefs = appointmentModel.based_on;
+        if basedOnRefs is r4:Reference[] {
+            foreach r4:Reference ref in basedOnRefs {
+                check self.referenceContext.saveIndividualReference(persistClient, "Appointment", resourceId, "based-on", ref, 'transaction);
+            }
+        }
+
+        r4:Reference[]? reasonRefs = appointmentModel?.reason_reference;
+        if reasonRefs is r4:Reference[] {
+            foreach r4:Reference ref in reasonRefs {
+                check self.referenceContext.saveIndividualReference(persistClient, "Appointment", resourceId, "reason-reference", ref, 'transaction);
+            }
+        }
+
+        r4:Reference[]? slotRefs = appointmentModel?.slot;
+        if slotRefs is r4:Reference[] {
+            foreach r4:Reference ref in slotRefs {
+                check self.referenceContext.saveIndividualReference(persistClient, "Appointment", resourceId, "slot", ref, 'transaction);
+            }
+        }
+
+        r4:Reference[]? supportingRefs = appointmentModel?.supportingInformation;
+        if supportingRefs is r4:Reference[] {
+            foreach r4:Reference ref in supportingRefs {
+                check self.referenceContext.saveIndividualReference(persistClient, "Appointment", resourceId, "supporting-information", ref, 'transaction);
+            }
+        }
+    }
+
+    private isolated function resolveParticipants(international401:AppointmentParticipant[] participants) {
+        // Clear previous state
+        self.actors = [];
+        self.patient = ();
+        self.practitioner = ();
+        self.location = ();
+
+        foreach international401:AppointmentParticipant participant in participants {
+            r4:Reference? actor = participant.actor;
+            if actor is r4:Reference {
+                self.actors.push(actor);
+                string? referencePointer = actor.reference;
+                if referencePointer is string {
+                    if referencePointer.includes("Patient") {
+                        self.patient = actor;
+                    } else if referencePointer.includes("Practitioner") {
+                        self.practitioner = actor;
+                    } else if referencePointer.includes("Location") {
+                        self.location = actor;
+                    }
+                }
+            }
+        }
+    }
+
     // Save main appointment record (without references)
     private isolated function saveMainAppointment(db_store:Client persistClient, AppointmentModel appointmentModel, json appointmentJson) returns string|error {
         // Convert JSON to byte array for RESOURCE_JSON field
@@ -160,72 +223,43 @@ public class AppointmentExtractor {
         return recordIds[0];
     }
 
-    // Save all references with rollback
-    private isolated function saveAllReferences(db_store:Client persistClient, AppointmentModel appointmentModel, utils:TransactionContext 'transaction) returns error? {
-
-        foreach string referenceSearchParam in self.referenceSearchParams {
-            error? result = self.saveReferencesByParam(persistClient, appointmentModel, referenceSearchParam, 'transaction);
-            if result is error {
-                return result;
-            }
-        }
+    // Rollback all record insertions from DB if one failed
+    private isolated function rollbackTransaction(db_store:Client persistClient, utils:TransactionContext 'transaction) returns error? {
+        return self.transactionHandler.rollbackTransaction(persistClient, 'transaction, "Appointment");
     }
 
-    // Save references for a specific search parameter
-    private isolated function saveReferencesByParam(db_store:Client persistClient, AppointmentModel appointmentModel,
-            string referenceSearchParam, utils:TransactionContext 'transaction) returns error? {
+    private isolated function resolveParticipantReferences(record {|r4:Reference? actor;|}[] participants) returns record {|
+        r4:Reference[] actors;
+        r4:Reference? patient;
+        r4:Reference? practitioner;
+        r4:Reference? location;
+    |} {
+        r4:Reference[] actors = [];
+        r4:Reference? patient = ();
+        r4:Reference? practitioner = ();
+        r4:Reference? location = ();
 
-        // Convert search param name to model key (e.g., "based-on" -> "based_on")
-        string:RegExp chars = re `-`;
-        string modelKey = chars.replaceAll(referenceSearchParam, "_");
-
-        anydata referenceValue = appointmentModel[modelKey];
-
-        if referenceValue is () {
-            log:printDebug(string `No value found for ${modelKey}, skipping`);
-            return;
-        }
-
-        string appointmentId = appointmentModel.id ?: "";
-
-        // Handle array of references
-        if referenceValue is r4:Reference[] {
-            r4:Reference[] references = <r4:Reference[]>referenceValue;
-            foreach r4:Reference reference in references {
-                error? result = self.referenceContext.saveIndividualReference(persistClient, "Appointment", appointmentId,referenceSearchParam, reference, 'transaction);
-                if result is error {
-                    return result;
+        foreach var participant in participants {
+            r4:Reference? actor = participant?.actor;
+            if actor is r4:Reference {
+                actors.push(actor);
+                string? referencePointer = actor?.reference;
+                if referencePointer is string {
+                    match referencePointer {
+                        var str if str.includes("Patient") => { patient = actor; }
+                        var str if str.includes("Practitioner") => { practitioner = actor; }
+                        var str if str.includes("Location") => { location = actor; }
+                        _ => {}
+                    }
                 }
             }
         }
-        // Handle single reference
-        else if referenceValue is r4:Reference {
-            r4:Reference reference = <r4:Reference>referenceValue;
-            error? result = self.referenceContext.saveIndividualReference(persistClient, "Appointment", appointmentId,referenceSearchParam, reference, 'transaction);
-            if result is error {
-                return result;
-            }
-        }
-        else {
-            log:printDebug(string `${modelKey} is not a Reference type, skipping`);
-        }
-    }
 
-    // Rollback all record insertions from DB if one failed
-    private isolated function rollbackTransaction(db_store:Client persistClient, utils:TransactionContext 'transaction) returns error? {
-        log:printWarn("Rolling back appointment transaction");
-
-        // Delete all saved references
-        foreach int referenceId in 'transaction.savedReferenceIds.reverse() {
-            _ = check persistClient->/references/[referenceId].delete();
-        }
-
-        // Delete main appointment if it was saved
-        if 'transaction.mainResourceId is string {
-            string appointmentId = <string>'transaction.mainResourceId;
-            _ = check persistClient->/appointmenttables/[appointmentId].delete();
-        }
-
-        log:printInfo("Rollback completed");
+        return {
+            actors,
+            patient,
+            practitioner,
+            location
+        };
     }
 }
