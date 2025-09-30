@@ -33,6 +33,47 @@ public class DBHandler {
         return false;
     }
 
+    public function initDatabase(jdbc:Client jdbcClient, db_store:Client persistClient) returns boolean|error? {
+        if (self.isDBExsists(jdbcClient) is error) {
+            return false;
+        } else if (self.isDBExsists(jdbcClient) == true) {
+            return true;
+        } else {
+            sql:ExecutionResult dropQueryResult = {affectedRowCount: 0, lastInsertId: 0};
+            sql:ExecutionResult createQueryResult = {affectedRowCount: 0, lastInsertId: 0};
+
+            error? isError = self.retreiveQueriesFromSchema();
+
+            if (isError is error) {
+                io:println("An error occured when reading the db schema: " + isError.message());
+                return false;
+            } else {
+                foreach sql:ParameterizedQuery dropQuery in self.dropQueries {
+                    sql:ParameterizedQuery query1 = dropQuery;
+                    dropQueryResult = check jdbcClient->execute(query1);
+                }
+
+                foreach sql:ParameterizedQuery createQuery in self.createQueries {
+                    sql:ParameterizedQuery query2 = createQuery;
+                    createQueryResult = check jdbcClient->execute(query2);
+                }
+            }
+
+            io:println("Drop Query Result: " + dropQueryResult.toString());
+            io:println("Create Query Result: " + createQueryResult.toString());
+
+            // MIGHT BE OBSOLETE: Check whether if necessary
+            error? isSearchParamsPopulated = self.populateSearchParamExpressionTable(persistClient);
+            if (isSearchParamsPopulated is error) {
+                io:print("An error occured while populating the SEARCH_PARAM_EXPRESSION_TABLE: " + isSearchParamsPopulated.message());
+                return false;
+            } else {
+                io:println("SEARCH_PARAM_EXPRESSION TABLE populated successfully!");
+                return true;
+            }
+        }
+    }
+
     private function convertToParameterizedQuery(readonly & string[] strQuery) returns sql:ParameterizedQuery {
         sql:ParameterizedQuery parameterizedQuery = ``;
         parameterizedQuery.strings = strQuery;
@@ -122,46 +163,5 @@ public class DBHandler {
             }
         }
         io:println("Total Records Inserted: " + totRecords.toString());
-    }
-
-    public function initDatabase(jdbc:Client jdbcClient, db_store:Client persistClient) returns boolean | error? {
-        if (self.isDBExsists(jdbcClient) is error) {
-            return false;
-        } else if (self.isDBExsists(jdbcClient) == true){
-            return true;
-        } else {
-            sql:ExecutionResult dropQueryResult = {affectedRowCount: 0, lastInsertId: 0};
-            sql:ExecutionResult createQueryResult = {affectedRowCount: 0, lastInsertId: 0};
-
-            error? isError = self.retreiveQueriesFromSchema();
-
-            if (isError is error) {
-                io:println("An error occured when reading the db schema: " + isError.message());
-                return false;
-            } else {
-                foreach sql:ParameterizedQuery dropQuery in self.dropQueries {
-                    sql:ParameterizedQuery query1 = dropQuery;
-                    dropQueryResult = check jdbcClient->execute(query1);
-                }
-
-                foreach sql:ParameterizedQuery createQuery in self.createQueries {
-                    sql:ParameterizedQuery query2 = createQuery;
-                    createQueryResult = check jdbcClient->execute(query2);
-                }
-            }
-
-            io:println("Drop Query Result: " + dropQueryResult.toString());
-            io:println("Create Query Result: " + createQueryResult.toString());
-
-            // MIGHT BE OBSOLETE: Check whether if necessary
-            error? isSearchParamsPopulated = self.populateSearchParamExpressionTable(persistClient);
-            if (isSearchParamsPopulated is error) {
-                io:print("An error occured while populating the SEARCH_PARAM_EXPRESSION_TABLE: " + isSearchParamsPopulated.message());
-                return false;
-            } else {
-                io:println("SEARCH_PARAM_EXPRESSION TABLE populated successfully!");
-                return true;
-            }
-        }
     }
 }

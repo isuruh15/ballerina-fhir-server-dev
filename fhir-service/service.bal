@@ -24,12 +24,11 @@ import ballerina_fhir_server.handlers;
 import ballerina_fhir_server.r4_api_config;
 
 import ballerina/http;
-import ballerina/io;
-
-import ballerinax/java.jdbc;
+import ballerina/log;
 import ballerinax/health.fhir.r4;
 import ballerinax/health.fhirr4;
 import ballerinax/health.fhir.r4.international401;
+import ballerinax/java.jdbc;
 
 # Generic types to wrap all implemented profiles for each resource.
 # Add required profile types here.
@@ -323,9 +322,9 @@ final jdbc:Client jdbcClient = check dbHandler.initializeJdbcClient();
 final db_store:Client persistClient = check dbHandler.initializePersistClient();
 
 function init() returns error? {
-    boolean | error? dbStatus = dbHandler.initDatabase(jdbcClient, persistClient);
-    if (dbStatus is boolean && dbStatus == true){
-        io:println("DB Init Successfully");
+    boolean|error? dbStatus = dbHandler.initDatabase(jdbcClient, persistClient);
+    if (dbStatus is boolean && dbStatus == true) {
+        log:printInfo("DB Init Successfully");
     }
 }
 
@@ -351,50 +350,104 @@ service /fhir/r4/Appointment on new fhirr4:Listener(config = r4_api_config:appoi
     isolated resource function post .(r4:FHIRContext fhirContext, Appointment appointment) returns Appointment|r4:OperationOutcome|r4:FHIRError {
         do {
             handlers:CreateHandler createHandler = new handlers:CreateHandler();
-            string|error? result = createHandler.saveResource(persistClient, "Appointment", appointment.toJson());
+            string|error? result = createHandler.saveResourceWithTransaction(persistClient, "Appointment", appointment.toJson());
 
             if result is string {
-                io:println("Appointment: POST - Execution Success!");
+                log:printInfo("Appointment: POST - Execution Success!");
                 return appointment;
             } else {
                 string errorMsg = "";
                 if (result is error) {
                     errorMsg = result.message();
                 }
-                io:println("Database save failed: " + errorMsg);
+                log:printError("Database save failed: " + errorMsg);
 
-                return r4:createFHIRError(
-                        "Failed to save appointment: " + errorMsg,
-                        r4:ERROR,
-                        r4:PROCESSING,
-                        httpStatusCode = http:STATUS_INTERNAL_SERVER_ERROR
-                );
+                return r4:createFHIRError("Failed to save appointment: " + errorMsg, r4:ERROR, r4:PROCESSING, httpStatusCode = http:STATUS_INTERNAL_SERVER_ERROR);
             }
 
         } on fail error e {
-            io:println("Error processing appointment: " + e.message());
+            log:printError("Error processing appointment: " + e.message());
             return r4:createFHIRError(
-                    "Invalid appointment data: " + e.message(),
-                    r4:ERROR,
-                    r4:INFORMATIONAL,
-                    httpStatusCode = http:STATUS_BAD_REQUEST
-            );
+                    "Invalid appointment data: " + e.message(), r4:ERROR, r4:INFORMATIONAL, httpStatusCode = http:STATUS_BAD_REQUEST);
         }
     }
 
     // Update the current state of a resource completely.
     isolated resource function put [string id](r4:FHIRContext fhirContext, Appointment appointment) returns Appointment|r4:OperationOutcome|r4:FHIRError {
-        return r4:createFHIRError("Not implemented", r4:ERROR, r4:INFORMATIONAL, httpStatusCode = http:STATUS_NOT_IMPLEMENTED);
+
+        do {
+            handlers:UpdateHandler updateHandler = new handlers:UpdateHandler();
+            string|error result = updateHandler.updateResourceWithTransaction(persistClient, "Appointment", id, appointment.toJson());
+
+            if result is string {
+                log:printInfo("Appointment: PUT - Execution Success!");
+                return appointment;
+            } else {
+                string errorMsg = result.message();
+                log:printError(string `Update failed: ${errorMsg}`);
+
+                return r4:createFHIRError(string `Failed to update Appointment/${id}: ${errorMsg}`, r4:ERROR, r4:PROCESSING, httpStatusCode = http:STATUS_INTERNAL_SERVER_ERROR);
+            }
+
+        } on fail error e {
+            log:printError(string `Error updating Appointment/${id}: ${e.message()}`);
+            return r4:createFHIRError(string `Update operation failed: ${e.message()}`, r4:ERROR, r4:PROCESSING, httpStatusCode = http:STATUS_BAD_REQUEST);
+        }
     }
 
     // Update the current state of a resource partially.
     isolated resource function patch [string id](r4:FHIRContext fhirContext, json patch) returns Appointment|r4:OperationOutcome|r4:FHIRError {
-        return r4:createFHIRError("Not implemented", r4:ERROR, r4:INFORMATIONAL, httpStatusCode = http:STATUS_NOT_IMPLEMENTED);
+
+        do {
+            handlers:UpdateHandler updateHandler = new handlers:UpdateHandler();
+            json|error result = updateHandler.patchResourceWithTransaction(persistClient, "Appointment", id, patch);
+
+            if result is json {
+                log:printInfo("Appointment: PATCH - Execution Success!");
+                return <Appointment>result;
+            } else {
+                string errorMsg = result.message();
+                log:printError(string `Patch failed: ${errorMsg}`);
+
+                return r4:createFHIRError(string `Failed to patch Appointment/${id}: ${errorMsg}`, r4:ERROR, r4:PROCESSING, httpStatusCode = http:STATUS_INTERNAL_SERVER_ERROR);
+            }
+
+        } on fail error e {
+            log:printError(string `Error patching Appointment/${id}: ${e.message()}`);
+            return r4:createFHIRError(string `Patch operation failed: ${e.message()}`, r4:ERROR, r4:PROCESSING, httpStatusCode = http:STATUS_BAD_REQUEST);
+        }
     }
 
     // Delete a resource.
     isolated resource function delete [string id](r4:FHIRContext fhirContext) returns r4:OperationOutcome|r4:FHIRError {
-        return r4:createFHIRError("Not implemented", r4:ERROR, r4:INFORMATIONAL, httpStatusCode = http:STATUS_NOT_IMPLEMENTED);
+        do {
+            handlers:DeleteHandler deleteHandler = new handlers:DeleteHandler();
+            boolean|error result = deleteHandler.deleteResourceWithTransaction(persistClient, "Appointment", id);
+
+            if result is boolean && result {
+                log:printInfo(string `Appointment: DELETE - Execution Success!`);
+
+                return {
+                    resourceType: "OperationOutcome",
+                    issue: [
+                        {
+                            severity: "information",
+                            code: "informational",
+                            diagnostics: string `Appointment/${id} deleted successfully`
+                        }
+                    ]
+                };
+            } else {
+                string errorMsg = result is error ? result.message() : "Unknown error";
+                log:printError(string `Delete failed: ${errorMsg}`);
+
+                return r4:createFHIRError(string `Failed to delete Appointment/${id}: ${errorMsg}`, r4:ERROR, r4:PROCESSING, httpStatusCode = http:STATUS_INTERNAL_SERVER_ERROR);
+            }
+
+        } on fail error e {
+            log:printError(string `Error deleting Appointment/${id}: ${e.message()}`);
+            return r4:createFHIRError(string `Delete operation failed: ${e.message()}`, r4:ERROR, r4:PROCESSING, httpStatusCode = http:STATUS_INTERNAL_SERVER_ERROR);
+        }
     }
 
     // Retrieve the update history for a particular resource.
