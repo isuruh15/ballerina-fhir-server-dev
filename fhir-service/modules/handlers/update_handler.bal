@@ -3,14 +3,13 @@ import ballerina_fhir_server.mappers;
 import ballerina_fhir_server.utils;
 
 import ballerina/log;
-import ballerina/time;
 
 public class UpdateHandler {
-    private mappers:CreateMapper createMapper;
+    private mappers:UpdateMapper updateMapper;
     private utils:TransactionHandler transactionHandler;
 
     public isolated function init() {
-        self.createMapper = new mappers:CreateMapper();
+        self.updateMapper = new mappers:UpdateMapper();
         self.transactionHandler = new utils:TransactionHandler();
     }
 
@@ -51,25 +50,23 @@ public class UpdateHandler {
                 return deleteRefsResult;
             }
 
-            // Map updated resource to insert model
+            // Map updated resource to update model
             log:printInfo(string `Mapping updated ${resourceType} to model`);
-            record {|anydata...;|}|error? insertModel = self.createMapper.mapToInsertModel(
-                persistClient, resourceType, resourceJson
-            );
+            record {|anydata...;|}|error? updateModel = self.updateMapper.mapToUpdateModel(persistClient, resourceType, resourceJson);
 
-            if insertModel is () || insertModel is error {
+            if updateModel is () || updateModel is error {
                 error? rollbackResult = self.transactionHandler.rollbackUpdateTransaction(
                     persistClient, 'transaction, resourceType
                 );
                 if (rollbackResult is error) {
                     log:printError(rollbackResult.toString());
                 }
-                return insertModel is error ? insertModel : error("Failed to create insert model");
+                return updateModel is error ? updateModel : error("Failed to create update model");
             }
 
             // Update main resource
             log:printInfo(string `Updating main ${resourceType}/${resourceId} record`);
-            error? updateResult = self.updateMainResource(persistClient, resourceType, resourceId, insertModel);
+            error? updateResult = self.updateMainResource(persistClient, resourceType, resourceId, updateModel);
 
             if updateResult is error {
                 log:printError(string `Main resource update failed: ${updateResult.message()}`);
@@ -84,7 +81,7 @@ public class UpdateHandler {
 
             // Save new references
             log:printInfo(string `Saving new references for ${resourceType}/${resourceId}`);
-            json[] references = self.createMapper.getReferences();
+            json[] references = self.updateMapper.getReferences();
             error? refResult = utils:saveReferences(persistClient, references, resourceType, resourceId, 'transaction);
 
             if refResult is error {
@@ -142,30 +139,28 @@ public class UpdateHandler {
             error? deleteRefsResult = utils:deleteReferences(persistClient, oldReferenceIds, 'transaction);
 
             if deleteRefsResult is error {
-                error? rollbackResult = self.transactionHandler.rollbackUpdateTransaction(
-                    persistClient, 'transaction, resourceType
-                );
+                error? rollbackResult = self.transactionHandler.rollbackUpdateTransaction(persistClient, 'transaction, resourceType);
                 if (rollbackResult is error) {
                     log:printError(rollbackResult.toString());
                 }
                 return deleteRefsResult;
             }
 
-            // Map merged resource to insert model
+            // Map merged resource to update model
             log:printInfo(string `Mapping patched resource to model`);
-            record {|anydata...;|}|error? insertModel = self.createMapper.mapToInsertModel(persistClient, resourceType, mergedResource);
+            record {|anydata...;|}|error? updateModel = self.updateMapper.mapToUpdateModel(persistClient, resourceType, mergedResource);
 
-            if insertModel is () || insertModel is error {
+            if updateModel is () || updateModel is error {
                 error? rollbackResult = self.transactionHandler.rollbackUpdateTransaction(persistClient, 'transaction, resourceType);
                 if (rollbackResult is error) {
                     log:printError(rollbackResult.toString());
                 }
-                return insertModel is error ? insertModel : error("Failed to create insert model");
+                return updateModel is error ? updateModel : error("Failed to create update model");
             }
 
             // Update main resource
             log:printInfo(string `Updating main resource`);
-            error? updateResult = self.updateMainResource(persistClient, resourceType, resourceId, insertModel);
+            error? updateResult = self.updateMainResource(persistClient, resourceType, resourceId, updateModel);
 
             if updateResult is error {
                 error? rollbackResult = self.transactionHandler.rollbackUpdateTransaction(
@@ -179,7 +174,7 @@ public class UpdateHandler {
 
             // Save new references
             log:printInfo(string `Saving new references`);
-            json[] references = self.createMapper.getReferences();
+            json[] references = self.updateMapper.getReferences();
             error? refResult = utils:saveReferences(persistClient, references, resourceType, resourceId, 'transaction);
 
             if refResult is error {
@@ -195,7 +190,7 @@ public class UpdateHandler {
             self.transactionHandler.commitTransaction('transaction, resourceType, resourceId);
 
             log:printInfo(string `Successfully patched ${resourceType}/${resourceId}`);
-            return insertModel.toJson();
+            return updateModel.toJson();
 
         } on fail error e {
             log:printError(string `Patch transaction failed: ${e.message()}`);
@@ -222,16 +217,6 @@ public class UpdateHandler {
 
                 return results.length() > 0;
             }
-            "Patient" => {
-                stream<db_store:PatientTable, error?> 'stream =
-                    persistClient->/patienttables(targetType = db_store:PatientTable);
-
-                db_store:PatientTable[] results = check from var item in 'stream
-                    where item.PATIENTTABLE_ID == resourceId
-                    select item;
-
-                return results.length() > 0;
-            }
             _ => {
                 return error(string `Unsupported resource type: ${resourceType}`);
             }
@@ -249,20 +234,6 @@ public class UpdateHandler {
 
                 db_store:AppointmentTable[] results = check from var item in 'stream
                     where item.APPOINTMENTTABLE_ID == resourceId
-                    select item;
-
-                if results.length() == 0 {
-                    return error("Resource not found for backup");
-                }
-
-                return results[0];
-            }
-            "Patient" => {
-                stream<db_store:PatientTable, error?> 'stream =
-                    persistClient->/patienttables(targetType = db_store:PatientTable);
-
-                db_store:PatientTable[] results = check from var item in 'stream
-                    where item.PATIENTTABLE_ID == resourceId
                     select item;
 
                 if results.length() == 0 {
@@ -298,7 +269,8 @@ public class UpdateHandler {
 
         if resourceBlob is byte[] {
             string jsonString = check string:fromBytes(resourceBlob);
-            return check jsonString.fromJsonString();
+            json resourceJson = check jsonString.fromJsonString();
+            return resourceJson;
         }
 
         return error("Could not extract resource JSON");
@@ -306,20 +278,26 @@ public class UpdateHandler {
 
     // Apply JSON patch
     private isolated function applyPatch(json existing, json patch) returns json|error {
-
-        if !(existing is map<json>) || !(patch is map<json>) {
-            return error("Both existing and patch must be JSON objects");
+         if !(existing is map<json>) {
+            return error(string `Existing resource is not a JSON object: ${existing.toString()}`);
+        }
+        
+        if !(patch is map<json>) {
+            return error(string `Patch is not a JSON object: ${patch.toString()}`);
         }
 
         map<json> existingMap = <map<json>>existing;
         map<json> patchMap = <map<json>>patch;
 
-        // Simple merge --> patch values override existing values
+        // Create a new map to hold merged values
+        map<json> mergedMap = existingMap.clone();
+
+        // Patch values override existing values
         foreach var [key, value] in patchMap.entries() {
-            existingMap[key] = value;
+            mergedMap[key] = value;
         }
 
-        return existingMap;
+        return mergedMap;
     }
 
     // Find source references
@@ -339,24 +317,12 @@ public class UpdateHandler {
         return referenceIds;
     }
 
-    private isolated function updateMainResource(db_store:Client persistClient, string resourceType, string resourceId, record {|anydata...;|} insertModel) returns error? {
+    private isolated function updateMainResource(db_store:Client persistClient, string resourceType, string resourceId, record {|anydata...;|} updateModel) returns error? {
 
         match resourceType {
             "Appointment" => {
-                db_store:AppointmentTableUpdate updateRecord = check insertModel.cloneWithType();
-                updateRecord.VERSION_ID = (updateRecord.VERSION_ID ?: 1) + 1;
-                updateRecord.UPDATED_AT = time:utcToCivil(time:utcNow());
-                updateRecord.LAST_UPDATED = time:utcToCivil(time:utcNow());
-
+                db_store:AppointmentTableUpdate updateRecord = check updateModel.cloneWithType();
                 _ = check persistClient->/appointmenttables/[resourceId].put(updateRecord);
-            }
-            "Patient" => {
-                db_store:PatientTableUpdate updateRecord = check insertModel.cloneWithType();
-                updateRecord.VERSION_ID = (updateRecord.VERSION_ID ?: 1) + 1;
-                updateRecord.UPDATED_AT = time:utcToCivil(time:utcNow());
-                updateRecord.LAST_UPDATED = time:utcToCivil(time:utcNow());
-
-                _ = check persistClient->/patienttables/[resourceId].put(updateRecord);
             }
             _ => {
                 return error(string `Unsupported resource type: ${resourceType}`);
