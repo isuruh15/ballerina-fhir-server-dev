@@ -87,16 +87,6 @@ public class DeleteHandler {
 
                 return appointments.length() > 0;
             }
-            "Patient" => {
-                stream<db_store:PatientTable, error?> patientStream =
-                    persistClient->/patienttables(targetType = db_store:PatientTable);
-
-                db_store:PatientTable[] patients = check from var patient in patientStream
-                    where patient.PATIENTTABLE_ID == resourceId
-                    select patient;
-
-                return patients.length() > 0;
-            }
             _ => {
                 return error(string `Unsupported resource type: ${resourceType}`);
             }

@@ -11,9 +11,6 @@ public isolated function deleteResource(db_store:Client persistClient, string re
         "Appointment" => {
             _ = check persistClient->/appointmenttables/[resourceId].delete();
         }
-        "Patient" => {
-            _ = check persistClient->/patienttables/[resourceId].delete();
-        }
     }
 }
 

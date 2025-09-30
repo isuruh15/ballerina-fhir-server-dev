@@ -80,11 +80,6 @@ public class CreateHandler {
                 string[] recordIds = check persistClient->/appointmenttables.post([appointmentInsert]);
                 return recordIds[0];
             }
-            "Patient" => {
-                db_store:PatientTableInsert patientInsert = check insertModel.cloneWithType();
-                string[] recordIds = check persistClient->/patienttables.post([patientInsert]);
-                return recordIds[0];
-            }
             _ => {
                 return error(string `Unsupported resource type for saving: ${resourceType}`);
             }

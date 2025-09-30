@@ -261,10 +261,6 @@ public class UpdateHandler {
                 db_store:AppointmentTable appointment = check backup.cloneWithType();
                 resourceBlob = appointment.RESOURCE_JSON;
             }
-            "Patient" => {
-                db_store:PatientTable patient = check backup.cloneWithType();
-                resourceBlob = patient.RESOURCE_JSON;
-            }
         }
 
         if resourceBlob is byte[] {
