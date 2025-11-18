@@ -1,9 +1,12 @@
 # generated files
 target/
 generated/
+~/
 
 # dependencies
-Dependencies.toml
+# Dependencies.toml
+**.DS_Store
+**launch.json
 
 # config files
 Config.toml
