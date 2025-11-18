@@ -29,6 +29,7 @@ import ballerinax/health.fhir.r4;
 import ballerinax/health.fhirr4;
 import ballerinax/health.fhir.r4.international401;
 import ballerinax/java.jdbc;
+import ballerinax/health.fhir.r4.parser as fhirParser;
 
 # Generic types to wrap all implemented profiles for each resource.
 # Add required profile types here.
@@ -333,7 +334,31 @@ function init() returns error? {
 service /fhir/r4/Appointment on new fhirr4:Listener(config = r4_api_config:appointmentApiConfig) {
     // Read the current state of single resource based on its id.
     isolated resource function get [string id](r4:FHIRContext fhirContext) returns Appointment|r4:OperationOutcome|r4:FHIRError {
-        return r4:createFHIRError("Not implemented", r4:ERROR, r4:INFORMATIONAL, httpStatusCode = http:STATUS_NOT_IMPLEMENTED);
+        do {
+            handlers:ReadHandler readHandler = new handlers:ReadHandler();
+            json|error result = readHandler.readResource(persistClient, "Appointment", id);
+
+            if result is json {
+                log:printInfo("Appointment: READ - Execution Success!");
+                international401:Appointment appointment = check fhirParser:parse(result).ensureType();
+                return appointment;
+            } else {
+                string errorMsg = "";
+                if (result is error) {
+                    errorMsg = result.message();
+                }
+                log:printError("Database save failed: " + errorMsg);
+
+                return r4:createFHIRError("Failed to fetch appointment: " + errorMsg, r4:ERROR, r4:PROCESSING, httpStatusCode = http:STATUS_INTERNAL_SERVER_ERROR);
+            }
+
+        } on fail error e {
+            log:printError("Error processing appointment: " + e.message());
+            return r4:createFHIRError(
+                    "Invalid appointment data: " + e.message(), r4:ERROR, r4:INFORMATIONAL, httpStatusCode = http:STATUS_BAD_REQUEST);
+        }
+        
+        // return r4:createFHIRError("Not implemented", r4:ERROR, r4:INFORMATIONAL, httpStatusCode = http:STATUS_NOT_IMPLEMENTED);
     }
 
     // Read the state of a specific version of a resource based on its id.

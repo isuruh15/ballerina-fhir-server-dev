@@ -1,0 +1,144 @@
+import ballerina_fhir_server.db_store;
+import ballerina_fhir_server.mappers;
+
+import ballerina/log;
+
+public class ReadHandler {
+    private mappers:ReadMapper readMapper;
+
+    public isolated function init() {
+        self.readMapper = new mappers:ReadMapper();
+    }
+
+    // Main function to read a single resource by ID
+    public isolated function readResource(db_store:Client persistClient, string resourceType, string resourceId) returns json|error {
+        log:printInfo(string `Reading ${resourceType}/${resourceId}`);
+
+        // Use ReadMapper to fetch resource
+        json|error resourceJson = self.readMapper.readResourceById(persistClient, resourceType, resourceId);
+
+        if resourceJson is error {
+            log:printError(string `Failed to read ${resourceType}/${resourceId}: ${resourceJson.message()}`);
+            return resourceJson;
+        }
+
+        log:printInfo(string `Successfully read ${resourceType}/${resourceId}`);
+        return resourceJson;
+    }
+
+    // Function to search resources with query parameters
+    public isolated function searchResources(db_store:Client persistClient, string resourceType, map<string[]> queryParams) returns json|error {
+        log:printInfo(string `Searching ${resourceType} with query parameters`);
+
+        // Use ReadMapper to search resources
+        json|error searchResults = self.readMapper.searchResources(persistClient, resourceType, queryParams);
+
+        if searchResults is error {
+            log:printError(string `Failed to search ${resourceType}: ${searchResults.message()}`);
+            return searchResults;
+        }
+
+        log:printInfo(string `Successfully completed search for ${resourceType}`);
+        return searchResults;
+    }
+
+    // Function to read all resources of a type (with optional limit)
+    public isolated function readAllResources(db_store:Client persistClient, string resourceType, int? 'limit = ()) returns json|error {
+        log:printInfo(string `Reading all ${resourceType} resources${('limit is int) ? string ` (limit: ${'limit})` : ""}`);
+
+        // Use ReadMapper to fetch all resources
+        json|error allResources = self.readMapper.readAllResources(persistClient, resourceType, 'limit);
+
+        if allResources is error {
+            log:printError(string `Failed to read all ${resourceType} resources: ${allResources.message()}`);
+            return allResources;
+        }
+
+        log:printInfo(string `Successfully read all ${resourceType} resources`);
+        return allResources;
+    }
+
+    // Function to check if a resource exists
+    public isolated function checkResourceExists(db_store:Client persistClient, string resourceType, string resourceId) returns boolean|error {
+        log:printInfo(string `Checking if ${resourceType}/${resourceId} exists`);
+
+        // Use ReadMapper to check existence
+        boolean|error exists = self.readMapper.resourceExists(persistClient, resourceType, resourceId);
+
+        if exists is error {
+            log:printError(string `Failed to check existence of ${resourceType}/${resourceId}: ${exists.message()}`);
+            return exists;
+        }
+
+        log:printInfo(string `${resourceType}/${resourceId} ${exists ? "exists" : "does not exist"}`);
+        return exists;
+    }
+
+    // Function to get resource count
+    public isolated function getResourceCount(db_store:Client persistClient, string resourceType) returns int|error {
+        log:printInfo(string `Getting count for ${resourceType} resources`);
+
+        // Use ReadMapper to get count
+        int|error count = self.readMapper.getResourceCount(persistClient, resourceType);
+
+        if count is error {
+            log:printError(string `Failed to get count for ${resourceType}: ${count.message()}`);
+            return count;
+        }
+
+        log:printInfo(string `Total ${resourceType} resources: ${count}`);
+        return count;
+    }
+
+    // Function to get resource metadata only (without full RESOURCE_JSON)
+    public isolated function getResourceMetadata(db_store:Client persistClient, string resourceType, string resourceId) returns record {|anydata...;|}|error {
+        log:printInfo(string `Getting metadata for ${resourceType}/${resourceId}`);
+
+        // Use ReadMapper to get metadata
+        record {|anydata...;|}|error metadata = self.readMapper.getResourceMetadata(persistClient, resourceType, resourceId);
+
+        if metadata is error {
+            log:printError(string `Failed to get metadata for ${resourceType}/${resourceId}: ${metadata.message()}`);
+            return metadata;
+        }
+
+        log:printInfo(string `Successfully retrieved metadata for ${resourceType}/${resourceId}`);
+        return metadata;
+    }
+
+    // Function to read references for a resource
+    public isolated function readResourceReferences(db_store:Client persistClient, string resourceType, string resourceId) returns json[]|error {
+        log:printInfo(string `Reading references for ${resourceType}/${resourceId}`);
+
+        // Use ReadMapper to get references
+        json[]|error references = self.readMapper.readReferences(persistClient, resourceType, resourceId);
+
+        if references is error {
+            log:printError(string `Failed to read references for ${resourceType}/${resourceId}: ${references.message()}`);
+            return references;
+        }
+
+        log:printInfo(string `Successfully read ${references.length()} references for ${resourceType}/${resourceId}`);
+        return references;
+    }
+
+    // Function to read resource with its references (combined operation)
+    public isolated function readResourceWithReferences(db_store:Client persistClient, string resourceType, string resourceId) returns json|error {
+        log:printInfo(string `Reading ${resourceType}/${resourceId} with references`);
+
+        // Read the main resource
+        json resourceJson = check self.readResource(persistClient, resourceType, resourceId);
+
+        // Read associated references
+        json[] references = check self.readResourceReferences(persistClient, resourceType, resourceId);
+
+        // Combine resource and references into a single response
+        json response = {
+            "resource": resourceJson,
+            "references": references
+        };
+
+        log:printInfo(string `Successfully read ${resourceType}/${resourceId} with ${references.length()} references`);
+        return response;
+    }
+}

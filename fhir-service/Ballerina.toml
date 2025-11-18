@@ -26,10 +26,16 @@ artifactId = "h2"
 version = "2.3.232"
 groupId = "com.h2database"
 
+# [[dependency]]
+# org = "ballerinax"
+# name = "health.fhir.r4.international401"
+# version = "3.0.1"
+# repository="local"
+
 [[dependency]]
 org = "ballerinax"
-name = "health.fhir.r4.international401"
-version = "3.0.1"
+name = "health.fhir.r4utils.fhirpath"
+version = "3.1.1"
 repository="local"
 
 

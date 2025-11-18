@@ -35,7 +35,7 @@ public class CreateMapper {
                     CREATED_AT: time:utcToCivil(time:utcNow()),
                     UPDATED_AT: time:utcToCivil(time:utcNow()),
                     LAST_UPDATED: time:utcToCivil(time:utcNow()),
-                    RESOURCE_JSON: resourceJson.toString().toBytes()
+                    RESOURCE_JSON: resourceJson.toJsonString().toBytes()
                 };
 
                 return appointmentInsert;
